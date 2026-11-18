@@ -1,0 +1,6 @@
+PROMPT 51
+
+1. Run the 18 MB fixture and inspect the largest requested chunk.
+2. Explain why counting newline bytes is valid for this UTF-8, newline-terminated fixture.
+3. Replace the whole-file read with the supplied scanner.
+4. Try cancellation and inspect disposal. The buffer check is not a total-process memory measurement.

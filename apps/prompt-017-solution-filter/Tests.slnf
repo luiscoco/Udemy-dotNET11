@@ -1,0 +1,8 @@
+{
+  "solution": {
+    "path": "InvoiceSuite.slnx",
+    "projects": [
+      "tests\\Checks\\Checks.csproj"
+    ]
+  }
+}

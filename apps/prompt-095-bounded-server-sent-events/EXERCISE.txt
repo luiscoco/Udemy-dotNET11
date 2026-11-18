@@ -1,0 +1,6 @@
+PROMPT 95
+
+1. Read actual SSE IDs and JSON event data.
+2. Observe the deterministic blocked third write.
+3. Disconnect from the held stream and inspect producer cleanup.
+4. Separate application queue bounds from network and socket buffering.

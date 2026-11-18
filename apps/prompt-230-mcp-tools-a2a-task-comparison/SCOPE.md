@@ -1,0 +1,5 @@
+# Executable lesson scope
+
+.NET SDK 11.0.100 runs official MCP C# SDK 2.4.0 with protocol 2025-11-25 pinned explicitly. SDK and protocol versions are separate. All data, users, JWT signing keys and side effects are owned teaching fixtures. HTTP endpoints bind only to loopback and validate bearer tokens where demonstrated. This is not a deployed OAuth authorization server.
+
+Actual official SDKs expose an authenticated loopback MCP quote tool and a separate A2A JSON-RPC specialist endpoint. MCP protocol 2025-11-25 and A2A protocol 1.0 are pinned independently; the A2A .NET SDK is explicitly version 1.0.0-preview4. Agent-card discovery, message send, task completion, artifact retrieval and get-task are real network operations. A real local Microsoft Agent Framework specialist selects a validated diagnostic recommendation grounded in a public synthetic runbook. Completed means that recommendation request finished, not that a real investigation or repair occurred. Local JWT fixtures protect both endpoints; production identity discovery, distributed task persistence and private multi-tenant A2A resource ACLs are outside this bounded example.

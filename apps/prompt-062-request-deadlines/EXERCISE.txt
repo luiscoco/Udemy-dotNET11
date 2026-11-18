@@ -1,0 +1,7 @@
+PROMPT 62
+
+1. Trace the linked request token through API, service, SQLite APIs and outbound HTTP.
+2. Run the successful real SQL/HTTP path before the two deadline cases.
+3. Identify the controlled database-boundary wait and the SQLite provider limitation.
+4. Compare the ignored-token mode, which returns success despite an already-cancelled API budget.
+5. Adapt the response policy and provider behavior explicitly for a real service.

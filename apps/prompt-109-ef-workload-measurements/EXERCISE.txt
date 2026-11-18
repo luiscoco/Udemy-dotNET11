@@ -1,0 +1,5 @@
+PROMPT 109
+
+1. Increase fixture size and measure allocations as well as elapsed time.
+2. Run a provider that supports statement batching and compare command round trips.
+3. Apply an explicit transaction and concurrency predicate around related bulk operations.

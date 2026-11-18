@@ -1,0 +1,92 @@
+{
+  "number": 251,
+  "title": "Detect missing payment idempotency with a Roslyn analyzer",
+  "files": [
+    "App/App.csproj",
+    "App/Check.cs",
+    "App/Harness.cs",
+    "App/CompilerInput.cs",
+    "App/Program.cs",
+    "NuGet.Config",
+    "PaymentAnalyzer/PaymentAnalyzer.csproj",
+    "PaymentAnalyzer/AnalyzerReleases.Shipped.md",
+    "PaymentAnalyzer/AnalyzerReleases.Unshipped.md",
+    "PaymentAnalyzer/PaymentKeyAnalyzer.cs",
+    "Sample/Sample.csproj",
+    "Sample/Program.cs",
+    "Sample/UnsafePayment.cs",
+    "App/Probe.cs",
+    "EXERCISE.txt"
+  ],
+  "resetFiles": {
+    "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+  },
+  "steps": [
+    {
+      "id": "build",
+      "label": "Build and execute the integration",
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release",
+          "--disable-build-servers",
+          "-p:UseSharedCompilation=false"
+        ],
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    },
+    {
+      "id": "regression",
+      "label": "Observe the controlled failure",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "problem"
+        ]
+      ],
+      "failure": true,
+      "contains": [
+        "EXT payment analyzer rejected unsafe code"
+      ]
+    },
+    {
+      "id": "repair",
+      "label": "Repair and verify",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    }
+  ]
+}

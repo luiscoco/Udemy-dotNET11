@@ -1,0 +1,1402 @@
+[
+  {
+    "number": 1,
+    "prompt": "Map .NET 11’s runtime, SDK, languages, base libraries, application frameworks, and optional workloads.",
+    "section": "Platform foundations and development environment"
+  },
+  {
+    "number": 2,
+    "prompt": "Install .NET 11 and verify operating-system, processor, SDK, and runtime compatibility.",
+    "section": "Platform foundations and development environment"
+  },
+  {
+    "number": 3,
+    "prompt": "Explain SDK versions, runtime versions, target frameworks, language versions, and workload versions using one solution.",
+    "section": "Platform foundations and development environment"
+  },
+  {
+    "number": 4,
+    "prompt": "Pin the SDK using global.json and demonstrate how SDK selection works.",
+    "section": "Platform foundations and development environment"
+  },
+  {
+    "number": 5,
+    "prompt": "Create a console application and a class library, then connect them through a project reference.",
+    "section": "Platform foundations and development environment"
+  },
+  {
+    "number": 6,
+    "prompt": "Generate API, Blazor, and Worker Service projects and explain their different startup models.",
+    "section": "Platform foundations and development environment"
+  },
+  {
+    "number": 7,
+    "prompt": "Explain a .csproj file, including target frameworks, nullable settings, implicit usings, and references.",
+    "section": "Platform foundations and development environment"
+  },
+  {
+    "number": 8,
+    "prompt": "Configure debugging, breakpoints, exception inspection, and launch profiles in my preferred supported editor.",
+    "section": "Platform foundations and development environment"
+  },
+  {
+    "number": 9,
+    "prompt": "Organize a solution with source, tests, configuration, documentation, and development secrets.",
+    "section": "Platform foundations and development environment"
+  },
+  {
+    "number": 10,
+    "prompt": "Demonstrate the complete restore, build, run, test, and publish workflow.",
+    "section": "Platform foundations and development environment"
+  },
+  {
+    "number": 11,
+    "prompt": "Share build settings through Directory.Build.props and explain when Directory.Build.targets is appropriate.",
+    "section": "SDK, CLI, packages, and build automation"
+  },
+  {
+    "number": 12,
+    "prompt": "Configure central package management, dependency locking, and reproducible NuGet restores.",
+    "section": "SDK, CLI, packages, and build automation"
+  },
+  {
+    "number": 13,
+    "prompt": "Configure trusted package sources, vulnerability checks, and the available package publication-age policy.",
+    "section": "SDK, CLI, packages, and build automation"
+  },
+  {
+    "number": 14,
+    "prompt": "Create a custom project template containing my preferred application structure and configuration.",
+    "section": "SDK, CLI, packages, and build automation"
+  },
+  {
+    "number": 15,
+    "prompt": "Package a reusable library with documentation, symbols, licensing information, and semantic versioning.",
+    "section": "SDK, CLI, packages, and build automation"
+  },
+  {
+    "number": 16,
+    "prompt": "[11] Build a file-based application spanning multiple source files using #:include.",
+    "section": "SDK, CLI, packages, and build automation"
+  },
+  {
+    "number": 17,
+    "prompt": "[11] Create and edit solution filters from the CLI to build selected project groups.",
+    "section": "SDK, CLI, packages, and build automation"
+  },
+  {
+    "number": 18,
+    "prompt": "[11] Demonstrate dotnet run -e, Hot Reload, and updated dotnet watch workflows.",
+    "section": "SDK, CLI, packages, and build automation"
+  },
+  {
+    "number": 19,
+    "prompt": "Enforce consistent formatting, nullable analysis, analyzer rules, and selected warnings as errors.",
+    "section": "SDK, CLI, packages, and build automation"
+  },
+  {
+    "number": 20,
+    "prompt": "[11] Measure cold and warm CLI/build behavior with the Native AOT CLI host and MSBuild server.",
+    "section": "SDK, CLI, packages, and build automation"
+  },
+  {
+    "number": 21,
+    "prompt": "Model the same domain using classes, records, and structs, explaining the tradeoffs.",
+    "section": "C# fundamentals for understanding generated code"
+  },
+  {
+    "number": 22,
+    "prompt": "Enable nullable reference types and fix realistic nullability problems without suppressing warnings.",
+    "section": "C# fundamentals for understanding generated code"
+  },
+  {
+    "number": 23,
+    "prompt": "Demonstrate constructors, properties, init, and required members with validated business objects.",
+    "section": "C# fundamentals for understanding generated code"
+  },
+  {
+    "number": 24,
+    "prompt": "Create generic abstractions using constraints and explain covariance and contravariance with practical examples.",
+    "section": "C# fundamentals for understanding generated code"
+  },
+  {
+    "number": 25,
+    "prompt": "Compare inheritance, interfaces, and composition when implementing interchangeable business services.",
+    "section": "C# fundamentals for understanding generated code"
+  },
+  {
+    "number": 26,
+    "prompt": "Build an event-driven example using delegates, lambdas, and events with correct subscription cleanup.",
+    "section": "C# fundamentals for understanding generated code"
+  },
+  {
+    "number": 27,
+    "prompt": "Replace complex conditional logic with readable pattern matching and switch expressions.",
+    "section": "C# fundamentals for understanding generated code"
+  },
+  {
+    "number": 28,
+    "prompt": "Design exception handling that preserves stack traces and separates expected failures from programming errors.",
+    "section": "C# fundamentals for understanding generated code"
+  },
+  {
+    "number": 29,
+    "prompt": "Implement synchronous and asynchronous resource cleanup using IDisposable and IAsyncDisposable.",
+    "section": "C# fundamentals for understanding generated code"
+  },
+  {
+    "number": 30,
+    "prompt": "Refactor shared mutable state into immutable records and clearly owned collections.",
+    "section": "C# fundamentals for understanding generated code"
+  },
+  {
+    "number": 31,
+    "prompt": "[11] Model success, missing data, and validation failure using union types and exhaustive pattern matching.",
+    "section": "C# 15 additions and advanced type design"
+  },
+  {
+    "number": 32,
+    "prompt": "[11] Implement a state model using closed hierarchies and demonstrate compiler exhaustiveness checks.",
+    "section": "C# 15 additions and advanced type design"
+  },
+  {
+    "number": 33,
+    "prompt": "[11] Use collection-expression arguments to configure capacity and equality comparers.",
+    "section": "C# 15 additions and advanced type design"
+  },
+  {
+    "number": 34,
+    "prompt": "[11] Create extension indexers and explain their discoverability and performance implications.",
+    "section": "C# 15 additions and advanced type design"
+  },
+  {
+    "number": 35,
+    "prompt": "[11] Simplify nested-loop navigation using labelled break and continue.",
+    "section": "C# 15 additions and advanced type design"
+  },
+  {
+    "number": 36,
+    "prompt": "[11] Demonstrate nonvirtual static interface members targeting an older compatible runtime.",
+    "section": "C# 15 additions and advanced type design"
+  },
+  {
+    "number": 37,
+    "prompt": "Design useful extension members without hiding expensive operations or surprising side effects.",
+    "section": "C# 15 additions and advanced type design"
+  },
+  {
+    "number": 38,
+    "prompt": "Implement a generic numeric algorithm using generic math and static abstract interface members.",
+    "section": "C# 15 additions and advanced type design"
+  },
+  {
+    "number": 39,
+    "prompt": "Create custom attributes and inspect their metadata without unnecessary runtime reflection.",
+    "section": "C# 15 additions and advanced type design"
+  },
+  {
+    "number": 40,
+    "prompt": "Refactor a small application using primary constructors, modern properties, and readable string literals.",
+    "section": "C# 15 additions and advanced type design"
+  },
+  {
+    "number": 41,
+    "prompt": "Choose between lists, dictionaries, sets, queues, and priority queues for realistic workloads.",
+    "section": "Collections, LINQ, text, dates, and numerics"
+  },
+  {
+    "number": 42,
+    "prompt": "Compare immutable, frozen, and concurrent collections using appropriate read/write scenarios.",
+    "section": "Collections, LINQ, text, dates, and numerics"
+  },
+  {
+    "number": 43,
+    "prompt": "Demonstrate deferred execution, repeated enumeration, and materialization costs with IEnumerable<T>.",
+    "section": "Collections, LINQ, text, dates, and numerics"
+  },
+  {
+    "number": 44,
+    "prompt": "Implement filtering, projection, grouping, aggregation, and joins using readable LINQ queries.",
+    "section": "Collections, LINQ, text, dates, and numerics"
+  },
+  {
+    "number": 45,
+    "prompt": "[11] Reconcile two datasets using FullJoin and demonstrate tuple-returning join overloads.",
+    "section": "Collections, LINQ, text, dates, and numerics"
+  },
+  {
+    "number": 46,
+    "prompt": "Process asynchronous sequences using asynchronous LINQ with cancellation and bounded resource usage.",
+    "section": "Collections, LINQ, text, dates, and numerics"
+  },
+  {
+    "number": 47,
+    "prompt": "Handle UTC, local time, time zones, daylight-saving changes, DateOnly, and TimeOnly.",
+    "section": "Collections, LINQ, text, dates, and numerics"
+  },
+  {
+    "number": 48,
+    "prompt": "Implement culture-aware formatting, explicit parsing rules, Unicode handling, and predictable string comparisons.",
+    "section": "Collections, LINQ, text, dates, and numerics"
+  },
+  {
+    "number": 49,
+    "prompt": "Build source-generated regular expressions with appropriate timeouts and representative edge cases.",
+    "section": "Collections, LINQ, text, dates, and numerics"
+  },
+  {
+    "number": 50,
+    "prompt": "[11] Compare existing numeric types with the new decimal-floating-point and generic complex-number capabilities.",
+    "section": "Collections, LINQ, text, dates, and numerics"
+  },
+  {
+    "number": 51,
+    "prompt": "Process a large file asynchronously without loading its entire contents into memory.",
+    "section": "Files, streams, serialization, compression, and processes"
+  },
+  {
+    "number": 52,
+    "prompt": "Implement a framed binary protocol using System.IO.Pipelines.",
+    "section": "Files, streams, serialization, compression, and processes"
+  },
+  {
+    "number": 53,
+    "prompt": "Serialize application data using System.Text.Json, source generation, and explicit polymorphism rules.",
+    "section": "Files, streams, serialization, compression, and processes"
+  },
+  {
+    "number": 54,
+    "prompt": "[11] Serialize union values and stream JSON Lines using the supported JSON APIs.",
+    "section": "Files, streams, serialization, compression, and processes"
+  },
+  {
+    "number": 55,
+    "prompt": "Import XML and CSV safely, identifying which parsers require additional packages.",
+    "section": "Files, streams, serialization, compression, and processes"
+  },
+  {
+    "number": 56,
+    "prompt": "[11] Compare Zstandard, GZip, and Brotli compression using representative application payloads.",
+    "section": "Files, streams, serialization, compression, and processes"
+  },
+  {
+    "number": 57,
+    "prompt": "[11] Use the new memory-backed stream wrappers and measure avoided copies and allocations.",
+    "section": "Files, streams, serialization, compression, and processes"
+  },
+  {
+    "number": 58,
+    "prompt": "[11] Execute a child process with captured output, cancellation, exit-status handling, and safe arguments.",
+    "section": "Files, streams, serialization, compression, and processes"
+  },
+  {
+    "number": 59,
+    "prompt": "Implement portable file operations while preventing path traversal and handling symbolic-link boundaries.",
+    "section": "Files, streams, serialization, compression, and processes"
+  },
+  {
+    "number": 60,
+    "prompt": "Compare JSON, CBOR, and a suitable external binary serializer for one data-exchange scenario.",
+    "section": "Files, streams, serialization, compression, and processes"
+  },
+  {
+    "number": 61,
+    "prompt": "Compare asynchronous I/O and CPU parallelism, explaining when Task.Run is appropriate.",
+    "section": "Async programming, concurrency, and background execution"
+  },
+  {
+    "number": 62,
+    "prompt": "Propagate cancellation and deadlines across an API, service, database call, and outbound request.",
+    "section": "Async programming, concurrency, and background execution"
+  },
+  {
+    "number": 63,
+    "prompt": "Run independent operations concurrently and handle partial failures without losing diagnostic information.",
+    "section": "Async programming, concurrency, and background execution"
+  },
+  {
+    "number": 64,
+    "prompt": "Stream results using IAsyncEnumerable<T> with cancellation and controlled buffering.",
+    "section": "Async programming, concurrency, and background execution"
+  },
+  {
+    "number": 65,
+    "prompt": "Build a producer-consumer pipeline using bounded Channel<T> instances.",
+    "section": "Async programming, concurrency, and background execution"
+  },
+  {
+    "number": 66,
+    "prompt": "Demonstrate correct use of locks, Interlocked, and SemaphoreSlim for different synchronization problems.",
+    "section": "Async programming, concurrency, and background execution"
+  },
+  {
+    "number": 67,
+    "prompt": "Process a collection with bounded parallelism and measure throughput and resource usage.",
+    "section": "Async programming, concurrency, and background execution"
+  },
+  {
+    "number": 68,
+    "prompt": "Implement a BackgroundService with startup, cancellation, error handling, and graceful shutdown.",
+    "section": "Async programming, concurrency, and background execution"
+  },
+  {
+    "number": 69,
+    "prompt": "Schedule periodic work using PeriodicTimer and an injectable TimeProvider.",
+    "section": "Async programming, concurrency, and background execution"
+  },
+  {
+    "number": 70,
+    "prompt": "Drain a background queue during shutdown while respecting a bounded termination deadline.",
+    "section": "Async programming, concurrency, and background execution"
+  },
+  {
+    "number": 71,
+    "prompt": "Build a console application using the Generic Host, dependency injection, configuration, and logging.",
+    "section": "Hosting, dependency injection, configuration, and resilience"
+  },
+  {
+    "number": 72,
+    "prompt": "Demonstrate singleton, scoped, and transient lifetimes and detect an invalid dependency relationship.",
+    "section": "Hosting, dependency injection, configuration, and resilience"
+  },
+  {
+    "number": 73,
+    "prompt": "Select interchangeable service implementations using keyed dependency injection.",
+    "section": "Hosting, dependency injection, configuration, and resilience"
+  },
+  {
+    "number": 74,
+    "prompt": "Combine JSON settings, environment variables, command-line options, and configuration reloads.",
+    "section": "Hosting, dependency injection, configuration, and resilience"
+  },
+  {
+    "number": 75,
+    "prompt": "Bind strongly typed options and validate required settings during application startup.",
+    "section": "Hosting, dependency injection, configuration, and resilience"
+  },
+  {
+    "number": 76,
+    "prompt": "[11] Implement asynchronous options validation with cancellation and clear startup failure messages.",
+    "section": "Hosting, dependency injection, configuration, and resilience"
+  },
+  {
+    "number": 77,
+    "prompt": "Build typed HTTP clients using IHttpClientFactory and appropriate connection-management settings.",
+    "section": "Hosting, dependency injection, configuration, and resilience"
+  },
+  {
+    "number": 78,
+    "prompt": "Add bounded retries, timeouts, circuit breaking, and retry budgets to an external-service integration.",
+    "section": "Hosting, dependency injection, configuration, and resilience"
+  },
+  {
+    "number": 79,
+    "prompt": "Implement structured, source-generated logging while excluding credentials and sensitive payloads.",
+    "section": "Hosting, dependency injection, configuration, and resilience"
+  },
+  {
+    "number": 80,
+    "prompt": "Expose separate health checks for liveness, readiness, dependencies, and degraded operation.",
+    "section": "Hosting, dependency injection, configuration, and resilience"
+  },
+  {
+    "number": 81,
+    "prompt": "Build a Minimal API with CRUD endpoints, typed results, dependency injection, and cancellation.",
+    "section": "ASP.NET Core APIs"
+  },
+  {
+    "number": 82,
+    "prompt": "Implement the same API using controllers and explain when each approach is appropriate.",
+    "section": "ASP.NET Core APIs"
+  },
+  {
+    "number": 83,
+    "prompt": "Organize middleware, route groups, endpoint filters, parameter binding, and request DTOs.",
+    "section": "ASP.NET Core APIs"
+  },
+  {
+    "number": 84,
+    "prompt": "[11] Implement asynchronous request validation backed by a database while preserving database-level constraints.",
+    "section": "ASP.NET Core APIs"
+  },
+  {
+    "number": 85,
+    "prompt": "Return consistent ProblemDetails responses for validation failures, missing resources, and unexpected errors.",
+    "section": "ASP.NET Core APIs"
+  },
+  {
+    "number": 86,
+    "prompt": "[11] Generate OpenAPI 3.2 documentation and inspect schemas for union-based JSON request bodies.",
+    "section": "ASP.NET Core APIs"
+  },
+  {
+    "number": 87,
+    "prompt": "Add API versioning using a compatible package and demonstrate a backward-compatible change.",
+    "section": "ASP.NET Core APIs"
+  },
+  {
+    "number": 88,
+    "prompt": "Implement pagination, filtering, and sorting with bounded query complexity.",
+    "section": "ASP.NET Core APIs"
+  },
+  {
+    "number": 89,
+    "prompt": "Handle file uploads and downloads with size limits, validation, streaming, and cancellation.",
+    "section": "ASP.NET Core APIs"
+  },
+  {
+    "number": 90,
+    "prompt": "Configure rate limiting, compression, and output caching with correct user-specific cache boundaries.",
+    "section": "ASP.NET Core APIs"
+  },
+  {
+    "number": 91,
+    "prompt": "Build an MVC application using controllers, Razor views, model binding, and validation.",
+    "section": "MVC, Razor Pages, networking, and real-time communication"
+  },
+  {
+    "number": 92,
+    "prompt": "Build a Razor Pages application and explain its page-focused request-handling model.",
+    "section": "MVC, Razor Pages, networking, and real-time communication"
+  },
+  {
+    "number": 93,
+    "prompt": "Implement HTTP/2 and HTTP/3 client requests and measure connection reuse under load.",
+    "section": "MVC, Razor Pages, networking, and real-time communication"
+  },
+  {
+    "number": 94,
+    "prompt": "Create a gRPC service with unary and streaming methods, deadlines, and cancellation.",
+    "section": "MVC, Razor Pages, networking, and real-time communication"
+  },
+  {
+    "number": 95,
+    "prompt": "Stream server-sent events with client-disconnection handling and bounded buffering.",
+    "section": "MVC, Razor Pages, networking, and real-time communication"
+  },
+  {
+    "number": 96,
+    "prompt": "Build a WebSocket endpoint with heartbeat messages, message limits, and backpressure.",
+    "section": "MVC, Razor Pages, networking, and real-time communication"
+  },
+  {
+    "number": 97,
+    "prompt": "Implement authenticated SignalR hubs with groups and a suitable scale-out strategy.",
+    "section": "MVC, Razor Pages, networking, and real-time communication"
+  },
+  {
+    "number": 98,
+    "prompt": "[11] Refresh SignalR authentication and cancel ordinary hub invocations using the documented capabilities.",
+    "section": "MVC, Razor Pages, networking, and real-time communication"
+  },
+  {
+    "number": 99,
+    "prompt": "Configure middleware ordering, localization, forwarded headers, and trusted reverse proxies.",
+    "section": "MVC, Razor Pages, networking, and real-time communication"
+  },
+  {
+    "number": 100,
+    "prompt": "Serve static assets efficiently and verify browser caching and compression behavior.",
+    "section": "MVC, Razor Pages, networking, and real-time communication"
+  },
+  {
+    "number": 101,
+    "prompt": "Create an EF Core model using DbContext, explicit entity configuration, and dependency injection.",
+    "section": "Entity Framework Core and relational data"
+  },
+  {
+    "number": 102,
+    "prompt": "Configure relationships, keys, indexes, constraints, and delete behavior for a realistic domain.",
+    "section": "Entity Framework Core and relational data"
+  },
+  {
+    "number": 103,
+    "prompt": "Create and inspect migrations, then plan safe deployment and recovery.",
+    "section": "Entity Framework Core and relational data"
+  },
+  {
+    "number": 104,
+    "prompt": "Compare tracking and no-tracking queries using projections and pagination.",
+    "section": "Entity Framework Core and relational data"
+  },
+  {
+    "number": 105,
+    "prompt": "Diagnose N+1 queries and compare eager, explicit, and split-query loading.",
+    "section": "Entity Framework Core and relational data"
+  },
+  {
+    "number": 106,
+    "prompt": "Implement transactions and optimistic concurrency with clear conflict handling.",
+    "section": "Entity Framework Core and relational data"
+  },
+  {
+    "number": 107,
+    "prompt": "[11] Inspect generated SQL for FullJoin, MaxBy, MinBy, and supported grouping queries.",
+    "section": "Entity Framework Core and relational data"
+  },
+  {
+    "number": 108,
+    "prompt": "[11] Map complex types and JSON properties within supported inheritance strategies.",
+    "section": "Entity Framework Core and relational data"
+  },
+  {
+    "number": 109,
+    "prompt": "Measure compiled queries, batching, ExecuteUpdate, and ExecuteDelete for suitable workloads.",
+    "section": "Entity Framework Core and relational data"
+  },
+  {
+    "number": 110,
+    "prompt": "Execute parameterized SQL safely and explain when leaving LINQ is justified.",
+    "section": "Entity Framework Core and relational data"
+  },
+  {
+    "number": 111,
+    "prompt": "Compare EF Core, ADO.NET, and Dapper using the same parameterized database operation.",
+    "section": "Advanced persistence, caching, and messaging"
+  },
+  {
+    "number": 112,
+    "prompt": "Test database-provider differences across SQL Server, PostgreSQL, and SQLite.",
+    "section": "Advanced persistence, caching, and messaging"
+  },
+  {
+    "number": 113,
+    "prompt": "Build a Cosmos DB example with explicit partitioning, consistency, throughput, and transaction boundaries.",
+    "section": "Advanced persistence, caching, and messaging"
+  },
+  {
+    "number": 114,
+    "prompt": "[11] Configure supported SQL Server full-text indexes through EF migrations and implement ranked search.",
+    "section": "Advanced persistence, caching, and messaging"
+  },
+  {
+    "number": 115,
+    "prompt": "Compare memory caching, distributed caching, and HybridCache for an expensive read operation.",
+    "section": "Advanced persistence, caching, and messaging"
+  },
+  {
+    "number": 116,
+    "prompt": "Design cache keys, invalidation, expiration, and tenant isolation; test concurrent cache misses.",
+    "section": "Advanced persistence, caching, and messaging"
+  },
+  {
+    "number": 117,
+    "prompt": "Build a message consumer using one suitable broker with acknowledgements, retries, and dead-letter handling.",
+    "section": "Advanced persistence, caching, and messaging"
+  },
+  {
+    "number": 118,
+    "prompt": "Implement Redis Streams consumer groups with pending-message recovery and idempotent processing.",
+    "section": "Advanced persistence, caching, and messaging"
+  },
+  {
+    "number": 119,
+    "prompt": "Implement transactional outbox and inbox patterns to handle duplicate message delivery.",
+    "section": "Advanced persistence, caching, and messaging"
+  },
+  {
+    "number": 120,
+    "prompt": "Add persistent background jobs using a compatible scheduler and demonstrate recovery after restart.",
+    "section": "Advanced persistence, caching, and messaging"
+  },
+  {
+    "number": 121,
+    "prompt": "Implement registration, login, password reset, and account lockout using ASP.NET Core Identity.",
+    "section": "Identity, authorization, and application security"
+  },
+  {
+    "number": 122,
+    "prompt": "Add OpenID Connect authentication with a suitable identity provider and secure session handling.",
+    "section": "Identity, authorization, and application security"
+  },
+  {
+    "number": 123,
+    "prompt": "Validate JWT issuer, audience, lifetime, signing keys, and key rotation.",
+    "section": "Identity, authorization, and application security"
+  },
+  {
+    "number": 124,
+    "prompt": "Implement policy-based and resource-based authorization with explicit permission checks.",
+    "section": "Identity, authorization, and application security"
+  },
+  {
+    "number": 125,
+    "prompt": "Enforce tenant isolation across database queries, caches, files, and background jobs.",
+    "section": "Identity, authorization, and application security"
+  },
+  {
+    "number": 126,
+    "prompt": "Add passkeys or multifactor authentication with secure account-recovery procedures.",
+    "section": "Identity, authorization, and application security"
+  },
+  {
+    "number": 127,
+    "prompt": "Configure cookies, antiforgery protection, CORS, and output encoding for the chosen application architecture.",
+    "section": "Identity, authorization, and application security"
+  },
+  {
+    "number": 128,
+    "prompt": "Replace embedded credentials with development secrets and an appropriate production identity or secret store.",
+    "section": "Identity, authorization, and application security"
+  },
+  {
+    "number": 129,
+    "prompt": "Configure Data Protection key persistence, access controls, and rotation across application instances.",
+    "section": "Identity, authorization, and application security"
+  },
+  {
+    "number": 130,
+    "prompt": "Test realistic SQL injection, SSRF, unauthorized-access, and sensitive-logging failure cases.",
+    "section": "Identity, authorization, and application security"
+  },
+  {
+    "number": 131,
+    "prompt": "Compare static rendering, Interactive Server, Interactive WebAssembly, and Interactive Auto for one application.",
+    "section": "Blazor applications"
+  },
+  {
+    "number": 132,
+    "prompt": "Build reusable components using parameters, binding, event callbacks, and cascading values.",
+    "section": "Blazor applications"
+  },
+  {
+    "number": 133,
+    "prompt": "Handle component lifecycle, prerendering, dependency injection, and disposal correctly.",
+    "section": "Blazor applications"
+  },
+  {
+    "number": 134,
+    "prompt": "[11] Build validated Blazor forms with asynchronous checks and understandable field-level feedback.",
+    "section": "Blazor applications"
+  },
+  {
+    "number": 135,
+    "prompt": "Implement routing, layouts, navigation, and state management across multiple pages.",
+    "section": "Blazor applications"
+  },
+  {
+    "number": 136,
+    "prompt": "Add authenticated UI while enforcing authorization again at server-side data and action boundaries.",
+    "section": "Blazor applications"
+  },
+  {
+    "number": 137,
+    "prompt": "Integrate browser functionality through isolated JavaScript modules and clean up interop references.",
+    "section": "Blazor applications"
+  },
+  {
+    "number": 138,
+    "prompt": "Optimize large lists using virtualization and measure rendering and network costs.",
+    "section": "Blazor applications"
+  },
+  {
+    "number": 139,
+    "prompt": "[11] Preserve interactive-server state using supported circuit pause/resume behavior; test expiry and reconnection.",
+    "section": "Blazor applications"
+  },
+  {
+    "number": 140,
+    "prompt": "Build an accessible, localized standalone Blazor WebAssembly PWA with clearly defined offline behavior.",
+    "section": "Blazor applications"
+  },
+  {
+    "number": 141,
+    "prompt": "Create a MAUI application targeting selected supported Android, iOS, Mac Catalyst, or Windows platforms.",
+    "section": "Mobile and desktop applications"
+  },
+  {
+    "number": 142,
+    "prompt": "Implement XAML views with MVVM, commands, validation, and dependency injection.",
+    "section": "Mobile and desktop applications"
+  },
+  {
+    "number": 143,
+    "prompt": "Add navigation, routes, deep links, and predictable navigation-state handling.",
+    "section": "Mobile and desktop applications"
+  },
+  {
+    "number": 144,
+    "prompt": "Access device capabilities with appropriate permissions, cancellation, and platform-specific behavior.",
+    "section": "Mobile and desktop applications"
+  },
+  {
+    "number": 145,
+    "prompt": "Implement offline SQLite storage and synchronization with explicit conflict-resolution rules.",
+    "section": "Mobile and desktop applications"
+  },
+  {
+    "number": 146,
+    "prompt": "Handle application lifecycle changes, backgrounding, connectivity loss, and interrupted operations.",
+    "section": "Mobile and desktop applications"
+  },
+  {
+    "number": 147,
+    "prompt": "Compare Blazor Hybrid and HybridWebView, then implement one with a constrained native bridge.",
+    "section": "Mobile and desktop applications"
+  },
+  {
+    "number": 148,
+    "prompt": "[11] Evaluate MAUI’s CoreCLR runtime and supported Native AOT publishing for the selected platforms.",
+    "section": "Mobile and desktop applications"
+  },
+  {
+    "number": 149,
+    "prompt": "Build a Windows WPF application using MVVM, binding, styles, resources, and accessible controls.",
+    "section": "Mobile and desktop applications"
+  },
+  {
+    "number": 150,
+    "prompt": "Build a Windows Forms application with data binding, responsive background work, and high-DPI support.",
+    "section": "Mobile and desktop applications"
+  },
+  {
+    "number": 151,
+    "prompt": "Structure a modular monolith with explicit module boundaries and clear dependency direction.",
+    "section": "Architecture, distributed systems, and Aspire"
+  },
+  {
+    "number": 152,
+    "prompt": "Model a domain using aggregates, value objects, domain services, and business invariants.",
+    "section": "Architecture, distributed systems, and Aspire"
+  },
+  {
+    "number": 153,
+    "prompt": "Separate commands and queries where useful, explaining the additional complexity introduced.",
+    "section": "Architecture, distributed systems, and Aspire"
+  },
+  {
+    "number": 154,
+    "prompt": "Create an Aspire AppHost coordinating an API, database, cache, and background worker.",
+    "section": "Architecture, distributed systems, and Aspire"
+  },
+  {
+    "number": 155,
+    "prompt": "Add service discovery, health checks, and OpenTelemetry through appropriate Aspire integrations.",
+    "section": "Architecture, distributed systems, and Aspire"
+  },
+  {
+    "number": 156,
+    "prompt": "Configure a distributed development environment with explicit resource dependencies and readiness checks.",
+    "section": "Architecture, distributed systems, and Aspire"
+  },
+  {
+    "number": 157,
+    "prompt": "Extract one module into a service while preserving contracts and failure behavior.",
+    "section": "Architecture, distributed systems, and Aspire"
+  },
+  {
+    "number": 158,
+    "prompt": "Implement a distributed business process using a saga and explicit compensating actions.",
+    "section": "Architecture, distributed systems, and Aspire"
+  },
+  {
+    "number": 159,
+    "prompt": "Build a reverse-proxy gateway using YARP with routing, authorization, and resilience policies.",
+    "section": "Architecture, distributed systems, and Aspire"
+  },
+  {
+    "number": 160,
+    "prompt": "Verify serverless hosting support for .NET 11 and implement a compatible worker or container alternative.",
+    "section": "Architecture, distributed systems, and Aspire"
+  },
+  {
+    "number": 161,
+    "prompt": "Create meaningful unit tests using a suitable current xUnit, NUnit, or MSTest version.",
+    "section": "Testing and verification"
+  },
+  {
+    "number": 162,
+    "prompt": "Test business boundaries and edge cases while mocking only appropriate external dependencies.",
+    "section": "Testing and verification"
+  },
+  {
+    "number": 163,
+    "prompt": "Test time-dependent behavior deterministically using an injectable TimeProvider.",
+    "section": "Testing and verification"
+  },
+  {
+    "number": 164,
+    "prompt": "Test an ASP.NET Core application through WebApplicationFactory.",
+    "section": "Testing and verification"
+  },
+  {
+    "number": 165,
+    "prompt": "Run database integration tests against the actual database engine using isolated test instances.",
+    "section": "Testing and verification"
+  },
+  {
+    "number": 166,
+    "prompt": "Test Blazor components using a compatible component-testing library.",
+    "section": "Testing and verification"
+  },
+  {
+    "number": 167,
+    "prompt": "Automate browser journeys using Playwright, including authentication and validation failures.",
+    "section": "Testing and verification"
+  },
+  {
+    "number": 168,
+    "prompt": "Verify API contracts and detect unintended OpenAPI or response-schema changes.",
+    "section": "Testing and verification"
+  },
+  {
+    "number": 169,
+    "prompt": "Run load, concurrency, and fault-injection tests against a service with explicit acceptance criteria.",
+    "section": "Testing and verification"
+  },
+  {
+    "number": 170,
+    "prompt": "[11] Configure Microsoft.Testing.Platform timeouts, failure limits, and per-module reports using its supported options.",
+    "section": "Testing and verification"
+  },
+  {
+    "number": 171,
+    "prompt": "Add correlated traces, metrics, and logs across API, database, HTTP, and messaging operations.",
+    "section": "Diagnostics, runtime behavior, and performance"
+  },
+  {
+    "number": 172,
+    "prompt": "Export OpenTelemetry data to a suitable backend and create a useful operational dashboard.",
+    "section": "Diagnostics, runtime behavior, and performance"
+  },
+  {
+    "number": 173,
+    "prompt": "Diagnose a slow application using dotnet-counters, dotnet-trace, and relevant runtime metrics.",
+    "section": "Diagnostics, runtime behavior, and performance"
+  },
+  {
+    "number": 174,
+    "prompt": "Investigate memory growth using heap analysis, allocation measurements, and garbage-collection evidence.",
+    "section": "Diagnostics, runtime behavior, and performance"
+  },
+  {
+    "number": 175,
+    "prompt": "Benchmark equivalent .NET 10 and .NET 11 workloads using identical deployment conditions.",
+    "section": "Diagnostics, runtime behavior, and performance"
+  },
+  {
+    "number": 176,
+    "prompt": "Reduce measured allocation hotspots using spans, memory buffers, pooling, and appropriate value types.",
+    "section": "Diagnostics, runtime behavior, and performance"
+  },
+  {
+    "number": 177,
+    "prompt": "Diagnose thread-pool starvation and evaluate garbage-collector settings for the workload.",
+    "section": "Diagnostics, runtime behavior, and performance"
+  },
+  {
+    "number": 178,
+    "prompt": "Compare JIT, tiered compilation, dynamic PGO, ReadyToRun, and Native AOT deployment tradeoffs.",
+    "section": "Diagnostics, runtime behavior, and performance"
+  },
+  {
+    "number": 179,
+    "prompt": "Resolve trimming and AOT compatibility issues involving reflection, serialization, and dynamic code.",
+    "section": "Diagnostics, runtime behavior, and performance"
+  },
+  {
+    "number": 180,
+    "prompt": "Benchmark vectorized numeric processing with supported SIMD APIs and a correct scalar fallback.",
+    "section": "Diagnostics, runtime behavior, and performance"
+  },
+  {
+    "number": 181,
+    "prompt": "Compare framework-dependent, self-contained, and single-file deployment for a small application.",
+    "section": "Deployment, CI/CD, operations, and migration"
+  },
+  {
+    "number": 182,
+    "prompt": "Publish a compatible CLI or API using Native AOT and document dependency limitations.",
+    "section": "Deployment, CI/CD, operations, and migration"
+  },
+  {
+    "number": 183,
+    "prompt": "Containerize an application with a non-root user, health checks, and resource limits.",
+    "section": "Deployment, CI/CD, operations, and migration"
+  },
+  {
+    "number": 184,
+    "prompt": "[11] Produce reproducible container images using the documented SDK publishing controls.",
+    "section": "Deployment, CI/CD, operations, and migration"
+  },
+  {
+    "number": 185,
+    "prompt": "Build a CI pipeline that restores, builds, analyzes, tests, and produces versioned deployment artifacts.",
+    "section": "Deployment, CI/CD, operations, and migration"
+  },
+  {
+    "number": 186,
+    "prompt": "Deploy a containerized application with readiness probes, resource settings, and secure configuration.",
+    "section": "Deployment, CI/CD, operations, and migration"
+  },
+  {
+    "number": 187,
+    "prompt": "Plan database changes using backward-compatible migration steps and verified backups.",
+    "section": "Deployment, CI/CD, operations, and migration"
+  },
+  {
+    "number": 188,
+    "prompt": "Implement gradual rollout, operational checks, and a concrete rollback procedure.",
+    "section": "Deployment, CI/CD, operations, and migration"
+  },
+  {
+    "number": 189,
+    "prompt": "Upgrade a .NET 8 or .NET 10 application to .NET 11 and resolve documented compatibility changes.",
+    "section": "Deployment, CI/CD, operations, and migration"
+  },
+  {
+    "number": 190,
+    "prompt": "Plan incremental modernization of a .NET Framework application, including unsupported dependencies and legacy integrations.",
+    "section": "Deployment, CI/CD, operations, and migration"
+  },
+  {
+    "number": 191,
+    "prompt": "Create a chat application using IChatClient, dependency injection, and a documented provider adapter.",
+    "section": "Generative AI with Microsoft.Extensions.AI"
+  },
+  {
+    "number": 192,
+    "prompt": "Switch model providers through configuration while preserving a common application interface.",
+    "section": "Generative AI with Microsoft.Extensions.AI"
+  },
+  {
+    "number": 193,
+    "prompt": "Implement conversation history with explicit roles, bounded context, and user isolation.",
+    "section": "Generative AI with Microsoft.Extensions.AI"
+  },
+  {
+    "number": 194,
+    "prompt": "Stream model responses through an ASP.NET Core endpoint into a Blazor interface.",
+    "section": "Generative AI with Microsoft.Extensions.AI"
+  },
+  {
+    "number": 195,
+    "prompt": "Generate typed responses with GetResponseAsync<T> and validate schema and business rules.",
+    "section": "Generative AI with Microsoft.Extensions.AI"
+  },
+  {
+    "number": 196,
+    "prompt": "Expose a validated C# method using AIFunctionFactory and authorize every execution.",
+    "section": "Generative AI with Microsoft.Extensions.AI"
+  },
+  {
+    "number": 197,
+    "prompt": "Build reusable prompt templates with explicit variables and clearly separated untrusted input.",
+    "section": "Generative AI with Microsoft.Extensions.AI"
+  },
+  {
+    "number": 198,
+    "prompt": "Handle model-request cancellation, timeouts, rate limits, and bounded retries.",
+    "section": "Generative AI with Microsoft.Extensions.AI"
+  },
+  {
+    "number": 199,
+    "prompt": "Cache suitable AI responses while preventing sensitive-data leakage and cross-user cache reuse.",
+    "section": "Generative AI with Microsoft.Extensions.AI"
+  },
+  {
+    "number": 200,
+    "prompt": "Compare supported model settings and document which features each configured provider actually supports.",
+    "section": "Generative AI with Microsoft.Extensions.AI"
+  },
+  {
+    "number": 201,
+    "prompt": "Generate embeddings while recording the model, dimensions, preprocessing rules, and version.",
+    "section": "Embeddings, vector databases, and RAG"
+  },
+  {
+    "number": 202,
+    "prompt": "Compare token-aware, heading-based, and semantic chunking using the same document collection.",
+    "section": "Embeddings, vector databases, and RAG"
+  },
+  {
+    "number": 203,
+    "prompt": "Create typed vector records and implement collection management, upserts, retrieval, and deletion.",
+    "section": "Embeddings, vector databases, and RAG"
+  },
+  {
+    "number": 204,
+    "prompt": "Implement semantic search with metadata filters that enforce tenant and document permissions.",
+    "section": "Embeddings, vector databases, and RAG"
+  },
+  {
+    "number": 205,
+    "prompt": "Compare vector, keyword, hybrid, and reranked retrieval using supported database features.",
+    "section": "Embeddings, vector databases, and RAG"
+  },
+  {
+    "number": 206,
+    "prompt": "Build a RAG endpoint that cites retrieved sources and abstains when evidence is insufficient.",
+    "section": "Embeddings, vector databases, and RAG"
+  },
+  {
+    "number": 207,
+    "prompt": "Implement incremental ingestion with document versioning, deletion propagation, and resumable processing.",
+    "section": "Embeddings, vector databases, and RAG"
+  },
+  {
+    "number": 208,
+    "prompt": "Improve retrieval using bounded query rewriting and multiple search formulations.",
+    "section": "Embeddings, vector databases, and RAG"
+  },
+  {
+    "number": 209,
+    "prompt": "Change embedding models safely using a rebuilt index and controlled cutover.",
+    "section": "Embeddings, vector databases, and RAG"
+  },
+  {
+    "number": 210,
+    "prompt": "Evaluate retrieval using Recall@k, ranking metrics, representative questions, and documented relevance judgments.",
+    "section": "Embeddings, vector databases, and RAG"
+  },
+  {
+    "number": 211,
+    "prompt": "Create an AIAgent with clear instructions, tools, streaming, and cancellation.",
+    "section": "AI agents and workflows"
+  },
+  {
+    "number": 212,
+    "prompt": "Persist an AgentSession and restore conversation state after an application restart.",
+    "section": "AI agents and workflows"
+  },
+  {
+    "number": 213,
+    "prompt": "Add context providers for relevant memory with explicit retention and access boundaries.",
+    "section": "AI agents and workflows"
+  },
+  {
+    "number": 214,
+    "prompt": "Require human approval before tools perform selected external or consequential actions.",
+    "section": "AI agents and workflows"
+  },
+  {
+    "number": 215,
+    "prompt": "Add agent middleware for authorization, input validation, logging, and execution limits.",
+    "section": "AI agents and workflows"
+  },
+  {
+    "number": 216,
+    "prompt": "Build a sequential workflow combining deterministic C# operations with agent decisions.",
+    "section": "AI agents and workflows"
+  },
+  {
+    "number": 217,
+    "prompt": "Run specialist agents concurrently with bounded concurrency and explicit result aggregation.",
+    "section": "AI agents and workflows"
+  },
+  {
+    "number": 218,
+    "prompt": "Route requests among agents and preserve relevant context during handoffs.",
+    "section": "AI agents and workflows"
+  },
+  {
+    "number": 219,
+    "prompt": "Checkpoint and resume a workflow while making external side effects idempotent.",
+    "section": "AI agents and workflows"
+  },
+  {
+    "number": 220,
+    "prompt": "Implement a bounded planning-and-feedback loop with budgets, termination conditions, and observable failure states.",
+    "section": "AI agents and workflows"
+  },
+  {
+    "number": 221,
+    "prompt": "Explain MCP clients, servers, tools, resources, and prompts using a small working example.",
+    "section": "MCP and agent interoperability"
+  },
+  {
+    "number": 222,
+    "prompt": "Build a stdio MCP server exposing a validated business-operation tool.",
+    "section": "MCP and agent interoperability"
+  },
+  {
+    "number": 223,
+    "prompt": "Host an authenticated HTTP MCP server using the official ASP.NET Core integration.",
+    "section": "MCP and agent interoperability"
+  },
+  {
+    "number": 224,
+    "prompt": "Connect an MCP client, discover permitted tools, and expose them to an agent.",
+    "section": "MCP and agent interoperability"
+  },
+  {
+    "number": 225,
+    "prompt": "Publish MCP resources with access-controlled content and useful metadata.",
+    "section": "MCP and agent interoperability"
+  },
+  {
+    "number": 226,
+    "prompt": "Create reusable MCP prompt templates while separating instructions from untrusted resource content.",
+    "section": "MCP and agent interoperability"
+  },
+  {
+    "number": 227,
+    "prompt": "Define tool schemas, validate arguments, and return understandable errors and cancellation outcomes.",
+    "section": "MCP and agent interoperability"
+  },
+  {
+    "number": 228,
+    "prompt": "Restrict MCP endpoint access and tool permissions according to the authenticated user.",
+    "section": "MCP and agent interoperability"
+  },
+  {
+    "number": 229,
+    "prompt": "Test malformed requests, disconnected clients, cancellation, and unsupported protocol capabilities.",
+    "section": "MCP and agent interoperability"
+  },
+  {
+    "number": 230,
+    "prompt": "Compare MCP tool integration with supported A2A agent communication using one concrete integration scenario.",
+    "section": "MCP and agent interoperability"
+  },
+  {
+    "number": 231,
+    "prompt": "Create a repeatable AI evaluation dataset with expected behavior and representative failure cases.",
+    "section": "AI evaluation, reliability, and production operation"
+  },
+  {
+    "number": 232,
+    "prompt": "Evaluate relevance, completeness, retrieval quality, and groundedness using suitable .NET evaluators.",
+    "section": "AI evaluation, reliability, and production operation"
+  },
+  {
+    "number": 233,
+    "prompt": "Combine deterministic assertions, reference-based metrics, and calibrated model-judged evaluations.",
+    "section": "AI evaluation, reliability, and production operation"
+  },
+  {
+    "number": 234,
+    "prompt": "Evaluate agent tool selection, argument correctness, approval behavior, and task completion.",
+    "section": "AI evaluation, reliability, and production operation"
+  },
+  {
+    "number": 235,
+    "prompt": "Test resistance to prompt injection embedded in retrieved documents and external tool responses.",
+    "section": "AI evaluation, reliability, and production operation"
+  },
+  {
+    "number": 236,
+    "prompt": "Implement sensitive-data redaction, retention limits, and access-controlled conversation storage.",
+    "section": "AI evaluation, reliability, and production operation"
+  },
+  {
+    "number": 237,
+    "prompt": "Track model latency, available token usage, estimated cost, and tool-execution telemetry.",
+    "section": "AI evaluation, reliability, and production operation"
+  },
+  {
+    "number": 238,
+    "prompt": "Add request queuing, quotas, circuit breaking, and carefully bounded provider fallback.",
+    "section": "AI evaluation, reliability, and production operation"
+  },
+  {
+    "number": 239,
+    "prompt": "Generate evaluation reports and fail CI when agreed quality thresholds regress.",
+    "section": "AI evaluation, reliability, and production operation"
+  },
+  {
+    "number": 240,
+    "prompt": "Monitor production feedback and compare prompt or model versions through controlled rollouts.",
+    "section": "AI evaluation, reliability, and production operation"
+  },
+  {
+    "number": 241,
+    "prompt": "Prepare an ML.NET dataset with training, validation, and test splits that prevent data leakage.",
+    "section": "ML.NET, local inference, and multimodal applications"
+  },
+  {
+    "number": 242,
+    "prompt": "Train a classification model and interpret precision, recall, and confusion-matrix results.",
+    "section": "ML.NET, local inference, and multimodal applications"
+  },
+  {
+    "number": 243,
+    "prompt": "Train a regression model and compare prediction errors against a simple baseline.",
+    "section": "ML.NET, local inference, and multimodal applications"
+  },
+  {
+    "number": 244,
+    "prompt": "Implement forecasting and anomaly detection with suitable time-based validation.",
+    "section": "ML.NET, local inference, and multimodal applications"
+  },
+  {
+    "number": 245,
+    "prompt": "Build separate clustering, recommendation, and ranking examples using appropriate ML.NET components.",
+    "section": "ML.NET, local inference, and multimodal applications"
+  },
+  {
+    "number": 246,
+    "prompt": "Run an ONNX model from C# and compare CPU execution with supported hardware acceleration.",
+    "section": "ML.NET, local inference, and multimodal applications"
+  },
+  {
+    "number": 247,
+    "prompt": "Integrate a compatible Foundry Local model and verify offline behavior after model acquisition.",
+    "section": "ML.NET, local inference, and multimodal applications"
+  },
+  {
+    "number": 248,
+    "prompt": "Analyze images or documents using a capable model and validate extracted structured information.",
+    "section": "ML.NET, local inference, and multimodal applications"
+  },
+  {
+    "number": 249,
+    "prompt": "Implement speech transcription or synthesis using a supported provider and documented streaming formats.",
+    "section": "ML.NET, local inference, and multimodal applications"
+  },
+  {
+    "number": 250,
+    "prompt": "Expose model predictions through an API with model versioning and input-data drift monitoring.",
+    "section": "ML.NET, local inference, and multimodal applications"
+  },
+  {
+    "number": 251,
+    "prompt": "Build a Roslyn analyzer that detects a meaningful application-specific coding mistake.",
+    "section": "Extensibility, interoperability, and specialist workloads"
+  },
+  {
+    "number": 252,
+    "prompt": "Create an incremental source generator and verify generated code and diagnostic messages.",
+    "section": "Extensibility, interoperability, and specialist workloads"
+  },
+  {
+    "number": 253,
+    "prompt": "Load and unload trusted plugins using AssemblyLoadContext, documenting isolation limitations.",
+    "section": "Extensibility, interoperability, and specialist workloads"
+  },
+  {
+    "number": 254,
+    "prompt": "Call a native library using LibraryImport, correct marshalling, and safe resource ownership.",
+    "section": "Extensibility, interoperability, and specialist workloads"
+  },
+  {
+    "number": 255,
+    "prompt": "Integrate a Windows COM or WinRT component with explicit platform and deployment requirements.",
+    "section": "Extensibility, interoperability, and specialist workloads"
+  },
+  {
+    "number": 256,
+    "prompt": "Create an F# library and consume it from a C# application.",
+    "section": "Extensibility, interoperability, and specialist workloads"
+  },
+  {
+    "number": 257,
+    "prompt": "Integrate an existing Visual Basic library while preserving a clear, tested public contract.",
+    "section": "Extensibility, interoperability, and specialist workloads"
+  },
+  {
+    "number": 258,
+    "prompt": "Build an IoT example using compatible device libraries and explicitly verified hardware support.",
+    "section": "Extensibility, interoperability, and specialist workloads"
+  },
+  {
+    "number": 259,
+    "prompt": "Connect a Unity or Godot client to a .NET 11 backend after checking the engine’s runtime constraints.",
+    "section": "Extensibility, interoperability, and specialist workloads"
+  },
+  {
+    "number": 260,
+    "prompt": "Evaluate WinUI or Avalonia for a desktop application, verifying current platform and .NET compatibility.",
+    "section": "Extensibility, interoperability, and specialist workloads"
+  },
+  {
+    "number": 261,
+    "prompt": "[Preview] Evaluate Runtime Async in an isolated project, comparing stack traces, performance, and compatibility.",
+    "section": "Advanced .NET 11 capabilities and optional preview labs"
+  },
+  {
+    "number": 262,
+    "prompt": "[Preview] Explore C# memory-safety changes and document the required compiler options and restrictions.",
+    "section": "Advanced .NET 11 capabilities and optional preview labs"
+  },
+  {
+    "number": 263,
+    "prompt": "[Preview] Build a DataIngestion pipeline with document reading, chunking, enrichment, and vector-store writing.",
+    "section": "Advanced .NET 11 capabilities and optional preview labs"
+  },
+  {
+    "number": 264,
+    "prompt": "[Preview] Generate images using experimental IImageGenerator and document provider-specific capabilities.",
+    "section": "Advanced .NET 11 capabilities and optional preview labs"
+  },
+  {
+    "number": 265,
+    "prompt": "[Preview] Prototype Blazor AI components with AG-UI and inspect streaming and tool-interaction behavior.",
+    "section": "Advanced .NET 11 capabilities and optional preview labs"
+  },
+  {
+    "number": 266,
+    "prompt": "[Preview] Evaluate SQL Server vector indexes and EF vector-search APIs against exact-search accuracy.",
+    "section": "Advanced .NET 11 capabilities and optional preview labs"
+  },
+  {
+    "number": 267,
+    "prompt": "[Preview] Explore Device Bound Session Credentials with supported browsers and the documented experimental package.",
+    "section": "Advanced .NET 11 capabilities and optional preview labs"
+  },
+  {
+    "number": 268,
+    "prompt": "[Preview] Investigate experimental TLS-session or hybrid cryptography APIs in an isolated interoperability lab.",
+    "section": "Advanced .NET 11 capabilities and optional preview labs"
+  },
+  {
+    "number": 269,
+    "prompt": "[11] Implement typed DNS queries and controlled HTTP connection eviction across supported operating systems.",
+    "section": "Advanced .NET 11 capabilities and optional preview labs"
+  },
+  {
+    "number": 270,
+    "prompt": "[11] Exercise new numeric parsing, generic random-number methods, and key-selector equality-comparer APIs.",
+    "section": "Advanced .NET 11 capabilities and optional preview labs"
+  },
+  {
+    "number": 271,
+    "prompt": "Build an inventory application with an API, EF Core, authentication, validation, tests, and container deployment.",
+    "section": "Complete projects and final capability audit"
+  },
+  {
+    "number": 272,
+    "prompt": "Build a document assistant with ingestion, permission-aware retrieval, citations, streaming, and evaluation.",
+    "section": "Complete projects and final capability audit"
+  },
+  {
+    "number": 273,
+    "prompt": "Build a support agent that queries approved tools and requires authorization before changing customer records.",
+    "section": "Complete projects and final capability audit"
+  },
+  {
+    "number": 274,
+    "prompt": "Build a real-time operations dashboard with SignalR, background processing, caching, and observability.",
+    "section": "Complete projects and final capability audit"
+  },
+  {
+    "number": 275,
+    "prompt": "Build a resilient file-processing pipeline with durable jobs, cancellation, retries, and recovery after restart.",
+    "section": "Complete projects and final capability audit"
+  },
+  {
+    "number": 276,
+    "prompt": "Build a multitenant SaaS application with isolated data, quotas, auditing, and operational monitoring.",
+    "section": "Complete projects and final capability audit"
+  },
+  {
+    "number": 277,
+    "prompt": "Build an offline-capable MAUI application that synchronizes with an authenticated .NET backend.",
+    "section": "Complete projects and final capability audit"
+  },
+  {
+    "number": 278,
+    "prompt": "Upgrade a representative .NET 10 application and compare correctness, performance, deployment, and operating costs.",
+    "section": "Complete projects and final capability audit"
+  },
+  {
+    "number": 279,
+    "prompt": "Review an AI-generated solution for architecture, security, maintainability, compatibility, and missing failure handling.",
+    "section": "Complete projects and final capability audit"
+  },
+  {
+    "number": 280,
+    "prompt": "Audit these exercises against current official .NET 11 documentation and add relevant missing capabilities with verified APIs.",
+    "section": "Complete projects and final capability audit"
+  }
+]

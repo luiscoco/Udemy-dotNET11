@@ -1,0 +1,4 @@
+PROMPT 113
+
+1. Choose a partition key for a different access pattern and discuss hot partitions.
+2. Repeat consistency and RU measurements against an authorized real account; the emulator does not model RU economics.

@@ -1,0 +1,11 @@
+PROMPT 16 — YOUR TURN
+
+1. Identify the file that owns top-level execution.
+2. Explain how include adds helper source to the same compilation.
+3. Run app.cs with the selected .NET 11 SDK.
+4. Predict and reproduce a top-level-statement conflict in a helper.
+5. Move reusable logic into a declared type and verify the corrected result.
+6. Explain when a normal project would provide a clearer structure.
+
+Predict the result before each command.
+Retain output and explain the failure and recovery.

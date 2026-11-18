@@ -1,0 +1,4 @@
+PROMPT 104
+
+1. Create equal seat counts and explain the unique Id tie-breaker.
+2. Replace offset pagination with a keyset cursor and inspect its WHERE clause.

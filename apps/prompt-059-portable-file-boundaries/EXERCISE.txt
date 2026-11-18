@@ -1,0 +1,7 @@
+PROMPT 59
+
+1. Read a normal nested file using portable path operations.
+2. Inspect the sibling-name prefix counterexample.
+3. Reject parent traversal after canonicalization.
+4. Resolve the fixture link for explanation, then reject it under the no-links policy.
+5. Explain the trust and concurrency boundary of a path-validation helper.

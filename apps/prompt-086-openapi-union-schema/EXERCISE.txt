@@ -1,0 +1,6 @@
+PROMPT 86
+
+1. Open the saved generated OpenAPI document.
+2. Follow the requestBody schema and resolve references.
+3. Send both allowed JSON token shapes.
+4. Distinguish native union anyOf from a discriminated object hierarchy.

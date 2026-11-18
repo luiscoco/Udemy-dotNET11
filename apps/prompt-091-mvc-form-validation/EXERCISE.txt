@@ -1,0 +1,6 @@
+PROMPT 91
+
+1. Trace route selection, binding and ModelState.
+2. Submit invalid seats and inspect the rendered field error.
+3. Follow a valid post through redirect to a Razor confirmation.
+4. Inspect antiforgery and HTML encoding in the actual responses.

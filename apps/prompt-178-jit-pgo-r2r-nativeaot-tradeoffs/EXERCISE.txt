@@ -1,0 +1,5 @@
+PROMPT 178
+
+1. Publish and execute managed, ReadyToRun and Native AOT applications.
+2. Review startup-inclusive and warmed kernel observations across repeated processes.
+3. Verify runtime capabilities before classifying the deployment.

@@ -1,0 +1,6 @@
+PROMPT 68
+
+1. Inspect hosted-service registration and HostOptions.
+2. Distinguish readiness from completed work using the gate.
+3. Compare a reported recoverable error with a fatal ExecuteAsync fault.
+4. Inspect stopping tokens, finally cleanup and the host-stopped event.

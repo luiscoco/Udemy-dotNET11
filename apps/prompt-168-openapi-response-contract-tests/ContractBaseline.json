@@ -1,0 +1,18 @@
+{
+  "properties": {
+    "id": {
+      "type": "integer|string",
+      "format": "int32",
+      "pattern": "^-?(?:0|[1-9]\\d*)$"
+    },
+    "title": {
+      "type": "string",
+      "format": null,
+      "pattern": null
+    }
+  },
+  "required": [
+    "id",
+    "title"
+  ]
+}

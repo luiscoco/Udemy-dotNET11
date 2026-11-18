@@ -1,0 +1,5 @@
+PROMPT 162
+
+1. Test below, at and above the capacity boundary.
+2. Inspect the payment fake call records.
+3. Introduce the exact-capacity regression and repair it.

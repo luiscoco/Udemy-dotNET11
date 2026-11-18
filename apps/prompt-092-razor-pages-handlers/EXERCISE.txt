@@ -1,0 +1,6 @@
+PROMPT 92
+
+1. Locate the @page route and PageModel.
+2. Trace BindProperty and the Reserve handler name.
+3. Compare Page() on invalid input with RedirectToPage on success.
+4. Run the browser form and inspect antiforgery protection.

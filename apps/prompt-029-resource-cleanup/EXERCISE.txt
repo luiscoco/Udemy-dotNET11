@@ -1,0 +1,8 @@
+PROMPT 29
+
+1. Trace resource ownership in ReceiptWriter.
+2. Compare using and await using in the actual file workflow.
+3. Verify repeated disposal and a closed receipt file.
+4. Observe cleanup when the scope throws.
+5. Reproduce the exclusive-file conflict.
+6. Close the owning scope and verify subsequent access.

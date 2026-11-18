@@ -1,0 +1,5 @@
+PROMPT 103
+
+1. Inspect the generated migration Up/Down methods and deployment SQL.
+2. Rehearse applying a new nullable column before backfilling it.
+3. Compare schema rollback with recovery of actual business data from a tested backup.

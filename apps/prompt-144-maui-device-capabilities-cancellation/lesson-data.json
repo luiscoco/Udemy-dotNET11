@@ -1,0 +1,102 @@
+{
+  "number": 144,
+  "title": "Device capabilities, permissions and cancellation",
+  "files": [
+    "App/App.csproj",
+    "App/Program.cs",
+    "lab-runtime.cjs",
+    "NuGet.Config",
+    "Native/Platforms/Windows/App.xaml",
+    "Native/Platforms/Windows/App.xaml.cs",
+    "Native/Platforms/Windows/app.manifest",
+    "Native/Platforms/Windows/Package.appxmanifest",
+    "Native/Native.csproj",
+    "Native/MauiProgram.cs",
+    "Native/App.cs",
+    "Native/LessonChecks.cs",
+    "Native/NativeCapture.cs",
+    "Native/GlobalUsings.cs",
+    "Native/DeviceWork.cs",
+    "Native/MainPage.xaml",
+    "Native/MainPage.xaml.cs",
+    "App/Probe.cs",
+    "EXERCISE.txt"
+  ],
+  "resetFiles": {
+    "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+  },
+  "steps": [
+    {
+      "id": "build",
+      "label": "Build and verify the native app",
+      "commands": [
+        [
+          "build",
+          "Native",
+          "-c",
+          "Release"
+        ],
+        [
+          "build",
+          "App",
+          "-c",
+          "Release"
+        ],
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS",
+        "native:"
+      ]
+    },
+    {
+      "id": "problem",
+      "label": "Reproduce the incorrect assumption",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "problem"
+        ]
+      ],
+      "failure": true,
+      "contains": [
+        "incorrect expectation: cancelled work commits its device file"
+      ]
+    },
+    {
+      "id": "repair",
+      "label": "Verify the supported native behavior",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS",
+        "native:"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "number": 149,
+  "title": "WPF MVVM, resources and accessible controls",
+  "files": [
+    "App/App.csproj",
+    "App/Program.cs",
+    "Native/Native.csproj",
+    "lab-runtime.cjs",
+    "NuGet.Config",
+    "Native/App.xaml",
+    "Native/App.xaml.cs",
+    "Native/CourseViewModel.cs",
+    "Native/MainWindow.xaml",
+    "Native/MainWindow.xaml.cs",
+    "App/Probe.cs",
+    "EXERCISE.txt"
+  ],
+  "resetFiles": {
+    "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+  },
+  "steps": [
+    {
+      "id": "build",
+      "label": "Build and verify the Windows app",
+      "commands": [
+        [
+          "build",
+          "Native",
+          "-c",
+          "Release"
+        ],
+        [
+          "build",
+          "App",
+          "-c",
+          "Release"
+        ],
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS",
+        "native:"
+      ]
+    },
+    {
+      "id": "problem",
+      "label": "Reproduce the incorrect assumption",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "problem"
+        ]
+      ],
+      "failure": true,
+      "contains": [
+        "incorrect expectation: invalid WPF input enables Save"
+      ]
+    },
+    {
+      "id": "repair",
+      "label": "Verify the supported Windows behavior",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS",
+        "native:"
+      ]
+    }
+  ]
+}

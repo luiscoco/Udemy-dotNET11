@@ -1,0 +1,5 @@
+PROMPT 177
+
+1. Inspect an owned process with four blocked worker threads and a queued probe.
+2. Replace blocking waits with asynchronous waits and inspect queue progress.
+3. Compare reported workstation and server GC modes in separate processes.

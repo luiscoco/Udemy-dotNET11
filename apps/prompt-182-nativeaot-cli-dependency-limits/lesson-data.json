@@ -1,0 +1,88 @@
+{
+  "number": 182,
+  "title": "Publish a Native AOT CLI and document dependency limits",
+  "files": [
+    "App/App.csproj",
+    "App/Harness.cs",
+    "App/DeploymentTools.cs",
+    "App/NativePublish.cs",
+    "App/Program.cs",
+    "NuGet.Config",
+    "Receipt/Receipt.csproj",
+    "Receipt/Program.cs",
+    "Unsupported/Unsupported.csproj",
+    "Unsupported/Program.cs",
+    "DEPENDENCIES.md",
+    "App/Probe.cs",
+    "EXERCISE.txt"
+  ],
+  "resetFiles": {
+    "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+  },
+  "steps": [
+    {
+      "id": "build",
+      "label": "Build and verify deployment",
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release"
+        ],
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    },
+    {
+      "id": "regression",
+      "label": "Observe deployment failure",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "problem"
+        ]
+      ],
+      "failure": true,
+      "contains": [
+        "NATIVE_DEPENDENCY_REGRESSION"
+      ]
+    },
+    {
+      "id": "repair",
+      "label": "Verify recovery",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    }
+  ]
+}

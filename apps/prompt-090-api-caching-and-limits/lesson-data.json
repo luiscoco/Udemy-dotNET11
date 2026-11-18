@@ -1,0 +1,112 @@
+{
+  "number": 90,
+  "title": "API policies / rate limits, compression and personal cache boundaries",
+  "files": [
+    "App/App.csproj",
+    "App/ApiHarness.cs",
+    "App/FixtureAuthentication.cs",
+    "App/Policies.cs",
+    "App/Program.cs",
+    "App/Probe.cs",
+    "EXERCISE.txt"
+  ],
+  "resetFiles": {
+    "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+  },
+  "steps": [
+    {
+      "id": "build",
+      "label": "Build and verify",
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release"
+        ],
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    },
+    {
+      "id": "cache",
+      "label": "Expect personal output to be publicly reused",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "cache"
+        ]
+      ],
+      "failure": true,
+      "contains": [
+        "Check failed"
+      ]
+    },
+    {
+      "id": "rate",
+      "label": "Expect a request beyond the rate limit to succeed",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "rate"
+        ]
+      ],
+      "failure": true,
+      "contains": [
+        "Check failed"
+      ]
+    },
+    {
+      "id": "repair",
+      "label": "Repair and verify",
+      "writeFiles": {
+        "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+      },
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release",
+          "--no-restore"
+        ],
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    }
+  ]
+}

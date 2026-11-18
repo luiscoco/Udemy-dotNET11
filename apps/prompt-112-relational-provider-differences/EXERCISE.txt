@@ -1,0 +1,4 @@
+PROMPT 112
+
+1. Change the SQL Server collation and repeat the case comparison.
+2. Inspect provider-specific migrations before applying a shared domain model.

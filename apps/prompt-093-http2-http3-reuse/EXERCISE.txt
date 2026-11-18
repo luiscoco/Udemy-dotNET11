@@ -1,0 +1,6 @@
+PROMPT 93
+
+1. Compare requested version, response version and server protocol.
+2. Read the connection IDs across two load batches.
+3. Explain why timing results do not prove one protocol is universally faster.
+4. Inspect QUIC availability and distinguish an unsupported exact request from fallback.

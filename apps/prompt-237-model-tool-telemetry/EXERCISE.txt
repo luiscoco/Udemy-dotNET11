@@ -1,0 +1,6 @@
+PROMPT 237
+
+1. Read SCOPE.md and the pinned dependencies.
+2. Execute the actual application and inspect its retained evidence.
+3. Reproduce the controlled failure, then restore the demonstrated boundary.
+4. Run the repair and compare individual case outcomes, not just an average.

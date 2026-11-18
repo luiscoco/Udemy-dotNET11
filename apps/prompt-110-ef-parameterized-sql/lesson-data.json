@@ -1,0 +1,93 @@
+{
+  "number": 110,
+  "title": "SQL escape hatch — Parameterization and trusted identifiers",
+  "files": [
+    "App/App.csproj",
+    "App/Entities.cs",
+    "App/SchoolContext.cs",
+    "App/DatabaseFixture.cs",
+    "App/Program.cs",
+    "NuGet.Config",
+    "App/Probe.cs",
+    "EXERCISE.txt"
+  ],
+  "resetFiles": {
+    "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+  },
+  "steps": [
+    {
+      "id": "build",
+      "label": "Build and verify",
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release"
+        ],
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    },
+    {
+      "id": "unsafe",
+      "label": "Reproduce the controlled problem",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "unsafe"
+        ]
+      ],
+      "failure": true,
+      "contains": [
+        "incorrect expectation: concatenation treats input only as data"
+      ]
+    },
+    {
+      "id": "repair",
+      "label": "Repair and verify",
+      "writeFiles": {
+        "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+      },
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release",
+          "--no-restore"
+        ],
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    }
+  ]
+}

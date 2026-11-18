@@ -1,0 +1,11 @@
+syntax = "proto3";
+option csharp_namespace = "Course.Rpc";
+service Workshop {
+  rpc Hello (Request) returns (Reply);
+  rpc Watch (WatchRequest) returns (stream Tick);
+  rpc Slow (Request) returns (Reply);
+}
+message Request { string name = 1; }
+message Reply { string text = 1; }
+message WatchRequest { int32 count = 1; bool hold = 2; }
+message Tick { int32 number = 1; }

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self'; object-src 'none'; base-uri 'none'">
+<style>body{font:22px system-ui;background:#f4f2fb;color:#20143e;padding:28px}button{font:inherit;background:#6642bb;color:white;border:0;border-radius:8px;padding:14px;margin:12px 12px 12px 0}#result{background:#e1f7ee;padding:22px}h1{font-size:30px}</style>
+<script src="_framework/hybridwebview.js"></script></head><body>
+<h1>Rate your .NET 11 lesson</h1>
+<p>The local page can submit a course rating through its native bridge.</p>
+<button id="rate" onclick="runAllowed()">Submit five stars</button>
+<button id="reject" onclick="runRejected()">Try an invalid rating</button>
+<p id="result" role="status">Choose a rating.</p>
+<script>
+window.bridgeReady='ready';
+window.runAllowed=async()=>{
+  const result=await window.HybridWebView.InvokeDotNet('Invoke',['rate','course-11',5]);
+  document.getElementById('result').textContent=result;
+  return result;
+};
+window.runRejected=async()=>{
+  const result=await window.HybridWebView.InvokeDotNet('Invoke',['rate','course-11',99]);
+  document.getElementById('result').textContent=result;
+  return result.startsWith('Rejected')?'rejected':'accepted';
+};
+window.runUnknown=async()=>{
+  const result=await window.HybridWebView.InvokeDotNet('Invoke',['delete-file','course-11',5]);
+  return result.startsWith('Rejected')?'rejected':'accepted';
+};
+</script></body></html>

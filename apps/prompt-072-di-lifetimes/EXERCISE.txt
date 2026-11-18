@@ -1,0 +1,6 @@
+PROMPT 72
+
+1. Compare object references within one scope and across two scopes.
+2. Inspect scope disposal and singleton disposal separately.
+3. Enable scope and build validation.
+4. Reject the singleton-to-scoped dependency and root scoped resolution.

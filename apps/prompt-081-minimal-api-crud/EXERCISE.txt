@@ -1,0 +1,6 @@
+PROMPT 81
+
+1. Trace each verb and returned status.
+2. Read the explicit Results<Ok<Todo>, NotFound> contract.
+3. Cancel the active HTTP request after the server enters its wait.
+4. Explain why this in-memory store is not persistent storage.

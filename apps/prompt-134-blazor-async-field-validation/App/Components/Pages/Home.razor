@@ -1,0 +1,20 @@
+@page "/"
+<h1>Reserve a student username</h1>
+<EditForm EditContext="Context" OnValidSubmit="Save" OnInvalidSubmit="Rejected">
+    <DataAnnotationsValidator />
+    <UsernameValidator Model="Model" />
+    <label for="username">Username</label>
+    <InputText id="username" @bind-Value="Model.Username" aria-describedby="username-errors" />
+    <div id="username-errors" role="alert"><ValidationMessage For="() => Model.Username" /></div>
+    <p id="pending" role="status">@(Context.IsValidationPending() ? "Checking availability…" : "Ready")</p>
+    <button id="submit" type="submit" disabled="@Context.IsValidationPending()">Reserve username</button>
+</EditForm>
+<p id="result" class="result" role="status">@Result</p>
+@code {
+    private Registration Model = new();
+    private EditContext Context = default!;
+    private string Result = "Choose a username.";
+    protected override void OnInitialized() => Context = new EditContext(Model);
+    private void Save() => Result = $"Reserved {Model.Username}";
+    private void Rejected() => Result = "Please correct the highlighted field.";
+}

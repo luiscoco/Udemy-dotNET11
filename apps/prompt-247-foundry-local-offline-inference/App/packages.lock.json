@@ -1,0 +1,109 @@
+{
+  "version": 1,
+  "dependencies": {
+    "net11.0": {
+      "Microsoft.AI.Foundry.Local": {
+        "type": "Direct",
+        "requested": "[2.5.0, )",
+        "resolved": "2.5.0",
+        "contentHash": "XcfMiZ9xJlzkPZOWm/1YsGKLhj5h2giy6bIVYzP2JBBEGpGeTaAfCOOJk2qiJQPELdH5x20WnZ49kRELS2ySDA==",
+        "dependencies": {
+          "Betalgo.Ranul.OpenAI": "9.1.0",
+          "Microsoft.AI.Foundry.Local.Runtime": "2.5.0"
+        }
+      },
+      "Betalgo.Ranul.OpenAI": {
+        "type": "Transitive",
+        "resolved": "9.1.0",
+        "contentHash": "PwGW3nvCI65LQPu3EFdZfpB3Z9LNM3NTMGL6ewIrPXLxxCuMvwwJI87BAFQCvZhjILt49Me+gFu0HWQWYjtycA==",
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "9.0.0",
+          "Microsoft.Extensions.AI.Abstractions": "9.5.0"
+        }
+      },
+      "Microsoft.AI.Foundry.Local.Runtime": {
+        "type": "Transitive",
+        "resolved": "2.5.0",
+        "contentHash": "sB+vVh2+yGykxommFhYXjhN3GGTjcVwLo7bY8IXFnh8O17b3xU8n2tq4YEfdJJJQBr0y1vxYq0jxx/x2nchhvA==",
+        "dependencies": {
+          "Microsoft.ML.OnnxRuntime": "1.32.0",
+          "Microsoft.ML.OnnxRuntimeGenAI.Foundry": "0.20.0"
+        }
+      },
+      "Microsoft.Bcl.AsyncInterfaces": {
+        "type": "Transitive",
+        "resolved": "9.0.0",
+        "contentHash": "owmu2Cr3IQ8yQiBleBHlGk8dSQ12oaF2e7TpzwJKEl4m84kkZJjEY1n33L67Y3zM5jPOjmmbdHjbfiL0RqcMRQ=="
+      },
+      "Microsoft.Extensions.AI.Abstractions": {
+        "type": "Transitive",
+        "resolved": "9.8.0",
+        "contentHash": "0++t+lPqX5amr7Kgh+ZFm1C5hhzMmFc5Dhoc6siNZ4sPXxy0pLTFRk+4vHn0hZf7Xe8Y9OoqL2cL4oTdjt8STQ=="
+      },
+      "Microsoft.ML.OnnxRuntime": {
+        "type": "Transitive",
+        "resolved": "1.32.0",
+        "contentHash": "3O3isLjl6ChjMvzZMt3in+uUymFxQK5+vd1UuSShmbUjHezHXgcze6KF5NquC/uPuL/++0CpI7qUBRrf+g1ezg==",
+        "dependencies": {
+          "Microsoft.ML.OnnxRuntime.Managed": "1.32.0"
+        }
+      },
+      "Microsoft.ML.OnnxRuntime.Managed": {
+        "type": "Transitive",
+        "resolved": "1.32.0",
+        "contentHash": "ApCfJdeUnrO4v+9KWtxnm/Uk3UlzdbNqGb64uBXh85RToxYbW1COJM/avDj3INNTwfEE6LUIWaJIxov0YWNa1g==",
+        "dependencies": {
+          "System.Numerics.Tensors": "9.0.0"
+        }
+      },
+      "Microsoft.ML.OnnxRuntimeGenAI.Foundry": {
+        "type": "Transitive",
+        "resolved": "0.20.0",
+        "contentHash": "9wqXGs0rNM+dRsLSjWG9jVO8X9rd6pWknIloo3G6jOiFj1/PwYYQ5az9f4tvIy1O1i8AQ71uLuKKFpcF2wZHBA==",
+        "dependencies": {
+          "Microsoft.ML.OnnxRuntimeGenAI.Managed": "0.20.0"
+        }
+      },
+      "Microsoft.ML.OnnxRuntimeGenAI.Managed": {
+        "type": "Transitive",
+        "resolved": "0.20.0",
+        "contentHash": "WS+rm1yo29l/7omfMYL4q/AMh/ubxdOJLh3mCE+sHFSA2v42725/XiDNObbElH596QcLOKZTh742Ek/tzBe/iw==",
+        "dependencies": {
+          "Microsoft.Extensions.AI.Abstractions": "9.8.0"
+        }
+      },
+      "System.Numerics.Tensors": {
+        "type": "Transitive",
+        "resolved": "9.0.0",
+        "contentHash": "hyJB4UlpAi19Xr9AXzu2NuagKC4lPfHObNMEAA0HmqFz2rX7wKgzeYzO/jM/eBHDhnUGFFEjk5cOoJaxqg5J4A=="
+      }
+    },
+    "net11.0/win-x64": {
+      "Microsoft.AI.Foundry.Local.Runtime": {
+        "type": "Transitive",
+        "resolved": "2.5.0",
+        "contentHash": "sB+vVh2+yGykxommFhYXjhN3GGTjcVwLo7bY8IXFnh8O17b3xU8n2tq4YEfdJJJQBr0y1vxYq0jxx/x2nchhvA==",
+        "dependencies": {
+          "Microsoft.ML.OnnxRuntime": "1.32.0",
+          "Microsoft.ML.OnnxRuntimeGenAI.Foundry": "0.20.0"
+        }
+      },
+      "Microsoft.ML.OnnxRuntime": {
+        "type": "Transitive",
+        "resolved": "1.32.0",
+        "contentHash": "3O3isLjl6ChjMvzZMt3in+uUymFxQK5+vd1UuSShmbUjHezHXgcze6KF5NquC/uPuL/++0CpI7qUBRrf+g1ezg==",
+        "dependencies": {
+          "Microsoft.ML.OnnxRuntime.Managed": "1.32.0"
+        }
+      },
+      "Microsoft.ML.OnnxRuntimeGenAI.Foundry": {
+        "type": "Transitive",
+        "resolved": "0.20.0",
+        "contentHash": "9wqXGs0rNM+dRsLSjWG9jVO8X9rd6pWknIloo3G6jOiFj1/PwYYQ5az9f4tvIy1O1i8AQ71uLuKKFpcF2wZHBA==",
+        "dependencies": {
+          "Microsoft.ML.OnnxRuntimeGenAI.Managed": "0.20.0"
+        }
+      }
+    }
+  }
+}

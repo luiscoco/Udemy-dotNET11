@@ -1,0 +1,6 @@
+PROMPT 49
+
+1. Build the partial matcher and inspect generated files under App/obj/generated.
+2. Test case, length, leading whitespace, trailing newline and non-ASCII digits.
+3. Compare the ASCII digit range with the Unicode digit class.
+4. Reproduce the risky pattern timeout and retain the bounded identifier matcher.

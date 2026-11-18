@@ -1,0 +1,11 @@
+<Window x:Class="NativeCourse.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Title="Lesson 149 · WPF course editor" Width="1100" Height="740" Background="#F4F2FB" Foreground="#20143E">
+    <StackPanel Margin="36">
+        <TextBlock Text=".NET 11 · Windows Presentation Foundation" FontSize="18" Foreground="{StaticResource CourseAccent}" />
+        <TextBlock Text="An accessible course editor" FontSize="32" FontWeight="Bold" Margin="0,20" />
+        <Label Content="_Course title" Target="{Binding ElementName=TitleBox}" FontSize="20" />
+        <TextBox x:Name="TitleBox" Text="{Binding Title,UpdateSourceTrigger=PropertyChanged,ValidatesOnNotifyDataErrors=True}" FontSize="22" Padding="10" AutomationProperties.Name="Course title" />
+        <TextBlock Text="{Binding ErrorsText}" Foreground="#9E2539" FontSize="18" Margin="0,12" AutomationProperties.LiveSetting="Polite" />
+        <Button x:Name="SaveButton" Content="_Save course" Command="{Binding SaveCommand}" HorizontalAlignment="Left" AutomationProperties.Name="Save course" />
+        <Border Background="#E1F7EE" Padding="24" Margin="0,20"><TextBlock x:Name="ResultText" Text="{Binding Result}" FontSize="22" AutomationProperties.LiveSetting="Polite" /></Border>
+    </StackPanel>
+</Window>

@@ -1,0 +1,21 @@
+using System.Net.Http.Json;
+using Microsoft.Extensions.DependencyInjection;
+var probe = new CancellationProbe();
+await using var api = await ApiHarness.StartAsync(b => { b.Services.AddSingleton<TodoStore>(); b.Services.AddSingleton(probe); }, Routes.Map);
+using var created = await api.Client.PostAsJsonAsync("/todos/", new TodoInput("First task"));
+var item = (await created.Content.ReadFromJsonAsync<Todo>())!;
+Check.That((int)created.StatusCode == 201 && item.Id == 1, "POST returns 201 and the created resource");
+Check.That((await api.Client.GetFromJsonAsync<Todo>("/todos/1"))!.Title == "First task", "GET resolves the injected in-memory store");
+using var updated = await api.Client.PutAsJsonAsync("/todos/1", new TodoInput("Revised task"));
+Check.That((int)updated.StatusCode == 204 && (await api.Client.GetFromJsonAsync<Todo>("/todos/1"))!.Title == "Revised task", "PUT updates the resource and returns 204");
+using var deleted = await api.Client.DeleteAsync("/todos/1");
+using var missing = await api.Client.GetAsync("/todos/1");
+Console.WriteLine($"api: POST {(int)created.StatusCode}; PUT {(int)updated.StatusCode}; DELETE {(int)deleted.StatusCode}; missing GET {(int)missing.StatusCode}");
+if(args.FirstOrDefault() == "missing") Check.That((int)missing.StatusCode == 200, "a deleted resource cannot be read as a successful result");
+Check.That((int)deleted.StatusCode == 204 && (int)missing.StatusCode == 404, "DELETE and the subsequent missing GET retain distinct results");
+using var cancellation = new CancellationTokenSource();
+Task<HttpResponseMessage> waiting = api.Client.GetAsync("/todos/wait", cancellation.Token);
+await probe.Entered.Task.WaitAsync(TimeSpan.FromSeconds(10)); cancellation.Cancel();
+try { using var ignored = await waiting; throw new Exception("Cancellation was not observed"); } catch(OperationCanceledException) { }
+await probe.Cancelled.Task.WaitAsync(TimeSpan.FromSeconds(10));
+Check.That(probe.Cancelled.Task.IsCompletedSuccessfully, "client cancellation reaches the actual request token and awaited operation");

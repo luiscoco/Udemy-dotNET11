@@ -1,0 +1,8 @@
+PROMPT 24
+
+1. Explain the capabilities required by Repository<T>.
+2. Reproduce the invalid Repository<string> construction.
+3. Trace the safe covariant producer conversion.
+4. Trace the safe contravariant consumer conversion.
+5. Explain the rejected mutable-list assignment.
+6. Keep each interface type parameter consistent with its input or output role.

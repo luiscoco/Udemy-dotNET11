@@ -1,0 +1,140 @@
+{
+  "number": 33,
+  "title": "Collections / capacity and comparer arguments",
+  "files": [
+    "App/App.csproj",
+    "App/Collections.cs",
+    "App/Program.cs",
+    "App/Probe.cs",
+    "EXERCISE.txt"
+  ],
+  "resetFiles": {
+    "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+  },
+  "steps": [
+    {
+      "id": "build",
+      "label": "Build and verify",
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release"
+        ],
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    },
+    {
+      "id": "wrong",
+      "label": "Use a mismatched comparer",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "wrong"
+        ]
+      ],
+      "failure": true,
+      "contains": [
+        "Observed distinct codes 2",
+        "Check failed"
+      ]
+    },
+    {
+      "id": "repair",
+      "label": "Repair and verify",
+      "writeFiles": {
+        "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+      },
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release",
+          "--no-restore"
+        ],
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    },
+    {
+      "id": "negative",
+      "label": "Pass an invalid capacity",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "negative"
+        ]
+      ],
+      "failure": true,
+      "contains": [
+        "ArgumentOutOfRangeException"
+      ]
+    },
+    {
+      "id": "repair",
+      "label": "Repair and verify",
+      "writeFiles": {
+        "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+      },
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release",
+          "--no-restore"
+        ],
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    }
+  ]
+}

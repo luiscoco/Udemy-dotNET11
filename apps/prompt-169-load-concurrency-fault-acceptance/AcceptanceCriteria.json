@@ -1,0 +1,9 @@
+{
+  "burstRequests": 10,
+  "heldAcceptedRequests": 2,
+  "overloadStatus": 503,
+  "maxInFlight": 2,
+  "faultStatus": 503,
+  "recoveryStatus": 200,
+  "latency": "Observed for this controlled local fixture"
+}

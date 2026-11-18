@@ -1,0 +1,6 @@
+PROMPT 33
+
+1. Explain count and reserved capacity using the printed values.
+2. Compare Ordinal and OrdinalIgnoreCase with the same codes.
+3. Predict the effect of negative capacity.
+4. Restore the comparer and verify the supplied sequence.

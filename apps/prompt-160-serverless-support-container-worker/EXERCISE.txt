@@ -1,0 +1,5 @@
+PROMPT 160
+
+1. Read the dated provider-support record and its official source.
+2. Publish the portable worker and run the Linux container.
+3. Compare host startup with awaited work completion and graceful shutdown.

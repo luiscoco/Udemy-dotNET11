@@ -1,0 +1,5 @@
+PROMPT 176
+
+1. Compare identical checksums before comparing allocation.
+2. Measure allocation on the same thread after warming both paths.
+3. Change the selected implementation and inspect the allocation guard.

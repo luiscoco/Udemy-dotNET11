@@ -1,0 +1,73 @@
+{
+  "number": 157,
+  "title": "Extract a module while preserving contracts",
+  "files": [
+    "App/App.csproj",
+    "App/ApiHarness.cs",
+    "App/CourseContract.cs",
+    "App/Program.cs",
+    "App/Probe.cs",
+    "EXERCISE.txt"
+  ],
+  "resetFiles": {
+    "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+  },
+  "steps": [
+    {
+      "id": "build",
+      "label": "Build and verify",
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release"
+        ],
+        [
+          "App/bin/Release/net11.0/App.dll",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    },
+    {
+      "id": "collapse",
+      "label": "Collapse outage into not-found",
+      "commands": [
+        [
+          "App/bin/Release/net11.0/App.dll",
+          "collapse"
+        ]
+      ],
+      "failure": true,
+      "contains": [
+        "incorrect expectation"
+      ]
+    },
+    {
+      "id": "repair",
+      "label": "Repair and verify",
+      "writeFiles": {
+        "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+      },
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release",
+          "--no-restore"
+        ],
+        [
+          "App/bin/Release/net11.0/App.dll",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    }
+  ]
+}

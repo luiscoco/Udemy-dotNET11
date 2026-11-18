@@ -1,0 +1,10 @@
+<h1>@Title</h1>
+<nav><a href="/static">Static SSR</a><a href="/server">Server</a><a href="/wasm">WebAssembly</a><a href="/auto">Auto</a></nav>
+<p id="renderer" class="card">Renderer @RendererInfo.Name</p>
+<p id="interactive">Interactive @RendererInfo.IsInteractive</p>
+<p id="count" class="result">Count @Count</p>
+<button id="increment" @onclick="() => Count++">Increment</button>
+@code {
+    [Parameter] public string Title { get; set; } = "Render mode";
+    private int Count;
+}

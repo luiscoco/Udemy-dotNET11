@@ -1,0 +1,6 @@
+PROMPT 82
+
+1. Compare controller attributes with route-group registration.
+2. Trace ActionResult<T> and typed result unions.
+3. Run the same four-verb HTTP contract against both styles.
+4. Choose a style based on organization, MVC features and team conventions.

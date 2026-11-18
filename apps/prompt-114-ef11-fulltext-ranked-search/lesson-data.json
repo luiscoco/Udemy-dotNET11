@@ -1,0 +1,97 @@
+{
+  "number": 114,
+  "title": "EF Core 11 — Full-text migrations and ranked search",
+  "files": [
+    "App/App.csproj",
+    "App/SqlServerFixture.cs",
+    "App/SearchContext.cs",
+    "App/Program.cs",
+    "NuGet.Config",
+    "infrastructure/compose.yaml",
+    "infrastructure/Dockerfile.sqlserver",
+    "App/Probe.cs",
+    "EXERCISE.txt",
+    "App/Migrations/20261113091433_CreateSearchIndex.cs",
+    "App/Migrations/20261113091433_CreateSearchIndex.Designer.cs",
+    "App/Migrations/SearchContextModelSnapshot.cs"
+  ],
+  "resetFiles": {
+    "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+  },
+  "steps": [
+    {
+      "id": "build",
+      "label": "Build and verify",
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release"
+        ],
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    },
+    {
+      "id": "index",
+      "label": "Reproduce the controlled problem",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "index"
+        ]
+      ],
+      "failure": true,
+      "contains": [
+        "not full-text indexed"
+      ]
+    },
+    {
+      "id": "repair",
+      "label": "Repair and verify",
+      "writeFiles": {
+        "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+      },
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release",
+          "--no-restore"
+        ],
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    }
+  ]
+}

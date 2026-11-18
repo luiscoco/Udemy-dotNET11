@@ -1,0 +1,5 @@
+PROMPT 188
+
+1. Publish distinct v1 and v2 images and send real traffic through the canary router.
+2. Inspect the 20-percent canary error gate before promotion.
+3. Inject a candidate failure, roll back to the retained stable release and verify recovery traffic.

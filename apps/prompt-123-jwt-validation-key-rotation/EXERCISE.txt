@@ -1,0 +1,4 @@
+PROMPT 123
+
+1. Add a not-before boundary and test it with an explicit clock policy.
+2. Replace the fixture key registry with an issuer-controlled discovery/JWKS source and a bounded rollover policy.

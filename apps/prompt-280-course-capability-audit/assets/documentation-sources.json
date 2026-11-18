@@ -1,0 +1,26 @@
+[
+  {
+    "file": "assets/docs/overview.html",
+    "url": "https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-11/overview",
+    "retrievedUtc": "2026-11-18T15:50:10.940Z",
+    "sha256": "6aaf19c4f8a6896034032c28612630b65ae49977257530bf16cf0d1859460297"
+  },
+  {
+    "file": "assets/docs/libraries.html",
+    "url": "https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-11/libraries",
+    "retrievedUtc": "2026-11-18T15:50:10.941Z",
+    "sha256": "c30ba514502c542aad26845f165140f7861b4d93401c86aff15f1c14329514ae"
+  },
+  {
+    "file": "assets/docs/runtime.html",
+    "url": "https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-11/runtime",
+    "retrievedUtc": "2026-11-18T15:50:10.941Z",
+    "sha256": "cb396bc6aa53ced5740d8bfde7b6620d6b9bb59c00dc5aed3f3c36f24d693927"
+  },
+  {
+    "file": "assets/docs/compatibility.html",
+    "url": "https://learn.microsoft.com/en-us/dotnet/core/compatibility/11",
+    "retrievedUtc": "2026-11-18T15:50:10.941Z",
+    "sha256": "14ad5699646a823b3fbf3527de5e84853d2c3195df23eada7b4cf50294b4dba0"
+  }
+]

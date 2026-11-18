@@ -1,0 +1,1 @@
+<Project Sdk="Microsoft.NET.Sdk"><PropertyGroup><TargetFramework>netstandard2.0</TargetFramework><RootNamespace>Legacy.Contracts</RootNamespace><OptionStrict>On</OptionStrict><OptionExplicit>On</OptionExplicit><OptionInfer>On</OptionInfer><RestorePackagesWithLockFile>true</RestorePackagesWithLockFile></PropertyGroup></Project>

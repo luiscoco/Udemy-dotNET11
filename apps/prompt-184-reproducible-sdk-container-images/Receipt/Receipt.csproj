@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net11.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <EnableSdkContainerSupport>true</EnableSdkContainerSupport>
+    <ContainerBaseImage>mcr.microsoft.com/dotnet/runtime@sha256:3fe5f5495141c97986a49d3a4e76061f6225c3f93f94e8a7e522781376193863</ContainerBaseImage>
+    <ContainerRepository>course-reproducible-184</ContainerRepository>
+    <ContainerImageTag>1.0.0</ContainerImageTag>
+    <ContainerImageFormat>OCI</ContainerImageFormat>
+    <LocalRegistry>Docker</LocalRegistry>
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <Target Name="RecordPublishedDigest" AfterTargets="_PublishSingleContainer">
+    <WriteLinesToFile File="$(DigestRecordPath)" Lines="$(GeneratedContainerDigest)" Overwrite="true" />
+  </Target>
+</Project>

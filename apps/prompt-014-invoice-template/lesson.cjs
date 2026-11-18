@@ -1,0 +1,9 @@
+const fs=require('fs'),path=require('path');const hive=['--debug:custom-hive','artifacts/template-hive'];
+module.exports={number:14,title:'Invoice starter / reusable project template',files:['CourseTemplate/TemplateApp.csproj','CourseTemplate/Invoice.cs','CourseTemplate/Program.cs','CourseTemplate/.template.config/template.json','artifacts/OrdersApp/OrdersApp.csproj','artifacts/OrdersApp/Invoice.cs','EXERCISE.txt'],reset:()=>{},actions:{
+reset:{label:'Exercise notes',run:c=>c.note('Generated files stay under artifacts/OrdersApp; the template cache is isolated in artifacts/template-hive.')},
+starter:{label:'1 Build starter',run:async c=>{await c.run(['build','CourseTemplate','-c','Release']);return c.dotnet(['run','--project','CourseTemplate','-c','Release','--no-build']);}},
+install:{label:'2 Install locally',run:c=>c.dotnet(['new','install','./CourseTemplate','--force',...hive])},
+missing:{label:'3 Wrong short name',run:c=>c.dotnet(['new','coco-invoice-missing','-n','OrdersApp','-o','artifacts/OrdersApp',...hive])},
+generate:{label:'4 Generate OrdersApp',run:async c=>{await c.run(['new','coco-invoice','-n','OrdersApp','-o','artifacts/OrdersApp','--force',...hive]);c.check(c.exists('artifacts/OrdersApp/OrdersApp.csproj'),'project file renamed');c.check(c.read('artifacts/OrdersApp/Invoice.cs').includes('namespace OrdersApp;'),'namespace substituted');}},
+verify:{label:'5 Build + run',run:async c=>{await c.run(['build','artifacts/OrdersApp','-c','Release']);return c.dotnet(['run','--project','artifacts/OrdersApp','-c','Release','--no-build']);}}
+},sequence:[{action:'starter',contains:['PASS: generated invoice starter']},{action:'install',contains:['coco-invoice']},{action:'missing',failure:true,contains:['coco-invoice-missing']},{action:'generate',contains:['namespace substituted']},{action:'verify',contains:['OrdersApp:','154.68','PASS: generated invoice starter']}]};

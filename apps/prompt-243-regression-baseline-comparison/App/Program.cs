@@ -1,0 +1,14 @@
+using Microsoft.ML;
+var ml=new MLContext(seed:42);var rows=RegressionLab.Rows();
+var train=rows.Where((r,i)=>i%5!=0).ToArray();var test=rows.Where((r,i)=>i%5==0).ToArray();
+var model=RegressionLab.Train(ml,ml.Data.LoadFromEnumerable(train));
+float baseline=train.Average(r=>r.Label);
+var inputs=test.Select(r=>new RegressionRow {X=args.Contains("problem")?0:r.X,Label=r.Label});
+var scored=model.Transform(ml.Data.LoadFromEnumerable(inputs));var metrics=ml.Regression.Evaluate(scored);
+double baselineMae=test.Average(r=>Math.Abs(r.Label-baseline));
+Console.WriteLine($"ML MAE={metrics.MeanAbsoluteError:F3} RMSE={metrics.RootMeanSquaredError:F3} R2={metrics.RSquared:F3} baselineMAE={baselineMae:F3}");
+Check.That(double.IsFinite(metrics.MeanAbsoluteError)&&metrics.MeanAbsoluteError<baselineMae,"the trained model beats the training-mean baseline on the same held-out rows","ML model failed the baseline comparison");
+Directory.CreateDirectory("artifacts");ml.Model.Save(model,ml.Data.LoadFromEnumerable(train).Schema,"artifacts/regression-model.zip");
+var reloaded=ml.Model.Load("artifacts/regression-model.zip",out _);var replay=ml.Regression.Evaluate(reloaded.Transform(ml.Data.LoadFromEnumerable(test)));
+Check.That(Math.Abs(metrics.MeanAbsoluteError-replay.MeanAbsoluteError)<0.0001,"the saved and reloaded model preserves evaluation predictions");
+Harness.Save("ml-evidence.json",new {passed=true,actualMlNet=true,train=train.Length,test=test.Length,baseline,baselineMae,metrics.MeanAbsoluteError,metrics.RootMeanSquaredError,metrics.RSquared,reloaded=true});

@@ -1,0 +1,5 @@
+PROMPT 106
+
+1. Inspect the UPDATE WHERE predicate for original Revision.
+2. Handle a deleted row where GetDatabaseValues returns null.
+3. Replace blind retry with an explicit user conflict decision when business rules require it.

@@ -1,0 +1,4 @@
+PROMPT 117
+
+1. Add delayed retries and classify transient failures separately from invalid messages.
+2. Make the business handler idempotent before enabling at-least-once delivery.

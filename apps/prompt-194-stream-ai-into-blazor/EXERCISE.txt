@@ -1,0 +1,6 @@
+PROMPT 194
+
+1. Start the local Ollama model service and run the build action.
+2. Inspect the endpoint flush and the Blazor incremental reader.
+3. Run the buffered-response failure and inspect the actual browser update count.
+4. Restore streaming and inspect the browser screenshots and retained timing evidence.

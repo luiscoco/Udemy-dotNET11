@@ -1,0 +1,5 @@
+PROMPT 153
+
+1. Run a command before projecting.
+2. Observe the stale query result.
+3. Advance the view and repeat the same command identifier.

@@ -1,0 +1,5 @@
+PROMPT 164
+
+1. Send valid and invalid requests through WebApplicationFactory.
+2. Inspect the test service replacement and factory isolation.
+3. Introduce the whitespace-validation regression and repair it.

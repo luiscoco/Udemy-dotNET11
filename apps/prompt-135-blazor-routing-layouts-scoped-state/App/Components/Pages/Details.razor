@@ -1,0 +1,10 @@
+@page "/course/{Id:int}"
+@inject CourseDraft Draft
+<h1>Course @Id</h1>
+<nav><NavLink href="/">Draft</NavLink><NavLink href="/course/42?level=advanced">Course details</NavLink></nav>
+<div class="result" id="draft-value">Draft @Draft.Title</div>
+<p id="level">Level @Level</p>
+@code {
+    [Parameter] public int Id { get; set; }
+    [SupplyParameterFromQuery] public string? Level { get; set; }
+}

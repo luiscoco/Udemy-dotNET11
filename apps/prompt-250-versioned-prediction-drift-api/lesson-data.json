@@ -1,0 +1,87 @@
+{
+  "number": 250,
+  "title": "Versioned prediction API and input drift monitoring",
+  "files": [
+    "App/App.csproj",
+    "App/Check.cs",
+    "App/Harness.cs",
+    "App/PredictionService.cs",
+    "App/WebFixture.cs",
+    "App/LocalTokens.cs",
+    "App/Program.cs",
+    "NuGet.Config",
+    "App/Probe.cs",
+    "EXERCISE.txt"
+  ],
+  "resetFiles": {
+    "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+  },
+  "steps": [
+    {
+      "id": "build",
+      "label": "Build and execute the model",
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release",
+          "--disable-build-servers",
+          "-p:UseSharedCompilation=false"
+        ],
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    },
+    {
+      "id": "regression",
+      "label": "Observe the controlled failure",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "problem"
+        ]
+      ],
+      "failure": true,
+      "contains": [
+        "ML drift was hidden by a missing monitor"
+      ]
+    },
+    {
+      "id": "repair",
+      "label": "Repair and verify",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    }
+  ]
+}

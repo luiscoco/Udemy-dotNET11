@@ -1,0 +1,7 @@
+@page "/"
+@inject CourseDraft Draft
+<h1>Course planning</h1>
+<nav><NavLink href="/" Match="NavLinkMatch.All">Draft</NavLink><NavLink id="details" href="/course/42?level=advanced">Course details</NavLink></nav>
+<label for="draft">Draft title</label>
+<input id="draft" @bind="Draft.Title" />
+<p class="card">The draft belongs to the current interactive server circuit.</p>

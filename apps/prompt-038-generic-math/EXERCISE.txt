@@ -1,0 +1,6 @@
+PROMPT 38
+
+1. Identify the static numeric operations supplied by INumber.
+2. Run the same calculation with int, decimal and double.
+3. Test empty input and mismatched lengths.
+4. Explain the checked integer overflow and the decimal result.

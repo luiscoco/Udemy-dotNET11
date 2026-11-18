@@ -1,0 +1,6 @@
+PROMPT 96
+
+1. Observe the blocked third enqueue before allowing sends.
+2. Distinguish application heartbeat text from protocol ping/pong.
+3. Send a valid message and a fragmented oversized message.
+4. Inspect the single sender and cancellation cleanup.

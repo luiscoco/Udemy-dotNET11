@@ -1,0 +1,89 @@
+{
+  "number": 225,
+  "title": "Access-controlled MCP resources and metadata",
+  "files": [
+    "App/App.csproj",
+    "App/Check.cs",
+    "App/Harness.cs",
+    "App/McpSession.cs",
+    "App/WebFixture.cs",
+    "App/LocalTokens.cs",
+    "App/ReservationStore.cs",
+    "App/PolicyResources.cs",
+    "App/Program.cs",
+    "NuGet.Config",
+    "App/Probe.cs",
+    "EXERCISE.txt"
+  ],
+  "resetFiles": {
+    "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+  },
+  "steps": [
+    {
+      "id": "build",
+      "label": "Build and run actual MCP",
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release",
+          "--disable-build-servers",
+          "-p:UseSharedCompilation=false"
+        ],
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    },
+    {
+      "id": "regression",
+      "label": "Observe the controlled failure",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "problem"
+        ]
+      ],
+      "failure": true,
+      "contains": [
+        "MCP resource ACL was bypassed"
+      ]
+    },
+    {
+      "id": "repair",
+      "label": "Repair and verify",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    }
+  ]
+}

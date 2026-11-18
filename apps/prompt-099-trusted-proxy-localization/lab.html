@@ -1,0 +1,95 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>InvoiceSuite • Shared build lab</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f4f1fb;color:#171532;font:20px 'Segoe UI',Arial,sans-serif}header{height:110px;background:#211044;color:white;padding:20px 30px;display:flex;align-items:center;gap:30px}header small{display:block;color:#ccbfea;font-size:17px;letter-spacing:2px}h1{font-size:32px;margin:5px 0}.badge{margin-left:auto;border:1px solid #aa93d7;border-radius:18px;padding:12px 20px;color:#e7dbff;font-size:19px}.toolbar{height:105px;padding:16px 25px;background:white;border-bottom:1px solid #d9ccea;display:flex;gap:10px;align-items:center;flex-wrap:wrap}button{font:600 17px 'Segoe UI';border:1px solid #b6a3d2;border-radius:9px;background:#fff;color:#34204f;padding:11px 14px;cursor:pointer}button:hover{background:#eee5ff}button:disabled{opacity:.5;cursor:wait}button.warn{color:#a32331;border-color:#d4919b}.workspace{height:calc(100vh - 285px);min-height:650px;display:grid;grid-template-columns:250px minmax(700px,1.12fr) minmax(650px,1fr);gap:15px;padding:20px}.files,.editor,.terminal{border:1px solid #cfbfe6;border-radius:14px;background:white;overflow:hidden;min-width:0}.files{padding:17px 12px}.files button{display:block;font-size:16px;text-align:left;width:100%;border:0;padding:11px 8px;overflow-wrap:anywhere}.files button.active{background:#e9dfff;color:#6027aa}.panel-title{height:52px;padding:13px 18px;font-weight:700;background:#eee7f8;border-bottom:1px solid #d5c7e6;font-size:18px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.code{height:calc(100% - 52px);overflow:auto;padding:16px 8px;font:21px/1.5 Consolas,'Courier New',monospace;scroll-behavior:instant}.line{display:flex;min-height:31.5px}.ln{flex:0 0 47px;color:#8f83a3;text-align:right;padding-right:15px;user-select:none}.source{white-space:pre-wrap;overflow-wrap:anywhere;flex:1}.line.mark{background:#fff0d9;border-left:4px solid #ff8a20}.kw{color:#7037c2;font-weight:700}.str{color:#ba2a5b}.comment{color:#5d7759}.terminal .panel-title{background:#e5f6f1}.output{height:calc(100% - 106px);overflow:auto;margin:0;padding:18px;background:#101727;color:#e6edf6;font:20px/1.48 Consolas,'Courier New',monospace;white-space:pre-wrap;overflow-wrap:anywhere}.terminal-foot{height:54px;padding:13px 18px;background:#f0f6f5;font-size:18px}.status{height:70px;padding:18px 30px;background:#211044;color:#f3edff;display:flex;gap:20px;align-items:center}.status strong{color:#ffad66}.focus{display:none;position:fixed;z-index:10;border:5px solid #ef2929;box-shadow:0 0 0 2px #fff;pointer-events:none;border-radius:4px}#scene-note{margin-left:auto;color:#d9cceb;font-size:17px}.error{color:#ff9d9d}.command{color:#8fe0c8}.result{color:#fff0a6}.recording .toolbar{pointer-events:none}.recording header small{letter-spacing:1px}
+</style>
+<header><div style="position:relative;width:190px;height:74px;border-radius:13px;overflow:hidden;flex-shrink:0"><img src="/brand.png" style="position:absolute;width:620px;left:-24px;top:-19px"></div><div><small>PROMPT 99 • .NET 11 • RUNNABLE APPLICATION</small><h1>Reverse proxy / trusted forwarded headers and request localization</h1></div><div class="badge">Actual source + actual .NET output</div></header>
+<nav class="toolbar" id="actions"></nav>
+<main class="workspace"><aside class="files"><div style="font-size:16px;font-weight:800;padding:8px">SOURCE EXPLORER</div><div id="file-buttons"></div></aside><section class="editor" id="editor"><div class="panel-title" id="filename"></div><div class="code" id="code"></div></section><section class="terminal" id="terminal"><div class="panel-title" id="terminal-title">Terminal • real child-process output</div><pre class="output" id="output">Build the solution, then run checkout or reporting.
+The failure buttons edit only this lesson's exercise files.</pre><div class="terminal-foot" id="result">Ready • no command running</div></section></main>
+<footer class="status"><strong id="stage">Predict → Run → Inspect → Explain</strong><span id="caption">Shared defaults, a local override, a failure, and a verified fix.</span><span id="scene-note">Local lab • no external packages</span></footer><div class="focus" id="focus"></div>
+<script type="module">
+const config=await(await fetch('/api/config')).json();const names=config.files;for(const entry of config.buttons){const b=document.createElement('button');b.textContent=entry.label;b.onclick=()=>run(entry.action);document.getElementById('actions').append(b);}
+const escape=s=>s.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;');
+function syntax(s){return escape(s).replace(/("[^"\n]*")|\b(public|static|class|sealed|record|decimal|string|var|new|return|foreach|int|if|throw|null|using|namespace|params|true|false)\b/g,(m,str)=>'<span class="'+(str?'str':'kw')+'">'+m+'</span>');}
+let currentFile='',lastResult=null;window.busy=false;window.actionHistory=[];
+for(const name of names){const b=document.createElement('button');b.textContent=name.replace('src/','').replace('tests/','');b.dataset.file=name;b.onclick=()=>openFile(name);document.getElementById('file-buttons').append(b);}
+async function openFile(name){const data=await(await fetch('/api/file?name='+encodeURIComponent(name))).json();currentFile=name;document.getElementById('filename').textContent=name;document.getElementById('code').innerHTML=data.text.trimEnd().split('\n').map((s,i)=>'<div class="line" data-line="'+(i+1)+'"><span class="ln">'+(i+1)+'</span><span class="source">'+syntax(s)+'</span></div>').join('');document.querySelectorAll('[data-file]').forEach(b=>b.classList.toggle('active',b.dataset.file===name));const panel=document.getElementById('code');if(panel.dataset.focusFile===name){focus('lines',Number(panel.dataset.focusFrom),Number(panel.dataset.focusTo));document.getElementById('focus').style.display='none';}return data;}
+function append(text,cls){const p=document.getElementById('output'),span=document.createElement('span');span.className=cls||'';span.textContent=text;p.append(span);p.scrollTop=p.scrollHeight;}
+async function run(action){if(window.busy)throw new Error('Already running');window.busy=true;document.querySelectorAll('.toolbar button').forEach(b=>b.disabled=true);document.getElementById('output').textContent='';document.getElementById('result').textContent='Running '+action+'…';let full='';try{const response=await fetch('/api/action',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action})});if(!response.ok)throw new Error(await response.text());const reader=response.body.getReader(),decoder=new TextDecoder();let pending='';for(;;){const chunk=await reader.read();pending+=decoder.decode(chunk.value||new Uint8Array(),{stream:!chunk.done});let index;while((index=pending.indexOf('\n'))>=0){const event=JSON.parse(pending.slice(0,index));pending=pending.slice(index+1);if(event.command){append('$ '+event.command+'\n\n','command');full+='$ '+event.command+'\n';}if(event.text){append(event.text,event.text.includes('error CS')?'error':'');full+=event.text;}if(event.done){lastResult={action,exitCode:event.exitCode,text:full};window.lastResult=lastResult;window.actionHistory.push(lastResult);document.getElementById('result').textContent='Exit '+event.exitCode+' • '+(event.exitCode===0?'completed':'inspect the failure above');}}if(chunk.done)break;}await openFile(currentFile);return lastResult;}finally{window.busy=false;document.querySelectorAll('.toolbar button').forEach(b=>b.disabled=false);}}
+function focus(target, from, to) {
+    const box = document.getElementById('focus');
+    for (const row of document.querySelectorAll('.line')) {
+        row.classList.remove('mark');
+        row.style.marginTop = '';
+        row.style.marginBottom = '';
+    }
+    if (!target) {
+        box.style.display = 'none';
+        return;
+    }
+
+    let bounds;
+    if (target === 'lines') {
+        const code = document.getElementById('code');
+        const rows = [...code.querySelectorAll('.line')].filter(row =>
+            Number(row.dataset.line) >= from && Number(row.dataset.line) <= to);
+        if (!rows.length) throw new Error('No selected source lines');
+        code.dataset.focusFile = document.getElementById('filename').textContent;
+        code.dataset.focusFrom = from;
+        code.dataset.focusTo = to;
+        for (const row of rows) row.classList.add('mark');
+        // Reserve actual layout space around the selection before drawing a border.
+        rows[0].style.marginTop = '12px';
+        rows.at(-1).style.marginBottom = '12px';
+        const panel = code.getBoundingClientRect();
+        let first = rows[0].getBoundingClientRect();
+        let last = rows.at(-1).getBoundingClientRect();
+        let fontSize = 21;
+        function setSize() {
+            code.style.fontSize = fontSize + 'px';
+            code.style.lineHeight = fontSize * 1.5 + 'px';
+            for (const row of code.querySelectorAll('.line')) row.style.minHeight = fontSize * 1.5 + 'px';
+            first = rows[0].getBoundingClientRect();
+            last = rows.at(-1).getBoundingClientRect();
+        }
+        setSize();
+        while (last.bottom - first.top > panel.height - 40 && fontSize > 16) {
+            fontSize--;
+            setSize();
+        }
+        if (last.bottom - first.top > panel.height - 40) {
+            throw new Error('Selected source must fit completely inside the code viewport');
+        }
+        code.scrollTop += (first.top + last.bottom - panel.top - panel.bottom) / 2;
+        first = rows[0].getBoundingClientRect();
+        last = rows.at(-1).getBoundingClientRect();
+        bounds = {
+            x: Math.floor(first.left - 5),
+            y: Math.floor(first.top - 7),
+            width: Math.ceil(first.right + 6) - Math.floor(first.left - 5),
+            height: Math.ceil(last.bottom + 7) - Math.floor(first.top - 7)
+        };
+    } else {
+        const panel = document.getElementById(target).getBoundingClientRect();
+        bounds = { x: panel.x + 2, y: panel.y + 2, width: panel.width - 4, height: panel.height - 4 };
+    }
+    Object.assign(box.style, {
+        display: 'block',
+        borderWidth: '4px',
+        boxShadow: 'none',
+        left: bounds.x + 'px',
+        top: bounds.y + 'px',
+        width: bounds.width + 'px',
+        height: bounds.height + 'px'
+    });
+}
+function focusLog(){
+ if(!lastResult)return;
+ const lines=lastResult.text.split('\n'),errors=[...new Set(lines.filter(l=>l.includes('error CS')))];
+ let selected;
+ if(errors.length)selected=lines.filter(l=>l.startsWith('$ ')||l.includes('POLICY ')).concat([''],errors.slice(0,2),[''],lines.filter(l=>l.includes('Build FAILED')||/\d+ Error\(s\)/.test(l)));
+ else if(lines.some(l=>l.startsWith('Unhandled exception.')))selected=lines.filter(l=>l.startsWith('$ ')).concat([''],lines.filter(l=>/^(api:|network:|browser:|service:|database:|VALIDATION |JSON=|Reloaded |Shared retry |RETRY |CIRCUIT |TIMEOUT:|\/health\/|Unhandled exception\.)/.test(l)),[''],lines.filter(l=>l.trim().startsWith('at ')&&l.includes('<repo>')).slice(0,3));
+ if(selected){document.getElementById('output').textContent=selected.join('\n');document.getElementById('terminal-title').textContent='Focused diagnostics • exact lines from captured output';document.getElementById('output').scrollTop=0;}
+}
+window.lab={openFile,run,focus,focusLog,setStage:(title,caption)=>{document.getElementById('stage').textContent=title;document.getElementById('caption').textContent=caption;document.getElementById('terminal-title').textContent='Terminal • real child-process output';}};openFile(names[0]);
+</script></html>

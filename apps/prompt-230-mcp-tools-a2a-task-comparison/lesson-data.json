@@ -1,0 +1,91 @@
+{
+  "number": 230,
+  "title": "MCP tools and A2A specialist tasks in one scenario",
+  "files": [
+    "App/App.csproj",
+    "App/Check.cs",
+    "App/Harness.cs",
+    "App/McpSession.cs",
+    "App/WebFixture.cs",
+    "App/LocalTokens.cs",
+    "App/ReservationStore.cs",
+    "App/AgentRuntime.cs",
+    "App/QuoteTool.cs",
+    "App/ReviewAgent.cs",
+    "App/Program.cs",
+    "NuGet.Config",
+    "App/Probe.cs",
+    "EXERCISE.txt"
+  ],
+  "resetFiles": {
+    "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+  },
+  "steps": [
+    {
+      "id": "build",
+      "label": "Build and run actual MCP",
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release",
+          "--disable-build-servers",
+          "-p:UseSharedCompilation=false"
+        ],
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    },
+    {
+      "id": "regression",
+      "label": "Observe the controlled failure",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "problem"
+        ]
+      ],
+      "failure": true,
+      "contains": [
+        "MCP A2A specialist did not complete"
+      ]
+    },
+    {
+      "id": "repair",
+      "label": "Repair and verify",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+PROMPT 53
+
+1. Inspect the two allowed derived types and stable wire discriminator.
+2. Find generated serializer metadata under App/obj/generated.
+3. Round-trip both permitted cases through the declared base contract.
+4. Explain why an arbitrary type name from input must not select a runtime type.

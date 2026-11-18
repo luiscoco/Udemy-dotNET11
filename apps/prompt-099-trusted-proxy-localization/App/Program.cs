@@ -1,0 +1,14 @@
+using System.Net.Http.Json;
+await using var fixture=new ProxyFixture();await fixture.StartAsync(args.FirstOrDefault()=="trust");
+using var handler=new SocketsHttpHandler();handler.SslOptions.RemoteCertificateValidationCallback=(_,cert,_,_)=>cert?.GetCertHashString()==fixture.Thumbprint;
+using var client=new HttpClient(handler) {BaseAddress=new Uri(fixture.Address)};
+using var response=await client.GetAsync("/info?culture=fr-FR");
+Console.WriteLine("network: trusted proxy response HTTP "+(int)response.StatusCode);
+Check.That((int)response.StatusCode==200,"the explicitly trusted proxy avoids a spurious HTTPS redirect");
+var body=(await response.Content.ReadFromJsonAsync<ProxyReply>())!;
+Check.That(body.Scheme=="https" && body.ClientIp=="127.0.0.1" && body.Culture=="fr-FR" && body.Amount.EndsWith(",5"),"the MVC action observes the original TLS scheme, client address and selected request culture");
+using var direct=new HttpClient(new HttpClientHandler {AllowAutoRedirect=false});
+using var spoof=new HttpRequestMessage(HttpMethod.Get,fixture.Backend+"/info");spoof.Headers.Add("X-Forwarded-Proto","https");spoof.Headers.Add("X-Forwarded-For","203.0.113.9");
+using var rejected=await direct.SendAsync(spoof);
+Check.That((int)rejected.StatusCode==307 && rejected.Headers.GetValues("X-Observed-Scheme").Single()=="http","untrusted direct headers cannot spoof the scheme to bypass redirection");
+Console.WriteLine($"network: scheme={body.Scheme}; client={body.ClientIp}; culture={body.Culture}; amount={body.Amount}; untrusted spoof={(int)rejected.StatusCode}");

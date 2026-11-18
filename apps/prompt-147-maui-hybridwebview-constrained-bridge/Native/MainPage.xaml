@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NativeCourse.MainPage" BackgroundColor="#F4F2FB" Title="Constrained native bridge">
+    <Grid Padding="28" RowDefinitions="Auto,Auto,*,Auto" RowSpacing="16">
+        <Label Text=".NET 11 · HybridWebView" FontSize="18" TextColor="#6642BB" />
+        <Label Grid.Row="1" Text="A small native capability for local web content" FontSize="28" FontAttributes="Bold" />
+        <HybridWebView Grid.Row="2" x:Name="Hybrid" HybridRoot="wwwroot" DefaultFile="index.html" />
+        <Border Grid.Row="3" Padding="18" BackgroundColor="#E1F7EE"><Label x:Name="NativeResult" Text="Native rating has not been submitted." FontSize="20" /></Border>
+    </Grid>
+</ContentPage>

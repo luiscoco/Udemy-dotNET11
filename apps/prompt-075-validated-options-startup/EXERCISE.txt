@@ -1,0 +1,6 @@
+PROMPT 75
+
+1. Bind the Import section to a typed options class.
+2. Compare data annotations with a domain-specific predicate.
+3. Verify that startup fails with all applicable field diagnostics.
+4. Read the options only after successful startup and preserve useful validation messages.

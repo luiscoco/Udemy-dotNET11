@@ -1,0 +1,19 @@
+MEASUREMENT DEFINITIONS
+
+Server-cold compiling build:
+- restore performed beforehand
+- project cleaned and build servers stopped
+- no claim that the OS disk cache was cleared
+
+Warm no-op build:
+- identical source and configuration
+- outputs can be up to date
+- not equal-work compilation
+
+Controlled incremental build:
+- one recorded source edit
+- same Release configuration and dependencies
+
+Repeat trials and retain exit status plus binary logs.
+Report observations for this machine and workload.
+Do not invent a universal compiler speedup.

@@ -1,0 +1,7 @@
+PROMPT 70
+
+1. Inspect admission closure before waiting for the consumer.
+2. Release the normal work gate and drain three accepted items.
+3. Hold the second gate and observe cancellation within the termination protocol.
+4. Reconcile accepted, completed and abandoned items after joining the consumer.
+5. Choose persistence and retry rules for work that must survive a process exit.

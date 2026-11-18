@@ -1,0 +1,108 @@
+{
+  "number": 161,
+  "title": "Meaningful unit tests with MSTest",
+  "files": [
+    "App/App.csproj",
+    "App/PricingPolicy.cs",
+    "Tests/Tests.csproj",
+    "Tests/GlobalUsings.cs",
+    "NuGet.Config",
+    "Tests/PricingTests.cs",
+    "App/Probe.cs",
+    "EXERCISE.txt",
+    "global.json"
+  ],
+  "resetFiles": {
+    "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n",
+    "App/PricingPolicy.cs": "public sealed class PricingPolicy\n{\n    public decimal Total(int quantity, decimal unitPrice)\n    {\n        if (quantity < 1) throw new ArgumentOutOfRangeException(nameof(quantity));\n        if (unitPrice < 0) throw new ArgumentOutOfRangeException(nameof(unitPrice));\n        decimal multiplier = quantity >= 3 ? 0.9m : 1m;\n        return decimal.Round(quantity * unitPrice * multiplier, 2, MidpointRounding.AwayFromZero);\n    }\n}\n"
+  },
+  "steps": [
+    {
+      "id": "build",
+      "label": "Build and run the tests",
+      "commands": [
+        [
+          "build",
+          "Tests/Tests.csproj",
+          "-c",
+          "Release"
+        ],
+        [
+          "test",
+          "--project",
+          "Tests/Tests.csproj",
+          "-c",
+          "Release",
+          "--no-build",
+          "--report-trx",
+          "--results-directory",
+          "artifacts/baseline"
+        ]
+      ],
+      "contains": [
+        "Passed"
+      ]
+    },
+    {
+      "id": "regression",
+      "label": "Introduce and detect the regression",
+      "writeFiles": {
+        "App/PricingPolicy.cs": "public sealed class PricingPolicy\n{\n    public decimal Total(int quantity, decimal unitPrice)\n    {\n        if (quantity < 1) throw new ArgumentOutOfRangeException(nameof(quantity));\n        if (unitPrice < 0) throw new ArgumentOutOfRangeException(nameof(unitPrice));\n        decimal multiplier = quantity > 3 ? 0.9m : 1m;\n        return decimal.Round(quantity * unitPrice * multiplier, 2, MidpointRounding.AwayFromZero);\n    }\n}\n"
+      },
+      "commands": [
+        [
+          "build",
+          "Tests/Tests.csproj",
+          "-c",
+          "Release",
+          "--no-restore"
+        ],
+        [
+          "test",
+          "--project",
+          "Tests/Tests.csproj",
+          "-c",
+          "Release",
+          "--no-build",
+          "--report-trx",
+          "--results-directory",
+          "artifacts/regression"
+        ]
+      ],
+      "failure": true,
+      "contains": [
+        "Bulk_discount_starts_at_three"
+      ]
+    },
+    {
+      "id": "repair",
+      "label": "Repair and rerun the tests",
+      "writeFiles": {
+        "App/PricingPolicy.cs": "public sealed class PricingPolicy\n{\n    public decimal Total(int quantity, decimal unitPrice)\n    {\n        if (quantity < 1) throw new ArgumentOutOfRangeException(nameof(quantity));\n        if (unitPrice < 0) throw new ArgumentOutOfRangeException(nameof(unitPrice));\n        decimal multiplier = quantity >= 3 ? 0.9m : 1m;\n        return decimal.Round(quantity * unitPrice * multiplier, 2, MidpointRounding.AwayFromZero);\n    }\n}\n"
+      },
+      "commands": [
+        [
+          "build",
+          "Tests/Tests.csproj",
+          "-c",
+          "Release",
+          "--no-restore"
+        ],
+        [
+          "test",
+          "--project",
+          "Tests/Tests.csproj",
+          "-c",
+          "Release",
+          "--no-build",
+          "--report-trx",
+          "--results-directory",
+          "artifacts/repair"
+        ]
+      ],
+      "contains": [
+        "Passed"
+      ]
+    }
+  ]
+}

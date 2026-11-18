@@ -1,0 +1,5 @@
+PROMPT 168
+
+1. Compare generated OpenAPI with the checked-in contract baseline.
+2. Rename the public response field and observe the regression.
+3. Repair the contract without automatically rewriting the baseline.

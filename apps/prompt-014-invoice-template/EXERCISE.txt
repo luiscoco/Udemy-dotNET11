@@ -1,0 +1,12 @@
+PROMPT 14 — YOUR TURN
+
+1. Build and run the starter before packaging it as a template.
+2. Explain identity, shortName, sourceName, and generated project name.
+3. Install the local template into the isolated exercise hive.
+4. Observe discovery failure with an incorrect short name.
+5. Generate OrdersApp and inspect renamed files and namespaces.
+6. Build and run the generated application.
+7. Add one convention to the starter and generate another clean example.
+
+Predict the result before each command.
+Retain output and explain the failure and recovery.

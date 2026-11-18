@@ -1,0 +1,66 @@
+@page "/"
+@using System.Globalization
+@using Microsoft.Extensions.Localization
+@implements IAsyncDisposable
+@inject IStringLocalizer<Labels> Text
+@inject IJSRuntime JS
+@inject HttpClient Http
+@inject NavigationManager Navigation
+<PageTitle>@Text["Title"]</PageTitle>
+<h1>@Text["Title"]</h1>
+<label for="language">@Text["Language"]</label>
+<select id="language" value="@Language" @onchange="ChangeLanguage"><option value="en">English</option><option value="es">Español</option></select>
+<label for="note">@Text["Note"]</label>
+<input id="note" @bind="Note" aria-describedby="note-status" />
+<button id="save" @onclick="Save" disabled="@(Module is null)">@Text["Save"]</button>
+<p id="note-status" role="status" aria-live="polite">@SaveResult</p>
+<button id="check" @onclick="Check">@Text["Check"]</button>
+<p id="network" class="result" role="status" aria-live="polite">@Network</p>
+@code {
+    private IJSObjectReference? Module;
+    private string Note = "", Language = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName, SaveResult = "", Network = "";
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (!firstRender) return;
+        try
+        {
+            Module = await JS.InvokeAsync<IJSObjectReference>("import", "./notebook.js");
+            Note = await Module.InvokeAsync<string>("read");
+        }
+        catch (JSException) { SaveResult = "Device storage is unavailable."; }
+        StateHasChanged();
+    }
+    private async Task Save()
+    {
+        if (Module is null) return;
+        try
+        {
+            var saved = await Module.InvokeAsync<bool>("save", Note);
+            if (saved) SaveResult = Text["Saved"];
+        }
+        catch (JSException) { SaveResult = "Device storage is unavailable."; }
+    }
+    private async Task ChangeLanguage(ChangeEventArgs args)
+    {
+        Language = args.Value?.ToString() == "es" ? "es" : "en";
+        try { if (Module is not null) await Module.InvokeAsync<bool>("language", Language); }
+        catch (JSException) { }
+        SaveResult = "";
+        Network = "";
+        Navigation.NavigateTo(Navigation.Uri, forceLoad: true);
+    }
+    private async Task Check()
+    {
+        try
+        {
+            using var response = await Http.GetAsync("api/status");
+            response.EnsureSuccessStatusCode();
+            Network = Text["Online"];
+        }
+        catch (HttpRequestException) { Network = Text["Offline"]; }
+    }
+    public async ValueTask DisposeAsync()
+    {
+        if (Module is not null) await Module.DisposeAsync();
+    }
+}

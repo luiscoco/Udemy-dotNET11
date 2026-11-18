@@ -1,0 +1,6 @@
+PROMPT 57
+
+1. Compare an explicit ToArray copy with a read-only memory view.
+2. Explain why read-only access does not freeze the underlying buffer.
+3. Inspect the writable fixed capacity, sequence segments and encoded string adapters.
+4. Measure allocations after warm-up and identify the boundary of the measurement.

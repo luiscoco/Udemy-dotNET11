@@ -1,0 +1,77 @@
+{
+  "number": 160,
+  "title": "Verify hosting support and run a container worker",
+  "files": [
+    "App/App.csproj",
+    "App/Program.cs",
+    "hosting-support.json",
+    "Dockerfile",
+    ".dockerignore",
+    "Worker/Worker.csproj",
+    "Worker/Program.cs",
+    "App/Probe.cs",
+    "EXERCISE.txt",
+    "global.json"
+  ],
+  "resetFiles": {
+    "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+  },
+  "steps": [
+    {
+      "id": "build",
+      "label": "Publish and run the container worker",
+      "commands": [
+        [
+          "publish",
+          "Worker",
+          "-c",
+          "Release",
+          "-o",
+          "artifacts/publish"
+        ],
+        [
+          "build",
+          "App",
+          "-c",
+          "Release"
+        ],
+        [
+          "App/bin/Release/net11.0/App.dll",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS worker processed 2",
+        "PASS the published"
+      ]
+    },
+    {
+      "id": "early",
+      "label": "Assume startup means completion",
+      "commands": [
+        [
+          "App/bin/Release/net11.0/App.dll",
+          "early"
+        ]
+      ],
+      "failure": true,
+      "contains": [
+        "incorrect expectation"
+      ]
+    },
+    {
+      "id": "repair",
+      "label": "Await completion and stop gracefully",
+      "commands": [
+        [
+          "App/bin/Release/net11.0/App.dll",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS worker processed 2",
+        "PASS the published"
+      ]
+    }
+  ]
+}

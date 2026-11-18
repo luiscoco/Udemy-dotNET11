@@ -1,0 +1,4 @@
+PROMPT 125
+
+1. Add a version dimension when the cached representation changes.
+2. Revalidate current authorization when running a queued tenant job.

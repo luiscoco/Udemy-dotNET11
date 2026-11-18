@@ -1,0 +1,8 @@
+PROMPT 22
+
+1. Explain why Find returns Customer?.
+2. Handle a missing customer before reading Name.
+3. Provide deliberate display behavior for an optional phone.
+4. Reproduce CS8602 and repair its control flow.
+5. Reject a missing required name at the input boundary.
+6. Verify found, missing and optional-field cases.

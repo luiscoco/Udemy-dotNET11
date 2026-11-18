@@ -1,0 +1,4 @@
+PROMPT 122
+
+1. Configure a real HTTPS authority before adapting the fixture to production.
+2. Compare local session sign-out with ending the identity-provider SSO session.

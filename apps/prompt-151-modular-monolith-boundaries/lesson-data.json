@@ -1,0 +1,83 @@
+{
+  "number": 151,
+  "title": "Modular monolith with explicit boundaries",
+  "files": [
+    "App/App.csproj",
+    "App/Program.cs",
+    "Contracts/Contracts.csproj",
+    "Contracts/CourseContract.cs",
+    "Catalog/Catalog.csproj",
+    "Catalog/CatalogModule.cs",
+    "Enrollment/Enrollment.csproj",
+    "Enrollment/EnrollmentService.cs",
+    "App/Probe.cs",
+    "EXERCISE.txt"
+  ],
+  "resetFiles": {
+    "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+  },
+  "steps": [
+    {
+      "id": "build",
+      "label": "Build and verify",
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release"
+        ],
+        [
+          "App/bin/Release/net11.0/App.dll",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    },
+    {
+      "id": "boundary",
+      "label": "Attempt to access private module storage",
+      "writeFiles": {
+        "App/Probe.cs": "public class LeakedDependency { Catalog.CourseStore store = new(); }\n"
+      },
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release",
+          "--no-restore"
+        ]
+      ],
+      "failure": true,
+      "contains": [
+        "CS0122"
+      ]
+    },
+    {
+      "id": "repair",
+      "label": "Repair and verify",
+      "writeFiles": {
+        "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+      },
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release",
+          "--no-restore"
+        ],
+        [
+          "App/bin/Release/net11.0/App.dll",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    }
+  ]
+}

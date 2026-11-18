@@ -1,0 +1,5 @@
+PROMPT 163
+
+1. Advance to one tick before expiry and then to the exact boundary.
+2. Complete the scheduled delay with virtual time.
+3. Change the expiry comparison and verify that the boundary test fails.

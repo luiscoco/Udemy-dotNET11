@@ -1,0 +1,6 @@
+PROMPT 217
+
+1. Read LOCAL-AGENT-SETUP.md and the exact pinned packages.
+2. Build and execute the real agent workflow.
+3. Reproduce the controlled failure and inspect the retained evidence.
+4. Repair the boundary and verify it again.

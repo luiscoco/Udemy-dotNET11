@@ -1,0 +1,6 @@
+PROMPT 221
+
+1. Read LOCAL-MCP-SETUP.md and the exact pinned packages.
+2. Build and execute the actual client/server round trips.
+3. Reproduce the controlled failure and inspect protocol and process evidence.
+4. Restore the boundary and verify the repaired application.

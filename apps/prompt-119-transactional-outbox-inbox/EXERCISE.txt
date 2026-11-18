@@ -1,0 +1,4 @@
+PROMPT 119
+
+1. Run the dispatcher after a crash between publication and marking sent.
+2. Keep the inbox retention policy aligned with replay and redelivery guarantees.

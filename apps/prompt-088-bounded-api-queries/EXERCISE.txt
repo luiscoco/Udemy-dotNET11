@@ -1,0 +1,6 @@
+PROMPT 88
+
+1. Predict the filtered page and keyset results.
+2. Inspect the validation branch before CountAsync and ToArrayAsync.
+3. Verify rejected input causes no SQL reads.
+4. Explain why bounded inputs still need representative database and index analysis.

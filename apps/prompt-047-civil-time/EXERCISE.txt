@@ -1,0 +1,6 @@
+PROMPT 47
+
+1. Combine DateOnly and TimeOnly into an unspecified wall-clock value.
+2. Convert a valid Madrid summer appointment to UTC.
+3. Identify the spring gap and both autumn offset candidates.
+4. State an explicit policy before accepting an ambiguous appointment.

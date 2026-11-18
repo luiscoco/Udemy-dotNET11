@@ -1,0 +1,5 @@
+PROMPT 151
+
+1. Run the composition root and inspect module references.
+2. Try to name the internal catalog store from App.
+3. Restore the contract-based dependency and rebuild.

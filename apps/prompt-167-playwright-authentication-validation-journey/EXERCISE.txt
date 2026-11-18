@@ -1,0 +1,5 @@
+PROMPT 167
+
+1. Run the full browser journey and inspect its actual screenshots.
+2. Introduce the whitespace-validation regression.
+3. Repair it and verify the authenticated save journey.

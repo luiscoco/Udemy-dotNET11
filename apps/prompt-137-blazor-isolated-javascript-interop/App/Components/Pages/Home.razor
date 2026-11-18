@@ -1,0 +1,57 @@
+@page "/"
+@implements IAsyncDisposable
+@inject IJSRuntime JS
+@inject InteropCounts Counts
+<h1>Browser focus and resize</h1>
+<label for="name">Course title</label>
+<input id="name" @ref="Input" />
+<button id="focus-name" @onclick="Focus" disabled="@(Handle is null)">Focus title</button>
+<p id="width" class="result">Viewport @Width px</p>
+@if (Handle is not null) { <p id="interop-ready">Browser module attached</p> }
+<a id="leave" href="/summary">Leave this component</a>
+@code {
+    private ElementReference Input;
+    private IJSObjectReference? Module, Handle;
+    private DotNetObjectReference<Home>? Reference;
+    private int Width;
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (!firstRender) return;
+        try
+        {
+            Module = await JS.InvokeAsync<IJSObjectReference>("import", "./focus-module.js");
+            Reference = DotNetObjectReference.Create(this);
+            Handle = await Module.InvokeAsync<IJSObjectReference>("attach", Input, Reference);
+        }
+        catch (JSException) { Reference?.Dispose(); }
+        StateHasChanged();
+    }
+    private async Task Focus()
+    {
+        try { if (Handle is not null) await Handle.InvokeVoidAsync("focus"); }
+        catch (JSException) { }
+    }
+    [JSInvokable] public Task Resized(int width)
+    {
+        Width = width;
+        return InvokeAsync(StateHasChanged);
+    }
+    public async ValueTask DisposeAsync()
+    {
+        try
+        {
+            if (Handle is not null)
+            {
+                await Handle.InvokeVoidAsync("dispose");
+                await Handle.DisposeAsync();
+            }
+            if (Module is not null) await Module.DisposeAsync();
+        }
+        catch (JSDisconnectedException) { }
+        finally
+        {
+            Reference?.Dispose();
+            Counts.Removed();
+        }
+    }
+}

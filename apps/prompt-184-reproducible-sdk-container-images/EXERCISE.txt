@@ -1,0 +1,5 @@
+PROMPT 184
+
+1. Pin the base-image digest, target RID and source timestamp.
+2. Publish independent OCI archives and compare the actual generated manifest digests.
+3. Change the source epoch and observe that the image identity changes.

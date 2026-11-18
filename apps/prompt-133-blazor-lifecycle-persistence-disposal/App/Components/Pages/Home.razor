@@ -1,0 +1,35 @@
+@page "/"
+@implements IDisposable
+@inject LifecycleStore Store
+<h1>@Title</h1>
+<p class="card">Prerendered data is restored when this component becomes interactive.</p>
+@if (Ready) { <p id="ready" class="result">Interactive render completed</p> }
+<a id="leave" href="/summary">Navigate away and dispose</a>
+@code {
+    [PersistentState] public string? Title { get; set; }
+    private bool Ready;
+    private readonly CancellationTokenSource Loading = new();
+    protected override async Task OnInitializedAsync()
+    {
+        try { Title ??= await Store.LoadAsync(Loading.Token); }
+        catch (OperationCanceledException) when (Loading.IsCancellationRequested) { return; }
+        Store.Changed += OnChanged;
+    }
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if (firstRender)
+        {
+            Store.Rendered();
+            Ready = true;
+            StateHasChanged();
+        }
+    }
+    private void OnChanged() => _ = InvokeAsync(StateHasChanged);
+    public void Dispose()
+    {
+        Loading.Cancel();
+        Loading.Dispose();
+        Store.Changed -= OnChanged;
+        Store.Removed();
+    }
+}

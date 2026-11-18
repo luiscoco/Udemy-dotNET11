@@ -1,0 +1,4 @@
+PROMPT 102
+
+1. Try a duplicate student in another course and explain why it is allowed.
+2. Change Restrict to Cascade in a disposable database and compare behavior.

@@ -1,0 +1,6 @@
+PROMPT 94
+
+1. Inspect the proto contract and generated client/service base.
+2. Compare unary and server-streaming response lifetimes.
+3. Observe DEADLINE_EXCEEDED and server cancellation.
+4. Cancel and dispose a live response stream.

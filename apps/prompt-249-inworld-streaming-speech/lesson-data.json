@@ -1,0 +1,84 @@
+{
+  "number": 249,
+  "title": "Real Inworld speech streaming and format validation",
+  "files": [
+    "App/App.csproj",
+    "App/Check.cs",
+    "App/Harness.cs",
+    "App/SpeechStream.cs",
+    "App/Program.cs",
+    "App/Probe.cs",
+    "EXERCISE.txt"
+  ],
+  "resetFiles": {
+    "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+  },
+  "steps": [
+    {
+      "id": "build",
+      "label": "Build and execute the model",
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release",
+          "--disable-build-servers",
+          "-p:UseSharedCompilation=false"
+        ],
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    },
+    {
+      "id": "regression",
+      "label": "Observe the controlled failure",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "problem"
+        ]
+      ],
+      "failure": true,
+      "contains": [
+        "SPEECH MP3 was mislabeled as PCM"
+      ]
+    },
+    {
+      "id": "repair",
+      "label": "Repair and verify",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    }
+  ]
+}

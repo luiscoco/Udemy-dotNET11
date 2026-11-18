@@ -1,0 +1,6 @@
+PROMPT 63
+
+1. Observe the three started operations before releasing the gate.
+2. Compare the exception thrown by await with the aggregate fault collection.
+3. Retain each operation name, success value and original exception.
+4. Decide an application policy for partial results instead of silently swallowing failures.

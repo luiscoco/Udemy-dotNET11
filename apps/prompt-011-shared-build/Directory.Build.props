@@ -1,0 +1,8 @@
+<Project>
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <WarningsAsErrors>$(WarningsAsErrors);CS8602</WarningsAsErrors>
+    <TrainingRegion>EU</TrainingRegion>
+  </PropertyGroup>
+</Project>

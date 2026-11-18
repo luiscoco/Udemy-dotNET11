@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NativeCourse.MainPage" BackgroundColor="#F4F2FB" Title="Device capability checks">
+    <VerticalStackLayout Padding="36" Spacing="18">
+        <Label Text=".NET 11 · Device capabilities" FontSize="18" TextColor="#6642BB" />
+        <Label Text="Inspect this device safely" FontSize="30" FontAttributes="Bold" />
+        <Button Text="Inspect device" Clicked="Inspect" HorizontalOptions="Start" />
+        <Border Padding="24" BackgroundColor="#E1F7EE"><Label x:Name="DeviceLabel" Text="Inspect platform, display and connectivity." FontSize="20" /></Border>
+        <Button Text="Run cancelled file operation" Clicked="CancelWork" HorizontalOptions="Start" />
+        <Label x:Name="WorkLabel" Text="Device work can be cancelled before committing a file." FontSize="20" />
+        <Label Text="Permission status is checked. Camera access remains under the user’s operating-system policy." FontSize="18" />
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,6 @@
+PROMPT 46
+
+1. Trace the six source values needed for three even results.
+2. Inspect the one-operation peak and partial-enumerator cleanup.
+3. Forward a cancellation token through the async query.
+4. Reproduce the effect of cancelling a source that is never passed to the query.

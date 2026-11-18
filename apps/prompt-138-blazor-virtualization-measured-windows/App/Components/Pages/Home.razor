@@ -1,0 +1,25 @@
+@page "/"
+@using Microsoft.AspNetCore.Components.Web.Virtualization
+@inject ListMetrics Metrics
+<h1>Browse 10,000 courses</h1>
+<p>Scroll to load another visible window.</p>
+<div id="viewport" style="height:384px;overflow-y:auto;border:2px solid #a997ce" tabindex="0" aria-label="Available courses">
+    <Virtualize ItemsProvider="Provide" ItemComparer="Comparer" ItemSize="48" OverscanCount="3" Context="item">
+        <div class="row" @key="item.Id">Course @item.Id · @item.Title</div>
+    </Virtualize>
+</div>
+<p class="result">Rendered row height is fixed at 48 pixels.</p>
+@code {
+    private async ValueTask<ItemsProviderResult<CourseRow>> Provide(ItemsProviderRequest request)
+    {
+        await Task.Delay(30, request.CancellationToken);
+        var count = Math.Min(request.Count, 10000 - request.StartIndex);
+        var rows = Enumerable.Range(request.StartIndex, count)
+            .Select(id => new CourseRow(id, $"Practical .NET topic {id}"));
+        Metrics.Record(count);
+        return new ItemsProviderResult<CourseRow>(rows, 10000);
+    }
+    private sealed record CourseRow(int Id, string Title);
+    private static readonly IEqualityComparer<CourseRow> Comparer =
+        EqualityComparer<CourseRow>.Create((a, b) => a?.Id == b?.Id, row => row.Id.GetHashCode());
+}

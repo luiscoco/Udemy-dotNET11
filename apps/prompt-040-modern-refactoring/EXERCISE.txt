@@ -1,0 +1,6 @@
+PROMPT 40
+
+1. Compare the earlier explicit constructor and the primary constructor.
+2. Trace validation and trimming through the field-backed property.
+3. Parse the raw JSON output with a quoted customer name.
+4. Verify the retained behavior and rejected inputs.

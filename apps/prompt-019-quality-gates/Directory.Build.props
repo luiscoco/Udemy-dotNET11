@@ -1,0 +1,8 @@
+<Project>
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <AnalysisLevel>11.0</AnalysisLevel>
+    <WarningsAsErrors>$(WarningsAsErrors);CS8602;CA1822</WarningsAsErrors>
+  </PropertyGroup>
+</Project>

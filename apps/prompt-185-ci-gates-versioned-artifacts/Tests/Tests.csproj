@@ -1,0 +1,11 @@
+<Project Sdk="MSTest.Sdk/4.5.3">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net11.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+  </PropertyGroup>
+  <PropertyGroup><EnableTrxReport>true</EnableTrxReport></PropertyGroup>
+  <ItemGroup><ProjectReference Include="../src/Catalog.csproj" /></ItemGroup>
+</Project>

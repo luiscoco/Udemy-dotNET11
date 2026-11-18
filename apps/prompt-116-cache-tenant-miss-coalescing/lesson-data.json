@@ -1,0 +1,94 @@
+{
+  "number": 116,
+  "title": "Cache correctness — Tenant keys, expiry and concurrent misses",
+  "files": [
+    "App/App.csproj",
+    "App/CacheNodes.cs",
+    "App/CacheKeys.cs",
+    "App/Program.cs",
+    "NuGet.Config",
+    "infrastructure/compose.yaml",
+    "infrastructure/Dockerfile.sqlserver",
+    "App/Probe.cs",
+    "EXERCISE.txt"
+  ],
+  "resetFiles": {
+    "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+  },
+  "steps": [
+    {
+      "id": "build",
+      "label": "Build and verify",
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release"
+        ],
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    },
+    {
+      "id": "tenant",
+      "label": "Reproduce the controlled problem",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "tenant"
+        ]
+      ],
+      "failure": true,
+      "contains": [
+        "incorrect expectation: a tenant-free key isolates tenants"
+      ]
+    },
+    {
+      "id": "repair",
+      "label": "Repair and verify",
+      "writeFiles": {
+        "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+      },
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release",
+          "--no-restore"
+        ],
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    }
+  ]
+}

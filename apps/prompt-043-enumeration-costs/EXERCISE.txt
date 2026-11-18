@@ -1,0 +1,6 @@
+PROMPT 43
+
+1. Predict when query construction visits the source.
+2. Compare Any followed by ToArray with one retained array.
+3. Change the input list after materialization.
+4. Explain the extra traversal and array storage associated with the selected operations.

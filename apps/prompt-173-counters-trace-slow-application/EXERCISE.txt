@@ -1,0 +1,5 @@
+PROMPT 173
+
+1. Inspect System.Runtime measurements and sampled stacks for the busy worker.
+2. Compare repeated computation with a cached result for the same key.
+3. Read the retained nettrace and top-method report alongside source.

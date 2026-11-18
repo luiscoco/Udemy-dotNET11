@@ -1,0 +1,6 @@
+PROMPT 73
+
+1. Register two implementations under stable keys.
+2. Compare runtime selection with FromKeyedServices constructor injection.
+3. Inspect the absence of an unkeyed default registration.
+4. Reject unsupported application choices before resolving a keyed service.

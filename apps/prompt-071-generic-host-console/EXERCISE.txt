@@ -1,0 +1,6 @@
+PROMPT 71
+
+1. Follow the host builder, JSON provider and service registrations.
+2. Inspect constructor-injected configuration, formatter and logger.
+3. Observe the report event and two generated copies.
+4. Omit the formatter registration, inspect the DI error, then run the repaired registration.

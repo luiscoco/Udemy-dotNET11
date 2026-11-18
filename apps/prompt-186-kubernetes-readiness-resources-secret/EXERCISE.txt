@@ -1,0 +1,5 @@
+PROMPT 186
+
+1. Create the isolated local kind cluster with its own kubeconfig.
+2. Deploy the actual image, readiness and liveness probes, resource policy and mounted synthetic secret.
+3. Use invalid configuration to observe a running pod excluded from ready service endpoints.

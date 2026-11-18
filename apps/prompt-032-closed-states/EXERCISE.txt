@@ -1,0 +1,6 @@
+PROMPT 32
+
+1. Trace Draft to Paid and inspect the retained number.
+2. Add Paused in this assembly and read the coverage diagnostic.
+3. Try paying the Paid state.
+4. Explain the roles of closed, sealed and null handling.

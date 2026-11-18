@@ -1,0 +1,1861 @@
+ <!DOCTYPE html>
+		<html
+			class="layout layout-holy-grail   show-table-of-contents conceptual show-breadcrumb default-focus"
+			lang="en-us"
+			dir="ltr"
+			data-authenticated="false"
+			data-auth-status-determined="false"
+			data-target="docs"
+			x-ms-format-detection="none"
+		>
+			
+		<head>
+			<title>What&#39;s new in .NET 11 runtime | Microsoft Learn</title>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<meta name="color-scheme" content="light dark" />
+
+			<meta name="description" content="Learn about the new features introduced in the .NET 11 runtime." />
+			<link rel="canonical" href="https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-11/runtime" /> 
+
+			<!-- Non-customizable open graph and sharing-related metadata -->
+			<meta name="twitter:card" content="summary" />
+			<meta name="twitter:site" content="@MicrosoftLearn" />
+			<meta property="og:type" content="website" />
+			<meta property="og:image:alt" content="What&#39;s new in .NET 11 runtime | Microsoft Learn" />
+			<meta property="og:image" content="https://learn.microsoft.com/dotnet/media/dotnet-logo.png" />
+			<!-- Page specific open graph and sharing-related metadata -->
+			<meta property="og:title" content="What&#39;s new in .NET 11 runtime" />
+			<meta property="og:url" content="https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-11/runtime" />
+			<meta property="og:description" content="Learn about the new features introduced in the .NET 11 runtime." />
+			<meta name="platform_id" content="c4ad9860-db59-6bc2-932b-7baae776152b" /> <meta name="scope" content=".NET" />
+			<meta name="locale" content="en-us" />
+			 
+			<meta name="uhfHeaderId" content="MSDocsHeader-DotNet" />
+
+			<meta name="page_type" content="conceptual" />
+
+			<!--page specific meta tags-->
+			
+
+			<!-- custom meta tags -->
+			
+		<meta name="apiPlatform" content="dotnet" />
+	
+		<meta name="author" content="gewarren" />
+	
+		<meta name="breadcrumb_path" content="/dotnet/breadcrumb/toc.json" />
+	
+		<meta name="feedback_system" content="OpenSource" />
+	
+		<meta name="feedback_product_url" content="https://aka.ms/feedback/report?space=61" />
+	
+		<meta name="ms.author" content="gewarren" />
+	
+		<meta name="ms.devlang" content="dotnet" />
+	
+		<meta name="ms.service" content="dotnet-fundamentals" />
+	
+		<meta name="ms.topic" content="whats-new" />
+	
+		<meta name="show_latex" content="true" />
+	
+		<meta name="ms.date" content="2026-11-10T00:00:00Z" />
+	
+		<meta name="ai-usage" content="ai-assisted" />
+	
+		<meta name="ms.update-cycle" content="3650-days" />
+	
+		<meta name="document_id" content="274267e4-22fa-7b8b-c2ec-b3c5ef4ebaf0" />
+	
+		<meta name="document_version_independent_id" content="d9801b32-529b-c7c4-cef4-15a5990d808e" />
+	
+		<meta name="updated_at" content="2026-11-12T13:17:00Z" />
+	
+		<meta name="original_content_git_url" content="https://github.com/dotnet/docs/blob/live/docs/core/whats-new/dotnet-11/runtime.md" />
+	
+		<meta name="gitcommit" content="https://github.com/dotnet/docs/blob/0dad19ab65b096f0b86430c01b1b6a9e5832ea22/docs/core/whats-new/dotnet-11/runtime.md" />
+	
+		<meta name="git_commit_id" content="0dad19ab65b096f0b86430c01b1b6a9e5832ea22" />
+	
+		<meta name="site_name" content="Docs" />
+	
+		<meta name="depot_name" content="VS.core-docs" />
+	
+		<meta name="schema" content="Conceptual" />
+	
+		<meta name="toc_rel" content="../../../fundamentals/toc.json" />
+	
+		<meta name="pdf_url_template" content="https://learn.microsoft.com/pdfstore/en-us/VS.core-docs/{branchName}{pdfName}" />
+	
+		<meta name="feedback_help_link_type" content="" />
+	
+		<meta name="feedback_help_link_url" content="" />
+	
+		<meta name="search.mshattr.devlang" content="csharp" />
+	
+		<meta name="word_count" content="3621" />
+	
+		<meta name="asset_id" content="core/whats-new/dotnet-11/runtime" />
+	
+		<meta name="moniker_range_name" content="" />
+	
+		<meta name="item_type" content="Content" />
+	
+		<meta name="source_path" content="docs/core/whats-new/dotnet-11/runtime.md" />
+	
+		<meta name="previous_tlsh_hash" content="1FC965A2F70D5710FFC24E4B5849FF5561F0D009BBF0AF851939A5B3E51B3F634FE258FAD7A7B75A277416D3129B62DF12E1CB39C46827621A21846C816C22028B9937BBF2" />
+	
+		<meta name="github_feedback_content_git_url" content="https://github.com/dotnet/docs/blob/main/docs/core/whats-new/dotnet-11/runtime.md" />
+	
+		<meta name="markdown_url" content="https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-11/runtime?accept=text/markdown" />
+	 
+		<meta name="cmProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/7696cda6-0510-47f6-8302-71bb5d2e28cf" data-source="generated" />
+	
+		<meta name="cmProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/bcbcbad5-4208-4783-8035-8481272c98b8" data-source="generated" />
+	
+		<meta name="spProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/69c76c32-967e-4c65-b89a-74cc527db725" data-source="generated" />
+	
+		<meta name="spProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/43b2e5aa-8a6d-4de2-a252-692232e5edc8" data-source="generated" />
+	
+
+			<!-- Apply persisted/system theme before first paint to prevent wrong-theme flash when scripts are deferred. -->
+			<script id="theme-preference">
+				(function () {
+			try {
+				var stored = localStorage.getItem('theme');
+				var theme = /^(light|dark|high-contrast)$/.test(stored)
+					? stored
+					: matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+				document.documentElement.classList.add('theme-' + theme);
+			} catch (e) {}
+		})();;
+			</script>
+
+			<script id="atlas-layout-preferences">
+				(function () {
+			try {
+				var state = JSON.parse(localStorage.getItem('atlas-layout-preferences') || '{}');
+				var view = state["docs-layout-persistence"] || {};
+				var excludesKey = "";
+				var blocked = {};
+				if (excludesKey) {
+					var exclusions = JSON.parse(localStorage.getItem('atlas-layout-exclusions') || '{}');
+					if (Object.prototype.hasOwnProperty.call(exclusions, excludesKey)) {
+						var scoped = exclusions[excludesKey];
+						if (scoped) {
+							if (typeof scoped === 'object') blocked = scoped;
+						}
+					}
+				}
+				var html = document.documentElement;
+				for (var c in view) {
+					if (Object.prototype.hasOwnProperty.call(blocked, c)) continue;
+					if (view[c]) html.classList.add(c);
+					else html.classList.remove(c);
+				}
+			} catch (e) {}
+		})();;
+			</script>
+
+			<!-- assets and js globals -->
+			
+			<link rel="stylesheet" href="/static/assets/0.4.03603.8379-b7d5d6ac/styles/site.css" />
+			
+			<script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+			<!-- Keep this URL in sync with oneDSScriptSelector in instrumentation/one-ds.ts. -->
+			<script async src="https://js.monitor.azure.com/scripts/c/ms.jsll-4.min.js"></script>
+			
+
+			<!-- msdocs global object -->
+			<script id="msdocs-script">
+		var msDocs = {
+  "environment": {
+    "accessLevel": "online",
+    "azurePortalHostname": "portal.azure.com",
+    "reviewFeatures": false,
+    "supportLevel": "production",
+    "systemContent": true,
+    "siteName": "learn",
+    "legacyHosting": false
+  },
+  "data": {
+    "contentLocale": "en-us",
+    "contentDir": "ltr",
+    "userLocale": "en-us",
+    "userDir": "ltr",
+    "pageTemplate": "Conceptual",
+    "layoutStateStorageKey": "docs-layout-persistence",
+    "brand": "",
+    "context": {},
+    "standardFeedback": false,
+    "showFeedbackReport": false,
+    "feedbackHelpLinkType": "",
+    "feedbackHelpLinkUrl": "",
+    "feedbackSystem": "OpenSource",
+    "feedbackGitHubRepo": "dotnet/docs",
+    "feedbackProductUrl": "https://aka.ms/feedback/report?space=61",
+    "extendBreadcrumb": false,
+    "isEditDisplayable": true,
+    "isPrivateUnauthorized": false,
+    "hideViewSource": false,
+    "isPermissioned": false,
+    "hasRecommendations": true,
+    "mathjax": {},
+    "openSourceFeedbackIssueUrl": "https://github.com/dotnet/docs/issues/new?template=z-customer-feedback.yml",
+    "openSourceFeedbackIssueTitle": ""
+  },
+  "functions": {}
+};;
+	</script>
+
+			<!-- base scripts, msdocs global should be before this -->
+			<script
+				src="/static/assets/0.4.03603.8379-b7d5d6ac/scripts/en-us/index-docs.js"
+				async
+			></script>
+			
+
+			<!-- json-ld -->
+			
+		<script >bazadebezolkohpepadr="1158228024"</script><script type="text/javascript" src="https://learn.microsoft.com/akam/13/45092822"  defer></script></head>
+	
+			<body
+				id="body"
+				data-bi-name="body"
+				class="layout-body "
+				lang="en-us"
+				dir="ltr"
+			>
+				<header class="layout-body-header background-color-body-medium">
+		<div class="header-holder has-default-focus">
+			
+		<a
+			href="#main"
+			
+			style="z-index: 1070"
+			class="outline-color-text visually-hidden-until-focused position-fixed inner-focus focus-visible top-0 left-0 right-0 padding-xs text-align-center background-color-body"
+			
+		>
+			Skip to main content
+		</a>
+	
+		<a
+			href="#"
+			data-skip-to-ask-learn
+			style="z-index: 1070"
+			class="outline-color-text visually-hidden-until-focused position-fixed inner-focus focus-visible top-0 left-0 right-0 padding-xs text-align-center background-color-body"
+			hidden
+		>
+			Skip to Ask Learn chat experience
+		</a>
+	
+
+			<div hidden id="cookie-consent-holder" data-test-id="cookie-consent-container"></div>
+			<!-- Unsupported browser warning -->
+			<div
+				id="unsupported-browser"
+				style="background-color: white; color: black; padding: 16px; border-bottom: 1px solid grey;"
+				hidden
+			>
+				<div style="max-width: 800px; margin: 0 auto;">
+					<p style="font-size: 24px">This browser is no longer supported.</p>
+					<p style="font-size: 16px; margin-top: 16px;">
+						Upgrade to Microsoft Edge to take advantage of the latest features, security updates, and technical support.
+					</p>
+					<div style="margin-top: 12px;">
+						<a
+							href="https://go.microsoft.com/fwlink/p/?LinkID=2092881 "
+							style="background-color: #0078d4; border: 1px solid #0078d4; color: white; padding: 6px 12px; border-radius: 2px; display: inline-block;"
+						>
+							Download Microsoft Edge
+						</a>
+						<a
+							href="https://learn.microsoft.com/en-us/lifecycle/faq/internet-explorer-microsoft-edge"
+							style="background-color: white; padding: 6px 12px; border: 1px solid #505050; color: #171717; border-radius: 2px; display: inline-block;"
+						>
+							More info about Internet Explorer and Microsoft Edge
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- site header -->
+			<div
+				id="ms--site-header"
+				data-test-id="site-header-wrapper"
+				itemscope="itemscope"
+				itemtype="http://schema.org/Organization"
+			>
+				<div
+					id="ms--mobile-nav"
+					class="site-header display-none-tablet padding-inline-none gap-none"
+					data-bi-name="mobile-header"
+					data-test-id="mobile-header"
+				></div>
+				<div
+					id="ms--primary-nav"
+					class="site-header display-none display-flex-tablet"
+					data-bi-name="L1-header"
+					data-test-id="primary-header"
+				></div>
+				<div
+					id="ms--secondary-nav"
+					class="site-header display-none display-flex-tablet"
+					data-bi-name="L2-header"
+					data-test-id="secondary-header"
+					
+				></div>
+			</div>
+			
+		<!-- banner -->
+		<div data-banner>
+			<div id="disclaimer-holder"></div>
+			
+		</div>
+		<!-- banner end -->
+	
+		</div>
+	</header>
+				 <section
+					id="layout-body-menu"
+					class="layout-body-menu border-right display-flex background-color-body-medium"
+					data-bi-name="menu"
+			  >
+					
+		<div
+			id="left-container"
+			class="left-container display-none padding-none display-block-tablet width-full display-none-until-layout-restored"
+			data-toc-container="true"
+		>
+			<div
+				id="ms--toc-content"
+				class="padding-left-sm padding-right-none padding-bottom-sm height-full"
+			>
+				<nav
+					id="affixed-left-container"
+					class="margin-top-xxs-tablet position-sticky display-flex flex-direction-column width-full"
+					aria-label="Primary"
+					data-bi-name="left-toc"
+					role="navigation"
+				>
+					<div
+						id="ms--collapsible-toc-header"
+						class="display-flex flex-direction-row-reverse justify-content-center align-items-center margin-bottom-xxs margin-right-xxs"
+					>
+						<button
+							type="button"
+							class="button button-clear button-sm inner-focus"
+							data-collapsible-toc-toggle
+							aria-expanded="true"
+							hidden
+							aria-controls="ms--toc-content"
+							aria-label="Table of contents"
+						>
+							<span class="icon icon-mirrored-rtl" aria-hidden="true">
+								<span
+									class="docon docon-panel-left-contract display-none-layout-menu-collapsed"
+								></span>
+								<span
+									class="docon docon-panel-left-expand display-none display-inline-layout-menu-collapsed"
+								></span>
+							</span>
+						</button>
+						<div
+							id="ms--collapsible-toc-moniker-slot"
+							class="flex-grow-1 display-none-layout-menu-collapsed"
+						></div>
+					</div>
+				</nav>
+			</div>
+		</div>
+	
+			  </section>
+
+				<main
+					id="main"
+					role="main"
+					class="layout-body-main "
+					data-bi-name="content"
+					lang="en-us"
+					dir="ltr"
+				>
+					
+			<div
+		id="ms--content-header"
+		class="content-header default-focus border-bottom-none"
+		data-bi-name="content-header"
+	>
+		<div class="content-header-controls margin-xxs margin-inline-sm-tablet">
+			<button
+				type="button"
+				class="contents-button button button-sm margin-right-xxs"
+				data-bi-name="contents-expand"
+				aria-haspopup="true"
+				data-contents-button
+			>
+				<span class="icon" aria-hidden="true"><span class="docon docon-menu"></span></span>
+				<span class="contents-expand-title"> Table of contents </span>
+			</button>
+			<button
+				type="button"
+				class="ap-collapse-behavior ap-expanded button button-sm"
+				data-bi-name="ap-collapse"
+				aria-controls="action-panel"
+			>
+				<span class="icon" aria-hidden="true"><span class="docon docon-exit-mode"></span></span>
+				<span>Exit editor mode</span>
+			</button>
+		</div>
+	</div> 
+		<div
+			id="action-panel"
+			role="region"
+			aria-label="Action Panel"
+			class="action-panel"
+			tabindex="-1"
+		></div>
+	
+			<div
+				data-main-column
+				class="reading-width margin-inline-auto layout-padding padding-top-none padding-top-sm-tablet padding-bottom-sm"
+			>
+				<div>
+					
+		<div id="article-header" class="background-color-body margin-bottom-xs display-none-print">
+			<div class="display-flex align-items-center justify-content-space-between">
+				
+		<details
+			id="article-header-breadcrumbs-overflow-popover"
+			class="popover popover-left"
+			data-for="article-header-breadcrumbs"
+		>
+			<summary
+				class="button button-clear button-primary button-sm inner-focus"
+				aria-label="All breadcrumbs"
+			>
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-more"></span>
+				</span>
+			</summary>
+			<div id="article-header-breadcrumbs-overflow" class="popover-content"></div>
+		</details>
+
+		<bread-crumbs
+			id="article-header-breadcrumbs"
+			role="group"
+			aria-label="Breadcrumbs"
+			data-test-id="article-header-breadcrumbs"
+			class="overflow-hidden flex-grow-1 margin-right-sm margin-right-md-tablet margin-right-lg-desktop margin-left-negative-xxs padding-left-xxs"
+		></bread-crumbs>
+	 
+		<div
+			id="article-header-page-actions"
+			class="opacity-none margin-left-auto display-flex flex-wrap-no-wrap align-items-stretch"
+		>
+			
+		<button
+			class="button button-sm border-none inner-focus display-none-tablet flex-shrink-0 "
+			data-bi-name="ask-learn-assistant-entry"
+			data-test-id="ask-learn-assistant-modal-entry-mobile"
+			data-ask-learn-modal-entry
+			
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-label="Ask Learn"
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+		</button>
+		<button
+			class="button button-sm display-none display-inline-flex-tablet display-none-desktop flex-shrink-0 margin-right-xxs border-color-ask-learn "
+			data-bi-name="ask-learn-assistant-entry"
+			
+			data-test-id="ask-learn-assistant-modal-entry-tablet"
+			data-ask-learn-modal-entry
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+		<button
+			class="button button-sm display-none flex-shrink-0 display-inline-flex-desktop margin-right-xxs border-color-ask-learn "
+			data-bi-name="ask-learn-assistant-entry"
+			
+			data-test-id="ask-learn-assistant-flyout-entry"
+			data-ask-learn-flyout-entry
+			data-flyout-button="toggle"
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-controls="ask-learn-flyout"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+	 
+
+			<details class="popover popover-right" id="article-header-page-actions-overflow">
+				<summary
+					class="justify-content-flex-start button button-clear button-sm button-primary inner-focus"
+					aria-label="More actions"
+					aria-expanded="false"
+					title="More actions"
+				>
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-more-vertical"></span>
+					</span>
+				</summary>
+				<div class="popover-content">
+					
+		<button
+			type="button"
+			id="ms--focus-mode-button"
+			data-focus-mode
+			data-bi-name="focus-mode-entry"
+			data-page-action-item="overflow-all"
+			data-popover-close
+			class="button button-clear button-sm button-block justify-content-flex-start text-align-left inner-focus display-none display-inline-flex-tablet"
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-glasses"></span>
+			</span>
+			<span>Reading mode</span>
+		</button>
+	 
+		<button
+			data-page-action-item="overflow-mobile"
+			type="button"
+			class="display-block-layout-menu-collapsed button-block button-sm inner-focus button button-clear display-none-tablet justify-content-flex-start text-align-left"
+			data-bi-name="contents-expand"
+			data-contents-button
+			data-popover-close
+		>
+			<span class="icon" aria-hidden="true"
+				><span class="docon docon-editor-list-bullet"></span
+			></span>
+			<span class="contents-expand-title">Table of contents</span>
+		</button>
+	 
+		<a
+			id="lang-link-overflow"
+			class="button-sm inner-focus button button-clear button-block justify-content-flex-start text-align-left"
+			data-bi-name="language-toggle"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-read-in-link
+			href="#"
+			hidden
+		>
+			<span class="icon" aria-hidden="true" data-read-in-link-icon>
+				<span class="docon docon-locale-globe"></span>
+			</span>
+			<span data-read-in-link-text>Read in English</span>
+		</a>
+	
+					
+		<button
+			type="button"
+			class="collection button button-clear button-sm button-block justify-content-flex-start text-align-left inner-focus"
+			data-list-type="collection"
+			data-bi-name="collection"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-popover-close
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-circle-addition"></span>
+			</span>
+			<span class="collection-status">Add</span>
+		</button>
+	 
+		<button
+			type="button"
+			class="collection button button-block button-clear button-sm justify-content-flex-start text-align-left inner-focus"
+			data-list-type="plan"
+			data-bi-name="plan"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-popover-close
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-circle-addition"></span>
+			</span>
+			<span class="plan-status">Add to Plans</span>
+		</button>
+	 
+					
+		<a
+			data-contenteditbtn
+			class="button button-clear button-block button-sm inner-focus justify-content-flex-start text-align-left text-decoration-none"
+			data-bi-name="edit"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			
+			href="https://github.com/dotnet/docs/blob/main/docs/core/whats-new/dotnet-11/runtime.md"
+			data-original_content_git_url="https://github.com/dotnet/docs/blob/live/docs/core/whats-new/dotnet-11/runtime.md"
+			data-original_content_git_url_template="{repo}/blob/{branch}/docs/core/whats-new/dotnet-11/runtime.md"
+			data-pr_repo=""
+			data-pr_branch=""
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-edit-outline"></span>
+			</span>
+			<span>Edit</span>
+		</a>
+	  
+		<hr class="margin-block-xxs" />
+		
+				<button
+					class="button button-block button-clear button-sm justify-content-flex-start text-align-left inner-focus"
+					type="button"
+					data-bi-name="copy-markdown"
+					data-page-action-item="overflow-all"
+					data-copy-markdown
+					data-copy-state="idle"
+					data-check-hidden="true"
+				>
+					<span class="icon color-primary" aria-hidden="true">
+						<span data-show-when="idle" class="docon docon-code-lang"></span>
+						<span data-show-when="loading" class="loader" hidden></span>
+						<span data-show-when="success" class="docon docon-check-mark" hidden></span>
+					</span>
+					<span>Copy Markdown</span>
+				</button>
+		   
+				<button
+					class="button button-block button-clear button-sm justify-content-flex-start text-align-left inner-focus"
+					type="button"
+					data-bi-name="print"
+					data-page-action-item="overflow-all"
+					data-popover-close
+					data-print-page
+					data-check-hidden="true"
+				>
+					<span class="icon color-primary" aria-hidden="true">
+						<span class="docon docon-print"></span>
+					</span>
+					<span>Print</span>
+				</button>
+		  
+	
+				</div>
+			</details>
+		</div>
+	
+			</div>
+		</div>
+	  
+		<!-- privateUnauthorizedTemplate is hidden by default -->
+		<div unauthorized-private-section data-bi-name="permission-content-unauthorized-private" hidden>
+			<hr class="hr margin-top-xs margin-bottom-sm" />
+			<div class="notification notification-info">
+				<div class="notification-content">
+					<p class="margin-top-none notification-title">
+						<span class="icon" aria-hidden="true"
+							><span class="docon docon-exclamation-circle-solid"></span
+						></span>
+						<span>Note</span>
+					</p>
+					<p class="margin-top-none authentication-determined not-authenticated">
+						Access to this page requires authorization. You can try <a class="docs-sign-in" href="#" data-bi-name="permission-content-sign-in">signing in</a> or <a  class="docs-change-directory" data-bi-name="permisson-content-change-directory">changing directories</a>.
+					</p>
+					<p class="margin-top-none authentication-determined authenticated">
+						Access to this page requires authorization. You can try <a class="docs-change-directory" data-bi-name="permisson-content-change-directory">changing directories</a>.
+					</p>
+				</div>
+			</div>
+		</div>
+	
+					<div class="content"><h1 id="whats-new-in-the-net-11-runtime">What's new in the .NET 11 runtime</h1></div>
+					
+		<div
+			id="article-metadata"
+			data-bi-name="article-metadata"
+			data-test-id="article-metadata"
+			class="page-metadata-container display-flex gap-xxs justify-content-space-between align-items-center flex-wrap-wrap"
+		>
+			 
+				<div
+					id="user-feedback"
+					class="margin-block-xxs display-none display-none-print"
+					hidden
+					data-hide-on-archived
+				>
+					
+		<button
+			id="user-feedback-button"
+			data-test-id="conceptual-feedback-button"
+			class="button button-sm button-clear button-primary display-none"
+			type="button"
+			data-bi-name="user-feedback-button"
+			data-user-feedback-button
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-like"></span>
+			</span>
+			<span>Feedback</span>
+		</button>
+	
+				</div>
+		  
+		</div>
+	 
+		<div data-id="ai-summary" class="display-none-print">
+			<div id="ms--ai-summary-cta" class="margin-top-xs display-flex align-items-center">
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-sparkle-fill gradient-text-vivid"></span>
+				</span>
+				<button
+					id="ms--ai-summary"
+					type="button"
+					class="tag tag-sm tag-suggestion margin-left-xxs"
+					data-test-id="ai-summary-cta"
+					data-bi-name="ai-summary-cta"
+					data-an="ai-summary"
+				>
+					<span class="ai-summary-cta-text">
+						Summarize this article for me
+					</span>
+				</button>
+			</div>
+			<!-- Slot where the client will render the summary card after the user clicks the CTA -->
+			<div id="ms--ai-summary-header" class="margin-top-xs"></div>
+		</div>
+	 
+		<nav
+			id="center-doc-outline"
+			class="doc-outline display-none-desktop display-none-print margin-bottom-sm"
+			data-bi-name="intopic toc"
+			aria-label="In this article"
+		>
+			<h2 id="ms--in-this-article" class="title is-6 margin-block-xs">
+				In this article
+			</h2>
+		</nav>
+	 <div class="content"><p>This article describes new features in the .NET runtime for .NET 11. It was last updated for the general availability (GA) release.</p>
+<h2 id="updated-minimum-hardware-requirements">Updated minimum hardware requirements</h2>
+<p>The minimum hardware requirements for .NET 11 have been updated to require more modern instruction sets on both x86/x64 and Arm64 architectures. Additionally, the ReadyToRun (R2R) compilation targets have been updated to take advantage of newer hardware capabilities.</p>
+<h3 id="arm64-requirements">Arm64 requirements</h3>
+<p>For Apple, there's no change to the minimum hardware or the ReadyToRun target. The Apple M1 chips are approximately equivalent to <code>armv8.5-a</code> and provide support for at least the <code>AdvSimd</code> (NEON), <code>CRC</code>, <code>DOTPROD</code>, <code>LSE</code>, <code>RCPC</code>, <code>RCPC2</code>, and <code>RDMA</code> instruction sets.</p>
+<p>For Linux, there's no change to the minimum hardware. .NET continues to support devices such as Raspberry Pi that might only provide support for the <code>AdvSimd</code> instruction set. The ReadyToRun target has been updated to include the <code>LSE</code> instruction set, which might result in additional jitting overhead if you launch an application.</p>
+<p>For Windows, the baseline is updated to require the <code>LSE</code> instruction set. This is <a href="/en-us/windows-hardware/design/minimum/minimum-hardware-requirements-overview" data-linktype="absolute-path">required by Windows 11</a> and by <a href="/en-us/windows-hardware/design/minimum/windows-processor-requirements" data-linktype="absolute-path">all Arm64 CPUs officially supported by Windows 10</a>. Additionally, it's inline with the Arm SBSA (Server Base System Architecture) requirements. The ReadyToRun target has been updated to be <code>armv8.2-a + RCPC</code>, which provides support for at least <code>AdvSimd</code>, <code>CRC</code>, <code>LSE</code>, <code>RCPC</code>, and <code>RDMA</code>, and covers the majority of hardware officially supported.</p>
+<table>
+<thead>
+<tr>
+<th>OS</th>
+<th>Previous JIT/AOT minimum</th>
+<th>New JIT/AOT minimum</th>
+<th>Previous R2R target</th>
+<th>New R2R target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Apple</td>
+<td>Apple M1</td>
+<td>(No change)</td>
+<td>Apple M1</td>
+<td>(No change)</td>
+</tr>
+<tr>
+<td>Linux</td>
+<td>armv8.0-a</td>
+<td>(No change)</td>
+<td>armv8.0-a</td>
+<td>armv8.0-a + LSE</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>armv8.0-a</td>
+<td>armv8.0-a + LSE</td>
+<td>armv8.0-a</td>
+<td>armv8.2-a + RCPC</td>
+</tr>
+</tbody>
+</table>
+<h3 id="x86x64-requirements">x86/x64 requirements</h3>
+<p>For all three operating systems (Apple, Linux, and Windows), the baseline is updated from <code>x86-64-v1</code> to <code>x86-64-v2</code>. This changes the hardware from only guaranteeing <code>CMOV</code>, <code>CX8</code>, <code>SSE</code>, and <code>SSE2</code> to also guaranteeing <code>CX16</code>, <code>POPCNT</code>, <code>SSE3</code>, <code>SSSE3</code>, <code>SSE4.1</code>, and <code>SSE4.2</code>. This guarantee is required by Windows 11 and by all x86/x64 CPUs officially supported on Windows 10. It includes all chips still officially supported by Intel and AMD, with the last older chips having gone out of support around 2013.</p>
+<p>The ReadyToRun target has been updated to <code>x86-64-v3</code> for Windows and Linux, which additionally includes the <code>AVX</code>, <code>AVX2</code>, <code>BMI1</code>, <code>BMI2</code>, <code>F16C</code>, <code>FMA</code>, <code>LZCNT</code>, and <code>MOVBE</code> instruction sets. The ReadyToRun target for Apple remains unchanged.</p>
+<table>
+<thead>
+<tr>
+<th>OS</th>
+<th>Previous JIT/AOT minimum</th>
+<th>New JIT/AOT minimum</th>
+<th>Previous R2R target</th>
+<th>New R2R target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Apple</td>
+<td>x86-64-v1</td>
+<td>x86-64-v2</td>
+<td>x86-64-v2</td>
+<td>(No change)</td>
+</tr>
+<tr>
+<td>Linux</td>
+<td>x86-64-v1</td>
+<td>x86-64-v2</td>
+<td>x86-64-v2</td>
+<td>x86-64-v3</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>x86-64-v1</td>
+<td>x86-64-v2</td>
+<td>x86-64-v2</td>
+<td>x86-64-v3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="impact">Impact</h3>
+<p>Starting with .NET 11, .NET fails to run on older hardware and might print a message similar to the following:</p>
+<blockquote>
+<p>The current CPU is missing one or more of the baseline instruction sets.</p>
+</blockquote>
+<p>For <a href="../../deploying/ready-to-run" data-linktype="relative-path">ReadyToRun</a>-capable assemblies, there might be additional startup overhead on some supported hardware that doesn't meet the expected support for a typical device.</p>
+<h3 id="reason-for-change">Reason for change</h3>
+<p>.NET supports a broad range of hardware, often above and beyond the minimum hardware requirements put in place by the underlying operating system. This support adds significant complexity to the codebase, particularly for much older hardware that's unlikely to still be in use. Additionally, it defines a "lowest common denominator" that AOT targets must default to, which can, in some scenarios, lead to reduced performance.</p>
+<p>The update to the minimum baseline was made to reduce the maintenance complexity of the codebase and to better align with the documented (and often enforced) hardware requirements of the underlying operating system.</p>
+<p>For more information, see <a href="../../compatibility/jit/11/minimum-hardware-requirements" data-linktype="relative-path">Minimum hardware requirements updated</a>.</p>
+<h2 id="runtime-async">Runtime Async</h2>
+<p>.NET 11 introduces runtime-native async (Runtime Async V2), a significant step toward replacing compiler-generated async state machines with runtime-managed suspension and resumption. Instead of the compiler emitting state-machine classes, the runtime itself tracks async execution, producing cleaner stack traces, better debuggability, and lower overhead.</p>
+<p>To enable Runtime Async in a project that targets <code>net11.0</code>, add the following property to your project file:</p>
+<pre><code class="lang-xml">&lt;PropertyGroup&gt;
+  &lt;Features&gt;runtime-async=on&lt;/Features&gt;
+&lt;/PropertyGroup&gt;
+</code></pre>
+<p>A <code>net11.0</code> project no longer requires <code>&lt;EnablePreviewFeatures&gt;true&lt;/EnablePreviewFeatures&gt;</code> to use Runtime Async.</p>
+<p>The .NET runtime libraries themselves are compiled with <code>runtime-async=on</code>. The runtime libraries no longer contain compiler-generated state machines and rely entirely on runtime-provided async. This makes it possible to migrate an entire app (with only library dependencies) to the new model, and it provides broad functional and performance validation of the feature. The product team welcomes any reports—positive or negative—about throughput and library size changes you observe.</p>
+<p>.NET 11 also includes two additional improvements:</p>
+<ul>
+<li><strong>Covariant <code>Task</code> → <code>Task&lt;T&gt;</code> overrides:</strong> When a derived class returns <code>Task&lt;T&gt;</code> for a base method that returns <code>Task</code>, the runtime now generates a void-returning thunk that bridges the calling convention difference, so virtual dispatch works for both flavors. The same fix applies to NativeAOT.</li>
+<li><strong>Inlining in crossgen2:</strong> Restrictions that prevented runtime-async methods from being inlined during ReadyToRun (R2R) compilation have been removed. All async tests pass with both crossgen2 and composite R2R, and inlining of await-less async calls (the synchronous fast path) is confirmed end-to-end.</li>
+</ul>
+<div class="NOTE">
+<p>Note</p>
+<p>The <code>DOTNET_RuntimeAsync</code> and <code>UNSUPPORTED_RuntimeAsync</code> environment variables that previously controlled runtime-async behavior have been removed. To opt out of runtime-async per project, set <code>&lt;UseRuntimeAsync&gt;false&lt;/UseRuntimeAsync&gt;</code> in your project file instead of relying on the environment variable.</p>
+</div>
+<h3 id="cleaner-live-stack-traces">Cleaner live stack traces</h3>
+<p>The most visible improvement is in <em>live stack traces</em>—what profilers, debuggers, and <code>new StackTrace()</code> see during execution. With compiler-generated async, each async method produces multiple frames from state-machine infrastructure. With Runtime Async, the actual methods appear directly on the call stack.</p>
+<pre><code class="lang-csharp">// To enable runtime async, add the following to your .csproj:
+//   &lt;Features&gt;runtime-async=on&lt;/Features&gt;
+
+await OuterAsync();
+
+static async Task OuterAsync()
+{
+    await Task.CompletedTask;
+    await MiddleAsync();
+}
+
+static async Task MiddleAsync()
+{
+    await Task.CompletedTask;
+    await InnerAsync();
+}
+
+static async Task InnerAsync()
+{
+    await Task.CompletedTask;
+    Console.WriteLine(new StackTrace(fNeedFileInfo: true));
+}
+</code></pre>
+<p><strong>Without <code>runtime-async</code>—13 frames, state-machine infrastructure visible:</strong></p>
+<pre><code class="lang-text">   at Program.&lt;&lt;Main&gt;$&gt;g__InnerAsync|0_2() in Program.cs:line 24
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](...)
+   at Program.&lt;&lt;Main&gt;$&gt;g__InnerAsync|0_2()
+   at Program.&lt;&lt;Main&gt;$&gt;g__MiddleAsync|0_1() in Program.cs:line 14
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](...)
+   at Program.&lt;&lt;Main&gt;$&gt;g__MiddleAsync|0_1()
+   at Program.&lt;&lt;Main&gt;$&gt;g__OuterAsync|0_0() in Program.cs:line 8
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](...)
+   at Program.&lt;&lt;Main&gt;$&gt;g__OuterAsync|0_0()
+   at Program.&lt;Main&gt;$(String[] args) in Program.cs:line 3
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](...)
+   at Program.&lt;Main&gt;$(String[] args)
+   at Program.&lt;Main&gt;(String[] args)
+</code></pre>
+<p><strong>With <code>runtime-async</code>—5 frames, the real call chain:</strong></p>
+<pre><code class="lang-text">   at Program.&lt;&lt;Main&gt;$&gt;g__InnerAsync|0_2() in Program.cs:line 24
+   at Program.&lt;&lt;Main&gt;$&gt;g__MiddleAsync|0_1() in Program.cs:line 14
+   at Program.&lt;&lt;Main&gt;$&gt;g__OuterAsync|0_0() in Program.cs:line 8
+   at Program.&lt;Main&gt;$(String[] args) in Program.cs:line 3
+   at Program.&lt;Main&gt;(String[] args)
+</code></pre>
+<div class="NOTE">
+<p>Note</p>
+<p>Exception stack traces (from <code>catch (Exception ex)</code>) already look the same with or without Runtime Async, because existing <code>ExceptionDispatchInfo</code> cleanup in compiler-generated code handles that case. The improvement is in what you see <em>during</em> live execution.</p>
+</div>
+<p>This improvement benefits anything that inspects the live execution stack, including profiling tools, diagnostic logging, and the debugger call stack window.</p>
+<h3 id="nativeaot-and-readytorun-support">NativeAOT and ReadyToRun support</h3>
+<p>Runtime Async supports NativeAOT and ReadyToRun compilation. This extends the feature beyond JIT-compiled code to ahead-of-time compiled scenarios. The runtime also reuses continuation objects more aggressively and avoids saving unchanged locals, reducing allocation pressure in async-heavy code.</p>
+<h3 id="debugging-improvements">Debugging improvements</h3>
+<p>Breakpoints now bind correctly inside runtime-async methods, and the debugger can step through <code>await</code> boundaries without jumping into compiler-generated infrastructure.</p>
+<h3 id="runtime-async-performance-improvements">Runtime Async performance improvements</h3>
+<p>Runtime Async includes several performance improvements:</p>
+<ul>
+<li><strong>JIT async support:</strong> The JIT compiles a dedicated runtime-async version of a synchronous, task-returning method rather than delegating through a thunk. The JIT turns the method's tail calls into runtime-async calls and awaits the task that would otherwise be returned, eliminating an extra layer of indirection.</li>
+<li><strong>Tail-merged suspension points:</strong> The JIT tail-merges async suspension points so generated code is smaller.</li>
+<li><strong>Cached continuations:</strong> Continuations used for runtime-async callable task thunks are cached and reused.</li>
+<li><strong>Pooled methods opt out:</strong> Methods that are already pooled opt out of runtime-async, avoiding redundant work.</li>
+<li><strong>Tiered async compilation:</strong> Async versions now flow through tiered compilation, so hot async methods get tier 1 optimizations after warm-up.</li>
+<li><strong>Task and ValueTask factory intrinsics:</strong> The JIT recognizes common factories, such as <code>Task.FromResult</code>, <code>Task.CompletedTask</code>, and <code>ValueTask.FromResult</code>, and folds them into faster async paths.</li>
+<li><strong>Tail-await optimizations:</strong> Implicit tailcalls from async methods are enabled again when the method directly returns another async result, and <code>await Task.Yield()</code> avoids extra allocations in runtime-async paths.</li>
+</ul>
+<h4 id="async-continuations-without-executioncontext">Async continuations without ExecutionContext</h4>
+<p>Async continuations can now opt out of <code>ExecutionContext</code> capture and restore. <code>ExecutionContext</code> carries ambient state—such as <code>AsyncLocal&lt;T&gt;</code> values—across <code>await</code> points. Every <code>Task</code> continuation previously captured a snapshot of the context and restored it before running, even when no <code>AsyncLocal&lt;T&gt;</code> state was in use and the restore was a no-op.</p>
+<p>The runtime now detects when a continuation has nothing to restore and skips the capture/restore cycle entirely. <code>Task</code>, <code>Task&lt;T&gt;</code>, <code>ValueTask</code>, and <code>ValueTask&lt;T&gt;</code> all benefit from this change, as does the runtime-async implementation path. Applications that use <code>ConfigureAwait(false)</code> and <code>AsyncLocal&lt;T&gt;</code> sparingly see reduced overhead in high-throughput async code paths.</p>
+<h2 id="jit-improvements">JIT improvements</h2>
+<ul>
+<li><strong>Bounds check elimination:</strong> The just-in-time (JIT) compiler now eliminates bounds checks for the common pattern where an index plus a constant is compared against a length, such as <code>i + cns &lt; len</code>. It also eliminates more redundant bounds checks for index-from-end access (for example, <code>values[^1]</code>). These improvements reduce redundant checks in tight loops and improve throughput for array and span operations.</li>
+<li><strong>Redundant checked context removal:</strong> The JIT can now prove and remove redundant checked arithmetic contexts—for example, when a value is already known to be in range. This optimization eliminates unnecessary overflow checks in generated code.</li>
+<li><strong>Switch expression folding:</strong> Multi-target <code>switch</code> expressions now fold into simpler branchless checks when the targets are a small set of constants, for example <code>x is 0 or 1 or 2 or 3 or 4</code>.</li>
+<li><strong>Faster uint-to-float/double casts:</strong> Casting <code>uint</code> to <code>float</code> or <code>double</code> is faster on pre-AVX-512 x86 hardware.</li>
+<li><strong>SVE2 intrinsics:</strong> New Arm SVE2 (Scalable Vector Extension 2) intrinsics are available: <code>ShiftRightLogicalNarrowingSaturate(Even|Odd)</code>. These expand the set of vectorized operations available on Arm hardware that supports SVE2.</li>
+<li><strong><code>Math.BigMul</code> on x64:</strong> <code>Math.BigMul(long, long, out long)</code> is now significantly faster on x64. The JIT generates a single <code>MUL r/m64</code> instruction when both operands are 64-bit values and the caller requests the high half of the result, eliminating the previous helper call.</li>
+<li><strong>Single-IG prolog restriction removed:</strong> The JIT no longer requires the function prolog to fit in a single instruction group (IG). Complex prologues with many saved registers, large stack allocations, or runtime-async state setup no longer trigger fallback paths.</li>
+<li><strong><code>SELECT(cond, cns, cns)</code> folding:</strong> The JIT now folds conditional selects whose two branches both produce the same constant into just that constant—for example, <code>condition ? 42 : 42</code> becomes <code>42</code>. This fold eliminates unnecessary comparisons that can appear after earlier optimizations unify branches.</li>
+<li><strong>AVX-VNNI-512 intrinsics:</strong> <a href="/en-us/dotnet/api/system.runtime.intrinsics.x86.avxvnni.v512" class="no-loc" data-linktype="absolute-path">System.Runtime.Intrinsics.X86.AvxVnni.V512</a> exposes 512-bit forms of the <code>AVX-VNNI</code> multiply-add intrinsics on CPUs with <code>AVX512-VNNI</code> support.</li>
+<li><strong>Saturating floating-point conversions:</strong> Unchecked <code>float</code> and <code>double</code> conversions to small integer types now saturate to type bounds instead of wrapping through intermediate truncation.</li>
+<li><strong>ARM64 <code>Vector&lt;T&gt;</code> by reference for SVE:</strong> When the runtime is compiled with ARM SVE support, <code>Vector&lt;T&gt;</code> values are passed by reference rather than by value, aligning with the ARM calling convention for scalable types and enabling better code generation for SVE-intensive code.</li>
+</ul>
+<p>For better performance and code quality, .NET 11 adds several more JIT optimizations:</p>
+<h3 id="constant-folding-sequenceequal">Constant-folding SequenceEqual</h3>
+<p>The JIT can now fold a <code>string.Equals</code> or <code>ReadOnlySpan&lt;T&gt;.SequenceEqual</code> call whose operands are both compile-time constants, replacing the byte-by-byte comparison with the constant <code>true</code> or <code>false</code> result. This matters most after inlining, when a caller passes another literal to a helper that compares against a known string. When <code>IsAdmin</code> is inlined into a caller that passes <code>"Guest"</code>, the JIT sees <code>"Guest" == "Admin"</code> and folds it to <code>false</code>:</p>
+<pre><code class="lang-csharp">static bool IsAdmin(string role) =&gt; role == "Admin";
+</code></pre>
+<p>The optimization applies to string literals, <code>const string</code> fields, and UTF-8 literals (for example, <code>"PNG"u8</code>).</p>
+<h3 id="devirtualization-improvements">Devirtualization improvements</h3>
+<p>The JIT can now devirtualize generic virtual methods, including non-shared generic virtual methods and shared generic virtual methods that don't require a runtime lookup. Default interface methods declared on generic interfaces can now be devirtualized as well.</p>
+<p>In addition, the result of <code>Activator.CreateInstance&lt;T&gt;()</code> is now treated as having an exact type, allowing the JIT to devirtualize subsequent calls made on the returned object.</p>
+<p>These improvements unlock further downstream optimizations such as inlining and constant folding, reducing runtime dispatch overhead and improving performance. For example:</p>
+<pre><code class="lang-csharp">IfaceGeneric&lt;string&gt; caller = new Caller&lt;string&gt;();
+Iface obj = Activator.CreateInstance&lt;Impl&gt;();
+caller.DefaultImpl(obj, "test"); // Can be optimized down to Console.WriteLine("test")
+
+interface Iface
+{
+    void GenericMethod&lt;T&gt;(T value);
+}
+
+interface IfaceGeneric&lt;T&gt;
+{
+    void DefaultImpl(Iface obj, T value) =&gt; obj.GenericMethod(value);
+}
+
+class Impl : Iface
+{
+    public void GenericMethod&lt;T&gt;(T value) =&gt; Console.WriteLine(value);
+}
+
+class Caller&lt;T&gt; : IfaceGeneric&lt;T&gt;
+{
+}
+</code></pre>
+<p>Here the JIT can determine the exact implementation behind both interface calls, devirtualize them, inline through the call chain, and ultimately fold the code down to the equivalent of <code>Console.WriteLine("test")</code>.</p>
+<h3 id="eliminating-bounds-checks-after-an-empty-span-guard">Eliminating bounds checks after an empty-span guard</h3>
+<p>The JIT now picks up the <code>length != 0</code> assertion from an empty-span check and uses it to prove the bounds check on the first element succeeds:</p>
+<pre><code class="lang-csharp">if (!span.IsEmpty &amp;&amp; span[0] == value)
+{
+    // The bounds check on span[0] is now eliminated.
+}
+</code></pre>
+<h3 id="redundant-branch-and-test-elimination">Redundant branch and test elimination</h3>
+<p>When an outer predicate is already implied by an inner branch, the JIT now removes the redundant outer check. Similarly, when code assigns a value in a conditional and then immediately tests it, the second test is eliminated:</p>
+<pre><code class="lang-csharp">if (x &gt; 0)
+{
+    if (x &gt; 1) S();  // The outer x &gt; 0 check is folded away.
+}
+
+int y = condition ? 1 : 2;
+if (y == 1) A(); else B();  // The y == 1 test is eliminated;
+                             // each branch of the ternary goes directly to A() or B().
+</code></pre>
+<p>These optimizations are most visible after inlining, where guards from different methods land in the same compiled body.</p>
+<h2 id="hardware-intrinsics-and-code-generation">Hardware intrinsics and code generation</h2>
+<p>.NET 11 includes several new hardware intrinsics and code generation improvements:</p>
+<ul>
+<li><strong>Hardware FP16 instructions for <code>Half</code> arithmetic and conversions:</strong> The JIT uses hardware FP16 instructions for <a href="/en-us/dotnet/api/system.half" class="no-loc" data-linktype="absolute-path">Half</a> arithmetic and conversions when the processor supports them. On x64, arithmetic uses AVX10.1, while conversions between <code>Half</code> and <code>float</code> can use F16C (available on most AVX2-capable hardware). On Arm64, arithmetic uses the optional FP16 instruction set, while conversions between <code>Half</code> and <code>float</code> or <code>double</code> use baseline Arm64 instructions. The optimization requires no application changes and preserves the existing ABI representation of <code>Half</code>.</li>
+<li><strong>Better cost modeling for x86/x64 SIMD:</strong> The JIT's floating-point execution and size costs previously reflected x87-era assumptions. Updated costs that reflect modern SSE/AVX hardware let the JIT make better decisions about hoisting and common subexpression elimination (CSE) around SIMD code.</li>
+<li><strong>Faster <code>DotProduct</code> on AVX:</strong> Lowering for <code>Vector128.Dot</code>-style operations now emits a <code>mul + permute + add</code> sequence instead of <code>vdpps</code>/<code>vdppd</code> when AVX is available, which is consistently faster.</li>
+<li><strong>Faster <code>IndexOfAnyAsciiSearcher</code> on Arm64:</strong> Arm64 versions of <code>Vector*.Count</code>, <code>IndexOf</code>, and <code>LastIndexOf</code> no longer route through <code>ExtractMostSignificantBits</code>, yielding a 5–50% improvement in workloads that use these APIs in their core loop.</li>
+<li><strong>Arm64 <code>ToScalar</code> for 64-bit integers:</strong> <code>ToScalar</code> on <code>Vector*&lt;long&gt;</code> and <code>Vector*&lt;ulong&gt;</code> now uses <code>fmov</code> instead of <code>umov</code>, which is shorter and faster on most cores.</li>
+<li><strong>SVE <code>CreateWhile</code> API expansion:</strong> <code>CreateWhile</code> gains signed, <code>double</code>, and <code>single</code> variants alongside the existing unsigned ones, completing the predicate-generation surface for SVE loops.</li>
+<li><strong>New SVE2 and Arm64 instruction-set detection:</strong> The runtime now reports <code>SVE_AES</code>, <code>SVE_SHA3</code>, <code>SVE_SM4</code>, <code>SHA3</code>, and <code>SM4</code> as separate instruction sets, allowing <code>Sve2*.IsSupported</code> queries for those features on capable hardware.</li>
+<li><strong>AVX10 detection fix:</strong> The CPUID-bit cache for AVX10 was being overwritten by a later query, which could cause AVX10 to be misreported on capable hardware. This is now fixed.</li>
+</ul>
+<h2 id="readytorun-improvements">ReadyToRun improvements</h2>
+<p><code>Comparer&lt;T&gt;.Default</code> and <code>EqualityComparer&lt;T&gt;.Default</code> are now specialized in ReadyToRun (R2R) images. Previously, the default comparers used reflection that R2R couldn't see ahead of time, causing callers to fall back to the JIT. R2R now generates a specialized helper in the image—mirroring the NativeAOT approach—and benchmarks show up to a 20× improvement for collections operations that rely on the default comparer.</p>
+<h2 id="vm-improvements">VM improvements</h2>
+<ul>
+<li><strong>Cached interface dispatch on non-JIT platforms:</strong> On platforms that lack JIT support, such as iOS, interface dispatch was falling back to an expensive generic fixup path. Cached dispatch yields up to 200x improvements in interface-heavy code on these targets.</li>
+<li><strong><code>Guid.NewGuid()</code> on Linux:</strong> <a href="/en-us/dotnet/api/system.guid.newguid#system-guid-newguid" class="no-loc" data-linktype="absolute-path">Guid.NewGuid()</a> on Linux now uses the <code>getrandom()</code> syscall with batch caching instead of reading from <code>/dev/urandom</code>, yielding approximately 12% throughput improvement for GUID generation.</li>
+</ul>
+<h2 id="webassembly-improvements">WebAssembly improvements</h2>
+<p>Browser and WebAssembly support has several improvements:</p>
+<ul>
+<li><strong>WebCIL payload loading:</strong> The runtime can now load WebCIL payloads directly, improving compatibility with browser-based deployment scenarios.</li>
+<li><strong>Better debugging symbols:</strong> Symbol and stack trace quality for WebAssembly debugging has improved, making it easier to diagnose issues in browser-hosted .NET apps.</li>
+<li><strong><code>float[]</code>, <code>Span&lt;float&gt;</code>, and <code>ArraySegment&lt;float&gt;</code> marshaling:</strong> <code>float[]</code>, <code>Span&lt;float&gt;</code>, and <code>ArraySegment&lt;float&gt;</code> are now marshaled more directly across JavaScript boundaries, reducing overhead for interop-heavy code.</li>
+</ul>
+<p>.NET includes improvements to CoreCLR-on-WebAssembly:</p>
+<ul>
+<li><strong>WebCIL V1 is the default for CoreCLR WASM builds:</strong> The shared WebCIL header gains a <code>TableBase</code> field (28 → 32 bytes). Both Mono and CoreCLR readers accept V0 and V1. Crossgen2's <code>WasmObjectWriter</code> produces V1 directly, and CoreCLR-flavored WASM SDK builds default <code>WasmWebcilVersion</code> to <code>V1</code>.</li>
+<li><strong>Native re-link works for CoreCLR WASM apps:</strong> A full Emscripten-based pipeline replaces the previous stub targets. Re-linking <code>dotnet.native.wasm</code> from the runtime pack and including custom native code via <code>NativeFileReference</code> now works.</li>
+<li><strong>JavaScript minification in Release builds:</strong> Browser CoreCLR Release builds ship minified JavaScript.</li>
+<li><strong>NativeAOT publish for WASM no longer drops package satellites:</strong> Satellite assemblies from NuGet packages are now passed to ILC and pruned from the publish output, fixing localization for AOT-published apps that depend on packages such as <code>System.CommandLine</code>.</li>
+</ul>
+<p>CoreCLR on WebAssembly now runs the libraries test suite end to end.</p>
+<h2 id="platform-support-for-more-than-1024-cpus">Platform support for more than 1024 CPUs</h2>
+<p>The .NET runtime can now initialize on machines with more than 1024 logical processors. Previously, <code>sched_getaffinity</code> was called with the default <code>cpu_set_t</code> (capped at 1024), causing initialization to fail on high-core-count servers. The runtime now allocates the CPU set dynamically. The GC retains its 1024-heap limit, but the CPU count limit is removed.</p>
+<h2 id="in-process-crash-report-logging">In-process crash report logging</h2>
+<p>A new in-process crash reporting mechanism captures diagnostic information from within the crashing process before it terminates. Previously, crash diagnostics were collected by an out-of-process monitor. While the out-of-process approach is safe, it can miss information that's only available inside the dying process. The new in-process path logs the managed stack trace, module list, and key runtime state to a well-known path before the process exits.</p>
+<p>This capability originated on mobile platforms and is now also available on Linux and macOS. When <code>DOTNET_DbgEnableMiniDump</code> isn't enabled, set <code>DOTNET_EnableCrashReport=1</code> or <code>DOTNET_EnableCrashReportOnly=1</code> to select the in-process reporter. Existing <code>createdump</code> behavior remains in place when minidumps are enabled.</p>
+<h2 id="nativeaot-faster-interface-dispatch">NativeAOT: faster interface dispatch</h2>
+<p>NativeAOT now uses a dispatch helper for interface method calls. Instead of a direct fat-pointer call sequence, the runtime routes interface dispatch through a shared helper that can be patched to the correct implementation after the call site warms up. This reduces the binary size of interface call sites and improves throughput on workloads with many interface method calls.</p>
+<p>Generic virtual method dispatch also uses the shared dispatch-cell infrastructure, which improves both monomorphic and polymorphic call performance. In addition, <a href="/en-us/dotnet/api/system.reflection.assembly.getcallingassembly#system-reflection-assembly-getcallingassembly" class="no-loc" data-linktype="absolute-path">Assembly.GetCallingAssembly()</a> now works on NativeAOT when stack trace data is available.</p>
+<h2 id="simd-lane-construction-and-composition">SIMD lane construction and composition</h2>
+<p><code>System.Runtime.Intrinsics</code> now includes lane construction and composition APIs for hardware vector types. The new APIs let you construct a vector from individually specified lanes and extract or reorder lanes between vectors. This enables precise, portable control over SIMD vector element placement without falling back to platform-specific intrinsics.</p>
+<p>The new methods fall into a few families:</p>
+<ul>
+<li><strong>Patterned construction:</strong> <code>CreateGeometricSequence</code>, <code>CreateAlternatingSequence</code>, and <code>CreateHarmonicSequence</code> build a vector from a starting value and a rule.</li>
+<li><strong>Interleave and de-interleave:</strong> <code>Zip</code>, <code>ZipLower</code>/<code>ZipUpper</code>, <code>Unzip</code>, <code>UnzipEven</code>/<code>UnzipOdd</code>.</li>
+<li><strong>Rearrange:</strong> The <code>Concat</code> family (<code>ConcatLowerLower</code>, <code>ConcatLowerUpper</code>, <code>ConcatUpperLower</code>, <code>ConcatUpperUpper</code>) and <code>Reverse</code>.</li>
+</ul>
+<pre><code class="lang-csharp">using System.Runtime.Intrinsics;
+
+// {1, 2, 4, 8} — each lane is the previous lane times two
+Vector128&lt;int&gt; powers = Vector128.CreateGeometricSequence(1, 2);
+
+// Interleave two vectors lane-by-lane
+(Vector128&lt;int&gt; lower, Vector128&lt;int&gt; upper) =
+    Vector128.Zip(Vector128.Create(1), Vector128.Create(2));
+</code></pre>
+<p>These APIs are available on <code>Vector128&lt;T&gt;</code>, <code>Vector256&lt;T&gt;</code>, <code>Vector512&lt;T&gt;</code>, <code>Vector64&lt;T&gt;</code>, and <code>Vector&lt;T&gt;</code>. They're building blocks for image processing, audio digital signal processing (DSP), and other SIMD-intensive workloads that need fine-grained control over vector element layout.</p>
+<h2 id="file-locking-on-ios-and-tvos">File locking on iOS and tvOS</h2>
+<p>On iOS and tvOS, including simulators, CoreCLR now disables advisory file locking by default. A <a href="/en-us/dotnet/api/system.io.filestream" class="no-loc" data-linktype="absolute-path">FileStream</a> that acquired an advisory lock could cause the operating system to terminate an app when the app entered the background while it held the lock. As a result, <a href="/en-us/dotnet/api/system.io.fileshare" class="no-loc" data-linktype="absolute-path">FileShare</a> restrictions are no longer enforced by those locks on iOS and tvOS, including between handles in the same process. Mac Catalyst and other platforms keep their existing defaults.</p>
+<p>If your app relies on <code>FileShare</code> enforcement and you accept the risk of suspension-related termination, restore file locking by using either of the following settings:</p>
+<ul>
+<li><p>Set the <code>DOTNET_SYSTEM_IO_DISABLEFILELOCKING</code> environment variable to <code>0</code>.</p>
+</li>
+<li><p>Set the <code>System.IO.DisableFileLocking</code> runtime configuration property to <code>false</code>. For example, in the <em>runtimeconfig.json</em> file:</p>
+<pre><code class="lang-json">{
+  "configProperties": {
+    "System.IO.DisableFileLocking": false
+  }
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="reliability-fixes">Reliability fixes</h2>
+<p>The runtime includes fixes for the following issues:</p>
+<ul>
+<li>On Linux, the SDK no longer crashes on Red Hat Enterprise Linux (RHEL) 8 on Arm64, and the runtime correctly traverses cgroup v2 memory limits at the root of the hierarchy.</li>
+<li>Array marshalling to native code now produces correct values and avoids unexpected exceptions.</li>
+<li>Sharing Unix named mutexes with older .NET processes no longer causes spurious abandoned-mutex errors.</li>
+<li>On macOS, terminating a process tree no longer hangs.</li>
+<li>Generic virtual method dispatch no longer hangs after repeated <a href="/en-us/dotnet/api/system.runtime.loader.assemblyloadcontext" class="no-loc" data-linktype="absolute-path">AssemblyLoadContext</a> unloads.</li>
+<li><a href="/en-us/dotnet/api/system.collections.concurrent.concurrentqueue-1.trydequeue" class="no-loc" data-linktype="absolute-path">TryDequeue</a> no longer spuriously reports an empty queue while a segment freezes during growth. <a href="/en-us/dotnet/api/system.collections.concurrent.concurrentqueue-1.trypeek" class="no-loc" data-linktype="absolute-path">TryPeek</a> has the same reliability fix.</li>
+<li>On Windows, garbage collection works correctly on machines with multiple CPU groups.</li>
+</ul>
+<h2 id="runtime-diagnostics">Runtime diagnostics</h2>
+<p>The async profiler now instruments both runtime-async methods and compiler-generated async state-machine methods, so tools receive one consistent event model regardless of async implementation style. The runtime also adds improved interpreter perf-map logging support, and fixes parsing of <code>CORECLR_NOTIFICATION_PROFILERS</code> lists that don't end with a semicolon.</p>
+<h2 id="see-also">See also</h2>
+<ul>
+<li><a href="libraries" data-linktype="relative-path">What's new in .NET libraries for .NET 11</a></li>
+<li><a href="sdk" data-linktype="relative-path">What's new in the SDK for .NET 11</a></li>
+<li><a href="../../compatibility/11" data-linktype="relative-path">Breaking changes in .NET 11</a></li>
+</ul>
+</div>
+					
+		<div
+			id="ms--inline-notifications"
+			class="margin-block-xs"
+			data-bi-name="inline-notification"
+		></div>
+	 
+		<div
+			id="assertive-live-region"
+			role="alert"
+			aria-live="assertive"
+			class="visually-hidden"
+			aria-relevant="additions"
+			aria-atomic="true"
+		></div>
+		<div
+			id="polite-live-region"
+			role="status"
+			aria-live="polite"
+			class="visually-hidden"
+			aria-relevant="additions"
+			aria-atomic="true"
+		></div>
+	
+					
+			
+		<!-- feedback section -->
+		<section
+			class="feedback-section position-relative margin-top-lg border border-radius padding-xxs display-none-print"
+			data-bi-name="open-source-feedback-section"
+			data-open-source-feedback-section
+			hidden
+		>
+			<div class="display-flex flex-direction-column flex-direction-row-tablet">
+				<div
+					class="width-450-tablet padding-inline-xs padding-inline-xs-tablet padding-top-xs padding-bottom-sm padding-top-xs-tablet background-color-body-medium"
+				>
+					<div class="display-flex flex-direction-column">
+						<div class="padding-bottom-xxs">
+							<span class="icon margin-right-xxs" aria-hidden="true">
+								<span class="docon docon-brand-github"></span>
+							</span>
+							<span class="font-weight-semibold">
+								Collaborate with us on GitHub
+							</span>
+						</div>
+						<span class="line-height-normal">
+							The source for this content can be found on GitHub, where you can also create and review issues and pull requests. For more information, see <a href="https://learn.microsoft.com/contribute/content/dotnet/dotnet-contribute">our contributor guide</a>.
+						</span>
+					</div>
+				</div>
+				<div
+					class="display-flex gap-xs width-full-tablet flex-direction-column padding-xs justify-content-space-evenly"
+				>
+					<div class="media">
+						
+					<div class="media-left">
+						<div class="image image-36x36" hidden data-open-source-image-container>
+							<img
+								class="theme-display is-light"
+								src="https://learn.microsoft.com/media/logos/logo_net.svg"
+								aria-hidden="true"
+								data-open-source-image-light
+							/>
+							<img
+								class="theme-display is-dark is-high-contrast"
+								src="https://learn.microsoft.com/media/logos/logo_net.svg"
+								aria-hidden="true"
+								data-open-source-image-dark
+							/>
+						</div>
+					</div>
+			  
+
+						<div class="media-content">
+							<p
+								class="font-size-xl font-weight-semibold margin-bottom-xxs"
+								data-open-source-product-title
+							>
+								.NET
+							</p>
+							<div class="display-flex gap-xs flex-direction-column">
+								<p class="line-height-normal" data-open-source-product-description></p>
+								<div class="display-flex gap-xs flex-direction-column">
+									<a href="#" data-github-link>
+										<span class="icon margin-right-xxs" aria-hidden="true">
+											<span class="docon docon-bug"></span>
+										</span>
+										<span>Open a documentation issue</span>
+									</a>
+									<a
+										href="https://aka.ms/feedback/report?space=61"
+										class="display-block margin-top-auto font-size-md"
+										data-feedback-product-url
+									>
+										<span class="icon margin-right-xxs" aria-hidden="true">
+											<span class="docon docon-feedback"></span>
+										</span>
+										<span>Provide product feedback</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end feedback section -->
+	
+			
+		<!-- feedback section -->
+		<section
+			id="site-user-feedback-footer"
+			class="font-size-sm margin-top-md display-none-print display-none-desktop"
+			data-test-id="site-user-feedback-footer"
+			data-bi-name="site-feedback-section"
+		>
+			<hr class="hr" />
+			<h2 id="ms--feedback" class="title is-3">Feedback</h2>
+			<div class="display-flex flex-wrap-wrap align-items-center">
+				<p class="font-weight-semibold margin-xxs margin-left-none">
+					Was this page helpful?
+				</p>
+				<div class="buttons">
+					<button
+						class="thumb-rating-button like button button-primary button-sm"
+						data-test-id="footer-rating-yes"
+						data-binary-rating-response="rating-yes"
+						type="button"
+						title="This article is helpful"
+						data-bi-name="button-rating-yes"
+						aria-pressed="false"
+					>
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-like"></span>
+						</span>
+						<span>Yes</span>
+					</button>
+					<button
+						class="thumb-rating-button dislike button button-primary button-sm"
+						id="standard-rating-no-button"
+						hidden
+						data-test-id="footer-rating-no"
+						data-binary-rating-response="rating-no"
+						type="button"
+						title="This article is not helpful"
+						data-bi-name="button-rating-no"
+						aria-pressed="false"
+					>
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-dislike"></span>
+						</span>
+						<span>No</span>
+					</button>
+					<details
+						class="popover popover-top"
+						id="mobile-help-popover"
+						data-test-id="footer-feedback-popover"
+					>
+						<summary
+							class="thumb-rating-button dislike button button-primary button-sm"
+							data-test-id="details-footer-rating-no"
+							data-binary-rating-response="rating-no"
+							title="This article is not helpful"
+							data-bi-name="button-rating-no"
+							aria-pressed="false"
+							data-bi-an="feedback-unhelpful-popover"
+						>
+							<span class="icon" aria-hidden="true">
+								<span class="docon docon-dislike"></span>
+							</span>
+							<span>No</span>
+						</summary>
+						<div
+							class="popover-content width-200 width-300-tablet"
+							role="dialog"
+							aria-labelledby="popover-heading"
+							aria-describedby="popover-description"
+						>
+							<p id="popover-heading" class="font-size-lg margin-bottom-xxs font-weight-semibold">
+								Need help with this topic?
+							</p>
+							<p id="popover-description" class="font-size-sm margin-bottom-xs">
+								Want to try using Ask Learn to clarify or guide you through this topic?
+							</p>
+							
+		<div class="buttons flex-direction-row flex-wrap justify-content-center gap-xxs">
+			<div>
+		<button
+			class="button button-sm border inner-focus display-none margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-test-id="ask-learn-assistant-modal-entry-mobile-feedback"
+			data-ask-learn-modal-entry-feedback
+			data-bi-an=feedback-unhelpful-popover
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-label="Ask Learn"
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+		</button>
+		<button
+			class="button button-sm display-inline-flex display-none-desktop flex-shrink-0 margin-right-xxs border-color-ask-learn margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-bi-an=feedback-unhelpful-popover
+			data-test-id="ask-learn-assistant-modal-entry-tablet-feedback"
+			data-ask-learn-modal-entry-feedback
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+		<button
+			class="button button-sm display-none flex-shrink-0 display-inline-flex-desktop margin-right-xxs border-color-ask-learn margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-bi-an=feedback-unhelpful-popover
+			data-test-id="ask-learn-assistant-flyout-entry-feedback"
+			data-ask-learn-flyout-entry-show-only
+			data-flyout-button="toggle"
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-controls="ask-learn-flyout"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+	</div>
+			<button
+				type="button"
+				class="button button-sm margin-right-xxs"
+				data-help-option="suggest-fix"
+				data-bi-name="feedback-suggest"
+				data-bi-an="feedback-unhelpful-popover"
+				data-test-id="suggest-fix"
+			>
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-feedback"></span>
+				</span>
+				<span> Suggest a fix? </span>
+			</button>
+		</div>
+	
+						</div>
+					</details>
+				</div>
+			</div>
+		</section>
+		<!-- end feedback section -->
+	
+		
+				</div>
+				
+		<div id="ms--additional-resources-mobile" class="display-none-print">
+			<hr class="hr" hidden />
+			<h2 id="ms--additional-resources-mobile-heading" class="title is-3" hidden>
+				Additional resources
+			</h2>
+			
+		<section
+			id="right-rail-recommendations-mobile"
+			class=""
+			data-bi-name="recommendations"
+			hidden
+		></section>
+	 
+		<section
+			id="right-rail-training-mobile"
+			class=""
+			data-bi-name="learning-resource-card"
+			hidden
+		></section>
+	 
+		<section
+			id="right-rail-events-mobile"
+			class=""
+			data-bi-name="events-card"
+			hidden
+		></section>
+	
+		</div>
+	 
+		<div
+			id="article-metadata-footer"
+			data-bi-name="article-metadata-footer"
+			data-test-id="article-metadata-footer"
+			class="page-metadata-container"
+		>
+			<hr class="hr" />
+			<ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
+				<li class="visibility-hidden-visual-diff">
+			<span class="badge badge-sm text-wrap-pretty">
+				<span>Last updated on <local-time format="twoDigitNumeric"
+		datetime="2026-11-10T08:00:00.000Z"
+		data-article-date-source="calculated"
+		class="is-invisible"
+	>
+		2026-11-10
+	</local-time></span>
+			</span>
+		</li>
+			</ul>
+		</div>
+	
+			</div>
+		
+				</main>
+				<aside
+					id="layout-body-aside"
+					class="layout-body-aside  "
+					data-bi-name="aside"
+					aria-label="Additional resources"
+			  >
+					
+		<div
+			id="ms--additional-resources"
+			class="right-container padding-sm display-none display-block-desktop height-full"
+			data-bi-name="pageactions"
+		>
+			<div id="affixed-right-container" data-bi-name="right-column">
+				
+		<nav
+			id="side-doc-outline"
+			class="doc-outline border-bottom padding-bottom-xs margin-bottom-xs scrollbar-width-thin"
+			data-bi-name="intopic toc"
+			aria-label="In this article"
+		>
+			<h3>In this article</h3>
+		</nav>
+	
+				<!-- Feedback -->
+				
+		<section
+			id="ms--site-user-feedback-right-rail"
+			class="font-size-sm display-none-print"
+			data-test-id="site-user-feedback-right-rail"
+			data-bi-name="site-feedback-right-rail"
+		>
+			<div class="display-flex flex-wrap-wrap align-items-center">
+				<p class="font-weight-semibold margin-xxs margin-left-none">
+					Was this page helpful?
+				</p>
+				<div class="display-flex flex-wrap-nowrap">
+					<button
+						class="thumb-rating-button like inner-focus"
+						data-test-id="right-rail-rating-yes"
+						data-binary-rating-response="rating-yes"
+						type="button"
+						title="This article is helpful"
+						aria-label="This article is helpful"
+						data-bi-name="button-rating-yes"
+						aria-pressed="false"
+					>
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-like"></span>
+						</span>
+					</button>
+					<button
+						class="thumb-rating-button dislike inner-focus"
+						id="right-rail-no-button"
+						hidden
+						data-test-id="right-rail-rating-no"
+						data-binary-rating-response="rating-no"
+						type="button"
+						title="This article is not helpful"
+						aria-label="This article is not helpful"
+						data-bi-name="button-rating-no"
+						aria-pressed="false"
+					>
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-dislike"></span>
+						</span>
+					</button>
+					<details class="popover popover-right" id="help-popover" data-test-id="feedback-popover">
+						<summary
+							tabindex="0"
+							class="thumb-rating-button dislike inner-focus"
+							data-test-id="details-right-rail-rating-no"
+							data-binary-rating-response="rating-no"
+							title="This article is not helpful"
+							aria-label="This article is not helpful"
+							data-bi-name="button-rating-no"
+							aria-pressed="false"
+							data-bi-an="feedback-unhelpful-popover"
+						>
+							<span class="icon" aria-hidden="true">
+								<span class="docon docon-dislike"></span>
+							</span>
+						</summary>
+						<div
+							class="popover-content width-200 width-300-tablet"
+							role="dialog"
+							aria-labelledby="popover-heading-right-rail"
+							aria-describedby="popover-description-right-rail"
+						>
+							<p
+								id="popover-heading-right-rail"
+								class="font-size-lg margin-bottom-xxs font-weight-semibold"
+							>
+								Need help with this topic?
+							</p>
+							<p id="popover-description-right-rail" class="font-size-sm margin-bottom-xs">
+								Want to try using Ask Learn to clarify or guide you through this topic?
+							</p>
+							
+		<div class="buttons flex-direction-row flex-wrap justify-content-center gap-xxs">
+			<div>
+		<button
+			class="button button-sm border inner-focus display-none margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-test-id="ask-learn-assistant-modal-entry-mobile-feedback"
+			data-ask-learn-modal-entry-feedback
+			data-bi-an=feedback-unhelpful-popover
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-label="Ask Learn"
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+		</button>
+		<button
+			class="button button-sm display-inline-flex display-none-desktop flex-shrink-0 margin-right-xxs border-color-ask-learn margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-bi-an=feedback-unhelpful-popover
+			data-test-id="ask-learn-assistant-modal-entry-tablet-feedback"
+			data-ask-learn-modal-entry-feedback
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+		<button
+			class="button button-sm display-none flex-shrink-0 display-inline-flex-desktop margin-right-xxs border-color-ask-learn margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-bi-an=feedback-unhelpful-popover
+			data-test-id="ask-learn-assistant-flyout-entry-feedback"
+			data-ask-learn-flyout-entry-show-only
+			data-flyout-button="toggle"
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-controls="ask-learn-flyout"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+	</div>
+			<button
+				type="button"
+				class="button button-sm margin-right-xxs"
+				data-help-option="suggest-fix"
+				data-bi-name="feedback-suggest"
+				data-bi-an="feedback-unhelpful-popover"
+				data-test-id="suggest-fix"
+			>
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-feedback"></span>
+				</span>
+				<span> Suggest a fix? </span>
+			</button>
+		</div>
+	
+						</div>
+					</details>
+				</div>
+			</div>
+		</section>
+	
+			</div>
+		</div>
+	
+			  </aside> <section
+					id="layout-body-flyout"
+					class="layout-body-flyout "
+					data-bi-name="flyout"
+			  >
+					 <div
+	class="height-full border-left background-color-body-medium"
+	id="ask-learn-flyout"
+></div>
+			  </section> <div class="layout-body-footer " data-bi-name="layout-footer">
+		<footer
+			id="footer"
+			data-test-id="footer"
+			data-bi-name="footer"
+			class="footer-layout padding-xs padding-sm-desktop has-default-focus border-top"
+			role="contentinfo"
+		>
+			<div class="display-flex gap-xs flex-wrap-wrap is-full-height padding-right-lg-desktop">
+				
+		<a
+			data-mscc-ic="false"
+			href="#"
+			data-bi-name="select-locale"
+			class="locale-selector-link flex-shrink-0 button button-sm button-clear external-link-indicator"
+			id=""
+			title=""
+			><span class="icon" aria-hidden="true"
+				><span class="docon docon-world"></span></span
+			><span class="local-selector-link-text">en-us</span></a
+		>
+	 <div class="ccpa-privacy-link" data-ccpa-privacy-link hidden>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://aka.ms/yourcaliforniaprivacychoices"
+			data-bi-name="your-privacy-choices"
+			class="button button-sm button-clear flex-shrink-0 external-link-indicator"
+			id=""
+			title=""
+			>
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 30 14"
+			xml:space="preserve"
+			height="16"
+			width="43"
+			aria-hidden="true"
+			focusable="false"
+		>
+			<path
+				d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z"
+				style="fill-rule:evenodd;clip-rule:evenodd;fill:#fff"
+			></path>
+			<path
+				d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z"
+				style="fill-rule:evenodd;clip-rule:evenodd;fill:#06f"
+			></path>
+			<path
+				d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z"
+				style="fill:#fff"
+			></path>
+			<path
+				d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z"
+				style="fill:#06f"
+			></path>
+		</svg>
+	
+			<span>Your Privacy Choices</span></a
+		>
+	
+	</div>
+				<div class="flex-shrink-0">
+		<div class="dropdown has-caret-up">
+			<button
+				data-test-id="theme-selector-button"
+				class="dropdown-trigger button button-clear button-sm inner-focus theme-dropdown-trigger"
+				aria-controls="{{ themeMenuId }}"
+				aria-haspopup="true"
+				aria-expanded="false"
+				data-bi-name="theme"
+			>
+				<span class="icon" aria-hidden="true"><span class="docon docon-sun"></span></span>
+				<span>Theme</span>
+				<span class="icon expanded-indicator" aria-hidden="true">
+					<span class="docon docon-chevron-down-light"></span>
+				</span>
+			</button>
+			<div class="dropdown-menu" id="{{ themeMenuId }}" role="menu">
+				<ul class="theme-selector padding-xxs" data-test-id="theme-dropdown-menu" role="none">
+					<li class="theme display-block" role="none">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							role="menuitemradio"
+							aria-checked="false"
+							data-theme-to="light"
+							tabindex="-1"
+						>
+							<span class="theme-light margin-right-xxs">
+								<span
+									class="theme-selector-icon border display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span> Light </span>
+						</button>
+					</li>
+					<li class="theme display-block" role="none">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							role="menuitemradio"
+							aria-checked="false"
+							data-theme-to="dark"
+							tabindex="-1"
+						>
+							<span class="theme-dark margin-right-xxs">
+								<span
+									class="border theme-selector-icon display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span> Dark </span>
+						</button>
+					</li>
+					<li class="theme display-block" role="none">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							role="menuitemradio"
+							aria-checked="false"
+							data-theme-to="high-contrast"
+							tabindex="-1"
+						>
+							<span class="theme-high-contrast margin-right-xxs">
+								<span
+									class="border theme-selector-icon display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span> High contrast </span>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+			</div>
+			<ul class="links" data-bi-name="footerlinks">
+				<li class="manage-cookies-holder" hidden=""></li>
+				<li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/principles-for-ai-generated-content"
+			data-bi-name="aiDisclaimer"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>AI Disclaimer</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/previous-versions/"
+			data-bi-name="archivelink"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Previous Versions</a
+		>
+	
+	</li> <li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://techcommunity.microsoft.com/t5/microsoft-learn-blog/bg-p/MicrosoftLearnBlog"
+			data-bi-name="bloglink"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Blog</a
+		>
+	
+	</li> <li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/contribute"
+			data-bi-name="contributorGuide"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Contribute</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://go.microsoft.com/fwlink/?LinkId=521839"
+			data-bi-name="privacy"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Privacy</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://go.microsoft.com/fwlink/?linkid=2259814"
+			data-bi-name="consumer-health-privacy"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Consumer Health Privacy</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/legal/termsofuse"
+			data-bi-name="termsofuse"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Terms of Use</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://www.microsoft.com/legal/intellectualproperty/Trademarks/"
+			data-bi-name="trademarks"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Trademarks</a
+		>
+	
+	</li>
+				<li>&copy; Microsoft 2026</li>
+			</ul>
+		</footer>
+	</footer>
+			<noscript><img src="https://learn.microsoft.com/akam/13/pixel_45092822?a=dD01Zjk3YTRjNTAzNzExODdkN2ZmOTJhMWE2YTZlNTE1NTFhZGM2YzE4JmpzPW9mZg==" style="visibility: hidden; position: absolute; left: -999px; top: -999px;" /></noscript></body>
+		</html>

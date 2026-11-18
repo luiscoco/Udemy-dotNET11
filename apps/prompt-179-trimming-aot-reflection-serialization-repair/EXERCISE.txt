@@ -1,0 +1,5 @@
+PROMPT 179
+
+1. Read the warning-producing dynamic discovery and reflection serialization.
+2. Publish with AOT and trimming warnings treated as errors.
+3. Replace dynamic discovery with an explicit registry and generated JSON metadata.

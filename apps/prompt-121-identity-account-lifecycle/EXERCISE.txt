@@ -1,0 +1,4 @@
+PROMPT 121
+
+1. Compare password reset with lockout expiry; neither should silently bypass the configured policy.
+2. Replace the in-process test outbox with a real email-delivery adapter.

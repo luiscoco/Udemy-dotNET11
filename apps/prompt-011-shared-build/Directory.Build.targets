@@ -1,0 +1,9 @@
+<Project>
+  <ItemGroup>
+    <AssemblyMetadata Include="TrainingRegion" Value="$(TrainingRegion)" />
+  </ItemGroup>
+  <Target Name="ShowBuildPolicy" BeforeTargets="CoreCompile">
+    <Message Importance="high"
+             Text="POLICY $(MSBuildProjectName): Nullable=$(Nullable); ImplicitUsings=$(ImplicitUsings); Region=$(TrainingRegion)" />
+  </Target>
+</Project>

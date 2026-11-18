@@ -1,0 +1,22 @@
+@page "/"
+@using Microsoft.AspNetCore.Components.Authorization
+@inject CourseActions Actions
+<h1>Course publication</h1>
+<AuthorizeView>
+    <Authorized Context="session"><p id="identity">Signed in as @session.User.Identity?.Name</p></Authorized>
+    <NotAuthorized><p id="identity">Sign in to manage your course.</p></NotAuthorized>
+</AuthorizeView>
+<AuthorizeView Policy="edit">
+    <Authorized><button id="publish" @onclick="Publish">Publish course</button></Authorized>
+    <NotAuthorized><p id="denied">Editor permission is required.</p></NotAuthorized>
+</AuthorizeView>
+<p id="result" class="result" role="status">@Result</p>
+@code {
+    private string Result = "Course is a draft.";
+    [CascadingParameter] private Task<AuthenticationState> Session { get; set; } = default!;
+    private async Task Publish()
+    {
+        var state = await Session;
+        Result = await Actions.PublishAsync(state.User);
+    }
+}

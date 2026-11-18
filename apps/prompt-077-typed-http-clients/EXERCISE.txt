@@ -1,0 +1,6 @@
+PROMPT 77
+
+1. Register a typed client with an absolute base address and a finite request timeout.
+2. Separate handler lifetime from connection lifetime and idle lifetime.
+3. Observe the shared pool across two transient typed clients.
+4. Dispose responses and handle non-success statuses and cancellation.

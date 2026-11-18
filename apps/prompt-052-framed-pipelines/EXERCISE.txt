@@ -1,0 +1,6 @@
+PROMPT 52
+
+1. Inspect the four-byte network-order length prefix.
+2. Observe that a partial payload leaves the buffer unchanged.
+3. Explain consumed and examined positions in AdvanceTo.
+4. Reject oversized and truncated messages before accepting data.

@@ -1,0 +1,6 @@
+PROMPT 98
+
+1. Read revision one before refreshing.
+2. Refresh to a new role for the same user without reconnecting.
+3. Reject a different-user refresh.
+4. Cancel an ordinary invocation and wait for server-side confirmation.

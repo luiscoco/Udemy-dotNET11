@@ -1,0 +1,6 @@
+PROMPT 76
+
+1. Inspect the token-aware ValidateAsync rule on .NET 11.
+2. Await successful host startup before reading the validated monitor.
+3. Observe a useful rule failure message and cancellation after rule entry.
+4. Try synchronous access before startup and inspect the fail-fast diagnostic.

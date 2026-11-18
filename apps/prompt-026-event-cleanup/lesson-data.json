@@ -1,0 +1,82 @@
+{
+  "number": 26,
+  "title": "Invoices / delegates, lambdas and event cleanup",
+  "files": [
+    "App/App.csproj",
+    "App/Publisher.cs",
+    "App/ReceiptSubscription.cs",
+    "App/LeakingExample.cs",
+    "App/Program.cs",
+    "App/Probe.cs",
+    "EXERCISE.txt"
+  ],
+  "resetFiles": {
+    "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+  },
+  "steps": [
+    {
+      "id": "build",
+      "label": "Build and verify",
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release"
+        ],
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    },
+    {
+      "id": "leak",
+      "label": "Anonymous cleanup problem",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "leak"
+        ]
+      ],
+      "contains": [
+        "attempted anonymous-handler cleanup"
+      ],
+      "failure": true
+    },
+    {
+      "id": "repair",
+      "label": "Verify stored-handler cleanup",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+PROMPT 17 — YOUR TURN
+
+1. Inspect parent solution membership and project references.
+2. Create and review Tests.slnf.
+3. Build the selected group.
+4. Remove Core from explicit filter selection.
+5. Explain why the Checks project reference can still require Core to build.
+6. Try to select an orphan project absent from the parent solution.
+7. Compare actual build work using the same configuration and incremental state.
+
+Predict the result before each command.
+Retain output and explain the failure and recovery.

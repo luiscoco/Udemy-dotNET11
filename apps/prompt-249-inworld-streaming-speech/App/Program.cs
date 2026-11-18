@@ -1,0 +1,12 @@
+Directory.CreateDirectory("artifacts");string file="artifacts/synthesized.mp3";
+var stream=await SpeechStream.Generate(file);var bytes=File.ReadAllBytes(file);
+Console.WriteLine($"SPEECH actualProvider=Inworld format=MP3 requestedHz=48000 chunks={stream.Chunks} bytes={stream.Bytes}");
+Check.That(stream.Chunks>0&&stream.Bytes>0&&SpeechStream.HasMp3Header(bytes),"actual NDJSON chunks decode into a nonempty MP3 stream");
+SpeechStream.ValidateLabel(args.Contains("problem")?"LINEAR16":"MP3",bytes);
+Check.That(true,"compressed MP3 is kept distinct from a raw PCM contract");
+string? probe=Environment.GetEnvironmentVariable("COURSE_FFPROBE");
+Check.That(!string.IsNullOrEmpty(probe),"an actual media probe is configured to verify the resulting codec");
+var measured=await Harness.Run(probe!,"-v","error","-show_streams","-of","json",Path.GetFullPath(file));
+using var json=System.Text.Json.JsonDocument.Parse(measured.Text);var audio=json.RootElement.GetProperty("streams")[0];
+Check.That(measured.Code==0&&audio.GetProperty("codec_name").GetString()=="mp3"&&audio.GetProperty("sample_rate").GetString()=="48000","the actual generated audio decodes as MP3 at 48 kHz");
+Harness.Save("ml-evidence.json",new {passed=true,actualProvider="Inworld",ndjson=true,chunks=stream.Chunks,bytes=stream.Bytes,codec="mp3",sampleRate=48000,voice="Yash",model="inworld-tts-2"});

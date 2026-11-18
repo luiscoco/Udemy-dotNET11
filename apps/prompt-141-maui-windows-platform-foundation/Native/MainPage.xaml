@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NativeCourse.MainPage" BackgroundColor="#F4F2FB" Title="Platform foundation">
+    <VerticalStackLayout Padding="36" Spacing="20">
+        <Label Text=".NET 11 · Native MAUI application" FontSize="18" TextColor="#6642BB" />
+        <Label Text="Choose and verify the platform target" FontSize="30" FontAttributes="Bold" />
+        <Label Text="This application is built for Windows x64." FontSize="20" />
+        <Button x:Name="InspectButton" Text="Inspect running platform" Clicked="Inspect" HorizontalOptions="Start" />
+        <Border Padding="24" BackgroundColor="#E1F7EE" Stroke="#14815E">
+            <Label x:Name="Result" Text="Inspect the running application." FontSize="22" />
+        </Border>
+        <Label Text="The target framework, installed workload and native host determine what can run." FontSize="18" />
+    </VerticalStackLayout>
+</ContentPage>

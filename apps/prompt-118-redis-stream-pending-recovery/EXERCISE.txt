@@ -1,0 +1,4 @@
+PROMPT 118
+
+1. Change the recovery idle threshold to a realistic worker timeout.
+2. Distinguish the Redis entry id from the durable business message id.

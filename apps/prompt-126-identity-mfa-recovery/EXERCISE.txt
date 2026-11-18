@@ -1,0 +1,4 @@
+PROMPT 126
+
+1. Require a recently verified password before changing MFA enrollment.
+2. Test loss of the authenticator without treating password reset as an MFA bypass.

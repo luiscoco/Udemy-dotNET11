@@ -1,0 +1,10 @@
+{
+  "checkedOn": "2026-11-13",
+  "target": "net11.0",
+  "provider": "Azure Functions",
+  "providerModel": ".NET 11 isolated worker on Functions runtime 4.x",
+  "projectSdk": "Azure.Functions.Sdk >= 1.0.1",
+  "source": "https://learn.microsoft.com/azure/azure-functions/dotnet-isolated-process-guide",
+  "demonstratedAlternative": "Published .NET 11 Generic Host worker running in a local Linux container",
+  "cloudDeploymentVerified": false
+}

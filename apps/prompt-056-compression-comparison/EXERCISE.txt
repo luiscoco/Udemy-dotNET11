@@ -1,0 +1,6 @@
+PROMPT 56
+
+1. Compare compressed sizes on repetitive JSON and seeded random bytes.
+2. Read the warm-up and five-sample timing loop.
+3. Verify lossless decompression for all three formats.
+4. Choose levels and payloads for your application; the demonstration does not impose a universal codec winner.

@@ -1,0 +1,6 @@
+PROMPT 69
+
+1. Inject the clock and pass it to PeriodicTimer.
+2. Advance three periods without sleeping in real time.
+3. Await each job before requesting the next tick.
+4. Inspect coalescing, token cancellation and timer disposal separately.

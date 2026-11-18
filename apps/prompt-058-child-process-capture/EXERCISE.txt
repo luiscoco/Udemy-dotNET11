@@ -1,0 +1,6 @@
+PROMPT 58
+
+1. Follow the self-hosted child branch and its two output streams.
+2. Inspect ArgumentList with spaces and punctuation passed literally.
+3. Distinguish launching a process from a successful exit status.
+4. Cancel the waiting child and inspect the capture helper result.

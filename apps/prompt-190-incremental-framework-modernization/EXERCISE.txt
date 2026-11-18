@@ -1,0 +1,5 @@
+PROMPT 190
+
+1. Build and execute the actual net48 legacy adapter.
+2. Verify a modernized route against its legacy contract while preserving a legacy-only route.
+3. Reproduce an unsupported dependency build and a premature route cutover.

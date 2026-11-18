@@ -1,0 +1,8 @@
+PROMPT 28
+
+1. Handle invalid import text through TryReadNet.
+2. Trace the storage exception through the service.
+3. Observe the original throwing method in the stack.
+4. Reproduce the effect of rethrowing the exception variable.
+5. Restore throw and verify the origin frame.
+6. Choose recovery behavior based on the exception and available context.

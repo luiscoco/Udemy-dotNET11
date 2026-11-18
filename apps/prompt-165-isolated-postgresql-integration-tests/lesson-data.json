@@ -1,0 +1,108 @@
+{
+  "number": 165,
+  "title": "Database integration tests with isolated PostgreSQL instances",
+  "files": [
+    "App/App.csproj",
+    "App/CourseSchema.cs",
+    "Tests/Tests.csproj",
+    "Tests/GlobalUsings.cs",
+    "NuGet.Config",
+    "Tests/DatabaseTests.cs",
+    "App/Probe.cs",
+    "EXERCISE.txt",
+    "global.json"
+  ],
+  "resetFiles": {
+    "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n",
+    "App/CourseSchema.cs": "public static class CourseSchema\n{\n    public const string Create = \"CREATE TABLE courses(id integer PRIMARY KEY, title text NOT NULL)\";\n}\n"
+  },
+  "steps": [
+    {
+      "id": "build",
+      "label": "Build and run the tests",
+      "commands": [
+        [
+          "build",
+          "Tests/Tests.csproj",
+          "-c",
+          "Release"
+        ],
+        [
+          "test",
+          "--project",
+          "Tests/Tests.csproj",
+          "-c",
+          "Release",
+          "--no-build",
+          "--report-trx",
+          "--results-directory",
+          "artifacts/baseline"
+        ]
+      ],
+      "contains": [
+        "Passed"
+      ]
+    },
+    {
+      "id": "regression",
+      "label": "Introduce and detect the regression",
+      "writeFiles": {
+        "App/CourseSchema.cs": "public static class CourseSchema\n{\n    public const string Create = \"CREATE TABLE courses(id integer NOT NULL, title text NOT NULL)\";\n}\n"
+      },
+      "commands": [
+        [
+          "build",
+          "Tests/Tests.csproj",
+          "-c",
+          "Release",
+          "--no-restore"
+        ],
+        [
+          "test",
+          "--project",
+          "Tests/Tests.csproj",
+          "-c",
+          "Release",
+          "--no-build",
+          "--report-trx",
+          "--results-directory",
+          "artifacts/regression"
+        ]
+      ],
+      "failure": true,
+      "contains": [
+        "PostgreSQL_enforces_the_primary_key"
+      ]
+    },
+    {
+      "id": "repair",
+      "label": "Repair and rerun the tests",
+      "writeFiles": {
+        "App/CourseSchema.cs": "public static class CourseSchema\n{\n    public const string Create = \"CREATE TABLE courses(id integer PRIMARY KEY, title text NOT NULL)\";\n}\n"
+      },
+      "commands": [
+        [
+          "build",
+          "Tests/Tests.csproj",
+          "-c",
+          "Release",
+          "--no-restore"
+        ],
+        [
+          "test",
+          "--project",
+          "Tests/Tests.csproj",
+          "-c",
+          "Release",
+          "--no-build",
+          "--report-trx",
+          "--results-directory",
+          "artifacts/repair"
+        ]
+      ],
+      "contains": [
+        "Passed"
+      ]
+    }
+  ]
+}

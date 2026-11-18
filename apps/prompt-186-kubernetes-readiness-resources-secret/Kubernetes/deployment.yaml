@@ -1,0 +1,52 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: catalog
+spec:
+  replicas: 1
+  selector:
+    matchLabels: {app: catalog}
+  template:
+    metadata:
+      labels: {app: catalog}
+    spec:
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1654
+        seccompProfile: {type: RuntimeDefault}
+      containers:
+        - name: web
+          image: COURSE_IMAGE
+          imagePullPolicy: Never
+          ports: [{containerPort: 8080}]
+          env:
+            - {name: COURSE_TOKEN_FILE, value: /run/course-config/token}
+          resources:
+            requests: {cpu: 100m, memory: 128Mi}
+            limits: {cpu: 500m, memory: 256Mi}
+          securityContext:
+            readOnlyRootFilesystem: true
+            allowPrivilegeEscalation: false
+            capabilities: {drop: [ALL]}
+          readinessProbe:
+            httpGet: {path: /health/ready, port: 8080}
+            periodSeconds: 1
+          livenessProbe:
+            httpGet: {path: /health/live, port: 8080}
+            periodSeconds: 5
+          volumeMounts:
+            - {name: runtime-config, mountPath: /run/course-config, readOnly: true}
+            - {name: temporary, mountPath: /tmp}
+      volumes:
+        - name: runtime-config
+          secret: {secretName: runtime-config}
+        - name: temporary
+          emptyDir: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: catalog
+spec:
+  selector: {app: catalog}
+  ports: [{port: 8080, targetPort: 8080}]

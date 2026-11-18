@@ -1,0 +1,5 @@
+PROMPT 175
+
+1. Publish both target frameworks with identical Release win-x64 self-contained settings.
+2. Review warmup, repetitions, checksums and alternating run order.
+3. Change the input for one target and observe the parity guard.

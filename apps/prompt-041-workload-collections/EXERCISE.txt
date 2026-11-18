@@ -1,0 +1,6 @@
+PROMPT 41
+
+1. Match positional lookup, keyed lookup and deduplication with their collections.
+2. Compare arrival order with urgency order.
+3. Explain the sequence value used to break equal priorities.
+4. Reproduce the reversed-priority expectation and repair the mapping.

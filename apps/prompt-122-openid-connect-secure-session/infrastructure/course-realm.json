@@ -1,0 +1,8 @@
+{
+  "realm": "course", "enabled": true, "sslRequired": "none", "registrationAllowed": false,
+  "clients": [{"clientId":"course-web","enabled":true,"publicClient":true,"standardFlowEnabled":true,"directAccessGrantsEnabled":false,
+    "redirectUris":["https://127.0.0.1:18122/signin-oidc"],"webOrigins":["https://127.0.0.1:18122"],
+    "attributes":{"pkce.code.challenge.method":"S256"},"defaultClientScopes":["profile","email"],"fullScopeAllowed":true}],
+  "users": [{"username":"student","enabled":true,"email":"student@example.test","emailVerified":true,"firstName":"Course","lastName":"Student","requiredActions":[],
+    "credentials":[{"type":"password","value":"Student_11!Local","temporary":false}]}]
+}

@@ -1,0 +1,4 @@
+PROMPT 124
+
+1. Add an instructor permission while retaining the tenant boundary.
+2. Test denied access before returning resource metadata.

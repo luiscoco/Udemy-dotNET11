@@ -1,0 +1,6 @@
+PROMPT 44
+
+1. Follow filtering, joining, projection, grouping and aggregation.
+2. Explain why the unmatched customer order is absent from the inner-join report.
+3. Change greater-than-or-equal to greater-than and inspect the lost boundary case.
+4. Verify group totals independently from the all-order total.

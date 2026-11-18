@@ -1,0 +1,7 @@
+PROMPT 66
+
+1. Use lock for the compound account update and snapshot.
+2. Use Interlocked for a single counter operation.
+3. Pair every successful semaphore acquisition with release in finally.
+4. Reproduce the lost update using the controlled shared snapshot.
+5. Inspect why await inside a lock is rejected by the compiler.

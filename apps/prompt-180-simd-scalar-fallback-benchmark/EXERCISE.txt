@@ -1,0 +1,5 @@
+PROMPT 180
+
+1. Run empty, short, vector-width and tail cases.
+2. Measure scalar and vector code after warmup on identical input.
+3. Reproduce the omitted-tail failure and restore scalar cleanup.

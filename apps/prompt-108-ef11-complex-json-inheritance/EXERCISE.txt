@@ -1,0 +1,5 @@
+PROMPT 108
+
+1. Inspect the base and derived tables and the JSON extraction SQL.
+2. Compare TPT with TPC in a separate disposable model and provider.
+3. Keep business validation explicit; complex values have no independent entity identity.

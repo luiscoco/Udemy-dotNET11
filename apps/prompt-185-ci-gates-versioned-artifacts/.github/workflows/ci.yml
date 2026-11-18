@@ -1,0 +1,20 @@
+name: Verified deployment artifact
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+      - name: Restore, build, analyze, test and publish
+        run: dotnet run --project App -c Release -- verify
+      - uses: actions/upload-artifact@v4
+        with:
+          name: course-deployment-1.0.0
+          path: |
+            artifacts/course-1.0.0.zip
+            artifacts/artifact-manifest.json

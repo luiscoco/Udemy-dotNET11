@@ -1,0 +1,6 @@
+PROMPT 55
+
+1. Explain the additional package used for CSV and the framework XML parser.
+2. Inspect invariant decimals and quoted multiline fields.
+3. Verify that the XML DTD is rejected before resolving an entity.
+4. Keep parsing limits and domain validation visible at the import boundary.

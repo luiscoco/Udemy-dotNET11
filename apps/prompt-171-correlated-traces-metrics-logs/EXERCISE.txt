@@ -1,0 +1,5 @@
+PROMPT 171
+
+1. Follow a single request through actual SQLite, HTTP and channel operations.
+2. Inspect trace and span identifiers in the exported logs.
+3. Drop the message traceparent and observe the correlation failure.

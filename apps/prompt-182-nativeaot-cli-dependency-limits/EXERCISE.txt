@@ -1,0 +1,5 @@
+PROMPT 182
+
+1. Publish the receipt CLI as an actual native executable.
+2. Verify valid and invalid input and dynamic-code capability.
+3. Publish the incompatible dependency probe with AOT warnings treated as errors.

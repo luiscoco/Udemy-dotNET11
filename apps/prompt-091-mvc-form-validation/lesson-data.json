@@ -1,0 +1,119 @@
+{
+  "number": 91,
+  "title": "MVC / controller, Razor view, binding and validation",
+  "files": [
+    "App/App.csproj",
+    "App/ApiHarness.cs",
+    "App/EnrollmentInput.cs",
+    "App/FormChecks.cs",
+    "App/BrowserRunner.cs",
+    "App/EnrollController.cs",
+    "App/Program.cs",
+    "browser-demo.cjs",
+    "tools/package.json",
+    "App/Views/_ViewImports.cshtml",
+    "App/Views/Enroll/Create.cshtml",
+    "App/Views/Enroll/Success.cshtml",
+    "App/Probe.cs",
+    "EXERCISE.txt"
+  ],
+  "resetFiles": {
+    "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+  },
+  "steps": [
+    {
+      "id": "build",
+      "label": "Build and verify",
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release"
+        ],
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    },
+    {
+      "id": "invalid",
+      "label": "Assume invalid model state redirects",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "invalid"
+        ]
+      ],
+      "failure": true,
+      "contains": [
+        "Check failed"
+      ]
+    },
+    {
+      "id": "browser",
+      "label": "Exercise the real browser form",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "browser"
+        ]
+      ],
+      "contains": [
+        "browser:",
+        "PASS"
+      ]
+    },
+    {
+      "id": "repair",
+      "label": "Repair and verify",
+      "writeFiles": {
+        "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+      },
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release",
+          "--no-restore"
+        ],
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    }
+  ]
+}

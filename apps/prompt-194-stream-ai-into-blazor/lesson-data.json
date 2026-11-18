@@ -1,0 +1,89 @@
+{
+  "number": 194,
+  "title": "Stream model responses into a real Blazor interface",
+  "files": [
+    "App/App.csproj",
+    "App/Check.cs",
+    "App/AiRuntime.cs",
+    "App/Harness.cs",
+    "App/Program.cs",
+    "NuGet.Config",
+    "tools/package.json",
+    "App/Components/_Imports.razor",
+    "App/Components/App.razor",
+    "App/Components/Routes.razor",
+    "App/Components/Pages/Home.razor",
+    "App/Probe.cs",
+    "EXERCISE.txt"
+  ],
+  "resetFiles": {
+    "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+  },
+  "steps": [
+    {
+      "id": "build",
+      "label": "Build and run live inference",
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release"
+        ],
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    },
+    {
+      "id": "regression",
+      "label": "Observe the controlled failure",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "problem"
+        ]
+      ],
+      "failure": true,
+      "contains": [
+        "AI streaming response was buffered",
+        "STREAM actual Blazor updates=1 "
+      ]
+    },
+    {
+      "id": "repair",
+      "label": "Repair and verify",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    }
+  ]
+}

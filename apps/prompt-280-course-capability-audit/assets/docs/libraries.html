@@ -1,0 +1,2569 @@
+ <!DOCTYPE html>
+		<html
+			class="layout layout-holy-grail   show-table-of-contents conceptual show-breadcrumb default-focus"
+			lang="en-us"
+			dir="ltr"
+			data-authenticated="false"
+			data-auth-status-determined="false"
+			data-target="docs"
+			x-ms-format-detection="none"
+		>
+			
+		<head>
+			<title>What&#39;s new in .NET libraries for .NET 11 | Microsoft Learn</title>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<meta name="color-scheme" content="light dark" />
+
+			<meta name="description" content="Learn about the updates to the .NET libraries for .NET 11." />
+			<link rel="canonical" href="https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-11/libraries" /> 
+
+			<!-- Non-customizable open graph and sharing-related metadata -->
+			<meta name="twitter:card" content="summary" />
+			<meta name="twitter:site" content="@MicrosoftLearn" />
+			<meta property="og:type" content="website" />
+			<meta property="og:image:alt" content="What&#39;s new in .NET libraries for .NET 11 | Microsoft Learn" />
+			<meta property="og:image" content="https://learn.microsoft.com/dotnet/media/dotnet-logo.png" />
+			<!-- Page specific open graph and sharing-related metadata -->
+			<meta property="og:title" content="What&#39;s new in .NET libraries for .NET 11" />
+			<meta property="og:url" content="https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-11/libraries" />
+			<meta property="og:description" content="Learn about the updates to the .NET libraries for .NET 11." />
+			<meta name="platform_id" content="b6515cad-f97f-fcf9-d775-69fa1e4f5202" /> <meta name="scope" content=".NET" />
+			<meta name="locale" content="en-us" />
+			 
+			<meta name="uhfHeaderId" content="MSDocsHeader-DotNet" />
+
+			<meta name="page_type" content="conceptual" />
+
+			<!--page specific meta tags-->
+			
+
+			<!-- custom meta tags -->
+			
+		<meta name="apiPlatform" content="dotnet" />
+	
+		<meta name="author" content="gewarren" />
+	
+		<meta name="breadcrumb_path" content="/dotnet/breadcrumb/toc.json" />
+	
+		<meta name="feedback_system" content="OpenSource" />
+	
+		<meta name="feedback_product_url" content="https://aka.ms/feedback/report?space=61" />
+	
+		<meta name="ms.author" content="gewarren" />
+	
+		<meta name="ms.devlang" content="dotnet" />
+	
+		<meta name="ms.service" content="dotnet-fundamentals" />
+	
+		<meta name="ms.topic" content="whats-new" />
+	
+		<meta name="show_latex" content="true" />
+	
+		<meta name="ms.date" content="2026-11-10T00:00:00Z" />
+	
+		<meta name="ai-usage" content="ai-assisted" />
+	
+		<meta name="ms.update-cycle" content="3650-days" />
+	
+		<meta name="document_id" content="b439026b-1fcb-3e6a-e6bd-def492f68d15" />
+	
+		<meta name="document_version_independent_id" content="38446b21-ff07-e785-8b97-9658010d6c6b" />
+	
+		<meta name="updated_at" content="2026-11-12T13:17:00Z" />
+	
+		<meta name="original_content_git_url" content="https://github.com/dotnet/docs/blob/live/docs/core/whats-new/dotnet-11/libraries.md" />
+	
+		<meta name="gitcommit" content="https://github.com/dotnet/docs/blob/0dad19ab65b096f0b86430c01b1b6a9e5832ea22/docs/core/whats-new/dotnet-11/libraries.md" />
+	
+		<meta name="git_commit_id" content="0dad19ab65b096f0b86430c01b1b6a9e5832ea22" />
+	
+		<meta name="site_name" content="Docs" />
+	
+		<meta name="depot_name" content="VS.core-docs" />
+	
+		<meta name="schema" content="Conceptual" />
+	
+		<meta name="toc_rel" content="../../../fundamentals/toc.json" />
+	
+		<meta name="pdf_url_template" content="https://learn.microsoft.com/pdfstore/en-us/VS.core-docs/{branchName}{pdfName}" />
+	
+		<meta name="feedback_help_link_type" content="" />
+	
+		<meta name="feedback_help_link_url" content="" />
+	
+		<meta name="search.mshattr.devlang" content="csharp" />
+	
+		<meta name="word_count" content="8248" />
+	
+		<meta name="asset_id" content="core/whats-new/dotnet-11/libraries" />
+	
+		<meta name="moniker_range_name" content="" />
+	
+		<meta name="item_type" content="Content" />
+	
+		<meta name="source_path" content="docs/core/whats-new/dotnet-11/libraries.md" />
+	
+		<meta name="previous_tlsh_hash" content="79D3D033081C8714FFC2AE5A6C99FB0511F4C005AFF0AB8815397AE6D1453F76EFA519FEEB63B70463310BD70281B54A91839B3DC038336219F2945CC7681646ABA937BBE9" />
+	
+		<meta name="github_feedback_content_git_url" content="https://github.com/dotnet/docs/blob/main/docs/core/whats-new/dotnet-11/libraries.md" />
+	
+		<meta name="markdown_url" content="https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-11/libraries?accept=text/markdown" />
+	 
+		<meta name="cmProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/7696cda6-0510-47f6-8302-71bb5d2e28cf" data-source="generated" />
+	
+		<meta name="cmProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/2d774b87-7dcb-40bf-a0b9-5a7a9efff0d1" data-source="generated" />
+	
+		<meta name="spProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/69c76c32-967e-4c65-b89a-74cc527db725" data-source="generated" />
+	
+		<meta name="spProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/89dc5f37-0e4e-4b05-ad87-5fcd2b941a8a" data-source="generated" />
+	
+
+			<!-- Apply persisted/system theme before first paint to prevent wrong-theme flash when scripts are deferred. -->
+			<script id="theme-preference">
+				(function () {
+			try {
+				var stored = localStorage.getItem('theme');
+				var theme = /^(light|dark|high-contrast)$/.test(stored)
+					? stored
+					: matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+				document.documentElement.classList.add('theme-' + theme);
+			} catch (e) {}
+		})();;
+			</script>
+
+			<script id="atlas-layout-preferences">
+				(function () {
+			try {
+				var state = JSON.parse(localStorage.getItem('atlas-layout-preferences') || '{}');
+				var view = state["docs-layout-persistence"] || {};
+				var excludesKey = "";
+				var blocked = {};
+				if (excludesKey) {
+					var exclusions = JSON.parse(localStorage.getItem('atlas-layout-exclusions') || '{}');
+					if (Object.prototype.hasOwnProperty.call(exclusions, excludesKey)) {
+						var scoped = exclusions[excludesKey];
+						if (scoped) {
+							if (typeof scoped === 'object') blocked = scoped;
+						}
+					}
+				}
+				var html = document.documentElement;
+				for (var c in view) {
+					if (Object.prototype.hasOwnProperty.call(blocked, c)) continue;
+					if (view[c]) html.classList.add(c);
+					else html.classList.remove(c);
+				}
+			} catch (e) {}
+		})();;
+			</script>
+
+			<!-- assets and js globals -->
+			
+			<link rel="stylesheet" href="/static/assets/0.4.03603.8379-b7d5d6ac/styles/site.css" />
+			
+			<script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+			<!-- Keep this URL in sync with oneDSScriptSelector in instrumentation/one-ds.ts. -->
+			<script async src="https://js.monitor.azure.com/scripts/c/ms.jsll-4.min.js"></script>
+			
+
+			<!-- msdocs global object -->
+			<script id="msdocs-script">
+		var msDocs = {
+  "environment": {
+    "accessLevel": "online",
+    "azurePortalHostname": "portal.azure.com",
+    "reviewFeatures": false,
+    "supportLevel": "production",
+    "systemContent": true,
+    "siteName": "learn",
+    "legacyHosting": false
+  },
+  "data": {
+    "contentLocale": "en-us",
+    "contentDir": "ltr",
+    "userLocale": "en-us",
+    "userDir": "ltr",
+    "pageTemplate": "Conceptual",
+    "layoutStateStorageKey": "docs-layout-persistence",
+    "brand": "",
+    "context": {},
+    "standardFeedback": false,
+    "showFeedbackReport": false,
+    "feedbackHelpLinkType": "",
+    "feedbackHelpLinkUrl": "",
+    "feedbackSystem": "OpenSource",
+    "feedbackGitHubRepo": "dotnet/docs",
+    "feedbackProductUrl": "https://aka.ms/feedback/report?space=61",
+    "extendBreadcrumb": false,
+    "isEditDisplayable": true,
+    "isPrivateUnauthorized": false,
+    "hideViewSource": false,
+    "isPermissioned": false,
+    "hasRecommendations": true,
+    "mathjax": {},
+    "openSourceFeedbackIssueUrl": "https://github.com/dotnet/docs/issues/new?template=z-customer-feedback.yml",
+    "openSourceFeedbackIssueTitle": ""
+  },
+  "functions": {}
+};;
+	</script>
+
+			<!-- base scripts, msdocs global should be before this -->
+			<script
+				src="/static/assets/0.4.03603.8379-b7d5d6ac/scripts/en-us/index-docs.js"
+				async
+			></script>
+			
+
+			<!-- json-ld -->
+			
+		<script >bazadebezolkohpepadr="1158228024"</script><script type="text/javascript" src="https://learn.microsoft.com/akam/13/45092822"  defer></script></head>
+	
+			<body
+				id="body"
+				data-bi-name="body"
+				class="layout-body "
+				lang="en-us"
+				dir="ltr"
+			>
+				<header class="layout-body-header background-color-body-medium">
+		<div class="header-holder has-default-focus">
+			
+		<a
+			href="#main"
+			
+			style="z-index: 1070"
+			class="outline-color-text visually-hidden-until-focused position-fixed inner-focus focus-visible top-0 left-0 right-0 padding-xs text-align-center background-color-body"
+			
+		>
+			Skip to main content
+		</a>
+	
+		<a
+			href="#"
+			data-skip-to-ask-learn
+			style="z-index: 1070"
+			class="outline-color-text visually-hidden-until-focused position-fixed inner-focus focus-visible top-0 left-0 right-0 padding-xs text-align-center background-color-body"
+			hidden
+		>
+			Skip to Ask Learn chat experience
+		</a>
+	
+
+			<div hidden id="cookie-consent-holder" data-test-id="cookie-consent-container"></div>
+			<!-- Unsupported browser warning -->
+			<div
+				id="unsupported-browser"
+				style="background-color: white; color: black; padding: 16px; border-bottom: 1px solid grey;"
+				hidden
+			>
+				<div style="max-width: 800px; margin: 0 auto;">
+					<p style="font-size: 24px">This browser is no longer supported.</p>
+					<p style="font-size: 16px; margin-top: 16px;">
+						Upgrade to Microsoft Edge to take advantage of the latest features, security updates, and technical support.
+					</p>
+					<div style="margin-top: 12px;">
+						<a
+							href="https://go.microsoft.com/fwlink/p/?LinkID=2092881 "
+							style="background-color: #0078d4; border: 1px solid #0078d4; color: white; padding: 6px 12px; border-radius: 2px; display: inline-block;"
+						>
+							Download Microsoft Edge
+						</a>
+						<a
+							href="https://learn.microsoft.com/en-us/lifecycle/faq/internet-explorer-microsoft-edge"
+							style="background-color: white; padding: 6px 12px; border: 1px solid #505050; color: #171717; border-radius: 2px; display: inline-block;"
+						>
+							More info about Internet Explorer and Microsoft Edge
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- site header -->
+			<div
+				id="ms--site-header"
+				data-test-id="site-header-wrapper"
+				itemscope="itemscope"
+				itemtype="http://schema.org/Organization"
+			>
+				<div
+					id="ms--mobile-nav"
+					class="site-header display-none-tablet padding-inline-none gap-none"
+					data-bi-name="mobile-header"
+					data-test-id="mobile-header"
+				></div>
+				<div
+					id="ms--primary-nav"
+					class="site-header display-none display-flex-tablet"
+					data-bi-name="L1-header"
+					data-test-id="primary-header"
+				></div>
+				<div
+					id="ms--secondary-nav"
+					class="site-header display-none display-flex-tablet"
+					data-bi-name="L2-header"
+					data-test-id="secondary-header"
+					
+				></div>
+			</div>
+			
+		<!-- banner -->
+		<div data-banner>
+			<div id="disclaimer-holder"></div>
+			
+		</div>
+		<!-- banner end -->
+	
+		</div>
+	</header>
+				 <section
+					id="layout-body-menu"
+					class="layout-body-menu border-right display-flex background-color-body-medium"
+					data-bi-name="menu"
+			  >
+					
+		<div
+			id="left-container"
+			class="left-container display-none padding-none display-block-tablet width-full display-none-until-layout-restored"
+			data-toc-container="true"
+		>
+			<div
+				id="ms--toc-content"
+				class="padding-left-sm padding-right-none padding-bottom-sm height-full"
+			>
+				<nav
+					id="affixed-left-container"
+					class="margin-top-xxs-tablet position-sticky display-flex flex-direction-column width-full"
+					aria-label="Primary"
+					data-bi-name="left-toc"
+					role="navigation"
+				>
+					<div
+						id="ms--collapsible-toc-header"
+						class="display-flex flex-direction-row-reverse justify-content-center align-items-center margin-bottom-xxs margin-right-xxs"
+					>
+						<button
+							type="button"
+							class="button button-clear button-sm inner-focus"
+							data-collapsible-toc-toggle
+							aria-expanded="true"
+							hidden
+							aria-controls="ms--toc-content"
+							aria-label="Table of contents"
+						>
+							<span class="icon icon-mirrored-rtl" aria-hidden="true">
+								<span
+									class="docon docon-panel-left-contract display-none-layout-menu-collapsed"
+								></span>
+								<span
+									class="docon docon-panel-left-expand display-none display-inline-layout-menu-collapsed"
+								></span>
+							</span>
+						</button>
+						<div
+							id="ms--collapsible-toc-moniker-slot"
+							class="flex-grow-1 display-none-layout-menu-collapsed"
+						></div>
+					</div>
+				</nav>
+			</div>
+		</div>
+	
+			  </section>
+
+				<main
+					id="main"
+					role="main"
+					class="layout-body-main "
+					data-bi-name="content"
+					lang="en-us"
+					dir="ltr"
+				>
+					
+			<div
+		id="ms--content-header"
+		class="content-header default-focus border-bottom-none"
+		data-bi-name="content-header"
+	>
+		<div class="content-header-controls margin-xxs margin-inline-sm-tablet">
+			<button
+				type="button"
+				class="contents-button button button-sm margin-right-xxs"
+				data-bi-name="contents-expand"
+				aria-haspopup="true"
+				data-contents-button
+			>
+				<span class="icon" aria-hidden="true"><span class="docon docon-menu"></span></span>
+				<span class="contents-expand-title"> Table of contents </span>
+			</button>
+			<button
+				type="button"
+				class="ap-collapse-behavior ap-expanded button button-sm"
+				data-bi-name="ap-collapse"
+				aria-controls="action-panel"
+			>
+				<span class="icon" aria-hidden="true"><span class="docon docon-exit-mode"></span></span>
+				<span>Exit editor mode</span>
+			</button>
+		</div>
+	</div> 
+		<div
+			id="action-panel"
+			role="region"
+			aria-label="Action Panel"
+			class="action-panel"
+			tabindex="-1"
+		></div>
+	
+			<div
+				data-main-column
+				class="reading-width margin-inline-auto layout-padding padding-top-none padding-top-sm-tablet padding-bottom-sm"
+			>
+				<div>
+					
+		<div id="article-header" class="background-color-body margin-bottom-xs display-none-print">
+			<div class="display-flex align-items-center justify-content-space-between">
+				
+		<details
+			id="article-header-breadcrumbs-overflow-popover"
+			class="popover popover-left"
+			data-for="article-header-breadcrumbs"
+		>
+			<summary
+				class="button button-clear button-primary button-sm inner-focus"
+				aria-label="All breadcrumbs"
+			>
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-more"></span>
+				</span>
+			</summary>
+			<div id="article-header-breadcrumbs-overflow" class="popover-content"></div>
+		</details>
+
+		<bread-crumbs
+			id="article-header-breadcrumbs"
+			role="group"
+			aria-label="Breadcrumbs"
+			data-test-id="article-header-breadcrumbs"
+			class="overflow-hidden flex-grow-1 margin-right-sm margin-right-md-tablet margin-right-lg-desktop margin-left-negative-xxs padding-left-xxs"
+		></bread-crumbs>
+	 
+		<div
+			id="article-header-page-actions"
+			class="opacity-none margin-left-auto display-flex flex-wrap-no-wrap align-items-stretch"
+		>
+			
+		<button
+			class="button button-sm border-none inner-focus display-none-tablet flex-shrink-0 "
+			data-bi-name="ask-learn-assistant-entry"
+			data-test-id="ask-learn-assistant-modal-entry-mobile"
+			data-ask-learn-modal-entry
+			
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-label="Ask Learn"
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+		</button>
+		<button
+			class="button button-sm display-none display-inline-flex-tablet display-none-desktop flex-shrink-0 margin-right-xxs border-color-ask-learn "
+			data-bi-name="ask-learn-assistant-entry"
+			
+			data-test-id="ask-learn-assistant-modal-entry-tablet"
+			data-ask-learn-modal-entry
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+		<button
+			class="button button-sm display-none flex-shrink-0 display-inline-flex-desktop margin-right-xxs border-color-ask-learn "
+			data-bi-name="ask-learn-assistant-entry"
+			
+			data-test-id="ask-learn-assistant-flyout-entry"
+			data-ask-learn-flyout-entry
+			data-flyout-button="toggle"
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-controls="ask-learn-flyout"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+	 
+
+			<details class="popover popover-right" id="article-header-page-actions-overflow">
+				<summary
+					class="justify-content-flex-start button button-clear button-sm button-primary inner-focus"
+					aria-label="More actions"
+					aria-expanded="false"
+					title="More actions"
+				>
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-more-vertical"></span>
+					</span>
+				</summary>
+				<div class="popover-content">
+					
+		<button
+			type="button"
+			id="ms--focus-mode-button"
+			data-focus-mode
+			data-bi-name="focus-mode-entry"
+			data-page-action-item="overflow-all"
+			data-popover-close
+			class="button button-clear button-sm button-block justify-content-flex-start text-align-left inner-focus display-none display-inline-flex-tablet"
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-glasses"></span>
+			</span>
+			<span>Reading mode</span>
+		</button>
+	 
+		<button
+			data-page-action-item="overflow-mobile"
+			type="button"
+			class="display-block-layout-menu-collapsed button-block button-sm inner-focus button button-clear display-none-tablet justify-content-flex-start text-align-left"
+			data-bi-name="contents-expand"
+			data-contents-button
+			data-popover-close
+		>
+			<span class="icon" aria-hidden="true"
+				><span class="docon docon-editor-list-bullet"></span
+			></span>
+			<span class="contents-expand-title">Table of contents</span>
+		</button>
+	 
+		<a
+			id="lang-link-overflow"
+			class="button-sm inner-focus button button-clear button-block justify-content-flex-start text-align-left"
+			data-bi-name="language-toggle"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-read-in-link
+			href="#"
+			hidden
+		>
+			<span class="icon" aria-hidden="true" data-read-in-link-icon>
+				<span class="docon docon-locale-globe"></span>
+			</span>
+			<span data-read-in-link-text>Read in English</span>
+		</a>
+	
+					
+		<button
+			type="button"
+			class="collection button button-clear button-sm button-block justify-content-flex-start text-align-left inner-focus"
+			data-list-type="collection"
+			data-bi-name="collection"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-popover-close
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-circle-addition"></span>
+			</span>
+			<span class="collection-status">Add</span>
+		</button>
+	 
+		<button
+			type="button"
+			class="collection button button-block button-clear button-sm justify-content-flex-start text-align-left inner-focus"
+			data-list-type="plan"
+			data-bi-name="plan"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-popover-close
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-circle-addition"></span>
+			</span>
+			<span class="plan-status">Add to Plans</span>
+		</button>
+	 
+					
+		<a
+			data-contenteditbtn
+			class="button button-clear button-block button-sm inner-focus justify-content-flex-start text-align-left text-decoration-none"
+			data-bi-name="edit"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			
+			href="https://github.com/dotnet/docs/blob/main/docs/core/whats-new/dotnet-11/libraries.md"
+			data-original_content_git_url="https://github.com/dotnet/docs/blob/live/docs/core/whats-new/dotnet-11/libraries.md"
+			data-original_content_git_url_template="{repo}/blob/{branch}/docs/core/whats-new/dotnet-11/libraries.md"
+			data-pr_repo=""
+			data-pr_branch=""
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-edit-outline"></span>
+			</span>
+			<span>Edit</span>
+		</a>
+	  
+		<hr class="margin-block-xxs" />
+		
+				<button
+					class="button button-block button-clear button-sm justify-content-flex-start text-align-left inner-focus"
+					type="button"
+					data-bi-name="copy-markdown"
+					data-page-action-item="overflow-all"
+					data-copy-markdown
+					data-copy-state="idle"
+					data-check-hidden="true"
+				>
+					<span class="icon color-primary" aria-hidden="true">
+						<span data-show-when="idle" class="docon docon-code-lang"></span>
+						<span data-show-when="loading" class="loader" hidden></span>
+						<span data-show-when="success" class="docon docon-check-mark" hidden></span>
+					</span>
+					<span>Copy Markdown</span>
+				</button>
+		   
+				<button
+					class="button button-block button-clear button-sm justify-content-flex-start text-align-left inner-focus"
+					type="button"
+					data-bi-name="print"
+					data-page-action-item="overflow-all"
+					data-popover-close
+					data-print-page
+					data-check-hidden="true"
+				>
+					<span class="icon color-primary" aria-hidden="true">
+						<span class="docon docon-print"></span>
+					</span>
+					<span>Print</span>
+				</button>
+		  
+	
+				</div>
+			</details>
+		</div>
+	
+			</div>
+		</div>
+	  
+		<!-- privateUnauthorizedTemplate is hidden by default -->
+		<div unauthorized-private-section data-bi-name="permission-content-unauthorized-private" hidden>
+			<hr class="hr margin-top-xs margin-bottom-sm" />
+			<div class="notification notification-info">
+				<div class="notification-content">
+					<p class="margin-top-none notification-title">
+						<span class="icon" aria-hidden="true"
+							><span class="docon docon-exclamation-circle-solid"></span
+						></span>
+						<span>Note</span>
+					</p>
+					<p class="margin-top-none authentication-determined not-authenticated">
+						Access to this page requires authorization. You can try <a class="docs-sign-in" href="#" data-bi-name="permission-content-sign-in">signing in</a> or <a  class="docs-change-directory" data-bi-name="permisson-content-change-directory">changing directories</a>.
+					</p>
+					<p class="margin-top-none authentication-determined authenticated">
+						Access to this page requires authorization. You can try <a class="docs-change-directory" data-bi-name="permisson-content-change-directory">changing directories</a>.
+					</p>
+				</div>
+			</div>
+		</div>
+	
+					<div class="content"><h1 id="whats-new-in-net-libraries-for-net-11">What's new in .NET libraries for .NET 11</h1></div>
+					
+		<div
+			id="article-metadata"
+			data-bi-name="article-metadata"
+			data-test-id="article-metadata"
+			class="page-metadata-container display-flex gap-xxs justify-content-space-between align-items-center flex-wrap-wrap"
+		>
+			 
+				<div
+					id="user-feedback"
+					class="margin-block-xxs display-none display-none-print"
+					hidden
+					data-hide-on-archived
+				>
+					
+		<button
+			id="user-feedback-button"
+			data-test-id="conceptual-feedback-button"
+			class="button button-sm button-clear button-primary display-none"
+			type="button"
+			data-bi-name="user-feedback-button"
+			data-user-feedback-button
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-like"></span>
+			</span>
+			<span>Feedback</span>
+		</button>
+	
+				</div>
+		  
+		</div>
+	 
+		<div data-id="ai-summary" class="display-none-print">
+			<div id="ms--ai-summary-cta" class="margin-top-xs display-flex align-items-center">
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-sparkle-fill gradient-text-vivid"></span>
+				</span>
+				<button
+					id="ms--ai-summary"
+					type="button"
+					class="tag tag-sm tag-suggestion margin-left-xxs"
+					data-test-id="ai-summary-cta"
+					data-bi-name="ai-summary-cta"
+					data-an="ai-summary"
+				>
+					<span class="ai-summary-cta-text">
+						Summarize this article for me
+					</span>
+				</button>
+			</div>
+			<!-- Slot where the client will render the summary card after the user clicks the CTA -->
+			<div id="ms--ai-summary-header" class="margin-top-xs"></div>
+		</div>
+	 
+		<nav
+			id="center-doc-outline"
+			class="doc-outline display-none-desktop display-none-print margin-bottom-sm"
+			data-bi-name="intopic toc"
+			aria-label="In this article"
+		>
+			<h2 id="ms--in-this-article" class="title is-6 margin-block-xs">
+				In this article
+			</h2>
+		</nav>
+	 <div class="content"><p>This article describes new features in the .NET libraries for .NET 11. It was last updated for the general availability (GA) release.</p>
+<h2 id="diagnostics-and-process-execution">Diagnostics and process execution</h2>
+<ul>
+<li><a href="#process-api-expansion" data-linktype="self-bookmark">Process API expansion</a></li>
+<li><a href="#console-force_color-support" data-linktype="self-bookmark">Console FORCE_COLOR support</a></li>
+</ul>
+<h3 id="process-api-expansion">Process API expansion</h3>
+<p><a href="/en-us/dotnet/api/system.diagnostics.process" class="no-loc" data-linktype="absolute-path">Process</a> has a substantial set of new APIs that cover common scenarios where you previously had to wire up <a href="/en-us/dotnet/api/system.diagnostics.process.outputdatareceived#system-diagnostics-process-outputdatareceived" class="no-loc" data-linktype="absolute-path">OutputDataReceived</a>/<a href="/en-us/dotnet/api/system.diagnostics.process.errordatareceived#system-diagnostics-process-errordatareceived" class="no-loc" data-linktype="absolute-path">ErrorDataReceived</a> events manually or use P/Invoke.</p>
+<h4 id="run-and-capture-helpers">Run-and-capture helpers</h4>
+<p>New one-shot APIs let you launch a process and get its result without manual setup:</p>
+<pre><code class="lang-csharp">// One-shot capture: stdout and stderr together, plus exit code.
+ProcessTextOutput result = await Process.RunAndCaptureTextAsync(
+    "git", ["status", "--porcelain"]);
+
+Console.WriteLine(result.StandardOutput);
+Console.WriteLine($"Exit code: {result.ExitStatus.ExitCode}");
+</code></pre>
+<p>The full set of helpers includes:</p>
+<ul>
+<li><a href="/en-us/dotnet/api/system.diagnostics.process.run" class="no-loc" data-linktype="absolute-path">Process.Run</a> and <a href="/en-us/dotnet/api/system.diagnostics.process.runasync" class="no-loc" data-linktype="absolute-path">Process.RunAsync</a> — launch a process and return an exit-status result.</li>
+<li><a href="/en-us/dotnet/api/system.diagnostics.process.runandcapturetext" class="no-loc" data-linktype="absolute-path">Process.RunAndCaptureText</a> and <a href="/en-us/dotnet/api/system.diagnostics.process.runandcapturetextasync" class="no-loc" data-linktype="absolute-path">Process.RunAndCaptureTextAsync</a> — launch and capture stdout/stderr together with exit code.</li>
+<li><a href="/en-us/dotnet/api/system.diagnostics.process.readalltext#system-diagnostics-process-readalltext(system-nullable((system-timespan)))" class="no-loc" data-linktype="absolute-path">Process.ReadAllText(Nullable&lt;TimeSpan&gt;)</a>, <a href="/en-us/dotnet/api/system.diagnostics.process.readallbytes#system-diagnostics-process-readallbytes(system-nullable((system-timespan)))" class="no-loc" data-linktype="absolute-path">Process.ReadAllBytes(Nullable&lt;TimeSpan&gt;)</a>, and their async variants — read a child process's standard output in a single call.</li>
+<li><a href="/en-us/dotnet/api/system.diagnostics.process.readalllines#system-diagnostics-process-readalllines(system-nullable((system-timespan)))" class="no-loc" data-linktype="absolute-path">Process.ReadAllLines(Nullable&lt;TimeSpan&gt;)</a> — synchronously reads all lines of output from a child process, returning a sequence of <a href="/en-us/dotnet/api/system.diagnostics.processoutputline" class="no-loc" data-linktype="absolute-path">ProcessOutputLine</a> values that distinguish stdout from stderr.</li>
+<li><a href="/en-us/dotnet/api/system.diagnostics.process.readalllinesasync#system-diagnostics-process-readalllinesasync(system-threading-cancellationtoken)" class="no-loc" data-linktype="absolute-path">Process.ReadAllLinesAsync(CancellationToken)</a> — returns a stream of <a href="/en-us/dotnet/api/system.diagnostics.processoutputline" class="no-loc" data-linktype="absolute-path">ProcessOutputLine</a> values that distinguish stdout from stderr without string parsing.</li>
+</ul>
+<h4 id="fire-and-forget-launches">Fire-and-forget launches</h4>
+<ul>
+<li><a href="/en-us/dotnet/api/system.diagnostics.process.startandforget" class="no-loc" data-linktype="absolute-path">Process.StartAndForget</a> — starts a child process when you don't intend to wait for it; the runtime detaches the handle automatically.</li>
+<li><a href="/en-us/dotnet/api/system.diagnostics.processstartinfo.startdetached#system-diagnostics-processstartinfo-startdetached" class="no-loc" data-linktype="absolute-path">ProcessStartInfo.StartDetached</a> — detaches from the parent's session/console so the child can outlive a terminal exit.</li>
+<li><a href="/en-us/dotnet/api/system.diagnostics.processstartinfo.killonparentexit#system-diagnostics-processstartinfo-killonparentexit" class="no-loc" data-linktype="absolute-path">ProcessStartInfo.KillOnParentExit</a> (Windows only) — the child is terminated when the parent process exits.</li>
+</ul>
+<h4 id="safeprocesshandle-lifecycle-methods">SafeProcessHandle lifecycle methods</h4>
+<p><a href="/en-us/dotnet/api/microsoft.win32.safehandles.safeprocesshandle" class="no-loc" data-linktype="absolute-path">SafeProcessHandle</a> gains lifecycle methods for advanced scenarios:</p>
+<ul>
+<li><a href="/en-us/dotnet/api/microsoft.win32.safehandles.safeprocesshandle.start#microsoft-win32-safehandles-safeprocesshandle-start(system-diagnostics-processstartinfo)" class="no-loc" data-linktype="absolute-path">SafeProcessHandle.Start(ProcessStartInfo)</a> and a new <a href="/en-us/dotnet/api/microsoft.win32.safehandles.safeprocesshandle.processid#microsoft-win32-safehandles-safeprocesshandle-processid" class="no-loc" data-linktype="absolute-path">SafeProcessHandle.ProcessId</a> property — launch and identify processes without going through <a href="/en-us/dotnet/api/system.diagnostics.process" class="no-loc" data-linktype="absolute-path">Process</a> itself.</li>
+<li><a href="/en-us/dotnet/api/microsoft.win32.safehandles.safeprocesshandle.kill#microsoft-win32-safehandles-safeprocesshandle-kill" class="no-loc" data-linktype="absolute-path">SafeProcessHandle.Kill()</a> and <a href="/en-us/dotnet/api/microsoft.win32.safehandles.safeprocesshandle.signal#microsoft-win32-safehandles-safeprocesshandle-signal(system-runtime-interopservices-posixsignal)" class="no-loc" data-linktype="absolute-path">SafeProcessHandle.Signal(PosixSignal)</a> — terminate or signal a process by handle.</li>
+<li><a href="/en-us/dotnet/api/microsoft.win32.safehandles.safeprocesshandle.waitforexit#microsoft-win32-safehandles-safeprocesshandle-waitforexit" class="no-loc" data-linktype="absolute-path">SafeProcessHandle.WaitForExit()</a> and <a href="/en-us/dotnet/api/microsoft.win32.safehandles.safeprocesshandle.waitforexitasync#microsoft-win32-safehandles-safeprocesshandle-waitforexitasync(system-threading-cancellationtoken)" class="no-loc" data-linktype="absolute-path">SafeProcessHandle.WaitForExitAsync(CancellationToken)</a> — wait for a process to exit by handle.</li>
+</ul>
+<h4 id="tighter-handle-control">Tighter handle control</h4>
+<ul>
+<li><a href="/en-us/dotnet/api/system.diagnostics.processstartinfo.inheritedhandles#system-diagnostics-processstartinfo-inheritedhandles" class="no-loc" data-linktype="absolute-path">ProcessStartInfo.InheritedHandles</a> — specify exactly which OS handles a child process inherits, instead of using the all-or-nothing <code>UseShellExecute = false</code> default.</li>
+<li><a href="/en-us/dotnet/api/system.diagnostics.processstartinfo.standardinputhandle#system-diagnostics-processstartinfo-standardinputhandle" class="no-loc" data-linktype="absolute-path">ProcessStartInfo.StandardInputHandle</a>, <a href="/en-us/dotnet/api/system.diagnostics.processstartinfo.standardoutputhandle#system-diagnostics-processstartinfo-standardoutputhandle" class="no-loc" data-linktype="absolute-path">ProcessStartInfo.StandardOutputHandle</a>, and <a href="/en-us/dotnet/api/system.diagnostics.processstartinfo.standarderrorhandle#system-diagnostics-processstartinfo-standarderrorhandle" class="no-loc" data-linktype="absolute-path">ProcessStartInfo.StandardErrorHandle</a> — supply already-open <a href="/en-us/dotnet/api/microsoft.win32.safehandles.safefilehandle" class="no-loc" data-linktype="absolute-path">Microsoft.Win32.SafeHandles.SafeFileHandle</a> values for redirection without the framework opening new ones.</li>
+</ul>
+<h4 id="suspended-starts-and-process-lookup">Suspended starts and process lookup</h4>
+<p><code>System.Diagnostics.Process</code> adds finer control over starting and finding processes:</p>
+<ul>
+<li><a href="/en-us/dotnet/api/system.diagnostics.processstartinfo.startsuspended#system-diagnostics-processstartinfo-startsuspended" class="no-loc" data-linktype="absolute-path">ProcessStartInfo.StartSuspended</a> starts a process in a suspended state on Windows and macOS. Pair it with <a href="/en-us/dotnet/api/microsoft.win32.safehandles.safeprocesshandle.resume#microsoft-win32-safehandles-safeprocesshandle-resume" class="no-loc" data-linktype="absolute-path">SafeProcessHandle.Resume()</a> to let it run once you've finished any setup, such as attaching a debugger or configuring job objects.</li>
+<li><a href="/en-us/dotnet/api/system.diagnostics.process.trygetprocessbyid#system-diagnostics-process-trygetprocessbyid(system-int32-system-diagnostics-process@)" class="no-loc" data-linktype="absolute-path">Process.TryGetProcessById(Int32, Process)</a> returns <code>false</code> instead of throwing when no process with the given ID exists.</li>
+<li><a href="/en-us/dotnet/api/microsoft.win32.safehandles.safeprocesshandle.open#microsoft-win32-safehandles-safeprocesshandle-open(system-int32)" class="no-loc" data-linktype="absolute-path">Open(Int32)</a> and <a href="/en-us/dotnet/api/microsoft.win32.safehandles.safeprocesshandle.tryopen#microsoft-win32-safehandles-safeprocesshandle-tryopen(system-int32-microsoft-win32-safehandles-safeprocesshandle@)" class="no-loc" data-linktype="absolute-path">TryOpen(Int32, SafeProcessHandle)</a> open a handle to an existing process by ID.</li>
+</ul>
+<pre><code class="lang-csharp">var startInfo = new ProcessStartInfo("worker.exe") { StartSuspended = true };
+using var process = Process.Start(startInfo)!;
+
+// Attach diagnostics or configure job objects while the process is suspended,
+// then call Resume to start execution once your setup is complete.
+AttachProfiler(process);
+process.SafeHandle.Resume();
+</code></pre>
+<h4 id="signal-processes-and-inspect-termination-status">Signal processes and inspect termination status</h4>
+<p><a href="/en-us/dotnet/api/system.diagnostics.process" class="no-loc" data-linktype="absolute-path">Process</a> exposes process signaling and exit-status APIs directly, without requiring you to work through <a href="/en-us/dotnet/api/microsoft.win32.safehandles.safeprocesshandle" class="no-loc" data-linktype="absolute-path">SafeProcessHandle</a>:</p>
+<ul>
+<li><a href="/en-us/dotnet/api/system.diagnostics.process.signal#system-diagnostics-process-signal(system-runtime-interopservices-posixsignal)" class="no-loc" data-linktype="absolute-path">Process.Signal(PosixSignal)</a> sends a POSIX signal to the process.</li>
+<li><a href="/en-us/dotnet/api/system.diagnostics.process.waitforexitstatus#system-diagnostics-process-waitforexitstatus" class="no-loc" data-linktype="absolute-path">Process.WaitForExitStatus()</a>, <a href="/en-us/dotnet/api/system.diagnostics.process.trywaitforexitstatus#system-diagnostics-process-trywaitforexitstatus(system-timespan-system-diagnostics-processexitstatus@)" class="no-loc" data-linktype="absolute-path">Process.TryWaitForExitStatus(TimeSpan, ProcessExitStatus)</a>, and <a href="/en-us/dotnet/api/system.diagnostics.process.waitforexitstatusasync#system-diagnostics-process-waitforexitstatusasync(system-threading-cancellationtoken)" class="no-loc" data-linktype="absolute-path">Process.WaitForExitStatusAsync(CancellationToken)</a> return a <a href="/en-us/dotnet/api/system.diagnostics.processexitstatus" class="no-loc" data-linktype="absolute-path">ProcessExitStatus</a>, which distinguishes a normal exit from a signal-based termination.</li>
+</ul>
+<pre><code class="lang-csharp">if (OperatingSystem.IsLinux() || OperatingSystem.IsMacOS())
+{
+    using Process process = Process.Start("sleep", "30")!;
+    process.Signal(PosixSignal.SIGTERM);
+    ProcessExitStatus status = await process.WaitForExitStatusAsync();
+    Console.WriteLine(status);
+}
+</code></pre>
+<h3 id="console-force_color-support">Console FORCE_COLOR support</h3>
+<p>.NET console output now honors the <a href="https://force-color.org/" data-linktype="external"><code>FORCE_COLOR</code></a> standard alongside the existing <code>NO_COLOR</code> support. When <code>FORCE_COLOR</code> is set, <a href="/en-us/dotnet/api/system.console.isoutputredirected#system-console-isoutputredirected" class="no-loc" data-linktype="absolute-path">Console.IsOutputRedirected</a> no longer suppresses ANSI escape codes. This is useful when you pipe <code>dotnet run</code> output through <code>tee</code>, into a CI log viewer, or through <code>less -R</code>:</p>
+<pre><code class="lang-bash">FORCE_COLOR=1 dotnet run | tee build.log
+</code></pre>
+<h2 id="in-memory-stream-adapters">In-memory stream adapters</h2>
+<p>Four new <code>Stream</code> types wrap common in-memory data so you can pass them to any API that expects a <code>Stream</code>, without copying into a <code>MemoryStream</code> first:</p>
+<ul>
+<li><code>ReadOnlyMemoryStream</code> exposes a <code>ReadOnlyMemory&lt;byte&gt;</code> as a read-only stream.</li>
+<li><code>WritableMemoryStream</code> exposes a writable <code>Memory&lt;byte&gt;</code> as a fixed-size stream.</li>
+<li><code>ReadOnlySequenceStream</code> exposes a <code>ReadOnlySequence&lt;byte&gt;</code> (for example, buffers from <code>System.IO.Pipelines</code>) as a stream without flattening it.</li>
+<li><code>StringStream</code> reads a <code>string</code> or <code>ReadOnlyMemory&lt;char&gt;</code> as a stream using a specified encoding.</li>
+</ul>
+<pre><code class="lang-csharp">using System.IO;
+using System.Text;
+
+// Pass a string to an API that takes a Stream, with no intermediate byte[] needed.
+using Stream config = new StringStream(yamlText, Encoding.UTF8);
+var settings = ParseConfiguration(config);
+
+// Expose an existing buffer as a read-only stream, for example as an HTTP request body.
+ReadOnlyMemory&lt;byte&gt; payload = GetPayload();
+using Stream body = new ReadOnlyMemoryStream(payload);
+await httpClient.PostAsync(uri, new StreamContent(body));
+</code></pre>
+<p><code>ReadOnlySequenceStream</code> is especially useful with <code>System.IO.Pipelines</code>, because it streams directly over the segments of a <code>ReadOnlySequence&lt;byte&gt;</code> instead of allocating a contiguous copy.</p>
+<h2 id="text-serialization-and-data-handling">Text, serialization, and data handling</h2>
+<ul>
+<li><a href="#string-and-character-enhancements" data-linktype="self-bookmark">String and character enhancements</a></li>
+<li><a href="#base64-encoding-improvements" data-linktype="self-bookmark">Base64 encoding improvements</a></li>
+<li><a href="#utf-validation-and-invalid-subsequence-search" data-linktype="self-bookmark">UTF validation and invalid-subsequence search</a></li>
+<li><a href="#systemtextjson-improvements" data-linktype="self-bookmark">System.Text.Json improvements</a></li>
+<li><a href="#regular-expression-improvements" data-linktype="self-bookmark">Regular expression improvements</a></li>
+<li><a href="#read-cbor-incrementally" data-linktype="self-bookmark">Read CBOR incrementally</a></li>
+</ul>
+<h3 id="string-and-character-enhancements">String and character enhancements</h3>
+<p>.NET 11 introduces significant enhancements to string and character manipulation APIs, making it easier to work with Unicode characters and runes.</p>
+<h4 id="rune-support-in-string-methods">Rune support in String methods</h4>
+<p>The <a href="/en-us/dotnet/api/system.string" class="no-loc" data-linktype="absolute-path">String</a> class now includes methods that accept <a href="/en-us/dotnet/api/system.text.rune" class="no-loc" data-linktype="absolute-path">Rune</a> parameters, enabling you to search, replace, and manipulate strings using Unicode scalar values directly. These new methods include:</p>
+<ul>
+<li><code>Contains</code> - Check if a string contains a specific rune: <a href="/en-us/dotnet/api/system.string.contains#system-string-contains(system-text-rune)" class="no-loc" data-linktype="absolute-path">String.Contains(Rune)</a> and <a href="/en-us/dotnet/api/system.string.contains#system-string-contains(system-text-rune-system-stringcomparison)" class="no-loc" data-linktype="absolute-path">String.Contains(Rune, StringComparison)</a>.</li>
+<li><code>StartsWith</code> and <code>EndsWith</code> - Check if a string starts or ends with a specific rune: <a href="/en-us/dotnet/api/system.string.startswith#system-string-startswith(system-text-rune)" class="no-loc" data-linktype="absolute-path">String.StartsWith(Rune)</a>, <a href="/en-us/dotnet/api/system.string.startswith#system-string-startswith(system-text-rune-system-stringcomparison)" class="no-loc" data-linktype="absolute-path">String.StartsWith(Rune, StringComparison)</a>, <a href="/en-us/dotnet/api/system.string.endswith#system-string-endswith(system-text-rune)" class="no-loc" data-linktype="absolute-path">String.EndsWith(Rune)</a>, and <a href="/en-us/dotnet/api/system.string.endswith#system-string-endswith(system-text-rune-system-stringcomparison)" class="no-loc" data-linktype="absolute-path">String.EndsWith(Rune, StringComparison)</a>.</li>
+<li><code>IndexOf</code> and <code>LastIndexOf</code> - Find the position of a rune in a string: <a href="/en-us/dotnet/api/system.string.indexof#system-string-indexof(system-text-rune)" class="no-loc" data-linktype="absolute-path">String.IndexOf(Rune)</a>, <a href="/en-us/dotnet/api/system.string.indexof#system-string-indexof(system-text-rune-system-stringcomparison)" class="no-loc" data-linktype="absolute-path">String.IndexOf(Rune, StringComparison)</a>, <a href="/en-us/dotnet/api/system.string.lastindexof#system-string-lastindexof(system-text-rune)" class="no-loc" data-linktype="absolute-path">String.LastIndexOf(Rune)</a>, and <a href="/en-us/dotnet/api/system.string.lastindexof#system-string-lastindexof(system-text-rune-system-stringcomparison)" class="no-loc" data-linktype="absolute-path">String.LastIndexOf(Rune, StringComparison)</a>.</li>
+<li><code>Replace</code> - Replace occurrences of one rune with another: <a href="/en-us/dotnet/api/system.string.replace#system-string-replace(system-text-rune-system-text-rune)" class="no-loc" data-linktype="absolute-path">String.Replace(Rune, Rune)</a>.</li>
+<li><code>Split</code> - Split a string using a rune as the separator: <a href="/en-us/dotnet/api/system.string.split#system-string-split(system-text-rune-system-stringsplitoptions)" class="no-loc" data-linktype="absolute-path">String.Split(Rune, StringSplitOptions)</a> and <a href="/en-us/dotnet/api/system.string.split#system-string-split(system-text-rune-system-int32-system-stringsplitoptions)" class="no-loc" data-linktype="absolute-path">String.Split(Rune, Int32, StringSplitOptions)</a>.</li>
+<li><code>Trim</code>, <code>TrimStart</code>, and <code>TrimEnd</code> - Trim runes from strings: <a href="/en-us/dotnet/api/system.string.trim#system-string-trim(system-text-rune)" class="no-loc" data-linktype="absolute-path">String.Trim(Rune)</a>, <a href="/en-us/dotnet/api/system.string.trimstart#system-string-trimstart(system-text-rune)" class="no-loc" data-linktype="absolute-path">String.TrimStart(Rune)</a>, and <a href="/en-us/dotnet/api/system.string.trimend#system-string-trimend(system-text-rune)" class="no-loc" data-linktype="absolute-path">String.TrimEnd(Rune)</a>.</li>
+</ul>
+<p>Many of these methods include overloads that accept a <a href="/en-us/dotnet/api/system.stringcomparison" class="no-loc" data-linktype="absolute-path">StringComparison</a> parameter for culture-aware comparisons.</p>
+<h4 id="charequals-with-stringcomparison">Char.Equals with StringComparison</h4>
+<p>The <a href="/en-us/dotnet/api/system.char" class="no-loc" data-linktype="absolute-path">Char</a> struct now includes an <a href="/en-us/dotnet/api/system.char.equals#system-char-equals(system-char-system-stringcomparison)" class="no-loc" data-linktype="absolute-path">Char.Equals(Char, StringComparison)</a> method that accepts a <a href="/en-us/dotnet/api/system.stringcomparison" class="no-loc" data-linktype="absolute-path">StringComparison</a> parameter, allowing you to compare characters using culture-aware or ordinal comparisons.</p>
+<h4 id="rune-support-in-textinfo">Rune support in TextInfo</h4>
+<p>The <a href="/en-us/dotnet/api/system.globalization.textinfo" class="no-loc" data-linktype="absolute-path">TextInfo</a> class now provides <a href="/en-us/dotnet/api/system.globalization.textinfo.tolower#system-globalization-textinfo-tolower(system-text-rune)" class="no-loc" data-linktype="absolute-path">TextInfo.ToLower(Rune)</a> and <a href="/en-us/dotnet/api/system.globalization.textinfo.toupper#system-globalization-textinfo-toupper(system-text-rune)" class="no-loc" data-linktype="absolute-path">TextInfo.ToUpper(Rune)</a> methods that accept <a href="/en-us/dotnet/api/system.text.rune" class="no-loc" data-linktype="absolute-path">Rune</a> parameters, enabling you to perform case conversions on individual Unicode scalar values.</p>
+<h4 id="stringbuildermovechunks">StringBuilder.MoveChunks</h4>
+<p>To transfer content without copying characters, use the new static <a href="/en-us/dotnet/api/system.text.stringbuilder.movechunks#system-text-stringbuilder-movechunks(system-text-stringbuilder)" class="no-loc" data-linktype="absolute-path">StringBuilder.MoveChunks(StringBuilder)</a> method, which moves all content from a source <code>StringBuilder</code> to a new <code>StringBuilder</code>. After the call, the source <code>StringBuilder</code> has a length of 0:</p>
+<pre><code class="lang-csharp">var source = new StringBuilder("Hello, ");
+source.Append("World!");
+
+// MoveChunks transfers all content from source to a new StringBuilder.
+// After the call, source contains no characters.
+StringBuilder dest = StringBuilder.MoveChunks(source);
+Console.WriteLine(dest);          // Hello, World!
+Console.WriteLine(source.Length); // 0
+</code></pre>
+<h3 id="base64-encoding-improvements">Base64 encoding improvements</h3>
+<p>.NET 11 adds new APIs and overloads to the existing <a href="/en-us/dotnet/api/system.buffers.text.base64" class="no-loc" data-linktype="absolute-path">Base64</a> type, providing comprehensive support for Base64 encoding and decoding. These additions offer improved performance and flexibility compared to existing methods.</p>
+<h4 id="new-base64-apis">New Base64 APIs</h4>
+<p>The new APIs support encoding and decoding operations with various input and output formats:</p>
+<ul>
+<li><strong>Encoding to chars</strong>: <a href="/en-us/dotnet/api/system.buffers.text.base64.encodetochars" class="no-loc" data-linktype="absolute-path">EncodeToChars</a> and <a href="/en-us/dotnet/api/system.buffers.text.base64.encodetostring" class="no-loc" data-linktype="absolute-path">EncodeToString</a></li>
+<li><strong>Encoding to UTF-8</strong>: <a href="/en-us/dotnet/api/system.buffers.text.base64.encodetoutf8" class="no-loc" data-linktype="absolute-path">EncodeToUtf8</a></li>
+<li><strong>Decoding from chars</strong>: <a href="/en-us/dotnet/api/system.buffers.text.base64.decodefromchars" class="no-loc" data-linktype="absolute-path">DecodeFromChars</a></li>
+<li><strong>Decoding from UTF-8</strong>: <a href="/en-us/dotnet/api/system.buffers.text.base64.decodefromutf8" class="no-loc" data-linktype="absolute-path">DecodeFromUtf8</a></li>
+</ul>
+<p>These methods provide both high-level convenience methods (that allocate and return arrays or strings) and low-level span-based methods (for zero-allocation scenarios).</p>
+<h3 id="utf-validation-and-invalid-subsequence-search">UTF validation and invalid-subsequence search</h3>
+<p><a href="/en-us/dotnet/api/system.text.unicode" class="no-loc" data-linktype="absolute-path">System.Text.Unicode</a> has two new complementary features. <a href="/en-us/dotnet/api/system.text.unicode.utf16.isvalid#system-text-unicode-utf16-isvalid(system-readonlyspan((system-char)))" class="no-loc" data-linktype="absolute-path">Utf16.IsValid(ReadOnlySpan&lt;Char&gt;)</a> answers whether a sequence is well-formed UTF-16 without scanning twice, and <a href="/en-us/dotnet/api/system.text.unicode.utf8.indexofinvalidsubsequence#system-text-unicode-utf8-indexofinvalidsubsequence(system-readonlyspan((system-byte)))" class="no-loc" data-linktype="absolute-path">Utf8.IndexOfInvalidSubsequence(ReadOnlySpan&lt;Byte&gt;)</a> / <a href="/en-us/dotnet/api/system.text.unicode.utf16.indexofinvalidsubsequence#system-text-unicode-utf16-indexofinvalidsubsequence(system-readonlyspan((system-char)))" class="no-loc" data-linktype="absolute-path">Utf16.IndexOfInvalidSubsequence(ReadOnlySpan&lt;Char&gt;)</a> return the position of the first ill-formed code-unit sequence (or <code>-1</code> for valid input). Together, these methods let parsers, validators, and serializers report precise errors instead of generic encoding-error messages.</p>
+<pre><code class="lang-csharp">ReadOnlySpan&lt;byte&gt; bytes = [0xC3, 0x28]; // invalid UTF-8
+int badIndex = Utf8.IndexOfInvalidSubsequence(bytes); // 0
+
+ReadOnlySpan&lt;char&gt; chars = "valid \uD83D\uDC4D end"; // valid UTF-16 (👍 emoji)
+bool ok = Utf16.IsValid(chars); // true
+</code></pre>
+<h3 id="systemtextjson-improvements">System.Text.Json improvements</h3>
+<h4 id="union-serialization">Union serialization</h4>
+<p><strong>C# union types.</strong> Starting in .NET 11, C# offers union types. For example, <code>Reading</code> can hold an <code>int</code> or a <code>string</code>:</p>
+<pre><code class="lang-csharp">public union Reading(int, string);
+</code></pre>
+<p>A <code>Reading</code> that holds <code>"hello"</code> round-trips as a JSON string:</p>
+<pre><code class="lang-csharp">Reading reading = new("hello");
+string json = JsonSerializer.Serialize(reading);
+Reading copy = JsonSerializer.Deserialize&lt;Reading&gt;(json);
+Console.WriteLine(json); // "hello"
+Console.WriteLine(copy.Value); // hello
+</code></pre>
+<p>The serializer writes the active case directly, without a wrapper or <code>$type</code> discriminator. The JSON output depends on the active case:</p>
+<table>
+<thead>
+<tr>
+<th>Union state</th>
+<th>JSON output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>string</code> case with value <code>"hello"</code></td>
+<td><code>"hello"</code></td>
+</tr>
+<tr>
+<td><code>int</code> case with value <code>42</code></td>
+<td><code>42</code></td>
+</tr>
+<tr>
+<td>Default struct union with no active case</td>
+<td><code>null</code></td>
+</tr>
+</tbody>
+</table>
+<p>By default, deserialization selects the case from the JSON token kind: number, string, Boolean, array, or object. Two object cases share a token kind, so the default classifier can't distinguish them. To select an object case by its root-level property names, use <a href="/en-us/dotnet/api/system.text.json.serialization.jsonunionattribute" class="no-loc" data-linktype="absolute-path">JsonUnionAttribute</a> with the built-in <a href="/en-us/dotnet/api/system.text.json.serialization.jsonuniontypestructuralclassifier" class="no-loc" data-linktype="absolute-path">JsonUnionTypeStructuralClassifier</a>:</p>
+<pre><code class="lang-csharp">[JsonUnion(TypeClassifier = typeof(JsonUnionTypeStructuralClassifier))]
+public union PetUnion(Dog, Cat);
+
+public sealed record Dog(string Name, string Breed);
+
+public sealed record Cat(string Name, int Lives);
+</code></pre>
+<pre><code class="lang-csharp">PetUnion? pet = JsonSerializer.Deserialize&lt;PetUnion&gt;(
+    """{"Name":"Misty","Lives":9}""",
+    PetJsonContext.Default.PetUnion);
+
+Console.WriteLine(pet?.Value is Cat); // True
+</code></pre>
+<p>The payload's <code>Lives</code> property selects <code>Cat</code>. The structural classifier narrows the candidate cases by root-level property names and required properties; it doesn't inspect property values or nested content. If the payload matches zero or multiple cases, deserialization throws <a href="/en-us/dotnet/api/system.text.json.jsonexception" class="no-loc" data-linktype="absolute-path">JsonException</a>. The classifier doesn't support multiple non-object cases with the same JSON token kind, nested unions, polymorphic cases, or <a href="/en-us/dotnet/api/system.text.json.serialization.referencehandler.preserve#system-text-json-serialization-referencehandler-preserve" class="no-loc" data-linktype="absolute-path">ReferenceHandler.Preserve</a>.</p>
+<p>For other case-selection rules, derive from <a href="/en-us/dotnet/api/system.text.json.serialization.jsontypeclassifierfactory" class="no-loc" data-linktype="absolute-path">JsonTypeClassifierFactory</a>. The factory receives a <a href="/en-us/dotnet/api/system.text.json.serialization.jsontypeclassifiercontext" class="no-loc" data-linktype="absolute-path">JsonTypeClassifierContext</a> describing the union cases and creates a <a href="/en-us/dotnet/api/system.text.json.serialization.jsontypeclassifier" class="no-loc" data-linktype="absolute-path">JsonTypeClassifier</a> delegate that reads JSON and selects a case type. Register the factory on one union through <a href="/en-us/dotnet/api/system.text.json.serialization.jsonunionattribute.typeclassifier#system-text-json-serialization-jsonunionattribute-typeclassifier" class="no-loc" data-linktype="absolute-path">JsonUnionAttribute.TypeClassifier</a>, on an options instance through <a href="/en-us/dotnet/api/system.text.json.jsonserializeroptions.typeclassifiers#system-text-json-jsonserializeroptions-typeclassifiers" class="no-loc" data-linktype="absolute-path">JsonSerializerOptions.TypeClassifiers</a>, or on a source-generated context through <a href="/en-us/dotnet/api/system.text.json.serialization.jsonsourcegenerationoptionsattribute.typeclassifiers#system-text-json-serialization-jsonsourcegenerationoptionsattribute-typeclassifiers" class="no-loc" data-linktype="absolute-path">JsonSourceGenerationOptionsAttribute.TypeClassifiers</a>.</p>
+<p><a href="/en-us/dotnet/api/system.text.json.serialization.jsonnumberhandlingattribute" class="no-loc" data-linktype="absolute-path">JsonNumberHandlingAttribute</a> is honored on C# unions, and the source generator no longer reports <a href="../../../fundamentals/syslib-diagnostics/syslib1220-1229" data-linktype="relative-path">SYSLIB1227</a> for unions that use custom converters.</p>
+<p>If a union declares separate <code>T</code> and <code>T?</code> cases, the serializer selects the nullable case for a <code>null</code> payload. A non-null payload is ambiguous without a custom classifier because both cases use the same JSON shape. If no case accepts <code>null</code>, JSON <code>null</code> deserializes to the default union value, which also serializes as <code>null</code>.</p>
+<p>For language syntax, see <a href="../../../csharp/whats-new/csharp-15#union-types" data-linktype="relative-path">C# 15 union types</a>. For more about classifiers and advanced contract metadata such as <a href="/en-us/dotnet/api/system.text.json.serialization.metadata.jsontypeinfokind#system-text-json-serialization-metadata-jsontypeinfokind-union" class="no-loc" data-linktype="absolute-path">JsonTypeInfoKind.Union</a> and <a href="/en-us/dotnet/api/system.text.json.serialization.metadata.jsonunioncaseinfo" class="no-loc" data-linktype="absolute-path">JsonUnionCaseInfo</a>, see <a href="../../../standard/serialization/system-text-json/union-types" data-linktype="relative-path">Serialize union types</a>.</p>
+<p><strong>F# discriminated unions.</strong> The serializer represents cases without fields as JSON strings and cases with fields as JSON objects that contain a <code>$type</code> discriminator:</p>
+<pre><code class="lang-fsharp">type Shape =
+    | Point
+    | Circle of radius: float
+    | Rectangle of height: float * length: float
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>F# value</th>
+<th>JSON output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Point</code></td>
+<td><code>"Point"</code></td>
+</tr>
+<tr>
+<td><code>Circle 3.14</code></td>
+<td><code>{"$type":"Circle","radius":3.14}</code></td>
+</tr>
+<tr>
+<td><code>Rectangle(10.0, 20.0)</code></td>
+<td><code>{"$type":"Rectangle","height":10,"length":20}</code></td>
+</tr>
+</tbody>
+</table>
+<p>For cases without fields, deserialization accepts both <code>"Point"</code> and <code>{"$type":"Point"}</code>. Class, struct, and recursive unions are supported. <a href="/en-us/dotnet/api/system.text.json.jsonserializeroptions.propertynamingpolicy#system-text-json-jsonserializeroptions-propertynamingpolicy" class="no-loc" data-linktype="absolute-path">JsonSerializerOptions.PropertyNamingPolicy</a> applies to case and field names, while <a href="/en-us/dotnet/api/system.text.json.serialization.jsonpropertynameattribute" class="no-loc" data-linktype="absolute-path">JsonPropertyNameAttribute</a> on a case takes precedence. You can also change the discriminator property through <a href="/en-us/dotnet/api/system.text.json.serialization.jsonpolymorphicattribute.typediscriminatorpropertyname#system-text-json-serialization-jsonpolymorphicattribute-typediscriminatorpropertyname" class="no-loc" data-linktype="absolute-path">JsonPolymorphicAttribute.TypeDiscriminatorPropertyName</a>.</p>
+<div class="IMPORTANT">
+<p>Important</p>
+<p>F# discriminated-union support uses reflection only. It doesn't support <code>System.Text.Json</code> source generation, trimming, or Native AOT.</p>
+</div>
+<h4 id="json-lines-output">JSON Lines output</h4>
+<p>Four <a href="/en-us/dotnet/api/system.text.json.jsonserializer.serializeasyncenumerable" class="no-loc" data-linktype="absolute-path">JsonSerializer.SerializeAsyncEnumerable</a> overloads serialize an <a href="/en-us/dotnet/api/system.collections.generic.iasyncenumerable-1" class="no-loc" data-linktype="absolute-path">IAsyncEnumerable&lt;T&gt;</a> to either a <a href="/en-us/dotnet/api/system.io.stream" class="no-loc" data-linktype="absolute-path">Stream</a> or <a href="/en-us/dotnet/api/system.io.pipelines.pipewriter" class="no-loc" data-linktype="absolute-path">PipeWriter</a>. For each output type, one overload accepts <a href="/en-us/dotnet/api/system.text.json.jsonserializeroptions" class="no-loc" data-linktype="absolute-path">JsonSerializerOptions</a> and one accepts <a href="/en-us/dotnet/api/system.text.json.serialization.metadata.jsontypeinfo-1" class="no-loc" data-linktype="absolute-path">JsonTypeInfo&lt;T&gt;</a>.</p>
+<p>With the default <code>topLevelValues: false</code>, the output remains one JSON array. Set <code>topLevelValues: true</code> to write canonical JSON Lines (JSONL). The serializer writes each value compactly and follows it with a line feed (LF), <code>\n</code>, including the final value. JSONL output uses LF regardless of <a href="/en-us/dotnet/api/system.text.json.jsonserializeroptions.newline#system-text-json-jsonserializeroptions-newline" class="no-loc" data-linktype="absolute-path">JsonSerializerOptions.NewLine</a> and ignores <a href="/en-us/dotnet/api/system.text.json.jsonserializeroptions.writeindented#system-text-json-jsonserializeroptions-writeindented" class="no-loc" data-linktype="absolute-path">JsonSerializerOptions.WriteIndented</a> so that each value occupies one line.</p>
+<p>The serializer streams each JSONL entry instead of buffering the entire entry, and it supports entries that contain nested asynchronous enumerables.</p>
+<pre><code class="lang-csharp">static async IAsyncEnumerable&lt;int&gt; GenerateNumbers()
+{
+    for (int i = 0; i &lt; 5; i++)
+    {
+        yield return i;
+        await Task.Yield();
+    }
+}
+
+using var arrayStream = new MemoryStream();
+PipeWriter arrayPipe = PipeWriter.Create(arrayStream);
+
+// Write a JSON array: [0,1,2,3,4]
+await JsonSerializer.SerializeAsyncEnumerable(
+    arrayPipe,
+    GenerateNumbers());
+await arrayPipe.CompleteAsync();
+
+using var jsonlStream = new MemoryStream();
+PipeWriter jsonlPipe = PipeWriter.Create(jsonlStream);
+
+// Write JSON Lines (one value per line): 0\n1\n2\n3\n4\n
+await JsonSerializer.SerializeAsyncEnumerable(
+    jsonlPipe,
+    GenerateNumbers(),
+    topLevelValues: true);
+await jsonlPipe.CompleteAsync();
+</code></pre>
+<h4 id="polymorphic-hierarchy-support">Polymorphic hierarchy support</h4>
+<p>For a C# <code>closed</code> hierarchy, the serializer can infer the derived types, including generic specializations, and assign deterministic discriminators. Configure inference at any of these scopes:</p>
+<pre><code class="lang-csharp">[JsonPolymorphic(InferClosedTypePolymorphism = true)]
+closed record Shape;
+record Circle(double Radius) : Shape;
+record Square(double Length) : Shape;
+</code></pre>
+<ul>
+<li>Set <a href="/en-us/dotnet/api/system.text.json.jsonserializeroptions.inferclosedtypepolymorphism#system-text-json-jsonserializeroptions-inferclosedtypepolymorphism" class="no-loc" data-linktype="absolute-path">JsonSerializerOptions.InferClosedTypePolymorphism</a> for reflection-based serialization or as a global runtime setting.</li>
+<li>Set <a href="/en-us/dotnet/api/system.text.json.serialization.jsonsourcegenerationoptionsattribute.inferclosedtypepolymorphism#system-text-json-serialization-jsonsourcegenerationoptionsattribute-inferclosedtypepolymorphism" class="no-loc" data-linktype="absolute-path">JsonSourceGenerationOptionsAttribute.InferClosedTypePolymorphism</a> so the source generator creates the required metadata at compile time.</li>
+<li>Set <a href="/en-us/dotnet/api/system.text.json.serialization.jsonpolymorphicattribute.inferclosedtypepolymorphism#system-text-json-serialization-jsonpolymorphicattribute-inferclosedtypepolymorphism" class="no-loc" data-linktype="absolute-path">JsonPolymorphicAttribute.InferClosedTypePolymorphism</a> to <code>true</code> on one hierarchy. Set it to <code>false</code> to opt that hierarchy out of a global setting.</li>
+</ul>
+<p>Inference also works through nested closed hierarchies, so a <code>closed</code> type that derives from another <code>closed</code> type contributes its own derived types to the inferred list. Explicit <a href="/en-us/dotnet/api/system.text.json.serialization.jsonderivedtypeattribute" class="no-loc" data-linktype="absolute-path">JsonDerivedTypeAttribute</a> registrations take precedence and replace the inferred list instead of extending it. If source-generated metadata doesn't contain inferred or explicitly registered derived types, enabling only the runtime option fails fast. A per-type opt-in on a type that isn't <code>closed</code> throws <a href="/en-us/dotnet/api/system.invalidoperationexception" class="no-loc" data-linktype="absolute-path">InvalidOperationException</a> with reflection and produces a source-generation error. Combining a per-type opt-in with explicit derived-type registrations produces a source-generation warning because the explicit registrations replace inference.</p>
+<p>Open generic derived-type registrations are also supported. For example, one attribute registers <code>Derived&lt;T&gt;</code> for every compatible closed <code>Base&lt;T&gt;</code>:</p>
+<pre><code class="lang-csharp">[JsonDerivedType(typeof(Derived&lt;&gt;), "derived")]
+public class Base&lt;T&gt; { }
+public class Derived&lt;T&gt; : Base&lt;T&gt; { }
+</code></pre>
+<p>The resolver supports these type-argument patterns:</p>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Example resolution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Direct binding</td>
+<td><code>Base&lt;int&gt;</code> resolves <code>Derived&lt;T&gt; : Base&lt;T&gt;</code> to <code>Derived&lt;int&gt;</code>.</td>
+</tr>
+<tr>
+<td>Reordered parameters</td>
+<td><code>Base&lt;int, string&gt;</code> resolves <code>Derived&lt;U, V&gt; : Base&lt;V, U&gt;</code> to <code>Derived&lt;string, int&gt;</code>.</td>
+</tr>
+<tr>
+<td>Partially concrete parameters</td>
+<td><code>Base&lt;string, int&gt;</code> resolves <code>Derived&lt;T&gt; : Base&lt;T, int&gt;</code> to <code>Derived&lt;string&gt;</code>.</td>
+</tr>
+<tr>
+<td>Nested or array parameters</td>
+<td><code>Base&lt;List&lt;int&gt;&gt;</code> resolves <code>Derived&lt;T&gt; : Base&lt;List&lt;T&gt;&gt;</code> to <code>Derived&lt;int&gt;</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>The same rules apply to generic interfaces and types nested in generic outer types. The registration must resolve to exactly one closed derived type and satisfy its generic constraints. A ground-type mismatch, an unbound parameter, a constraint violation, an ambiguous match, or an incompatible shape throws <a href="/en-us/dotnet/api/system.invalidoperationexception" class="no-loc" data-linktype="absolute-path">InvalidOperationException</a> with reflection. For source generation, an unresolved registration produces the <a href="../../../fundamentals/syslib-diagnostics/syslib1220-1229" data-linktype="relative-path">SYSLIB1229</a> warning, and the generated hierarchy still fails when the serializer configures it. Suppressing the warning doesn't make the registration valid.</p>
+<p>For serializer configuration guidance, see <a href="../../../standard/serialization/system-text-json/polymorphism#infer-polymorphism-from-a-closed-hierarchy" data-linktype="relative-path">Infer polymorphism from a closed hierarchy</a> and <a href="../../../standard/serialization/system-text-json/polymorphism#configure-open-generic-derived-types" data-linktype="relative-path">Configure open generic derived types</a>. For more information about the language feature, see <a href="../../../csharp/whats-new/csharp-15#closed-hierarchies" data-linktype="relative-path">C# 15 closed hierarchies</a>.</p>
+<h4 id="source-generation-and-contract-metadata">Source-generation and contract metadata</h4>
+<p>The <code>System.Text.Json</code> source generator supports more contract shapes, and the generated unsafe accessors are compatible with the updated C# unsafe semantics:</p>
+<ul>
+<li>Members marked with <a href="/en-us/dotnet/api/system.text.json.serialization.jsonincludeattribute" class="no-loc" data-linktype="absolute-path">JsonIncludeAttribute</a> can have <code>private</code>, <code>internal</code>, or <code>protected</code> accessors. Private, internal, and protected fields are also supported when they're marked with <code>[JsonInclude]</code>.</li>
+<li>An inaccessible constructor marked with <a href="/en-us/dotnet/api/system.text.json.serialization.jsonconstructorattribute" class="no-loc" data-linktype="absolute-path">JsonConstructorAttribute</a> can participate in deserialization.</li>
+<li>An omitted <code>init</code>-only property retains its property-initializer value. The generated contract sets the property after construction only when the JSON payload contains that property.</li>
+</ul>
+<p><code>JsonSerializer</code> also deserializes types with constructors whose parameters use <code>in</code>, <code>ref</code>, <code>out</code>, or <code>ref readonly</code>. The serializer binds <code>in</code>, <code>ref</code>, and <code>ref readonly</code> parameters by their element type. An <code>out</code> parameter doesn't bind a JSON constructor argument; the constructor receives an initialized output location, and a matching writable property can receive the JSON value after construction.</p>
+<p>For more information, see <a href="../../../standard/serialization/system-text-json/source-generation-modes" data-linktype="relative-path">Source-generation modes in System.Text.Json</a> and <a href="../../../standard/serialization/system-text-json/immutability" data-linktype="relative-path">Use immutable types and properties</a>.</p>
+<p>Generic <a href="/en-us/dotnet/api/system.text.json.jsonserializeroptions.gettypeinfo#system-text-json-jsonserializeroptions-gettypeinfo-1" class="no-loc" data-linktype="absolute-path">JsonSerializerOptions.GetTypeInfo&lt;T&gt;()</a> and <a href="/en-us/dotnet/api/system.text.json.jsonserializeroptions.trygettypeinfo#system-text-json-jsonserializeroptions-trygettypeinfo-1(system-text-json-serialization-metadata-jsontypeinfo((-0))@)" class="no-loc" data-linktype="absolute-path">JsonSerializerOptions.TryGetTypeInfo&lt;T&gt;(JsonTypeInfo&lt;T&gt;)</a> methods return <a href="/en-us/dotnet/api/system.text.json.serialization.metadata.jsontypeinfo-1" class="no-loc" data-linktype="absolute-path">JsonTypeInfo&lt;T&gt;</a> without a manual cast. <code>GetTypeInfo&lt;T&gt;()</code> throws if the options can't resolve the type, while <code>TryGetTypeInfo&lt;T&gt;()</code> returns <code>false</code> in that case. Resolver and configuration exceptions can still propagate. These methods simplify metadata access in source-generation, Native AOT, and polymorphic serialization scenarios. For more information, see <a href="../../../standard/serialization/system-text-json/custom-contracts#get-strongly-typed-metadata" data-linktype="relative-path">Get strongly typed metadata</a>.</p>
+<pre><code class="lang-csharp">JsonSerializerOptions options = new(JsonSerializerDefaults.Web);
+options.MakeReadOnly(populateMissingResolver: true);
+
+// Before: manual downcast required
+JsonTypeInfo&lt;MyRecord&gt; info1 = (JsonTypeInfo&lt;MyRecord&gt;)options.GetTypeInfo(typeof(MyRecord));
+
+// After: generic method returns the right type directly
+JsonTypeInfo&lt;MyRecord&gt; info2 = options.GetTypeInfo&lt;MyRecord&gt;();
+
+// TryGetTypeInfo variant for cases where the type may not be registered
+if (options.TryGetTypeInfo&lt;MyRecord&gt;(out JsonTypeInfo&lt;MyRecord&gt;? typeInfo))
+{
+    // Use typeInfo
+    _ = typeInfo;
+}
+</code></pre>
+<h4 id="property-names-and-ignore-conditions">Property names and ignore conditions</h4>
+<p><a href="/en-us/dotnet/api/system.text.json.jsonnamingpolicy.pascalcase#system-text-json-jsonnamingpolicy-pascalcase" class="no-loc" data-linktype="absolute-path">JsonNamingPolicy.PascalCase</a> and <a href="/en-us/dotnet/api/system.text.json.serialization.jsonknownnamingpolicy#system-text-json-serialization-jsonknownnamingpolicy-pascalcase" class="no-loc" data-linktype="absolute-path">JsonKnownNamingPolicy.PascalCase</a> provide built-in PascalCase conversion. Apply <a href="/en-us/dotnet/api/system.text.json.serialization.jsonnamingpolicyattribute" class="no-loc" data-linktype="absolute-path">JsonNamingPolicyAttribute</a> to a class, struct, interface, property, or field to select a naming policy at the type or member level.</p>
+<p>Naming precedence, from highest to lowest, is <a href="/en-us/dotnet/api/system.text.json.serialization.jsonpropertynameattribute" class="no-loc" data-linktype="absolute-path">JsonPropertyNameAttribute</a>, a member-level <code>[JsonNamingPolicy]</code>, a type-level <code>[JsonNamingPolicy]</code>, <a href="/en-us/dotnet/api/system.text.json.jsonserializeroptions.propertynamingpolicy#system-text-json-jsonserializeroptions-propertynamingpolicy" class="no-loc" data-linktype="absolute-path">JsonSerializerOptions.PropertyNamingPolicy</a>, and the original member name.</p>
+<p><a href="/en-us/dotnet/api/system.text.json.serialization.jsonignoreattribute" class="no-loc" data-linktype="absolute-path">JsonIgnoreAttribute</a> can now set a default ignore condition on classes, structs, and interfaces. A member-level <code>[JsonIgnore]</code> takes precedence over the type-level condition, which takes precedence over <a href="/en-us/dotnet/api/system.text.json.jsonserializeroptions.defaultignorecondition#system-text-json-jsonserializeroptions-defaultignorecondition" class="no-loc" data-linktype="absolute-path">JsonSerializerOptions.DefaultIgnoreCondition</a>. <a href="/en-us/dotnet/api/system.text.json.serialization.jsonignorecondition#system-text-json-serialization-jsonignorecondition-always" class="no-loc" data-linktype="absolute-path">JsonIgnoreCondition.Always</a> isn't valid at the type level; reflection throws <a href="/en-us/dotnet/api/system.invalidoperationexception" class="no-loc" data-linktype="absolute-path">InvalidOperationException</a>, while source generation reports <code>SYSLIB1226</code> and ignores the type-level attribute.</p>
+<pre><code class="lang-csharp">// Type-level JsonIgnore: all members use WhenWritingNull by default
+// Type-level JsonNamingPolicy: ReleaseVersion uses snake_case
+// Per-member JsonNamingPolicy: EventName uses camelCase even though the
+// serializer options use PascalCase
+var options = new JsonSerializerOptions
+{
+    PropertyNamingPolicy = JsonNamingPolicy.PascalCase
+};
+
+var data = new EventData { EventName = "Launch", ReleaseVersion = "11", Notes = null };
+string json = JsonSerializer.Serialize(data, options);
+Console.WriteLine(json);
+// {"eventName":"Launch","release_version":"11"}  -- Notes omitted (null), EventName camel-cased
+</code></pre>
+<p>For more information, see <a href="../../../standard/serialization/system-text-json/customize-properties#apply-a-naming-policy-to-a-type-or-member" data-linktype="relative-path">Apply a naming policy to a type or member</a> and <a href="../../../standard/serialization/system-text-json/ignore-properties#ignore-properties-based-on-a-type-level-condition" data-linktype="relative-path">Ignore properties based on a type-level condition</a>.</p>
+<h4 id="converters-and-collection-contracts">Converters and collection contracts</h4>
+<p><strong>Numeric converters.</strong> The serializer includes built-in converters for <a href="/en-us/dotnet/api/system.numerics.bfloat16" class="no-loc" data-linktype="absolute-path">BFloat16</a>, <a href="/en-us/dotnet/api/system.numerics.decimal32" class="no-loc" data-linktype="absolute-path">Decimal32</a>, <a href="/en-us/dotnet/api/system.numerics.decimal64" class="no-loc" data-linktype="absolute-path">Decimal64</a>, and <a href="/en-us/dotnet/api/system.numerics.decimal128" class="no-loc" data-linktype="absolute-path">Decimal128</a>. The converters support number-handling options, dictionary keys, and JSON Schema export. For generated metadata, <a href="/en-us/dotnet/api/system.text.json.serialization.metadata.jsonmetadataservices" class="no-loc" data-linktype="absolute-path">JsonMetadataServices</a> exposes <a href="/en-us/dotnet/api/system.text.json.serialization.metadata.jsonmetadataservices.bfloat16converter#system-text-json-serialization-metadata-jsonmetadataservices-bfloat16converter" class="no-loc" data-linktype="absolute-path">JsonMetadataServices.BFloat16Converter</a>, <a href="/en-us/dotnet/api/system.text.json.serialization.metadata.jsonmetadataservices.decimal32converter#system-text-json-serialization-metadata-jsonmetadataservices-decimal32converter" class="no-loc" data-linktype="absolute-path">JsonMetadataServices.Decimal32Converter</a>, <a href="/en-us/dotnet/api/system.text.json.serialization.metadata.jsonmetadataservices.decimal64converter#system-text-json-serialization-metadata-jsonmetadataservices-decimal64converter" class="no-loc" data-linktype="absolute-path">JsonMetadataServices.Decimal64Converter</a>, and <a href="/en-us/dotnet/api/system.text.json.serialization.metadata.jsonmetadataservices.decimal128converter#system-text-json-serialization-metadata-jsonmetadataservices-decimal128converter" class="no-loc" data-linktype="absolute-path">JsonMetadataServices.Decimal128Converter</a>.</p>
+<p><strong>Open generic converters.</strong> <a href="/en-us/dotnet/api/system.text.json.serialization.jsonconverterattribute" class="no-loc" data-linktype="absolute-path">JsonConverterAttribute</a> can reference an open generic converter on a generic type or member:</p>
+<pre><code class="lang-csharp">[JsonConverter(typeof(OptionConverter&lt;&gt;))]
+public readonly struct Option&lt;T&gt; { }
+</code></pre>
+<p>The converter's total generic arity must match the target type's arity. The serializer closes the converter with the target type arguments without requiring <a href="/en-us/dotnet/api/system.text.json.serialization.jsonconverterfactory" class="no-loc" data-linktype="absolute-path">JsonConverterFactory</a>. For supported nesting patterns, constraints, and error behavior, see <a href="../../../standard/serialization/system-text-json/converters-how-to#use-open-generic-converters-with-jsonconverter" data-linktype="relative-path">Use open generic converters with <code>JsonConverter</code></a>.</p>
+<p><strong>Extension data.</strong> A member marked with <a href="/en-us/dotnet/api/system.text.json.serialization.jsonextensiondataattribute" class="no-loc" data-linktype="absolute-path">JsonExtensionDataAttribute</a> can use <a href="/en-us/dotnet/api/system.collections.generic.ireadonlydictionary-2" class="no-loc" data-linktype="absolute-path">IReadOnlyDictionary&lt;TKey,TValue&gt;</a> with <code>string</code> keys and either <code>object</code> or <a href="/en-us/dotnet/api/system.text.json.jsonelement" class="no-loc" data-linktype="absolute-path">JsonElement</a> values. During deserialization, the serializer assigns a mutable <a href="/en-us/dotnet/api/system.collections.generic.dictionary-2" class="no-loc" data-linktype="absolute-path">Dictionary&lt;TKey,TValue&gt;</a> implementation. If the property already contains entries, the serializer copies them first and then adds JSON properties, so an incoming value replaces an existing value with the same key. A <a href="/en-us/dotnet/api/system.text.json.nodes.jsonobject" class="no-loc" data-linktype="absolute-path">JsonObject</a> extension-data member writes its child properties directly into the containing object. For example, an <code>Id</code> property and a <code>JsonObject</code> entry named <code>nested</code> produce <code>{"Id":1,"nested":true}</code>. For more information, see <a href="../../../standard/serialization/system-text-json/handle-overflow#handle-overflow-json" data-linktype="relative-path">Handle overflow JSON</a>.</p>
+<p><strong>Read-only sets.</strong> <a href="/en-us/dotnet/api/system.text.json.jsonserializer" class="no-loc" data-linktype="absolute-path">JsonSerializer</a> serializes <a href="/en-us/dotnet/api/system.collections.generic.ireadonlyset-1" class="no-loc" data-linktype="absolute-path">IReadOnlySet&lt;T&gt;</a> as a JSON array and deserializes it into a <a href="/en-us/dotnet/api/system.collections.generic.hashset-1" class="no-loc" data-linktype="absolute-path">HashSet&lt;T&gt;</a> instance. For source-generated metadata, <a href="/en-us/dotnet/api/system.text.json.serialization.metadata.jsonmetadataservices.createireadonlysetinfo" class="no-loc" data-linktype="absolute-path">JsonMetadataServices.CreateIReadOnlySetInfo</a> creates the collection contract.</p>
+<p>For more information about built-in numeric and collection contracts, see <a href="../../../standard/serialization/system-text-json/supported-types" data-linktype="relative-path">Supported types in System.Text.Json</a>.</p>
+<h4 id="writer-reuse">Writer reuse</h4>
+<p><a href="/en-us/dotnet/api/system.text.json.utf8jsonwriter.reset" class="no-loc" data-linktype="absolute-path">Reset</a> accepts a <a href="/en-us/dotnet/api/system.text.json.jsonwriteroptions" class="no-loc" data-linktype="absolute-path">JsonWriterOptions</a> together with either a <a href="/en-us/dotnet/api/system.io.stream" class="no-loc" data-linktype="absolute-path">Stream</a> or <a href="/en-us/dotnet/api/system.buffers.ibufferwriter-1" class="no-loc" data-linktype="absolute-path">IBufferWriter&lt;T&gt;</a>. After you flush one JSON document, you can reuse or pool the writer with a different output target and different options instead of constructing another writer instance:</p>
+<pre><code class="lang-csharp">using var stream = new MemoryStream();
+using var writer = new Utf8JsonWriter(stream, new JsonWriterOptions { Indented = true });
+writer.WriteStartObject();
+writer.WriteString("name", "example");
+writer.WriteEndObject();
+writer.Flush();
+
+// Reset with different options for next use — no new allocation needed
+stream.SetLength(0);
+writer.Reset(stream, new JsonWriterOptions { Indented = false });
+</code></pre>
+<p>For more information, see <a href="../../../standard/serialization/system-text-json/use-utf8jsonwriter#reuse-a-writer" data-linktype="relative-path">Reuse a writer</a>.</p>
+<p>You can also opt a single closed hierarchy in to this behavior with <a href="/en-us/dotnet/api/system.text.json.serialization.jsonpolymorphicattribute.inferclosedtypepolymorphism#system-text-json-serialization-jsonpolymorphicattribute-inferclosedtypepolymorphism" class="no-loc" data-linktype="absolute-path">JsonPolymorphicAttribute.InferClosedTypePolymorphism</a>, without changing the application-wide <code>JsonSerializerOptions</code> setting:</p>
+<pre><code class="lang-csharp">[JsonPolymorphic(InferClosedTypePolymorphism = true)]
+public abstract record Shape;
+
+public sealed record Circle(double Radius) : Shape;
+
+public sealed record Square(double Side) : Shape;
+</code></pre>
+<h3 id="regular-expression-improvements">Regular expression improvements</h3>
+<h4 id="anynewline-option">AnyNewLine option</h4>
+<p>A new <a href="/en-us/dotnet/api/system.text.regularexpressions.regexoptions#system-text-regularexpressions-regexoptions-anynewline" class="no-loc" data-linktype="absolute-path">RegexOptions.AnyNewLine</a> flag makes <code>^</code>, <code>$</code>, and <code>.</code> treat the full set of Unicode newline characters as line terminators—not just <code>\n</code>. This helps when parsing text that mixes Windows (<code>\r\n</code>), Unix (<code>\n</code>), and Unicode-specific (<code>\u0085</code>, <code>\u2028</code>, <code>\u2029</code>) line endings.</p>
+<pre><code class="lang-csharp">string text = "line1\r\nline2\u0085line3\u2028line4";
+
+// RegexOptions.AnyNewLine makes ^, $, and . treat all Unicode newline
+// sequences as line terminators, not just \n.
+MatchCollection matches = Regex.Matches(
+    text,
+    @"^line\d$",
+    RegexOptions.Multiline | RegexOptions.AnyNewLine);
+
+Console.WriteLine(matches.Count); // 4
+</code></pre>
+<h4 id="regex-engine-and-source-generator-fixes">Regex engine and source generator fixes</h4>
+<p>.NET 11 includes several regex correctness and code-quality fixes:</p>
+<ul>
+<li>The non-backtracking engine no longer takes super-linear time on certain nested-loop patterns and produces correct results for cases that previously diverged.</li>
+<li>The regex compiler and source generator handle <code>resumeAt</code> correctly when a conditional appears inside a loop body.</li>
+<li>The <a href="../../../fundamentals/syslib-diagnostics/syslib1040-1049" data-linktype="relative-path">SYSLIB1045</a> code fixer no longer creates duplicate class names when applied across multiple partial declarations of the same class.</li>
+</ul>
+<h3 id="read-cbor-incrementally">Read CBOR incrementally</h3>
+<p><a href="/en-us/dotnet/api/system.formats.cbor.cborreader" class="no-loc" data-linktype="absolute-path">CborReader</a> can read a Concise Binary Object Representation (CBOR) payload that's delivered in chunks, without first copying the entire document into contiguous memory. To read incrementally:</p>
+<ol>
+<li>Construct a reader with <code>isFinalBlock: false</code>.</li>
+<li>Check for <code>CborReaderState.NeedsMoreData</code> to determine when the reader needs the next chunk.</li>
+<li>Pass the next chunk to <code>CborReader.SlideData</code>, and set <code>isFinalBlock</code> to <code>true</code> for the last chunk.</li>
+</ol>
+<p>Incremental reading requires <a href="/en-us/dotnet/api/system.formats.cbor.cborconformancemode#system-formats-cbor-cborconformancemode-lax" class="no-loc" data-linktype="absolute-path">CborConformanceMode.Lax</a>. Other conformance modes reject a non-final block.</p>
+<pre><code class="lang-csharp">ReadOnlyMemory&lt;byte&gt; firstChunk = new byte[] { 0x82, 0x0a };
+ReadOnlyMemory&lt;byte&gt; nextChunk = new byte[] { 0x14 };
+
+// Incremental reading requires CborConformanceMode.Lax.
+var reader = new CborReader(
+    firstChunk,
+    new CborReaderOptions { ConformanceMode = CborConformanceMode.Lax },
+    isFinalBlock: false);
+
+reader.ReadStartArray();
+int first = reader.ReadInt32(); // 10
+
+if (reader.PeekState() == CborReaderState.NeedsMoreData)
+{
+    // Slide in the next chunk after the reader consumes all the buffered bytes.
+    if (reader.BytesRemaining == 0)
+    {
+        reader.SlideData(nextChunk, isFinalBlock: true);
+    }
+    else
+    {
+        throw new InvalidOperationException("Buffer management omitted from the sample.");
+    }
+}
+
+int second = reader.ReadInt32(); // 20
+reader.ReadEndArray();
+</code></pre>
+<h2 id="compression-and-archive-formats">Compression and archive formats</h2>
+<ul>
+<li><a href="#compression-enhancements" data-linktype="self-bookmark">Compression enhancements</a></li>
+<li><a href="#zstandard-compression" data-linktype="self-bookmark">Zstandard compression</a></li>
+<li><a href="#tar-archive-format-selection" data-linktype="self-bookmark">Tar archive format selection</a></li>
+</ul>
+<h3 id="compression-enhancements">Compression enhancements</h3>
+<p>.NET 11 includes several improvements to compression APIs.</p>
+<h4 id="zip-archive-entry-access-modes">ZIP archive entry access modes</h4>
+<p>The <a href="/en-us/dotnet/api/system.io.compression.ziparchiveentry" class="no-loc" data-linktype="absolute-path">ZipArchiveEntry</a> class now supports opening entries with specific file access modes through new overloads: <a href="/en-us/dotnet/api/system.io.compression.ziparchiveentry.open#system-io-compression-ziparchiveentry-open(system-io-fileaccess)" class="no-loc" data-linktype="absolute-path">ZipArchiveEntry.Open(FileAccess)</a> and <a href="/en-us/dotnet/api/system.io.compression.ziparchiveentry.openasync#system-io-compression-ziparchiveentry-openasync(system-io-fileaccess-system-threading-cancellationtoken)" class="no-loc" data-linktype="absolute-path">ZipArchiveEntry.OpenAsync(FileAccess, CancellationToken)</a>. These overloads accept a <a href="/en-us/dotnet/api/system.io.fileaccess" class="no-loc" data-linktype="absolute-path">FileAccess</a> parameter and allow you to open ZIP entries for read, write, or read-write access.</p>
+<p>Additionally, a new <a href="/en-us/dotnet/api/system.io.compression.ziparchiveentry.compressionmethod#system-io-compression-ziparchiveentry-compressionmethod" class="no-loc" data-linktype="absolute-path">CompressionMethod</a> property exposes the compression method used for an entry through the <a href="/en-us/dotnet/api/system.io.compression.zipcompressionmethod" class="no-loc" data-linktype="absolute-path">ZipCompressionMethod</a> enum, which includes values for <a href="/en-us/dotnet/api/system.io.compression.zipcompressionmethod#system-io-compression-zipcompressionmethod-stored" class="no-loc" data-linktype="absolute-path">Stored</a>, <a href="/en-us/dotnet/api/system.io.compression.zipcompressionmethod#system-io-compression-zipcompressionmethod-deflate" class="no-loc" data-linktype="absolute-path">Deflate</a>, and <a href="/en-us/dotnet/api/system.io.compression.zipcompressionmethod#system-io-compression-zipcompressionmethod-deflate64" class="no-loc" data-linktype="absolute-path">Deflate64</a>.</p>
+<h4 id="zip-crc32-validation">ZIP CRC32 validation</h4>
+<p><a href="/en-us/dotnet/api/system.io.compression.ziparchive" class="no-loc" data-linktype="absolute-path">ZipArchive</a> validates the CRC32 checksum when reading ZIP entries. Corrupted or truncated archives that previously passed without error now throw <a href="/en-us/dotnet/api/system.io.invaliddataexception" class="no-loc" data-linktype="absolute-path">InvalidDataException</a>, helping you detect data integrity issues early.</p>
+<h4 id="zip-archive-password-support">ZIP archive password support</h4>
+<p><a href="/en-us/dotnet/api/system.io.compression.ziparchiveentry" class="no-loc" data-linktype="absolute-path">ZipArchiveEntry</a> now supports password-protected entries for read and write operations. Use the new password-aware <a href="/en-us/dotnet/api/system.io.compression.ziparchiveentry.open#system-io-compression-ziparchiveentry-open(system-readonlyspan((system-char)))" class="no-loc" data-linktype="absolute-path">ZipArchiveEntry.Open(ReadOnlySpan&lt;Char&gt;)</a> and <a href="/en-us/dotnet/api/system.io.compression.ziparchiveentry.openasync#system-io-compression-ziparchiveentry-openasync(system-readonlyspan((system-char))-system-threading-cancellationtoken)" class="no-loc" data-linktype="absolute-path">ZipArchiveEntry.OpenAsync(ReadOnlySpan&lt;Char&gt;, CancellationToken)</a> overloads, and use password plus <a href="/en-us/dotnet/api/system.io.compression.zipencryptionmethod" class="no-loc" data-linktype="absolute-path">ZipEncryptionMethod</a> when you create encrypted entries.</p>
+<h4 id="deflatestream-and-gzipstream-behavior-change">DeflateStream and GZipStream behavior change</h4>
+<p>Starting in .NET 11, <a href="/en-us/dotnet/api/system.io.compression.deflatestream" class="no-loc" data-linktype="absolute-path">DeflateStream</a> and <a href="/en-us/dotnet/api/system.io.compression.gzipstream" class="no-loc" data-linktype="absolute-path">GZipStream</a> always write format headers and footers to the output stream, even when no data is written. This ensures the output is a valid compressed stream according to the Deflate and GZip specifications.</p>
+<p>Previously, these streams didn't produce any output if no data was written, resulting in an empty output stream. This change ensures compatibility with tools that expect properly formatted compressed streams.</p>
+<p>For more information, see <a href="../../compatibility/core-libraries/11/deflatestream-gzipstream-empty-payload" data-linktype="relative-path">DeflateStream and GZipStream write headers and footers for empty payload</a>.</p>
+<h4 id="span-based-deflate-zlib-and-gzip-apis">Span-based Deflate, ZLib, and GZip APIs</h4>
+<p><a href="/en-us/dotnet/api/system.io.compression" class="no-loc" data-linktype="absolute-path">System.IO.Compression</a> now offers <code>Span&lt;byte&gt;</code>/<code>ReadOnlySpan&lt;byte&gt;</code> encode and decode entry points for the Deflate, ZLib, and GZip formats. The new APIs, on types such as <a href="/en-us/dotnet/api/system.io.compression.deflateencoder" class="no-loc" data-linktype="absolute-path">DeflateEncoder</a>, <a href="/en-us/dotnet/api/system.io.compression.zlibencoder" class="no-loc" data-linktype="absolute-path">ZLibEncoder</a>, and <a href="/en-us/dotnet/api/system.io.compression.gzipencoder" class="no-loc" data-linktype="absolute-path">GZipEncoder</a>, mirror the shape of <a href="/en-us/dotnet/api/system.io.compression.brotliencoder" class="no-loc" data-linktype="absolute-path">BrotliEncoder</a>/<a href="/en-us/dotnet/api/system.io.compression.brotlidecoder" class="no-loc" data-linktype="absolute-path">BrotliDecoder</a> and the Zstandard primitives. You can compress and decompress buffers without allocating a <code>Stream</code>. This is useful for high-throughput scenarios such as protocol parsers, log shippers, and middleware that already operate on spans.</p>
+<pre><code class="lang-csharp">ReadOnlySpan&lt;byte&gt; source = [0x48, 0x65, 0x6C, 0x6C, 0x6F]; // "Hello"
+byte[] buffer = new byte[source.Length + 32];
+Span&lt;byte&gt; destination = buffer;
+
+using ZLibEncoder encoder = new();
+OperationStatus status = encoder.Compress(
+    source, destination, out int bytesConsumed, out int bytesWritten,
+    isFinalBlock: true);
+
+Console.WriteLine($"Compressed {bytesConsumed} bytes into {bytesWritten} bytes. Status: {status}");
+</code></pre>
+<p>The streamless <code>DeflateEncoder</code>, <code>DeflateDecoder</code>, <code>ZLibEncoder</code>, <code>ZLibDecoder</code>, <code>GZipEncoder</code>, and <code>GZipDecoder</code> types also gain a <code>Reset()</code> method. Resetting returns an instance to its initial state so you can process another independent payload without allocating a replacement encoder or decoder.</p>
+<h3 id="zstandard-compression">Zstandard compression</h3>
+<p>The Zstandard compression APIs, for example, <a href="/en-us/dotnet/api/system.io.compression.zstandardstream" class="no-loc" data-linktype="absolute-path">ZstandardStream</a> and <a href="/en-us/dotnet/api/system.io.compression.zstandardencoder" class="no-loc" data-linktype="absolute-path">ZstandardEncoder</a>, are now part of the <a href="/en-us/dotnet/api/system.io.compression" class="no-loc" data-linktype="absolute-path">System.IO.Compression</a> namespace, alongside <code>DeflateStream</code>, <code>GZipStream</code>, and <code>BrotliStream</code>. The API surface is otherwise unchanged.</p>
+<p><a href="/en-us/dotnet/api/system.io.compression.zstandarddictionary" class="no-loc" data-linktype="absolute-path">ZstandardDictionary</a> provides dictionary training and construction. <a href="/en-us/dotnet/api/system.io.compression.zstandarddictionary.train" class="no-loc" data-linktype="absolute-path">Train</a> returns raw dictionary data as a <code>byte[]</code>; pass that data to <a href="/en-us/dotnet/api/system.io.compression.zstandarddictionary.create" class="no-loc" data-linktype="absolute-path">Create</a> with the desired compression quality:</p>
+<pre><code class="lang-csharp">byte[] data = ZstandardDictionary.Train(samples, sampleLengths, maxDictionarySize: 4096);
+using ZstandardDictionary dictionary = ZstandardDictionary.Create(data, quality: 19);
+</code></pre>
+<h3 id="tar-archive-format-selection">Tar archive format selection</h3>
+<p>New overloads on <a href="/en-us/dotnet/api/system.formats.tar.tarfile.createfromdirectory" class="no-loc" data-linktype="absolute-path">CreateFromDirectory</a> and <a href="/en-us/dotnet/api/system.formats.tar.tarfile.createfromdirectoryasync" class="no-loc" data-linktype="absolute-path">CreateFromDirectoryAsync</a> accept a <a href="/en-us/dotnet/api/system.formats.tar.tarentryformat" class="no-loc" data-linktype="absolute-path">TarEntryFormat</a> parameter, giving you direct control over the archive format. Previously, <code>CreateFromDirectory</code> always produced Pax archives. The new overloads support all four tar formats—Pax, Ustar, GNU, and V7—for compatibility with specific tools and environments.</p>
+<pre><code class="lang-csharp">// Create a GNU format tar archive for Linux compatibility
+TarFile.CreateFromDirectory("/source/dir", "/dest/archive.tar",
+    includeBaseDirectory: true, format: TarEntryFormat.Gnu);
+
+// Create a Ustar format archive for broader compatibility
+using Stream outputStream = File.OpenWrite("/dest/ustar.tar");
+TarFile.CreateFromDirectory("/source/dir", outputStream,
+    includeBaseDirectory: false, format: TarEntryFormat.Ustar);
+
+// Async version
+CancellationToken cancellationToken = CancellationToken.None;
+await TarFile.CreateFromDirectoryAsync("/source/dir", "/dest/archive.tar",
+    includeBaseDirectory: true, format: TarEntryFormat.Pax,
+    cancellationToken: cancellationToken);
+</code></pre>
+<p><code>TarReader</code> can now also read entries that use the GNU sparse format 1.0 (PAX) representation. The earlier 0.1 representation was already supported. With 1.0 support in place, <code>TarReader</code> matches what modern <code>tar</code> implementations write by default for sparse files.</p>
+<h2 id="collections-numerics-and-low-level-io">Collections, numerics, and low-level I/O</h2>
+<ul>
+<li><a href="#linq-join-improvements" data-linktype="self-bookmark">LINQ join improvements</a></li>
+<li><a href="#ieee-754-decimal-floating-point-types" data-linktype="self-bookmark">IEEE 754 decimal floating-point types</a></li>
+<li><a href="#correctly-rounded-decimal-and-biginteger-conversions" data-linktype="self-bookmark">Correctly rounded decimal and BigInteger conversions</a></li>
+<li><a href="#partial-numeric-parsing" data-linktype="self-bookmark">Partial numeric parsing</a></li>
+<li><a href="#generic-complext" data-linktype="self-bookmark">Generic Complex&lt;T&gt;</a></li>
+<li><a href="#bfloat16-support-in-bitconverter" data-linktype="self-bookmark">BFloat16 support in BitConverter</a></li>
+<li><a href="#floating-point-hex-formatting-and-parsing" data-linktype="self-bookmark">Floating-point hex formatting and parsing</a></li>
+<li><a href="#numerics-improvements" data-linktype="self-bookmark">Numerics improvements</a></li>
+<li><a href="#random-generic-methods" data-linktype="self-bookmark">Random generic methods</a></li>
+<li><a href="#cross-lane-vector-operations" data-linktype="self-bookmark">Cross-lane vector operations</a></li>
+<li><a href="#low-level-io-improvements" data-linktype="self-bookmark">Low-level I/O improvements</a></li>
+<li><a href="#collections-improvements" data-linktype="self-bookmark">Collections improvements</a></li>
+</ul>
+<h3 id="linq-join-improvements">LINQ join improvements</h3>
+<p>LINQ adds join enhancements, including a new <code>FullJoin</code> operation and tuple-returning overloads for the existing <code>Join</code> and <code>GroupJoin</code> methods. These APIs are available on <a href="/en-us/dotnet/api/system.linq.enumerable" class="no-loc" data-linktype="absolute-path">Enumerable</a>, <a href="/en-us/dotnet/api/system.linq.queryable" class="no-loc" data-linktype="absolute-path">Queryable</a>, and <a href="/en-us/dotnet/api/system.linq.asyncenumerable" class="no-loc" data-linktype="absolute-path">AsyncEnumerable</a>.</p>
+<h4 id="leftjoin-rightjoin-and-fulljoin">LeftJoin, RightJoin, and FullJoin</h4>
+<p>Because the three outer-join operations return tuples directly, you can work with them easily using pattern matching and deconstruction:</p>
+<ul>
+<li><a href="/en-us/dotnet/api/system.linq.enumerable.leftjoin" class="no-loc" data-linktype="absolute-path">Enumerable.LeftJoin</a> — Returns all elements from the left (outer) sequence. When there's no matching element in the right (inner) sequence, the inner element is <code>default</code> (typically <code>null</code> for reference types).</li>
+<li><a href="/en-us/dotnet/api/system.linq.enumerable.rightjoin" class="no-loc" data-linktype="absolute-path">Enumerable.RightJoin</a> — Returns all elements from the right (inner) sequence. When there's no matching element in the left (outer) sequence, the outer element is <code>default</code> (typically <code>null</code> for reference types).</li>
+<li><a href="/en-us/dotnet/api/system.linq.enumerable.fulljoin" class="no-loc" data-linktype="absolute-path">Enumerable.FullJoin</a> — Returns all elements from both sequences, using <code>default</code> on either side when there's no match.</li>
+</ul>
+<pre><code class="lang-csharp">var products = new List&lt;(int Id, string Name, string? Category)&gt;
+{
+    (1, "Laptop", "Electronics"),
+    (2, "Mouse", "Electronics"),
+    (3, "Orphan", null), // No matching category
+};
+var categories = new List&lt;(string Name, string Description)&gt;
+{
+    ("Electronics", "Electronic devices"),
+    ("Furniture", "Office furniture"), // No matching product
+};
+
+// LeftJoin: all products, matched categories (null if none)
+var leftJoined = products.LeftJoin(
+    categories,
+    p =&gt; p.Category,
+    c =&gt; c.Name);
+
+foreach (var (product, category) in leftJoined)
+    Console.WriteLine($"{product.Name}: {category.Description ?? "(none)"}");
+// Laptop: Electronic devices
+// Mouse: Electronic devices
+// Orphan: (none)
+
+// FullJoin: all products and categories, paired where they match
+var fullJoined = products.FullJoin(
+    categories,
+    p =&gt; p.Category,
+    c =&gt; c.Name);
+
+foreach (var (product, category) in fullJoined)
+    Console.WriteLine(
+        $"{product.Name ?? "(none)"}: {category.Description ?? "(none)"}");
+// Laptop: Electronic devices
+// Mouse: Electronic devices
+// Orphan: (none)
+// (none): Office furniture
+</code></pre>
+<h3 id="ieee-754-decimal-floating-point-types">IEEE 754 decimal floating-point types</h3>
+<p><a href="/en-us/dotnet/api/system.numerics" class="no-loc" data-linktype="absolute-path">System.Numerics</a> adds <a href="/en-us/dotnet/api/system.numerics.decimal32" class="no-loc" data-linktype="absolute-path">Decimal32</a>, <a href="/en-us/dotnet/api/system.numerics.decimal64" class="no-loc" data-linktype="absolute-path">Decimal64</a>, and <a href="/en-us/dotnet/api/system.numerics.decimal128" class="no-loc" data-linktype="absolute-path">Decimal128</a>, which implement IEEE 754-2019 decimal floating-point semantics. These types support generic math, infinities, and NaN values, and can help when you need IEEE decimal behavior instead of <a href="/en-us/dotnet/api/system.decimal" class="no-loc" data-linktype="absolute-path">Decimal</a>.</p>
+<p>The transcendental functions on these types are more accurate. The most significant fix is for <code>Decimal128</code> values near a cancellation point, such as <code>Asin</code> and <code>Acos</code> near ±1 and logarithms near 1, where earlier builds could lose most or all significant digits. For example, <code>Decimal128.Acos(1 - 1e-30)</code> previously had an error of roughly 10²⁴ units in the last place (ULPs). It's now well under one ULP.</p>
+<p>The change also improves the following behaviors:</p>
+<ul>
+<li>Inverse trigonometric and hyperbolic functions, logarithms, <code>Pow</code>, and <code>RootN</code> preserve decimal precision during argument reduction.</li>
+<li><code>SinPi</code>, <code>CosPi</code>, <code>TanPi</code>, and <code>SinCosPi</code> return exact results, such as zero for integer inputs written with alternate decimal representations (for example, <code>SinPi(1000.000)</code>).</li>
+<li><code>Log(x, base)</code> rounds only once for all three types.</li>
+<li><code>Exp2</code>, <code>Exp2M1</code>, and subnormal-result rounding are more accurate.</li>
+<li>Alternate representations of <code>1</code>, such as <code>Acosh(1.0000000)</code>, no longer return NaN for <code>Decimal64</code> and <code>Decimal128</code>.</li>
+</ul>
+<p>No public APIs were added. Because the rounded results intentionally change, code that compares these results against stored values might observe different last digits. The functions still aren't guaranteed to be correctly rounded.</p>
+<h3 id="correctly-rounded-decimal-and-biginteger-conversions">Correctly rounded decimal and BigInteger conversions</h3>
+<p>Conversions between <a href="/en-us/dotnet/api/system.decimal" class="no-loc" data-linktype="absolute-path">Decimal</a> and binary floating-point types, and conversions from <a href="/en-us/dotnet/api/system.numerics.biginteger" class="no-loc" data-linktype="absolute-path">BigInteger</a> to binary floating-point types, now round the exact source value once to the nearest representable destination value. The previous conversions could lose significant digits or round through an intermediate value, so binaries rebuilt with a .NET 11 SDK can produce different results than they did on earlier versions. There's no compatibility switch to restore the previous conversion algorithms.</p>
+<p>For example, converting the <code>double</code> literal <code>1.23</code> to <code>decimal</code> now preserves the exact binary floating-point value rather than producing <code>1.23</code>. If a value is meant to be decimal, use a decimal literal such as <code>1.23m</code> instead of converting a <code>double</code> literal. For complete guidance, including previous and new behavior for each conversion direction, see <a href="../../compatibility/core-libraries/11/decimal-biginteger-floating-point-conversions" data-linktype="relative-path">Decimal and BigInteger floating-point conversions are correctly rounded</a>.</p>
+<h3 id="partial-numeric-parsing">Partial numeric parsing</h3>
+<p><a href="/en-us/dotnet/api/system.numerics.inumberbase-1.tryparsepartial" class="no-loc" data-linktype="absolute-path">INumberBase&lt;TSelf&gt;.TryParsePartial</a> adds partial parsing overloads that report consumed input. Use this API to parse delimited formats, such as CSV, so you don't copy substrings.</p>
+<h3 id="generic-complext">Generic Complex&lt;T&gt;</h3>
+<p><a href="/en-us/dotnet/api/system.numerics.complex-1" class="no-loc" data-linktype="absolute-path">Complex&lt;T&gt;</a> is now available, so complex arithmetic can use several floating-point types, including <code>float</code>, <code>Half</code>, <code>BFloat16</code>, and the new decimal floating-point types.</p>
+<h4 id="tuple-returning-join-and-groupjoin-overloads">Tuple-returning Join and GroupJoin overloads</h4>
+<p>New overloads of <a href="/en-us/dotnet/api/system.linq.enumerable.join" class="no-loc" data-linktype="absolute-path">Enumerable.Join</a> and <a href="/en-us/dotnet/api/system.linq.enumerable.groupjoin" class="no-loc" data-linktype="absolute-path">Enumerable.GroupJoin</a> return tuples directly without requiring a result selector, and accept an optional <a href="/en-us/dotnet/api/system.collections.generic.iequalitycomparer-1" class="no-loc" data-linktype="absolute-path">IEqualityComparer&lt;T&gt;</a> parameter. The optional comparer overload is also available on the <code>FullJoin</code>, <code>LeftJoin</code>, and <code>RightJoin</code> operations.</p>
+<pre><code class="lang-csharp">var products = new[] { (Id: 1, Name: "Laptop"), (Id: 2, Name: "Mouse") };
+var orders = new[] { (ProductId: 1, Qty: 3), (ProductId: 1, Qty: 1) };
+
+var result = products.Join(orders, p =&gt; p.Id, o =&gt; o.ProductId);
+foreach (var (product, order) in result)
+    Console.WriteLine($"{product.Name}: qty={order.Qty}");
+// Laptop: qty=3
+// Laptop: qty=1
+</code></pre>
+<h3 id="bfloat16-support-in-bitconverter">BFloat16 support in BitConverter</h3>
+<p>The <a href="/en-us/dotnet/api/system.bitconverter" class="no-loc" data-linktype="absolute-path">BitConverter</a> class now includes methods for converting between <a href="/en-us/dotnet/api/system.numerics.bfloat16" class="no-loc" data-linktype="absolute-path">BFloat16</a> values and byte arrays or bit representations. These new methods include:</p>
+<ul>
+<li><a href="/en-us/dotnet/api/system.bitconverter.getbytes#system-bitconverter-getbytes(system-numerics-bfloat16)" class="no-loc" data-linktype="absolute-path">BitConverter.GetBytes(BFloat16)</a> - Convert a BFloat16 value to a byte array.</li>
+<li><a href="/en-us/dotnet/api/system.bitconverter.tobfloat16#system-bitconverter-tobfloat16(system-byte()-system-int32)" class="no-loc" data-linktype="absolute-path">BitConverter.ToBFloat16(Byte[], Int32)</a> and <a href="/en-us/dotnet/api/system.bitconverter.tobfloat16#system-bitconverter-tobfloat16(system-readonlyspan((system-byte)))" class="no-loc" data-linktype="absolute-path">BitConverter.ToBFloat16(ReadOnlySpan&lt;Byte&gt;)</a> - Convert a byte array to a BFloat16 value.</li>
+<li><a href="/en-us/dotnet/api/system.bitconverter.bfloat16toint16bits#system-bitconverter-bfloat16toint16bits(system-numerics-bfloat16)" class="no-loc" data-linktype="absolute-path">BitConverter.BFloat16ToInt16Bits(BFloat16)</a>, <a href="/en-us/dotnet/api/system.bitconverter.bfloat16touint16bits#system-bitconverter-bfloat16touint16bits(system-numerics-bfloat16)" class="no-loc" data-linktype="absolute-path">BitConverter.BFloat16ToUInt16Bits(BFloat16)</a>, <a href="/en-us/dotnet/api/system.bitconverter.int16bitstobfloat16#system-bitconverter-int16bitstobfloat16(system-int16)" class="no-loc" data-linktype="absolute-path">BitConverter.Int16BitsToBFloat16(Int16)</a>, and <a href="/en-us/dotnet/api/system.bitconverter.uint16bitstobfloat16#system-bitconverter-uint16bitstobfloat16(system-uint16)" class="no-loc" data-linktype="absolute-path">BitConverter.UInt16BitsToBFloat16(UInt16)</a> - Methods for converting between BFloat16 and its bit representation as <code>short</code> or <code>ushort</code>.</li>
+</ul>
+<p>BFloat16 (Brain Floating Point) is a 16-bit floating-point format that's commonly used in machine learning and scientific computing.</p>
+<h3 id="floating-point-hex-formatting-and-parsing">Floating-point hex formatting and parsing</h3>
+<p><code>double</code>, <code>float</code>, and <code>Half</code> can now be formatted and parsed in their hexadecimal IEEE-754 form. The hex form preserves every bit of the underlying value, making it the right choice for golden-file tests, cross-language interop with C/C++ <code>printf("%a", ...)</code>, and any scenario where round-tripping a <code>double</code> through decimal text is too lossy.</p>
+<pre><code class="lang-csharp">double value = Math.PI;
+
+// Format as hexadecimal IEEE-754: preserves all bits exactly
+string hex = value.ToString("X"); // e.g., "0X1.921FB54442D18P+1"
+double roundTripped = double.Parse(hex, NumberStyles.HexFloat);
+
+Console.WriteLine(roundTripped == value); // True — exact round-trip
+</code></pre>
+<h3 id="numerics-improvements">Numerics improvements</h3>
+<p><a href="/en-us/dotnet/api/system.numerics.matrix4x4.getdeterminant#system-numerics-matrix4x4-getdeterminant" class="no-loc" data-linktype="absolute-path">Matrix4x4.GetDeterminant()</a> now uses an SSE-vectorized implementation, improving performance by approximately 15%.</p>
+<h3 id="random-generic-methods">Random generic methods</h3>
+<p><a href="/en-us/dotnet/api/system.random" class="no-loc" data-linktype="absolute-path">Random</a> gains two new generic methods that work with any numeric type implementing the appropriate generic math interfaces:</p>
+<ul>
+<li><a href="/en-us/dotnet/api/system.random.nextinteger" class="no-loc" data-linktype="absolute-path">Random.NextInteger</a> — Generates a random integer of type <code>T</code> where <code>T</code> implements <code>IBinaryInteger&lt;T&gt;</code> and <code>IMinMaxValue&lt;T&gt;</code>. Overloads accept an upper bound or both lower and upper bounds.</li>
+<li><a href="/en-us/dotnet/api/system.random.nextbinaryfloat" class="no-loc" data-linktype="absolute-path">Random.NextBinaryFloat</a> — Generates a random floating-point value of type <code>T</code> where <code>T</code> implements <code>IBinaryFloatingPointIeee754&lt;T&gt;</code>.</li>
+</ul>
+<pre><code class="lang-csharp">// Generate a random integer of any binary integer type
+int i = Random.Shared.NextInteger&lt;int&gt;();
+long l = Random.Shared.NextInteger&lt;long&gt;(0L, 100L);
+byte b = Random.Shared.NextInteger&lt;byte&gt;(maxValue: (byte)10);
+
+// Generate a random floating-point value of any IEEE-754 type
+float f = Random.Shared.NextBinaryFloat&lt;float&gt;();
+double d = Random.Shared.NextBinaryFloat&lt;double&gt;();
+Half h = Random.Shared.NextBinaryFloat&lt;Half&gt;();
+
+Console.WriteLine($"int={i}, long={l}, byte={b}");
+Console.WriteLine($"float={f}, double={d}, Half={h}");
+</code></pre>
+<h3 id="cross-lane-vector-operations">Cross-lane vector operations</h3>
+<p><code>Vector64&lt;T&gt;</code>, <code>Vector128&lt;T&gt;</code>, <code>Vector256&lt;T&gt;</code>, <code>Vector512&lt;T&gt;</code>, and <code>Vector&lt;T&gt;</code> gain a set of lane construction and composition methods that previously required hand-written shuffles. The new methods fall into a few families:</p>
+<ul>
+<li><strong>Patterned construction:</strong> <code>CreateGeometricSequence</code>, <code>CreateAlternatingSequence</code>, and <code>CreateHarmonicSequence</code> build a vector from a starting value and a rule.</li>
+<li><strong>Interleave and de-interleave:</strong> <code>Zip</code>, <code>ZipLower</code>/<code>ZipUpper</code>, <code>Unzip</code>, <code>UnzipEven</code>/<code>UnzipOdd</code>.</li>
+<li><strong>Rearrange:</strong> The <code>Concat</code> family (<code>ConcatLowerLower</code>, <code>ConcatLowerUpper</code>, <code>ConcatUpperLower</code>, <code>ConcatUpperUpper</code>) and <code>Reverse</code>.</li>
+</ul>
+<pre><code class="lang-csharp">using System.Runtime.Intrinsics;
+
+// {1, 2, 4, 8} — each lane is the previous lane times two
+Vector128&lt;int&gt; powers = Vector128.CreateGeometricSequence(1, 2);
+
+// Interleave two vectors lane-by-lane
+(Vector128&lt;int&gt; lower, Vector128&lt;int&gt; upper) =
+    Vector128.Zip(Vector128.Create(1), Vector128.Create(2));
+</code></pre>
+<p>These building blocks are useful for image processing, audio digital signal processing (DSP), and other SIMD-intensive workloads that need fine-grained control over vector element layout, without falling back to platform-specific intrinsics.</p>
+<h3 id="low-level-io-improvements">Low-level I/O improvements</h3>
+<ul>
+<li><a href="#safefilehandle-pipe-support" data-linktype="self-bookmark">SafeFileHandle pipe support</a></li>
+<li><a href="#randomaccess-pipe-support" data-linktype="self-bookmark">RandomAccess pipe support</a></li>
+<li><a href="#file-locking-on-ios-and-tvos" data-linktype="self-bookmark">File locking on iOS and tvOS</a></li>
+</ul>
+<h4 id="safefilehandle-pipe-support">SafeFileHandle pipe support</h4>
+<p><a href="/en-us/dotnet/api/microsoft.win32.safehandles.safefilehandle" class="no-loc" data-linktype="absolute-path">SafeFileHandle</a> gains two new members:</p>
+<ul>
+<li><strong><a href="/en-us/dotnet/api/microsoft.win32.safehandles.safefilehandle.type#microsoft-win32-safehandles-safefilehandle-type" class="no-loc" data-linktype="absolute-path">SafeFileHandle.Type</a> property:</strong> Reports whether a handle represents a file, pipe, socket, directory, or other OS object, without requiring platform-specific code.</li>
+<li><strong><a href="/en-us/dotnet/api/microsoft.win32.safehandles.safefilehandle.createanonymouspipe#microsoft-win32-safehandles-safefilehandle-createanonymouspipe(microsoft-win32-safehandles-safefilehandle@-microsoft-win32-safehandles-safefilehandle@-system-boolean-system-boolean)" class="no-loc" data-linktype="absolute-path">SafeFileHandle.CreateAnonymousPipe(SafeFileHandle, SafeFileHandle, Boolean, Boolean)</a> method:</strong> Creates a pair of connected anonymous pipe handles with independent async behavior for each end.</li>
+</ul>
+<pre><code class="lang-csharp">SafeFileHandle.CreateAnonymousPipe(
+    out SafeFileHandle readEnd,
+    out SafeFileHandle writeEnd,
+    asyncRead: true,
+    asyncWrite: false);
+
+using (readEnd)
+using (writeEnd)
+{
+    // SafeFileHandle.Type reports the kind of OS object the handle refers to
+    Console.WriteLine(readEnd.Type);   // Pipe
+    Console.WriteLine(writeEnd.Type);  // Pipe
+}
+</code></pre>
+<h4 id="randomaccess-pipe-support">RandomAccess pipe support</h4>
+<p><a href="/en-us/dotnet/api/system.io.randomaccess.read" class="no-loc" data-linktype="absolute-path">RandomAccess.Read</a> and <a href="/en-us/dotnet/api/system.io.randomaccess.write" class="no-loc" data-linktype="absolute-path">RandomAccess.Write</a> now work with non-seekable handles such as pipes, in addition to regular file handles.</p>
+<p>On Windows, <code>Process</code> now uses overlapped I/O for redirected stdout/stderr, which reduces thread-pool blocking in process-heavy applications.</p>
+<h4 id="file-locking-on-ios-and-tvos">File locking on iOS and tvOS</h4>
+<p>On iOS and tvOS, <a href="/en-us/dotnet/api/system.io.filestream" class="no-loc" data-linktype="absolute-path">FileStream</a> no longer acquires advisory file locks by default. This change avoids operating-system termination when an app is suspended while it holds a file lock. As a result, <a href="/en-us/dotnet/api/system.io.fileshare" class="no-loc" data-linktype="absolute-path">FileShare</a> restrictions aren't enforced on those platforms, including between handles in the same process. Mac Catalyst and other platforms keep their existing defaults. To restore locking, set the <code>System.IO.DisableFileLocking</code> runtime configuration property to <code>false</code>, or set the <code>DOTNET_SYSTEM_IO_DISABLEFILELOCKING</code> environment variable to <code>0</code>. For more information, see <a href="runtime#file-locking-on-ios-and-tvos" data-linktype="relative-path">File locking on iOS and tvOS</a>.</p>
+<h3 id="collections-improvements">Collections improvements</h3>
+<ul>
+<li><a href="#bitarray-span-constructors" data-linktype="self-bookmark">BitArray span constructors</a></li>
+<li><a href="#bitarraypopcount" data-linktype="self-bookmark">BitArray.PopCount</a></li>
+<li><a href="#equalitycomparertcreate" data-linktype="self-bookmark">EqualityComparer&lt;T&gt;.Create</a></li>
+<li><a href="#concurrentqueue-reliability-fix" data-linktype="self-bookmark">ConcurrentQueue reliability fix</a></li>
+<li><a href="#systemnumericstensors-package-compatibility" data-linktype="self-bookmark">System.Numerics.Tensors package compatibility</a></li>
+</ul>
+<h4 id="bitarray-span-constructors">BitArray span constructors</h4>
+<p><a href="/en-us/dotnet/api/system.collections.bitarray" class="no-loc" data-linktype="absolute-path">BitArray</a> now has constructors that accept <a href="/en-us/dotnet/api/system.readonlyspan-1" class="no-loc" data-linktype="absolute-path">ReadOnlySpan&lt;T&gt;</a>: <code>ReadOnlySpan&lt;bool&gt;</code>, <code>ReadOnlySpan&lt;byte&gt;</code>, and <code>ReadOnlySpan&lt;int&gt;</code>. You can construct a bit array directly from a slice or stack-allocated data without first allocating an array:</p>
+<pre><code class="lang-csharp">Span&lt;byte&gt; bytes = stackalloc byte[] { 0b_0000_0011, 0b_1000_0000 };
+var bits = new BitArray(bytes);
+
+Console.WriteLine(bits[0]);  // True
+Console.WriteLine(bits[1]);  // True
+Console.WriteLine(bits[15]); // True
+</code></pre>
+<p>The span-based constructors avoid the intermediate array allocation that <code>new BitArray(span.ToArray())</code> requires.</p>
+<h4 id="bitarraypopcount">BitArray.PopCount</h4>
+<p>The <a href="/en-us/dotnet/api/system.collections.bitarray" class="no-loc" data-linktype="absolute-path">BitArray</a> class now includes a <a href="/en-us/dotnet/api/system.collections.bitarray.popcount#system-collections-bitarray-popcount" class="no-loc" data-linktype="absolute-path">BitArray.PopCount()</a> method that returns the number of bits set to <code>true</code> in the array. This provides an efficient way to count set bits without manually iterating through the array.</p>
+<h4 id="equalitycomparertcreate">EqualityComparer&lt;T&gt;.Create</h4>
+<p>To create an equality comparer from a key selector function, use the new <a href="/en-us/dotnet/api/system.collections.generic.equalitycomparer-1.create" class="no-loc" data-linktype="absolute-path">EqualityComparer&lt;T&gt;.Create</a> factory method. You can pass an optional <a href="/en-us/dotnet/api/system.collections.generic.iequalitycomparer-1" class="no-loc" data-linktype="absolute-path">IEqualityComparer&lt;T&gt;</a> for the key type itself:</p>
+<pre><code class="lang-csharp">
+// Create an equality comparer based on a key selector
+var byName = EqualityComparer&lt;(string Name, int Age)&gt;.Create(p =&gt; p.Name);
+
+var people = new HashSet&lt;(string Name, int Age)&gt;(byName)
+{
+    ("Alice", 30),
+    ("Bob", 25),
+    ("Alice", 40), // Duplicate by name — not added
+};
+Console.WriteLine(people.Count); // 2
+</code></pre>
+<h4 id="concurrentqueue-reliability-fix">ConcurrentQueue reliability fix</h4>
+<p><a href="/en-us/dotnet/api/system.collections.concurrent.concurrentqueue-1.trydequeue" class="no-loc" data-linktype="absolute-path">ConcurrentQueue&lt;T&gt;.TryDequeue</a> and <a href="/en-us/dotnet/api/system.collections.concurrent.concurrentqueue-1.trypeek" class="no-loc" data-linktype="absolute-path">ConcurrentQueue&lt;T&gt;.TryPeek</a> no longer spuriously report an empty queue while the queue freezes a segment during growth.</p>
+<h4 id="systemnumericstensors-package-compatibility">System.Numerics.Tensors package compatibility</h4>
+<p>Updating the <code>System.Numerics.Tensors</code> package changes shape alignment and rejects unsupported overlapping storage layouts, including on target frameworks older than .NET 11. Review code that depends on a particular shape or on overlapping copies. Use separate destination storage or snapshot the source when overlap isn't supported. For details, see <a href="../../compatibility/core-libraries/11/tensor-shape-alignment" data-linktype="relative-path">Tensor shape alignment</a> and <a href="../../compatibility/core-libraries/11/tensor-storage-layout-validation" data-linktype="relative-path">Tensor storage-layout validation</a>.</p>
+<h2 id="extensions-and-developer-platform">Extensions and developer platform</h2>
+<ul>
+<li><a href="#discriminated-union-scaffolding" data-linktype="self-bookmark">Discriminated-union scaffolding</a></li>
+<li><a href="#metadataloadcontext-additions" data-linktype="self-bookmark">MetadataLoadContext additions</a></li>
+<li><a href="#reflection-improvements" data-linktype="self-bookmark">Reflection improvements</a></li>
+<li><a href="#assemblylocation-override-for-assemblyloadcontext" data-linktype="self-bookmark">Assembly.Location override for AssemblyLoadContext</a></li>
+<li><a href="#reduced-contention-in-systemiopipelines" data-linktype="self-bookmark">Reduced contention in System.IO.Pipelines</a></li>
+<li><a href="#uri-data-scheme-constant" data-linktype="self-bookmark">URI data scheme constant</a></li>
+<li><a href="#stringsyntax-attribute-enhancements" data-linktype="self-bookmark">StringSyntax attribute enhancements</a></li>
+</ul>
+<h3 id="discriminated-union-scaffolding">Discriminated-union scaffolding</h3>
+<p>.NET 11 introduces <a href="/en-us/dotnet/api/system.runtime.compilerservices.unionattribute" class="no-loc" data-linktype="absolute-path">System.Runtime.CompilerServices.UnionAttribute</a> and <a href="/en-us/dotnet/api/system.runtime.compilerservices.iunion" class="no-loc" data-linktype="absolute-path">System.Runtime.CompilerServices.IUnion</a> in <a href="/en-us/dotnet/api/system.runtime.compilerservices" class="no-loc" data-linktype="absolute-path">System.Runtime.CompilerServices</a>. These types are the runtime side of the C# discriminated-union design. They aren't directly user-facing yet—the C# compiler and source generators are the expected producers—but they ship in the framework so libraries can author against the surface now.</p>
+<p>For the language-side design, see the <a href="https://github.com/dotnet/csharplang/blob/main/meetings/working-groups/discriminated-unions/union-proposals-overview.md" data-linktype="external">discriminated unions working group overview</a>.</p>
+<h3 id="metadataloadcontext-additions">MetadataLoadContext additions</h3>
+<p><a href="/en-us/dotnet/api/system.reflection.metadataloadcontext.getloadcontext#system-reflection-metadataloadcontext-getloadcontext(system-reflection-assembly)" class="no-loc" data-linktype="absolute-path">MetadataLoadContext.GetLoadContext(Assembly)</a> returns the load context that produced a given <code>Assembly</code>, mirroring the long-existing API on <a href="/en-us/dotnet/api/system.runtime.loader.assemblyloadcontext" class="no-loc" data-linktype="absolute-path">AssemblyLoadContext</a>. This closes a gap for tooling that reflects over assemblies in an isolated <code>MetadataLoadContext</code> and needs to walk back from an <code>Assembly</code> reference to the context that owns it:</p>
+<pre><code class="lang-csharp">using System.Reflection;
+using System.Reflection.Metadata;
+
+string[] paths = [typeof(object).Assembly.Location];
+using var mlc = new MetadataLoadContext(new PathAssemblyResolver(paths));
+Assembly asm = mlc.LoadFromAssemblyPath(typeof(object).Assembly.Location);
+
+MetadataLoadContext owner = MetadataLoadContext.GetLoadContext(asm)!;
+Console.WriteLine(ReferenceEquals(owner, mlc)); // true
+</code></pre>
+<h3 id="uri-data-scheme-constant">URI data scheme constant</h3>
+<p>A new <a href="/en-us/dotnet/api/system.uri.urischemedata#system-uri-urischemedata" class="no-loc" data-linktype="absolute-path">Uri.UriSchemeData</a> constant has been added, representing the <code>data:</code> URI scheme. This constant provides a standardized way to reference data URIs.</p>
+<h3 id="reflection-improvements">Reflection improvements</h3>
+<h4 id="typegetnullableunderlyingtype">Type.GetNullableUnderlyingType</h4>
+<p><a href="/en-us/dotnet/api/system.type" class="no-loc" data-linktype="absolute-path">System.Type</a> gains a new virtual method, <a href="/en-us/dotnet/api/system.type.getnullableunderlyingtype#system-type-getnullableunderlyingtype" class="no-loc" data-linktype="absolute-path">Type.GetNullableUnderlyingType()</a>, that returns the underlying value type for a <code>Nullable&lt;T&gt;</code> type, or <code>null</code> for any non-nullable type. Implementations are provided on <a href="/en-us/dotnet/api/system.type" class="no-loc" data-linktype="absolute-path">Type</a>, <a href="/en-us/dotnet/api/system.reflection.emit.typebuilder" class="no-loc" data-linktype="absolute-path">TypeBuilder</a>, <a href="/en-us/dotnet/api/system.reflection.emit.enumbuilder" class="no-loc" data-linktype="absolute-path">EnumBuilder</a>, <a href="/en-us/dotnet/api/system.reflection.emit.generictypeparameterbuilder" class="no-loc" data-linktype="absolute-path">GenericTypeParameterBuilder</a>, and <a href="/en-us/dotnet/api/system.reflection.typedelegator" class="no-loc" data-linktype="absolute-path">TypeDelegator</a>:</p>
+<pre><code class="lang-csharp">Type nullableIntType = typeof(int?);
+Type? underlying = nullableIntType.GetNullableUnderlyingType();
+Console.WriteLine(underlying); // System.Int32
+
+Type nonNullable = typeof(int);
+Console.WriteLine(nonNullable.GetNullableUnderlyingType() is null); // True
+</code></pre>
+<h4 id="constructorinfogetgenericarguments">ConstructorInfo.GetGenericArguments</h4>
+<p><a href="/en-us/dotnet/api/system.reflection.constructorinfo.getgenericarguments#system-reflection-constructorinfo-getgenericarguments" class="no-loc" data-linktype="absolute-path">ConstructorInfo.GetGenericArguments()</a> now has an override, providing a consistent way to retrieve generic type arguments for constructor definitions, matching the behavior already available on other <code>MethodBase</code> subclasses.</p>
+<h3 id="assemblylocation-override-for-assemblyloadcontext">Assembly.Location override for AssemblyLoadContext</h3>
+<p><a href="/en-us/dotnet/api/system.runtime.loader.assemblyloadcontext.setassemblylocationoverride#system-runtime-loader-assemblyloadcontext-setassemblylocationoverride(system-func((system-reflection-assembly-system-string-system-string)))" class="no-loc" data-linktype="absolute-path">AssemblyLoadContext.SetAssemblyLocationOverride(Func&lt;Assembly,String,String&gt;)</a> is a set-once callback that can override the location reported by <a href="/en-us/dotnet/api/system.reflection.assembly.location#system-reflection-assembly-location" class="no-loc" data-linktype="absolute-path">Assembly.Location</a>. This API helps hosts that stage assemblies in temporary paths or virtualized locations report stable, meaningful locations to diagnostics and resource-loading code.</p>
+<h3 id="reduced-contention-in-systemiopipelines">Reduced contention in System.IO.Pipelines</h3>
+<p><a href="/en-us/dotnet/api/system.io.pipelines" class="no-loc" data-linktype="absolute-path">System.IO.Pipelines</a> reduces reader and writer lock contention under high fan-in workloads. Internal changes include lower lock scope, local queue continuation scheduling, and pool updates that improve cache locality.</p>
+<h3 id="stringsyntax-attribute-enhancements">StringSyntax attribute enhancements</h3>
+<p>The <a href="/en-us/dotnet/api/system.diagnostics.codeanalysis.stringsyntaxattribute" class="no-loc" data-linktype="absolute-path">StringSyntaxAttribute</a> class now includes constants for common programming languages:</p>
+<ul>
+<li><a href="/en-us/dotnet/api/system.diagnostics.codeanalysis.stringsyntaxattribute.csharp#system-diagnostics-codeanalysis-stringsyntaxattribute-csharp" class="no-loc" data-linktype="absolute-path">CSharp</a> - Indicates C# syntax.</li>
+<li><a href="/en-us/dotnet/api/system.diagnostics.codeanalysis.stringsyntaxattribute.fsharp#system-diagnostics-codeanalysis-stringsyntaxattribute-fsharp" class="no-loc" data-linktype="absolute-path">FSharp</a> - Indicates F# syntax.</li>
+<li><a href="/en-us/dotnet/api/system.diagnostics.codeanalysis.stringsyntaxattribute.visualbasic#system-diagnostics-codeanalysis-stringsyntaxattribute-visualbasic" class="no-loc" data-linktype="absolute-path">VisualBasic</a> - Indicates Visual Basic syntax.</li>
+</ul>
+<p>These constants can be used with the <code>StringSyntax</code> attribute to provide better tooling support for string literals containing code in these languages.</p>
+<h2 id="caching-configuration-and-logging">Caching, configuration, and logging</h2>
+<ul>
+<li><a href="#configuration-binding" data-linktype="self-bookmark">Configuration binding</a></li>
+<li><a href="#memorycache-opentelemetry-metrics" data-linktype="self-bookmark">MemoryCache OpenTelemetry metrics</a></li>
+<li><a href="#options-builder-validation-improvements" data-linktype="self-bookmark">Options builder validation improvements</a></li>
+<li><a href="#asynchronous-changetokenonchange" data-linktype="self-bookmark">Asynchronous ChangeToken.OnChange</a></li>
+<li><a href="#options-aware-hybridcache-factories" data-linktype="self-bookmark">Options-aware HybridCache factories</a></li>
+<li><a href="#asynchronous-validation-with-dataannotations" data-linktype="self-bookmark">Asynchronous validation with DataAnnotations</a></li>
+<li><a href="#format-dataannotations-messages" data-linktype="self-bookmark">Format DataAnnotations messages</a></li>
+<li><a href="#activity-tracing-configuration" data-linktype="self-bookmark">Activity tracing configuration</a></li>
+<li><a href="#generic-source-generated-logging-methods" data-linktype="self-bookmark">Generic source-generated logging methods</a></li>
+<li><a href="#improved-reliability-for-configuration-file-change-detection" data-linktype="self-bookmark">Improved reliability for configuration file change detection</a></li>
+</ul>
+<h3 id="configuration-binding">Configuration binding</h3>
+<p><a href="/en-us/dotnet/api/microsoft.extensions.configuration" class="no-loc" data-linktype="absolute-path">Microsoft.Extensions.Configuration</a> adds <a href="/en-us/dotnet/api/microsoft.extensions.configuration.configurationignoreattribute" class="no-loc" data-linktype="absolute-path">Microsoft.Extensions.Configuration.ConfigurationIgnoreAttribute</a>, so models can opt individual properties out of binding declaratively without relying on <code>BindNonPublicProperties</code> toggles or custom converters:</p>
+<pre><code class="lang-csharp">public sealed class AppOptions
+{
+    public string Endpoint { get; set; } = "";
+
+    [ConfigurationIgnore]
+    public string ComputedKey =&gt; Endpoint + ":default";
+}
+</code></pre>
+<p><code>ConfigurationBinder</code> now also binds an empty array to a constructor parameter instead of throwing.</p>
+<p><code>PhysicalFilesWatcher</code> no longer throws when its root directory doesn't yet exist, and <code>InMemoryDirectoryInfo</code> resolves <code>..</code> and other relative segments consistently with the physical provider.</p>
+<h3 id="memorycache-opentelemetry-metrics">MemoryCache OpenTelemetry metrics</h3>
+<p><a href="/en-us/dotnet/api/microsoft.extensions.caching.memory.memorycache" class="no-loc" data-linktype="absolute-path">MemoryCache</a> now emits a built-in set of OpenTelemetry (OTel)-compatible metrics without an extra adapter package. To opt in, set <a href="/en-us/dotnet/api/microsoft.extensions.caching.memory.memorycacheoptions.trackstatistics#microsoft-extensions-caching-memory-memorycacheoptions-trackstatistics" class="no-loc" data-linktype="absolute-path">MemoryCacheOptions.TrackStatistics</a> to <code>true</code>:</p>
+<pre><code class="lang-csharp">var cache = new MemoryCache(new MemoryCacheOptions
+{
+    TrackStatistics = true
+});
+</code></pre>
+<p>The new <code>Microsoft.Extensions.Caching.Memory.MemoryCache</code> meter publishes four observable instruments:</p>
+<ul>
+<li><code>dotnet.cache.requests</code> (with a <code>dotnet.cache.request.result</code> tag that distinguishes <code>hit</code> from <code>miss</code>)</li>
+<li><code>dotnet.cache.evictions</code></li>
+<li><code>dotnet.cache.entries</code></li>
+<li><code>dotnet.cache.estimated_size</code> (with unit <code>1</code>, because its values represent application-defined cache size units rather than bytes)</li>
+</ul>
+<p>If you filter telemetry on the hit/miss tag, use <code>dotnet.cache.request.result</code>. Earlier builds named the tag <code>dotnet.cache.request.type</code>.</p>
+<p>Pass an <a href="/en-us/dotnet/api/system.diagnostics.metrics.imeterfactory" class="no-loc" data-linktype="absolute-path">System.Diagnostics.Metrics.IMeterFactory</a> to the new <a href="/en-us/dotnet/api/microsoft.extensions.caching.memory.memorycache.-ctor#microsoft-extensions-caching-memory-memorycache-ctor(microsoft-extensions-options-ioptions((microsoft-extensions-caching-memory-memorycacheoptions))-microsoft-extensions-logging-iloggerfactory-system-diagnostics-metrics-imeterfactory)" class="no-loc" data-linktype="absolute-path">MemoryCache.MemoryCache(IOptions&lt;MemoryCacheOptions&gt;, ILoggerFactory, IMeterFactory)</a> constructor overload for per-instance metrics. Without one, the instruments are aggregated process-wide on a shared meter.</p>
+<h3 id="options-builder-validation-improvements">Options builder validation improvements</h3>
+<p><a href="/en-us/dotnet/api/microsoft.extensions.options.optionsbuilder-1" class="no-loc" data-linktype="absolute-path">OptionsBuilder&lt;TOptions&gt;</a> gains a new generic <a href="/en-us/dotnet/api/microsoft.extensions.options.optionsbuilder-1.validate" class="no-loc" data-linktype="absolute-path">OptionsBuilder&lt;TOptions&gt;.Validate</a> overload that accepts a type parameter instead of a factory delegate. The type must implement <a href="/en-us/dotnet/api/microsoft.extensions.options.ivalidateoptions-1" class="no-loc" data-linktype="absolute-path">IValidateOptions&lt;TOptions&gt;</a> and be registered in the dependency-injection container. This aligns options validation with the standard DI pattern:</p>
+<pre><code class="lang-csharp">services.AddSingleton&lt;IValidateOptions&lt;MyOptions&gt;, MyOptionsValidator&gt;();
+services.AddOptions&lt;MyOptions&gt;()
+    .Bind(configuration.GetSection("MyOptions"))
+    .Validate&lt;MyOptionsValidator&gt;();
+</code></pre>
+<h3 id="asynchronous-changetokenonchange">Asynchronous ChangeToken.OnChange</h3>
+<p><a href="/en-us/dotnet/api/microsoft.extensions.primitives.changetoken.onchange" class="no-loc" data-linktype="absolute-path">OnChange</a> now has <code>Func&lt;Task&gt;</code> overloads, so you can run asynchronous callbacks without using <code>async void</code>. Re-registration now happens after the returned task completes.</p>
+<h3 id="options-aware-hybridcache-factories">Options-aware HybridCache factories</h3>
+<p><a href="/en-us/dotnet/api/microsoft.extensions.caching.hybrid.hybridcache.getorcreateasync" class="no-loc" data-linktype="absolute-path">GetOrCreateAsync</a> now has overloads that provide a mutable factory context. You can set entry-level options, such as expiration and local cache size, from the value-producing callback.</p>
+<h3 id="asynchronous-validation-with-dataannotations">Asynchronous validation with DataAnnotations</h3>
+<p><code>System.ComponentModel.DataAnnotations</code> now supports asynchronous validation. A validation rule that needs to do I/O—a database lookup or a remote API call—can now run without blocking a thread. There are three new ways to express an async rule:</p>
+<ul>
+<li>Derive from <code>AsyncValidationAttribute</code> and override its <code>IsValidAsync</code> method.</li>
+<li>Implement <code>IAsyncValidatableObject</code> on the model.</li>
+<li>Call the new <code>Validator.ValidateObjectAsync</code>, <code>TryValidateObjectAsync</code>, <code>ValidatePropertyAsync</code>, and <code>ValidateValueAsync</code> methods.</li>
+</ul>
+<pre><code class="lang-csharp">using System;
+using System.ComponentModel.DataAnnotations;
+
+public sealed class ValidVatNumberAttribute : AsyncValidationAttribute
+{
+    protected override ValidationResult? IsValid(object? value, ValidationContext context) =&gt;
+        throw new InvalidOperationException("Validate this attribute with IsValidAsync.");
+
+    protected override async Task&lt;ValidationResult?&gt; IsValidAsync(
+        object? value, ValidationContext context, CancellationToken cancellationToken)
+    {
+        var registry = context.GetRequiredService&lt;IVatRegistry&gt;();
+        return await registry.IsRegisteredAsync((string?)value, cancellationToken)
+            ? ValidationResult.Success
+            : new ValidationResult("That VAT number isn't registered with the tax authority.");
+    }
+}
+
+public class Invoice
+{
+    [Required]
+    [StringLength(14, MinimumLength = 8)]
+    [RegularExpression(@"^[A-Z]{2}[A-Z0-9]+$")]
+    [ValidVatNumber] // asynchronous
+    public string VatNumber { get; set; } = "";
+}
+
+var context = new ValidationContext(model, serviceProvider, items: null);
+await Validator.ValidateObjectAsync(model, context, validateAllProperties: true);
+</code></pre>
+<p><code>Microsoft.Extensions.Options</code> gains matching support: options can be validated asynchronously, including at startup through the new <code>IAsyncStartupValidator</code>. This lets an app fail fast when an option that requires a network check is misconfigured. <code>IStartupValidator</code> is now obsolete; implement <code>IAsyncStartupValidator</code> instead.</p>
+<p>Source-generated options validators provide a synchronous <code>IValidateOptions&lt;TOptions&gt;.Validate</code> implementation in addition to asynchronous validation, so existing synchronous validation call sites keep working alongside validators that need to await I/O:</p>
+<pre><code class="lang-csharp">public sealed class BackendOptionsValidator : IAsyncValidateOptions&lt;BackendOptions&gt;
+{
+    public async Task&lt;ValidateOptionsResult&gt; ValidateAsync(
+        string? name, BackendOptions options, CancellationToken cancellationToken = default) =&gt;
+        await IsReachableAsync(options.HostName, cancellationToken)
+            ? ValidateOptionsResult.Success
+            : ValidateOptionsResult.Fail($"'{options.HostName}' isn't reachable.");
+
+    // Source-generated validators also implement this synchronous fallback.
+    public ValidateOptionsResult Validate(string? name, BackendOptions options) =&gt;
+        ValidateOptionsResult.Fail("Backend validation must run asynchronously.");
+}
+</code></pre>
+<h3 id="format-dataannotations-messages">Format DataAnnotations messages</h3>
+<p><code>ValidationAttribute.FormatMessage</code> lets a validation host supply a message template while the attribute fills in its own placeholders. This method supports localization without duplicating the formatting logic for built-in attributes such as <a href="/en-us/dotnet/api/system.componentmodel.dataannotations.rangeattribute" class="no-loc" data-linktype="absolute-path">RangeAttribute</a>:</p>
+<pre><code class="lang-csharp">using System.ComponentModel.DataAnnotations;
+
+var range = new RangeAttribute(1, 10);
+string message = range.FormatMessage("{0} must be between {1} and {2}", "Value");
+// Value must be between 1 and 10
+</code></pre>
+<h3 id="activity-tracing-configuration">Activity tracing configuration</h3>
+<p>A new tracing configuration API in <code>Microsoft.Extensions.Diagnostics</code> lets you turn <code>Activity</code> tracing on and off with rules instead of wiring up <code>ActivityListener</code> instances manually. Call <code>AddTracing</code> and describe which activity sources, operations, and listeners to enable or disable. Rules can be driven from configuration, so tracing can be tuned without a redeploy.</p>
+<pre><code class="lang-csharp">builder.Services.AddTracing(tracing =&gt;
+{
+    tracing.EnableTracing(sourceName: "MyCompany.Orders");
+    tracing.DisableTracing(sourceName: "MyCompany.Orders", operationName: "HealthCheck");
+});
+</code></pre>
+<p>The same release adds <code>ActivitySourceFactory</code> and unseals <code>ActivitySource</code>, which together support factory-driven creation and refreshable listeners.</p>
+<h3 id="generic-source-generated-logging-methods">Generic source-generated logging methods</h3>
+<p>The logging source generator now supports generic methods decorated with <a href="/en-us/dotnet/api/microsoft.extensions.logging.loggermessageattribute" class="no-loc" data-linktype="absolute-path">LoggerMessageAttribute</a>, primarily to avoid boxing. Generic type parameters can use standard constraints, such as <code>class</code>, <code>struct</code>, <code>unmanaged</code>, interfaces, base types, and <code>new()</code>. The <code>allows ref struct</code> anti-constraint isn't supported and produces <a href="../../../fundamentals/syslib-diagnostics/syslib1011" data-linktype="relative-path">SYSLIB1011</a>.</p>
+<pre><code class="lang-csharp">[LoggerMessage(0, LogLevel.Trace, "Received {Code} ({Length} bytes)")]
+public static partial void PacketReceived&lt;TCode&gt;(ILogger logger, TCode code, int length)
+    where TCode : struct, Enum;
+</code></pre>
+<h3 id="improved-reliability-for-configuration-file-change-detection">Improved reliability for configuration file change detection</h3>
+<p>The <a href="/en-us/dotnet/api/microsoft.extensions.fileproviders.physical.physicalfileswatcher" class="no-loc" data-linktype="absolute-path">PhysicalFilesWatcher</a> type, which configuration providers use to detect configuration file changes, includes several reliability improvements.</p>
+<p>It now handles relative paths, missing directories, and file systems that don't support file watching more reliably. It also avoids watching subdirectories when it doesn't need to.</p>
+<h2 id="cryptography">Cryptography</h2>
+<ul>
+<li><a href="#x25519-diffie-hellman-key-exchange" data-linktype="self-bookmark">X25519 Diffie-Hellman key exchange</a></li>
+<li><a href="#cryptographicoperationsfixedtimeequals-overload" data-linktype="self-bookmark">CryptographicOperations.FixedTimeEquals overload</a></li>
+<li><a href="#aes-key-wrap" data-linktype="self-bookmark">AES Key Wrap</a></li>
+<li><a href="#faster-authenticated-encryption-on-apple-platforms" data-linktype="self-bookmark">Faster authenticated encryption on Apple platforms</a></li>
+<li><a href="#experimental-composite-ml-kem-and-hpke-apis" data-linktype="self-bookmark">Experimental composite ML-KEM and HPKE APIs</a></li>
+<li><a href="#encrypt-cms-messages-with-ml-kem" data-linktype="self-bookmark">Encrypt CMS messages with ML-KEM</a></li>
+</ul>
+<h3 id="x25519-diffie-hellman-key-exchange">X25519 Diffie-Hellman key exchange</h3>
+<p>The new <a href="/en-us/dotnet/api/system.security.cryptography.x25519diffiehellman" class="no-loc" data-linktype="absolute-path">System.Security.Cryptography.X25519DiffieHellman</a> abstract class provides a clean API for the X25519 elliptic-curve Diffie-Hellman algorithm, which is widely used in TLS 1.3, SSH, and Signal-protocol implementations. Platform-specific implementations are provided through <a href="/en-us/dotnet/api/system.security.cryptography.x25519diffiehellmancng" class="no-loc" data-linktype="absolute-path">X25519DiffieHellmanCng</a> (Windows) and <a href="/en-us/dotnet/api/system.security.cryptography.x25519diffiehellmanopenssl" class="no-loc" data-linktype="absolute-path">X25519DiffieHellmanOpenSsl</a> (Linux and macOS), but the portable <code>GenerateKey()</code> factory method picks the right one automatically:</p>
+<pre><code class="lang-csharp">// Generate key pairs for Alice and Bob
+using X25519DiffieHellman alice = X25519DiffieHellman.GenerateKey();
+using X25519DiffieHellman bob = X25519DiffieHellman.GenerateKey();
+
+// Each party derives the shared secret using the other's public key
+byte[] aliceShared = alice.DeriveRawSecretAgreement(bob);
+byte[] bobShared = bob.DeriveRawSecretAgreement(alice);
+
+// Both parties arrive at the same secret
+Console.WriteLine(aliceShared.SequenceEqual(bobShared)); // True
+</code></pre>
+<p>The class supports the full key lifecycle: key generation, PKCS#8 and SubjectPublicKeyInfo import/export, PEM serialization, and raw private/public key access.</p>
+<h3 id="cryptographicoperationsfixedtimeequals-overload">CryptographicOperations.FixedTimeEquals overload</h3>
+<p>For secret-comparison scenarios where the expected value is a single known byte, use the new <a href="/en-us/dotnet/api/system.security.cryptography.cryptographicoperations.fixedtimeequals" class="no-loc" data-linktype="absolute-path">CryptographicOperations.FixedTimeEquals</a> overload that compares a <a href="/en-us/dotnet/api/system.readonlyspan-1" class="no-loc" data-linktype="absolute-path">ReadOnlySpan&lt;T&gt;</a> with a single <code>byte</code> value in constant time:</p>
+<pre><code class="lang-csharp">bool equal = CryptographicOperations.FixedTimeEquals(receivedSpan, 0x42);
+</code></pre>
+<h3 id="aes-key-wrap">AES Key Wrap</h3>
+<p><a href="/en-us/dotnet/api/system.security.cryptography.aes" class="no-loc" data-linktype="absolute-path">System.Security.Cryptography.Aes</a> now supports the AES Key Wrap algorithms used by JOSE and other libraries to encrypt cryptographic keys:</p>
+<ul>
+<li><a href="/en-us/dotnet/api/system.security.cryptography.aes.encryptkeywrappadded" class="no-loc" data-linktype="absolute-path">Aes.EncryptKeyWrapPadded</a>, <a href="/en-us/dotnet/api/system.security.cryptography.aes.decryptkeywrappadded" class="no-loc" data-linktype="absolute-path">Aes.DecryptKeyWrapPadded</a>, <a href="/en-us/dotnet/api/system.security.cryptography.aes.trydecryptkeywrappadded#system-security-cryptography-aes-trydecryptkeywrappadded(system-readonlyspan((system-byte))-system-span((system-byte))-system-int32@)" class="no-loc" data-linktype="absolute-path">Aes.TryDecryptKeyWrapPadded(ReadOnlySpan&lt;Byte&gt;, Span&lt;Byte&gt;, Int32)</a>, and <a href="/en-us/dotnet/api/system.security.cryptography.aes.getkeywrappaddedlength#system-security-cryptography-aes-getkeywrappaddedlength(system-int32)" class="no-loc" data-linktype="absolute-path">Aes.GetKeyWrapPaddedLength(Int32)</a> implement the padded AES-KWP algorithm (RFC 5649).</li>
+<li><a href="/en-us/dotnet/api/system.security.cryptography.aes.encryptkeywrap" class="no-loc" data-linktype="absolute-path">Aes.EncryptKeyWrap</a>, <a href="/en-us/dotnet/api/system.security.cryptography.aes.decryptkeywrap" class="no-loc" data-linktype="absolute-path">Aes.DecryptKeyWrap</a>, <a href="/en-us/dotnet/api/system.security.cryptography.aes.trydecryptkeywrap#system-security-cryptography-aes-trydecryptkeywrap(system-readonlyspan((system-byte))-system-span((system-byte))-system-int32@)" class="no-loc" data-linktype="absolute-path">Aes.TryDecryptKeyWrap(ReadOnlySpan&lt;Byte&gt;, Span&lt;Byte&gt;, Int32)</a>, and <a href="/en-us/dotnet/api/system.security.cryptography.aes.getkeywraplength#system-security-cryptography-aes-getkeywraplength(system-int32)" class="no-loc" data-linktype="absolute-path">Aes.GetKeyWrapLength(Int32)</a> implement the unpadded AES Key Wrap algorithm (RFC 3394), which requires plaintext that's a multiple of 8 bytes.</li>
+</ul>
+<p>Both sets of APIs provide array-returning and span-based overloads:</p>
+<pre><code class="lang-csharp">using Aes aes = Aes.Create();
+aes.Key = RandomNumberGenerator.GetBytes(32); // AES-256 key-encryption key
+
+byte[] keyToWrap = RandomNumberGenerator.GetBytes(24); // Multiple of 8 bytes
+
+// Unpadded AES Key Wrap (RFC 3394)
+byte[] wrapped = aes.EncryptKeyWrap(keyToWrap);
+byte[] unwrapped = aes.DecryptKeyWrap(wrapped);
+Console.WriteLine(keyToWrap.SequenceEqual(unwrapped)); // True
+
+// Padded AES-KWP (RFC 5649) accepts a plaintext of any length
+byte[] arbitraryLengthKey = RandomNumberGenerator.GetBytes(19);
+byte[] wrappedPadded = aes.EncryptKeyWrapPadded(arbitraryLengthKey);
+byte[] unwrappedPadded = aes.DecryptKeyWrapPadded(wrappedPadded);
+Console.WriteLine(arbitraryLengthKey.SequenceEqual(unwrappedPadded)); // True
+</code></pre>
+<h3 id="faster-authenticated-encryption-on-apple-platforms">Faster authenticated encryption on Apple platforms</h3>
+<p><a href="/en-us/dotnet/api/system.security.cryptography.aesgcm" class="no-loc" data-linktype="absolute-path">AesGcm</a> and <a href="/en-us/dotnet/api/system.security.cryptography.chacha20poly1305" class="no-loc" data-linktype="absolute-path">ChaCha20Poly1305</a> avoid passing empty associated data to CryptoKit on Apple platforms, letting the native implementation use its empty-AAD fast path. On Apple platforms version 26 and later, encryption also skips a copy that was previously required for older Foundation implementations.</p>
+<h3 id="experimental-composite-ml-kem-and-hpke-apis">Experimental composite ML-KEM and HPKE APIs</h3>
+<div class="WARNING">
+<p>Warning</p>
+<p><a href="/en-us/dotnet/api/system.security.cryptography.compositemlkem" class="no-loc" data-linktype="absolute-path">CompositeMLKem</a> and <a href="/en-us/dotnet/api/system.security.cryptography.hpke" class="no-loc" data-linktype="absolute-path">Hpke</a> are experimental in .NET 11 and might change. Direct use requires you to opt in to the <code>SYSLIB5006</code> diagnostic for <code>CompositeMLKem</code> and the <code>SYSLIB5009</code> diagnostic for <code>Hpke</code>.</p>
+</div>
+<p><a href="/en-us/dotnet/api/system.security.cryptography.compositemlkem" class="no-loc" data-linktype="absolute-path">CompositeMLKem</a> combines post-quantum and classical key encapsulation so that both contribute to the shared secret. It's available on platforms that already support Module-Lattice-Based Key-Encapsulation Mechanism (ML-KEM). Call <a href="/en-us/dotnet/api/system.security.cryptography.compositemlkem.isalgorithmsupported" class="no-loc" data-linktype="absolute-path">IsAlgorithmSupported</a> to determine whether the platform supports a particular combination of algorithms.</p>
+<p><a href="/en-us/dotnet/api/system.security.cryptography.hpke" class="no-loc" data-linktype="absolute-path">Hpke</a> provides a managed implementation of Hybrid Public Key Encryption (HPKE). Build an <a href="/en-us/dotnet/api/system.security.cryptography.hpkesuite" class="no-loc" data-linktype="absolute-path">HpkeSuite</a> from <a href="/en-us/dotnet/api/system.security.cryptography.hpkekem" class="no-loc" data-linktype="absolute-path">HpkeKem</a>, <a href="/en-us/dotnet/api/system.security.cryptography.hpkekdf" class="no-loc" data-linktype="absolute-path">HpkeKdf</a>, and <a href="/en-us/dotnet/api/system.security.cryptography.hpkeaead" class="no-loc" data-linktype="absolute-path">HpkeAead</a> values. Check <a href="/en-us/dotnet/api/system.security.cryptography.hpke.issupported" class="no-loc" data-linktype="absolute-path">IsSupported</a> for the suite you select. The following example uses <a href="/en-us/dotnet/api/system.security.cryptography.hpke.generatekey" class="no-loc" data-linktype="absolute-path">GenerateKey</a> to create the recipient's key pair, then encrypts and decrypts data with <a href="/en-us/dotnet/api/system.security.cryptography.hpke.seal" class="no-loc" data-linktype="absolute-path">Seal</a> and <a href="/en-us/dotnet/api/system.security.cryptography.hpke.open" class="no-loc" data-linktype="absolute-path">Open</a>:</p>
+<pre><code class="lang-csharp">var suite = new HpkeSuite(HpkeKem.DHKEM_P256_HKDF_SHA256, HpkeKdf.HKDF_SHA256, HpkeAead.AES_128_GCM);
+using var recipient = Hpke.GenerateKey(suite);
+using var sender = Hpke.ImportEncapsulationKey(suite, recipient.ExportEncapsulationKey());
+sender.Seal("Hello"u8, out byte[] encapsulatedSecret, out byte[] ciphertext);
+byte[] plaintext = recipient.Open(encapsulatedSecret, ciphertext);
+Console.WriteLine(Encoding.UTF8.GetString(plaintext));
+</code></pre>
+<p>Algorithm-suite availability varies by platform. The example uses a classical Diffie-Hellman key encapsulation mechanism (DHKEM) suite.</p>
+<h3 id="encrypt-cms-messages-with-ml-kem">Encrypt CMS messages with ML-KEM</h3>
+<p>The Cryptographic Message Syntax (CMS) API, <a href="/en-us/dotnet/api/system.security.cryptography.pkcs.envelopedcms" class="no-loc" data-linktype="absolute-path">EnvelopedCms</a>, can encrypt and decrypt messages by using ML-KEM key encapsulation mechanism (KEM) recipients. Support is limited to the pure ML-KEM algorithm, and it's available only on non-Windows platforms.</p>
+<h2 id="networking-and-transport-security">Networking and transport security</h2>
+<ul>
+<li><a href="#tls-handshake-hardening" data-linktype="self-bookmark">TLS handshake hardening</a></li>
+<li><a href="#experimental-caller-driven-tls-sessions" data-linktype="self-bookmark">Experimental caller-driven TLS sessions</a></li>
+<li><a href="#http-request-compression" data-linktype="self-bookmark">HTTP request compression</a></li>
+<li><a href="#configurable-http-connection-eviction" data-linktype="self-bookmark">Configurable HTTP connection eviction</a></li>
+<li><a href="#initial-http2-concurrency" data-linktype="self-bookmark">Initial HTTP/2 concurrency</a></li>
+<li><a href="#dns-record-resolution-apis" data-linktype="self-bookmark">DNS record resolution APIs</a></li>
+<li><a href="#http2-automatic-downgrade-for-windows-authentication" data-linktype="self-bookmark">HTTP/2 automatic downgrade for Windows authentication</a></li>
+<li><a href="#quic-stream-priority" data-linktype="self-bookmark">QUIC stream priority</a></li>
+<li><a href="#video-mime-type-constants" data-linktype="self-bookmark">Video MIME type constants</a></li>
+<li><a href="#http-metrics-use-observable-instruments" data-linktype="self-bookmark">HTTP metrics use observable instruments</a></li>
+</ul>
+<h3 id="tls-handshake-hardening">TLS handshake hardening</h3>
+<p>Two <a href="/en-us/dotnet/api/system.net.security" class="no-loc" data-linktype="absolute-path">System.Net.Security</a> items improve TLS (Transport Layer Security) reliability:</p>
+<ul>
+<li><a href="/en-us/dotnet/api/system.net.security.sslstream" class="no-loc" data-linktype="absolute-path">SslStream</a> server-side handshake bounds-checking fixes in <code>TlsFrameHelper</code> close several edge cases that could surface as <code>IOException</code> on malformed ClientHello records.</li>
+<li>On Linux, certificate-validation failures now surface as standard TLS alerts to the peer, matching Windows behavior. Connecting clients receive an actionable handshake error instead of a connection drop.</li>
+</ul>
+<p>Negotiate authentication servers can also validate TLS channel binding tokens on Unix. The managed GSSAPI path passes the channel binding data to <code>gss_accept_sec_context</code>, which rejects a mismatch in the same way as the existing Unix client path. This enables Extended Protection scenarios, such as ASP.NET Core's Negotiate authentication, that bind authentication to the underlying TLS connection.</p>
+<h3 id="experimental-caller-driven-tls-sessions">Experimental caller-driven TLS sessions</h3>
+<div class="WARNING">
+<p>Warning</p>
+<p>The <code>TlsContext</code>, <code>TlsSession</code>, <code>TlsBufferSession</code>, <code>TlsSocketSession</code>, and <code>TlsOperationStatus</code> types are experimental in .NET 11 and report diagnostic <code>SYSLIB5007</code>.</p>
+</div>
+<p><a href="/en-us/dotnet/api/system.net.security" class="no-loc" data-linktype="absolute-path">System.Net.Security</a> adds a caller-driven, non-blocking TLS state machine for advanced transports where the application controls buffers and I/O scheduling. <code>TlsBufferSession</code> operates over caller-provided spans, while <code>TlsSocketSession</code> works with a <code>SafeSocketHandle</code>.</p>
+<p>Operations such as <code>Handshake</code>, <code>Read</code>, <code>Write</code>, <code>Shutdown</code>, and <code>RequestClientCertificate</code> return <code>TlsOperationStatus</code>, which reports whether an operation completed, needs more input, needs a larger destination buffer, or requires certificate validation or a new <code>TlsContext</code>.</p>
+<h3 id="http-request-compression">HTTP request compression</h3>
+<p><a href="/en-us/dotnet/api/system.net.http" class="no-loc" data-linktype="absolute-path">System.Net.Http</a> adds <a href="/en-us/dotnet/api/system.net.http.gzipcompressedcontent" class="no-loc" data-linktype="absolute-path">GZipCompressedContent</a>, <a href="/en-us/dotnet/api/system.net.http.brotlicompressedcontent" class="no-loc" data-linktype="absolute-path">BrotliCompressedContent</a>, and <a href="/en-us/dotnet/api/system.net.http.zstandardcompressedcontent" class="no-loc" data-linktype="absolute-path">ZstandardCompressedContent</a> wrappers for request bodies. These wrappers set the <code>Content-Encoding</code> header and stream compressed content as the request serializes.</p>
+<h3 id="configurable-http-connection-eviction">Configurable HTTP connection eviction</h3>
+<p><a href="/en-us/dotnet/api/system.net.http.socketshttphandler" class="no-loc" data-linktype="absolute-path">SocketsHttpHandler</a> now provides <a href="/en-us/dotnet/api/system.net.http.socketshttphandler.shouldevictconnection#system-net-http-socketshttphandler-shouldevictconnection" class="no-loc" data-linktype="absolute-path">SocketsHttpHandler.ShouldEvictConnection</a> for per-connection eviction decisions. This callback lets you retire connections based on age, endpoint details, and DNS changes instead of fixed lifetime-only policies.</p>
+<h3 id="initial-http2-concurrency">Initial HTTP/2 concurrency</h3>
+<p><code>SocketsHttpHandler.InitialHttp2MaxConcurrentStreams</code> limits the number of concurrent streams on each new HTTP/2 connection before the server's <code>SETTINGS</code> frame arrives. If you know that a server's stream limit is lower than the default of 100, set a lower value to limit the initial burst of requests on that connection. After the connection receives the <code>SETTINGS</code> frame, it uses the server's advertised limit.</p>
+<p>The property requires a value of at least 1. If an earlier connection to the same host advertised a lower limit, that limit can further reduce the initial concurrency for the host.</p>
+<pre><code class="lang-csharp">var handler = new SocketsHttpHandler
+{
+    InitialHttp2MaxConcurrentStreams = 20
+};
+using var client = new HttpClient(handler);
+</code></pre>
+<h3 id="dns-record-resolution-apis">DNS record resolution APIs</h3>
+<p><a href="/en-us/dotnet/api/system.net.dns" class="no-loc" data-linktype="absolute-path">System.Net.Dns</a> adds typed record-resolution APIs, including <a href="/en-us/dotnet/api/system.net.dns.resolvesrv#system-net-dns-resolvesrv(system-string)" class="no-loc" data-linktype="absolute-path">Dns.ResolveSrv(String)</a>, <a href="/en-us/dotnet/api/system.net.dns.resolvemx#system-net-dns-resolvemx(system-string)" class="no-loc" data-linktype="absolute-path">Dns.ResolveMx(String)</a>, <a href="/en-us/dotnet/api/system.net.dns.resolvetxt#system-net-dns-resolvetxt(system-string)" class="no-loc" data-linktype="absolute-path">Dns.ResolveTxt(String)</a>, <a href="/en-us/dotnet/api/system.net.dns.resolvecname#system-net-dns-resolvecname(system-string)" class="no-loc" data-linktype="absolute-path">Dns.ResolveCName(String)</a>, <a href="/en-us/dotnet/api/system.net.dns.resolveptr#system-net-dns-resolveptr(system-string)" class="no-loc" data-linktype="absolute-path">Dns.ResolvePtr(String)</a>, and <a href="/en-us/dotnet/api/system.net.dns.resolvens#system-net-dns-resolvens(system-string)" class="no-loc" data-linktype="absolute-path">Dns.ResolveNs(String)</a>, together with <code>Async</code> variants. The results include records, response code, and negative-cache time-to-live (TTL) metadata through <a href="/en-us/dotnet/api/system.net.dnsresult-1" class="no-loc" data-linktype="absolute-path">DnsResult&lt;T&gt;</a>.</p>
+<p>The new <a href="/en-us/dotnet/api/system.net.dnsresolver" class="no-loc" data-linktype="absolute-path">DnsResolver</a> class provides the same record types through an instance API that accepts a <a href="/en-us/dotnet/api/system.net.dnsresolveroptions" class="no-loc" data-linktype="absolute-path">DnsResolverOptions</a> object, which lets you supply a custom list of DNS servers instead of using the platform resolver configuration. <code>DnsResolver</code> and the static <code>Dns.Resolve*</code> methods now work on Linux in addition to Windows and macOS.</p>
+<h3 id="http2-automatic-downgrade-for-windows-authentication">HTTP/2 automatic downgrade for Windows authentication</h3>
+<p><a href="/en-us/dotnet/api/system.net.http.httpclient" class="no-loc" data-linktype="absolute-path">HttpClient</a> automatically downgrades to HTTP/1.1 when a request requires Windows authentication (NTLM/Negotiate) over HTTP/2. The HTTP/2 specification disallows the connection-bound authentication schemes that NTLM and Kerberos rely on, so these requests previously failed. With the downgrade in place, applications targeting mixed-authentication environments—common in enterprise intranets—work without explicit <code>HttpRequestMessage.Version</code> overrides.</p>
+<h3 id="quic-stream-priority">QUIC stream priority</h3>
+<p><a href="/en-us/dotnet/api/system.net.quic.quicstream" class="no-loc" data-linktype="absolute-path">QuicStream</a> gains a <a href="/en-us/dotnet/api/system.net.quic.quicstream.priority#system-net-quic-quicstream-priority" class="no-loc" data-linktype="absolute-path">QuicStream.Priority</a> property and a <a href="/en-us/dotnet/api/system.net.quic.quicstream.defaultpriority#system-net-quic-quicstream-defaultpriority" class="no-loc" data-linktype="absolute-path">QuicStream.DefaultPriority</a> constant that exposes HTTP/3 stream prioritization (RFC 9218). Priority values range from 0 (highest) to 255 (lowest), with a default of 127:</p>
+<pre><code class="lang-csharp">// Increase priority for interactive streams
+stream.Priority = 64; // Higher priority than the default 127
+</code></pre>
+<h3 id="video-mime-type-constants">Video MIME type constants</h3>
+<p>A new <a href="/en-us/dotnet/api/system.net.mime.mediatypenames.video" class="no-loc" data-linktype="absolute-path">System.Net.Mime.MediaTypeNames.Video</a> class provides string constants for common video media types:</p>
+<ul>
+<li><code>MediaTypeNames.Video.Mp4</code> — <code>"video/mp4"</code></li>
+<li><code>MediaTypeNames.Video.Mpeg</code> — <code>"video/mpeg"</code></li>
+<li><code>MediaTypeNames.Video.Ogg</code> — <code>"video/ogg"</code></li>
+<li><code>MediaTypeNames.Video.QuickTime</code> — <code>"video/quicktime"</code></li>
+<li><code>MediaTypeNames.Video.WebM</code> — <code>"video/webm"</code></li>
+</ul>
+<p>These join the existing <code>MediaTypeNames.Application</code>, <code>MediaTypeNames.Image</code>, <code>MediaTypeNames.Text</code>, and <code>MediaTypeNames.Multipart</code> classes.</p>
+<h3 id="http-metrics-use-observable-instruments">HTTP metrics use observable instruments</h3>
+<p>The high-cardinality HTTP <code>open_connections</code> and <code>active_requests</code> metrics are now observable instruments instead of regular counters. If you use <a href="/en-us/dotnet/api/system.diagnostics.metrics.meterlistener" class="no-loc" data-linktype="absolute-path">MeterListener</a> directly to read these metrics, call <a href="/en-us/dotnet/api/system.diagnostics.metrics.meterlistener.recordobservableinstruments#system-diagnostics-metrics-meterlistener-recordobservableinstruments" class="no-loc" data-linktype="absolute-path">MeterListener.RecordObservableInstruments()</a> to receive measurements from them.</p>
+<h2 id="see-also">See also</h2>
+<ul>
+<li><a href="runtime" data-linktype="relative-path">What's new in the .NET 11 runtime</a></li>
+<li><a href="sdk" data-linktype="relative-path">What's new in the SDK for .NET 11</a></li>
+<li><a href="../../compatibility/11" data-linktype="relative-path">Breaking changes in .NET 11</a></li>
+</ul>
+</div>
+					
+		<div
+			id="ms--inline-notifications"
+			class="margin-block-xs"
+			data-bi-name="inline-notification"
+		></div>
+	 
+		<div
+			id="assertive-live-region"
+			role="alert"
+			aria-live="assertive"
+			class="visually-hidden"
+			aria-relevant="additions"
+			aria-atomic="true"
+		></div>
+		<div
+			id="polite-live-region"
+			role="status"
+			aria-live="polite"
+			class="visually-hidden"
+			aria-relevant="additions"
+			aria-atomic="true"
+		></div>
+	
+					
+			
+		<!-- feedback section -->
+		<section
+			class="feedback-section position-relative margin-top-lg border border-radius padding-xxs display-none-print"
+			data-bi-name="open-source-feedback-section"
+			data-open-source-feedback-section
+			hidden
+		>
+			<div class="display-flex flex-direction-column flex-direction-row-tablet">
+				<div
+					class="width-450-tablet padding-inline-xs padding-inline-xs-tablet padding-top-xs padding-bottom-sm padding-top-xs-tablet background-color-body-medium"
+				>
+					<div class="display-flex flex-direction-column">
+						<div class="padding-bottom-xxs">
+							<span class="icon margin-right-xxs" aria-hidden="true">
+								<span class="docon docon-brand-github"></span>
+							</span>
+							<span class="font-weight-semibold">
+								Collaborate with us on GitHub
+							</span>
+						</div>
+						<span class="line-height-normal">
+							The source for this content can be found on GitHub, where you can also create and review issues and pull requests. For more information, see <a href="https://learn.microsoft.com/contribute/content/dotnet/dotnet-contribute">our contributor guide</a>.
+						</span>
+					</div>
+				</div>
+				<div
+					class="display-flex gap-xs width-full-tablet flex-direction-column padding-xs justify-content-space-evenly"
+				>
+					<div class="media">
+						
+					<div class="media-left">
+						<div class="image image-36x36" hidden data-open-source-image-container>
+							<img
+								class="theme-display is-light"
+								src="https://learn.microsoft.com/media/logos/logo_net.svg"
+								aria-hidden="true"
+								data-open-source-image-light
+							/>
+							<img
+								class="theme-display is-dark is-high-contrast"
+								src="https://learn.microsoft.com/media/logos/logo_net.svg"
+								aria-hidden="true"
+								data-open-source-image-dark
+							/>
+						</div>
+					</div>
+			  
+
+						<div class="media-content">
+							<p
+								class="font-size-xl font-weight-semibold margin-bottom-xxs"
+								data-open-source-product-title
+							>
+								.NET
+							</p>
+							<div class="display-flex gap-xs flex-direction-column">
+								<p class="line-height-normal" data-open-source-product-description></p>
+								<div class="display-flex gap-xs flex-direction-column">
+									<a href="#" data-github-link>
+										<span class="icon margin-right-xxs" aria-hidden="true">
+											<span class="docon docon-bug"></span>
+										</span>
+										<span>Open a documentation issue</span>
+									</a>
+									<a
+										href="https://aka.ms/feedback/report?space=61"
+										class="display-block margin-top-auto font-size-md"
+										data-feedback-product-url
+									>
+										<span class="icon margin-right-xxs" aria-hidden="true">
+											<span class="docon docon-feedback"></span>
+										</span>
+										<span>Provide product feedback</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end feedback section -->
+	
+			
+		<!-- feedback section -->
+		<section
+			id="site-user-feedback-footer"
+			class="font-size-sm margin-top-md display-none-print display-none-desktop"
+			data-test-id="site-user-feedback-footer"
+			data-bi-name="site-feedback-section"
+		>
+			<hr class="hr" />
+			<h2 id="ms--feedback" class="title is-3">Feedback</h2>
+			<div class="display-flex flex-wrap-wrap align-items-center">
+				<p class="font-weight-semibold margin-xxs margin-left-none">
+					Was this page helpful?
+				</p>
+				<div class="buttons">
+					<button
+						class="thumb-rating-button like button button-primary button-sm"
+						data-test-id="footer-rating-yes"
+						data-binary-rating-response="rating-yes"
+						type="button"
+						title="This article is helpful"
+						data-bi-name="button-rating-yes"
+						aria-pressed="false"
+					>
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-like"></span>
+						</span>
+						<span>Yes</span>
+					</button>
+					<button
+						class="thumb-rating-button dislike button button-primary button-sm"
+						id="standard-rating-no-button"
+						hidden
+						data-test-id="footer-rating-no"
+						data-binary-rating-response="rating-no"
+						type="button"
+						title="This article is not helpful"
+						data-bi-name="button-rating-no"
+						aria-pressed="false"
+					>
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-dislike"></span>
+						</span>
+						<span>No</span>
+					</button>
+					<details
+						class="popover popover-top"
+						id="mobile-help-popover"
+						data-test-id="footer-feedback-popover"
+					>
+						<summary
+							class="thumb-rating-button dislike button button-primary button-sm"
+							data-test-id="details-footer-rating-no"
+							data-binary-rating-response="rating-no"
+							title="This article is not helpful"
+							data-bi-name="button-rating-no"
+							aria-pressed="false"
+							data-bi-an="feedback-unhelpful-popover"
+						>
+							<span class="icon" aria-hidden="true">
+								<span class="docon docon-dislike"></span>
+							</span>
+							<span>No</span>
+						</summary>
+						<div
+							class="popover-content width-200 width-300-tablet"
+							role="dialog"
+							aria-labelledby="popover-heading"
+							aria-describedby="popover-description"
+						>
+							<p id="popover-heading" class="font-size-lg margin-bottom-xxs font-weight-semibold">
+								Need help with this topic?
+							</p>
+							<p id="popover-description" class="font-size-sm margin-bottom-xs">
+								Want to try using Ask Learn to clarify or guide you through this topic?
+							</p>
+							
+		<div class="buttons flex-direction-row flex-wrap justify-content-center gap-xxs">
+			<div>
+		<button
+			class="button button-sm border inner-focus display-none margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-test-id="ask-learn-assistant-modal-entry-mobile-feedback"
+			data-ask-learn-modal-entry-feedback
+			data-bi-an=feedback-unhelpful-popover
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-label="Ask Learn"
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+		</button>
+		<button
+			class="button button-sm display-inline-flex display-none-desktop flex-shrink-0 margin-right-xxs border-color-ask-learn margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-bi-an=feedback-unhelpful-popover
+			data-test-id="ask-learn-assistant-modal-entry-tablet-feedback"
+			data-ask-learn-modal-entry-feedback
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+		<button
+			class="button button-sm display-none flex-shrink-0 display-inline-flex-desktop margin-right-xxs border-color-ask-learn margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-bi-an=feedback-unhelpful-popover
+			data-test-id="ask-learn-assistant-flyout-entry-feedback"
+			data-ask-learn-flyout-entry-show-only
+			data-flyout-button="toggle"
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-controls="ask-learn-flyout"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+	</div>
+			<button
+				type="button"
+				class="button button-sm margin-right-xxs"
+				data-help-option="suggest-fix"
+				data-bi-name="feedback-suggest"
+				data-bi-an="feedback-unhelpful-popover"
+				data-test-id="suggest-fix"
+			>
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-feedback"></span>
+				</span>
+				<span> Suggest a fix? </span>
+			</button>
+		</div>
+	
+						</div>
+					</details>
+				</div>
+			</div>
+		</section>
+		<!-- end feedback section -->
+	
+		
+				</div>
+				
+		<div id="ms--additional-resources-mobile" class="display-none-print">
+			<hr class="hr" hidden />
+			<h2 id="ms--additional-resources-mobile-heading" class="title is-3" hidden>
+				Additional resources
+			</h2>
+			
+		<section
+			id="right-rail-recommendations-mobile"
+			class=""
+			data-bi-name="recommendations"
+			hidden
+		></section>
+	 
+		<section
+			id="right-rail-training-mobile"
+			class=""
+			data-bi-name="learning-resource-card"
+			hidden
+		></section>
+	 
+		<section
+			id="right-rail-events-mobile"
+			class=""
+			data-bi-name="events-card"
+			hidden
+		></section>
+	
+		</div>
+	 
+		<div
+			id="article-metadata-footer"
+			data-bi-name="article-metadata-footer"
+			data-test-id="article-metadata-footer"
+			class="page-metadata-container"
+		>
+			<hr class="hr" />
+			<ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
+				<li class="visibility-hidden-visual-diff">
+			<span class="badge badge-sm text-wrap-pretty">
+				<span>Last updated on <local-time format="twoDigitNumeric"
+		datetime="2026-11-10T08:00:00.000Z"
+		data-article-date-source="calculated"
+		class="is-invisible"
+	>
+		2026-11-10
+	</local-time></span>
+			</span>
+		</li>
+			</ul>
+		</div>
+	
+			</div>
+		
+				</main>
+				<aside
+					id="layout-body-aside"
+					class="layout-body-aside  "
+					data-bi-name="aside"
+					aria-label="Additional resources"
+			  >
+					
+		<div
+			id="ms--additional-resources"
+			class="right-container padding-sm display-none display-block-desktop height-full"
+			data-bi-name="pageactions"
+		>
+			<div id="affixed-right-container" data-bi-name="right-column">
+				
+		<nav
+			id="side-doc-outline"
+			class="doc-outline border-bottom padding-bottom-xs margin-bottom-xs scrollbar-width-thin"
+			data-bi-name="intopic toc"
+			aria-label="In this article"
+		>
+			<h3>In this article</h3>
+		</nav>
+	
+				<!-- Feedback -->
+				
+		<section
+			id="ms--site-user-feedback-right-rail"
+			class="font-size-sm display-none-print"
+			data-test-id="site-user-feedback-right-rail"
+			data-bi-name="site-feedback-right-rail"
+		>
+			<div class="display-flex flex-wrap-wrap align-items-center">
+				<p class="font-weight-semibold margin-xxs margin-left-none">
+					Was this page helpful?
+				</p>
+				<div class="display-flex flex-wrap-nowrap">
+					<button
+						class="thumb-rating-button like inner-focus"
+						data-test-id="right-rail-rating-yes"
+						data-binary-rating-response="rating-yes"
+						type="button"
+						title="This article is helpful"
+						aria-label="This article is helpful"
+						data-bi-name="button-rating-yes"
+						aria-pressed="false"
+					>
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-like"></span>
+						</span>
+					</button>
+					<button
+						class="thumb-rating-button dislike inner-focus"
+						id="right-rail-no-button"
+						hidden
+						data-test-id="right-rail-rating-no"
+						data-binary-rating-response="rating-no"
+						type="button"
+						title="This article is not helpful"
+						aria-label="This article is not helpful"
+						data-bi-name="button-rating-no"
+						aria-pressed="false"
+					>
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-dislike"></span>
+						</span>
+					</button>
+					<details class="popover popover-right" id="help-popover" data-test-id="feedback-popover">
+						<summary
+							tabindex="0"
+							class="thumb-rating-button dislike inner-focus"
+							data-test-id="details-right-rail-rating-no"
+							data-binary-rating-response="rating-no"
+							title="This article is not helpful"
+							aria-label="This article is not helpful"
+							data-bi-name="button-rating-no"
+							aria-pressed="false"
+							data-bi-an="feedback-unhelpful-popover"
+						>
+							<span class="icon" aria-hidden="true">
+								<span class="docon docon-dislike"></span>
+							</span>
+						</summary>
+						<div
+							class="popover-content width-200 width-300-tablet"
+							role="dialog"
+							aria-labelledby="popover-heading-right-rail"
+							aria-describedby="popover-description-right-rail"
+						>
+							<p
+								id="popover-heading-right-rail"
+								class="font-size-lg margin-bottom-xxs font-weight-semibold"
+							>
+								Need help with this topic?
+							</p>
+							<p id="popover-description-right-rail" class="font-size-sm margin-bottom-xs">
+								Want to try using Ask Learn to clarify or guide you through this topic?
+							</p>
+							
+		<div class="buttons flex-direction-row flex-wrap justify-content-center gap-xxs">
+			<div>
+		<button
+			class="button button-sm border inner-focus display-none margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-test-id="ask-learn-assistant-modal-entry-mobile-feedback"
+			data-ask-learn-modal-entry-feedback
+			data-bi-an=feedback-unhelpful-popover
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-label="Ask Learn"
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+		</button>
+		<button
+			class="button button-sm display-inline-flex display-none-desktop flex-shrink-0 margin-right-xxs border-color-ask-learn margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-bi-an=feedback-unhelpful-popover
+			data-test-id="ask-learn-assistant-modal-entry-tablet-feedback"
+			data-ask-learn-modal-entry-feedback
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+		<button
+			class="button button-sm display-none flex-shrink-0 display-inline-flex-desktop margin-right-xxs border-color-ask-learn margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-bi-an=feedback-unhelpful-popover
+			data-test-id="ask-learn-assistant-flyout-entry-feedback"
+			data-ask-learn-flyout-entry-show-only
+			data-flyout-button="toggle"
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-controls="ask-learn-flyout"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+	</div>
+			<button
+				type="button"
+				class="button button-sm margin-right-xxs"
+				data-help-option="suggest-fix"
+				data-bi-name="feedback-suggest"
+				data-bi-an="feedback-unhelpful-popover"
+				data-test-id="suggest-fix"
+			>
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-feedback"></span>
+				</span>
+				<span> Suggest a fix? </span>
+			</button>
+		</div>
+	
+						</div>
+					</details>
+				</div>
+			</div>
+		</section>
+	
+			</div>
+		</div>
+	
+			  </aside> <section
+					id="layout-body-flyout"
+					class="layout-body-flyout "
+					data-bi-name="flyout"
+			  >
+					 <div
+	class="height-full border-left background-color-body-medium"
+	id="ask-learn-flyout"
+></div>
+			  </section> <div class="layout-body-footer " data-bi-name="layout-footer">
+		<footer
+			id="footer"
+			data-test-id="footer"
+			data-bi-name="footer"
+			class="footer-layout padding-xs padding-sm-desktop has-default-focus border-top"
+			role="contentinfo"
+		>
+			<div class="display-flex gap-xs flex-wrap-wrap is-full-height padding-right-lg-desktop">
+				
+		<a
+			data-mscc-ic="false"
+			href="#"
+			data-bi-name="select-locale"
+			class="locale-selector-link flex-shrink-0 button button-sm button-clear external-link-indicator"
+			id=""
+			title=""
+			><span class="icon" aria-hidden="true"
+				><span class="docon docon-world"></span></span
+			><span class="local-selector-link-text">en-us</span></a
+		>
+	 <div class="ccpa-privacy-link" data-ccpa-privacy-link hidden>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://aka.ms/yourcaliforniaprivacychoices"
+			data-bi-name="your-privacy-choices"
+			class="button button-sm button-clear flex-shrink-0 external-link-indicator"
+			id=""
+			title=""
+			>
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 30 14"
+			xml:space="preserve"
+			height="16"
+			width="43"
+			aria-hidden="true"
+			focusable="false"
+		>
+			<path
+				d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z"
+				style="fill-rule:evenodd;clip-rule:evenodd;fill:#fff"
+			></path>
+			<path
+				d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z"
+				style="fill-rule:evenodd;clip-rule:evenodd;fill:#06f"
+			></path>
+			<path
+				d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z"
+				style="fill:#fff"
+			></path>
+			<path
+				d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z"
+				style="fill:#06f"
+			></path>
+		</svg>
+	
+			<span>Your Privacy Choices</span></a
+		>
+	
+	</div>
+				<div class="flex-shrink-0">
+		<div class="dropdown has-caret-up">
+			<button
+				data-test-id="theme-selector-button"
+				class="dropdown-trigger button button-clear button-sm inner-focus theme-dropdown-trigger"
+				aria-controls="{{ themeMenuId }}"
+				aria-haspopup="true"
+				aria-expanded="false"
+				data-bi-name="theme"
+			>
+				<span class="icon" aria-hidden="true"><span class="docon docon-sun"></span></span>
+				<span>Theme</span>
+				<span class="icon expanded-indicator" aria-hidden="true">
+					<span class="docon docon-chevron-down-light"></span>
+				</span>
+			</button>
+			<div class="dropdown-menu" id="{{ themeMenuId }}" role="menu">
+				<ul class="theme-selector padding-xxs" data-test-id="theme-dropdown-menu" role="none">
+					<li class="theme display-block" role="none">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							role="menuitemradio"
+							aria-checked="false"
+							data-theme-to="light"
+							tabindex="-1"
+						>
+							<span class="theme-light margin-right-xxs">
+								<span
+									class="theme-selector-icon border display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span> Light </span>
+						</button>
+					</li>
+					<li class="theme display-block" role="none">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							role="menuitemradio"
+							aria-checked="false"
+							data-theme-to="dark"
+							tabindex="-1"
+						>
+							<span class="theme-dark margin-right-xxs">
+								<span
+									class="border theme-selector-icon display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span> Dark </span>
+						</button>
+					</li>
+					<li class="theme display-block" role="none">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							role="menuitemradio"
+							aria-checked="false"
+							data-theme-to="high-contrast"
+							tabindex="-1"
+						>
+							<span class="theme-high-contrast margin-right-xxs">
+								<span
+									class="border theme-selector-icon display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span> High contrast </span>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+			</div>
+			<ul class="links" data-bi-name="footerlinks">
+				<li class="manage-cookies-holder" hidden=""></li>
+				<li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/principles-for-ai-generated-content"
+			data-bi-name="aiDisclaimer"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>AI Disclaimer</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/previous-versions/"
+			data-bi-name="archivelink"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Previous Versions</a
+		>
+	
+	</li> <li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://techcommunity.microsoft.com/t5/microsoft-learn-blog/bg-p/MicrosoftLearnBlog"
+			data-bi-name="bloglink"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Blog</a
+		>
+	
+	</li> <li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/contribute"
+			data-bi-name="contributorGuide"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Contribute</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://go.microsoft.com/fwlink/?LinkId=521839"
+			data-bi-name="privacy"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Privacy</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://go.microsoft.com/fwlink/?linkid=2259814"
+			data-bi-name="consumer-health-privacy"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Consumer Health Privacy</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/legal/termsofuse"
+			data-bi-name="termsofuse"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Terms of Use</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://www.microsoft.com/legal/intellectualproperty/Trademarks/"
+			data-bi-name="trademarks"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Trademarks</a
+		>
+	
+	</li>
+				<li>&copy; Microsoft 2026</li>
+			</ul>
+		</footer>
+	</footer>
+			<noscript><img src="https://learn.microsoft.com/akam/13/pixel_45092822?a=dD01Zjk3YTRjNTAzNzExODdkN2ZmOTJhMWE2YTZlNTE1NTFhZGM2YzE4JmpzPW9mZg==" style="visibility: hidden; position: absolute; left: -999px; top: -999px;" /></noscript></body>
+		</html>

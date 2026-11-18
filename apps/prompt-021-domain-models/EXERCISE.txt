@@ -1,0 +1,8 @@
+PROMPT 21
+
+1. Predict the result of assigning and changing a class reference.
+2. Compare record equality and a with expression.
+3. Explain the default Money state and value copying.
+4. Reproduce the nested-list sharing example.
+5. Explain the readonly property diagnostic and create a revised value.
+6. Choose a representation for an entity, a snapshot and a small domain value.

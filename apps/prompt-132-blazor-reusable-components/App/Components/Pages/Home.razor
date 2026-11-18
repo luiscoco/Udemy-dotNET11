@@ -1,0 +1,13 @@
+@page "/"
+<h1>Course seat reservation</h1>
+<CascadingValue Value="Theme">
+    <SeatPicker @bind-Quantity="Quantity" OnReserve="Reserve" />
+</CascadingValue>
+<div class="result">Total <output id="total">EUR @(Quantity * 25)</output></div>
+<p id="saved" role="status">@Confirmation</p>
+@code {
+    private int Quantity { get; set; } = 1;
+    private string Theme = "Ocean";
+    private string Confirmation = "Choose your seats and reserve.";
+    private void Reserve(int seats) => Confirmation = $"Reserved {seats} seats.";
+}

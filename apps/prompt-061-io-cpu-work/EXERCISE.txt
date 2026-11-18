@@ -1,0 +1,6 @@
+PROMPT 61
+
+1. Compare the file API with the synchronous prime loop.
+2. Inspect the gate that keeps the scheduled task pending deterministically.
+3. Await the result before using it and verify the count 9592.
+4. Forward a cancellation token into the CPU loop itself.

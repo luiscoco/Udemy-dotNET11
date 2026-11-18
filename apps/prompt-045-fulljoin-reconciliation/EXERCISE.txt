@@ -1,0 +1,6 @@
+PROMPT 45
+
+1. Reconcile matched, inventory-only and warehouse-only keys.
+2. Inspect the tuple-returning Join call and compare its row count.
+3. Explain null handling for reference-type join elements.
+4. Add a duplicate key and verify the resulting multiplicity.

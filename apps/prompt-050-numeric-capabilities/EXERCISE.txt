@@ -1,0 +1,6 @@
+PROMPT 50
+
+1. Compare representative binary and decimal sums.
+2. Inspect IEEE decimal infinity and NaN results.
+3. Reproduce the Decimal32 precision boundary.
+4. Run complex arithmetic with double, float and Decimal64 components.

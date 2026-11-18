@@ -1,0 +1,6 @@
+PROMPT 272
+
+1. Read SCOPE.md and the exact platform, dependency and deployment requirements.
+2. Build and execute the real integration.
+3. Reproduce the controlled failure and inspect actual diagnostics and state.
+4. Restore the demonstrated boundary and verify the repaired behavior.

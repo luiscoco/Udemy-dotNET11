@@ -1,0 +1,31 @@
+name: dotnet-course-111-120
+services:
+  sqlserver:
+    build:
+      context: .
+      dockerfile: Dockerfile.sqlserver
+    image: dotnet-course/sql2025-fts:local
+    environment:
+      ACCEPT_EULA: Y
+      MSSQL_PID: Developer
+      MSSQL_SA_PASSWORD: Course_11_Local!
+    ports: ["127.0.0.1:15433:1433"]
+  postgres:
+    image: postgres@sha256:d3244e8ce3f165ee3c93d9c4a4b1d0fe48b3a89e2287b717fdcbbde92d405065
+    environment:
+      POSTGRES_PASSWORD: course-local
+    ports: ["127.0.0.1:15432:5432"]
+  redis:
+    image: redis@sha256:7f7d30b7fdd09467bac58198a1f166dd69789d348d4fe859cccb20e0cf287fbe
+    ports: ["127.0.0.1:16379:6379"]
+  rabbitmq:
+    image: rabbitmq@sha256:cd4009416f83d7e5895020cd71b0963f3b8a4dfc3de74bbb6fb3bfe5f81f01e0
+    environment:
+      RABBITMQ_DEFAULT_USER: course
+      RABBITMQ_DEFAULT_PASS: course-local
+    ports: ["127.0.0.1:15673:5672"]
+  cosmos:
+    image: mcr.microsoft.com/cosmosdb/linux/azure-cosmos-emulator@sha256:db53613dae19d0a3d5ad50688d14aa6e957af082dafea56b52e1bd3a6b3f1406
+    environment:
+      ENABLE_TELEMETRY: "false"
+    ports: ["127.0.0.1:18081:8081", "127.0.0.1:18080:8080"]

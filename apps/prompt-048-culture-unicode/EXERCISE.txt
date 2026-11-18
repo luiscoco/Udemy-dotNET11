@@ -1,0 +1,6 @@
+PROMPT 48
+
+1. Separate display formatting from a protocol parsing contract.
+2. Compare the interpretations of 1,234 using two explicit cultures.
+3. Normalize composed and decomposed accents before the selected name comparison.
+4. Count UTF-16 units, Unicode scalars and user-perceived text elements.

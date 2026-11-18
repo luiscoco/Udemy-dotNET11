@@ -1,0 +1,5 @@
+PROMPT 185
+
+1. Run locked restore, build and analysis, tests and publishing as one pipeline.
+2. Inspect the versioned ZIP and per-file hashes.
+3. Remove the nullable guard and observe the analysis gate blocking release.

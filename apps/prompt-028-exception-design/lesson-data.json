@@ -1,0 +1,124 @@
+{
+  "number": 28,
+  "title": "Invoice import / exception handling and stack traces",
+  "files": [
+    "App/App.csproj",
+    "App/ImportInput.cs",
+    "App/InvoiceStore.cs",
+    "App/ImportService.cs",
+    "App/Program.cs",
+    "App/Probe.cs",
+    "EXERCISE.txt"
+  ],
+  "resetFiles": {
+    "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n",
+    "App/ImportService.cs": "using System.Runtime.CompilerServices;\n\npublic static class ImportService\n{\n    [MethodImpl(MethodImplOptions.NoInlining)]\n    public static void Load()\n    {\n        try\n        {\n            InvoiceStore.Load();\n        }\n        catch (IOException error)\n        {\n            Console.WriteLine($\"Recorded storage failure {error.Message}\");\n            throw;\n        }\n    }\n}\n"
+  },
+  "steps": [
+    {
+      "id": "build",
+      "label": "Build and verify",
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release"
+        ],
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    },
+    {
+      "id": "bug",
+      "label": "Invalid caller assumption",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "bug"
+        ]
+      ],
+      "contains": [
+        "IndexOutOfRangeException"
+      ],
+      "failure": true
+    },
+    {
+      "id": "resetstack",
+      "label": "Rethrow-variable problem",
+      "writeFiles": {
+        "App/ImportService.cs": "using System.Runtime.CompilerServices;\n\npublic static class ImportService\n{\n    [MethodImpl(MethodImplOptions.NoInlining)]\n    public static void Load()\n    {\n        try\n        {\n            InvoiceStore.Load();\n        }\n        catch (IOException error)\n        {\n            Console.WriteLine($\"Recorded storage failure {error.Message}\");\n            throw error;\n        }\n    }\n}\n"
+      },
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release",
+          "--no-restore"
+        ],
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "failure": true,
+      "contains": [
+        "origin frame preserved"
+      ]
+    },
+    {
+      "id": "repair",
+      "label": "Repair and verify",
+      "writeFiles": {
+        "App/Probe.cs": "// Restored exercise.\n",
+        "App/ImportService.cs": "using System.Runtime.CompilerServices;\n\npublic static class ImportService\n{\n    [MethodImpl(MethodImplOptions.NoInlining)]\n    public static void Load()\n    {\n        try\n        {\n            InvoiceStore.Load();\n        }\n        catch (IOException error)\n        {\n            Console.WriteLine($\"Recorded storage failure {error.Message}\");\n            throw;\n        }\n    }\n}\n"
+      },
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release",
+          "--no-restore"
+        ],
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    }
+  ]
+}

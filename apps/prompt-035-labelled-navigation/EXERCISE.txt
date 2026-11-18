@@ -1,0 +1,6 @@
+PROMPT 35
+
+1. Trace the blocked warehouse and first eligible target.
+2. Compare the earlier flag-based scan with the labelled implementation.
+3. Change a target label and inspect the compiler diagnostic.
+4. Add another blocked row and verify the chosen position.

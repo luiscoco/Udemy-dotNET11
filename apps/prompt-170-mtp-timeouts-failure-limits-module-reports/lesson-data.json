@@ -1,0 +1,130 @@
+{
+  "number": 170,
+  "title": "MTP timeouts, failure limits and per-module reports",
+  "files": [
+    "App/App.csproj",
+    "App/CourseRules.cs",
+    "ModuleA/ModuleA.csproj",
+    "ModuleB/ModuleB.csproj",
+    "ModuleA/GlobalUsings.cs",
+    "ModuleB/GlobalUsings.cs",
+    "NuGet.Config",
+    "Course.slnx",
+    "ModuleA/PolicyTests.cs",
+    "ModuleB/ReportTests.cs",
+    "PolicyOptions.md",
+    "App/Probe.cs",
+    "EXERCISE.txt",
+    "global.json",
+    "RunnerCommands.ps1"
+  ],
+  "resetFiles": {
+    "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+  },
+  "steps": [
+    {
+      "id": "build",
+      "label": "Build and run both passing modules",
+      "commands": [
+        [
+          "build",
+          "Course.slnx",
+          "-c",
+          "Release"
+        ],
+        [
+          "test",
+          "--solution",
+          "Course.slnx",
+          "-c",
+          "Release",
+          "--no-build",
+          "--filter",
+          "TestCategory=Passing",
+          "--results-directory",
+          "artifacts/baseline",
+          "--results-directory-layout",
+          "per-module",
+          "--report-trx",
+          "--report-trx-filename",
+          "results.trx"
+        ]
+      ],
+      "contains": [
+        "Passed"
+      ]
+    },
+    {
+      "id": "timeout",
+      "label": "Enforce a five-second test timeout",
+      "commands": [
+        [
+          "test",
+          "--project",
+          "ModuleA/ModuleA.csproj",
+          "-c",
+          "Release",
+          "--no-build",
+          "--filter",
+          "TestCategory=Slow",
+          "--timeout",
+          "5s",
+          "--report-trx",
+          "--results-directory",
+          "artifacts/timeout"
+        ]
+      ],
+      "failure": true,
+      "contains": []
+    },
+    {
+      "id": "limit",
+      "label": "Stop at the configured failure limit",
+      "commands": [
+        [
+          "test",
+          "--project",
+          "ModuleA/ModuleA.csproj",
+          "-c",
+          "Release",
+          "--no-build",
+          "--filter",
+          "TestCategory=Failing",
+          "--maximum-failed-tests",
+          "1",
+          "--report-trx",
+          "--results-directory",
+          "artifacts/failure-limit"
+        ]
+      ],
+      "failure": true,
+      "contains": []
+    },
+    {
+      "id": "repair",
+      "label": "Verify passing tests and isolated reports",
+      "commands": [
+        [
+          "test",
+          "--solution",
+          "Course.slnx",
+          "-c",
+          "Release",
+          "--no-build",
+          "--filter",
+          "TestCategory=Passing",
+          "--results-directory",
+          "artifacts/repair",
+          "--results-directory-layout",
+          "per-module",
+          "--report-trx",
+          "--report-trx-filename",
+          "results.trx"
+        ]
+      ],
+      "contains": [
+        "Passed"
+      ]
+    }
+  ]
+}

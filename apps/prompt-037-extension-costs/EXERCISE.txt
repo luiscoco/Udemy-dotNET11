@@ -1,0 +1,6 @@
+PROMPT 37
+
+1. Predict the traversal count for two property reads.
+2. Call the calculation method once and reuse its result.
+3. Explain the work performed by the member signature and name.
+4. Verify that computing a total preserves the supplied lines.

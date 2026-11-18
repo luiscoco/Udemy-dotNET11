@@ -1,0 +1,5 @@
+PROMPT 110
+
+1. Try hostile sort input and reject it before building SQL.
+2. Compare a LINQ equivalent, generated execution plan and parameterized raw SQL.
+3. Explain why interpolated identifiers cannot be database parameters.

@@ -1,0 +1,6 @@
+PROMPT 64
+
+1. Follow the consumer token through the enumerator and channel read.
+2. Inspect the two-item prefetch capacity and pending write.
+3. Break after three items and verify producer cleanup.
+4. Compare bounded prefetch with retaining a whole materialized result array.

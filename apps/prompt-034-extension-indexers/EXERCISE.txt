@@ -1,0 +1,6 @@
+PROMPT 34
+
+1. Read the named receiver in the extension block.
+2. Inspect how namespace imports affect indexer lookup.
+3. Predict the inspections for the first and last invoice.
+4. Explain when a dictionary suits repeated keyed lookups.

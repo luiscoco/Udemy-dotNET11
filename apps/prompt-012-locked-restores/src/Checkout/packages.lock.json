@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dependencies": {
+    "net11.0": {
+      "Course.Invoice.Contracts": {
+        "type": "Direct",
+        "requested": "[1.0.0, )",
+        "resolved": "1.0.0",
+        "contentHash": "isKEliwXlUiK3ADl1rKGVhovJHbVxyFKmkakttEuxm+T3/Lo2nXlXNeuSjIYTxX7XH46tLN019DKe5ysciTIZA=="
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+using System.Net.Http.Json;
+using Microsoft.Extensions.DependencyInjection;
+var traces=new List<RequestTrace>();
+await using var api = await ApiHarness.StartAsync(b => b.Services.AddScoped(_ => { var trace=new RequestTrace(); lock(traces) traces.Add(trace); return trace; }), Pipeline.Map);
+using var response=await api.Client.PostAsJsonAsync("/api/v1/tasks/42?verbose=true",new CreateTask("Bound DTO"));
+var body=(await response.Content.ReadFromJsonAsync<BoundTask>())!;
+var trace=traces.Last(); await trace.Completed.Task.WaitAsync(TimeSpan.FromSeconds(10));
+Check.That((int)response.StatusCode==201 && body==new BoundTask(42,"Bound DTO",true),"route, query and JSON body bind into the intended handler arguments");
+Check.That(trace.Events.SequenceEqual(new[] {"middleware-before","filter-before","handler","filter-after","middleware-after"}),"middleware surrounds the endpoint filter and handler in the observed order");
+Console.WriteLine("api: " + string.Join(" -> ",trace.Events));
+using var invalid=await api.Client.PostAsJsonAsync("/api/v1/tasks/43",new CreateTask(""));
+Console.WriteLine($"api: invalid Title returns {(int)invalid.StatusCode}");
+if(args.FirstOrDefault()=="bypass") Check.That((int)invalid.StatusCode==201,"the group filter must reject an empty request title");
+Check.That((int)invalid.StatusCode==400,"the filter short-circuits invalid input before the handler");
+using var badRoute=await api.Client.PostAsJsonAsync("/api/v1/tasks/not-an-integer",new CreateTask("Valid"));
+Check.That((int)badRoute.StatusCode==404,"the integer route constraint rejects a nonmatching path");

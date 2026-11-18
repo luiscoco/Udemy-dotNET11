@@ -1,0 +1,6 @@
+PROMPT 42
+
+1. Retain both the original immutable map and its revised result.
+2. Build a frozen map and change the mutable construction source.
+3. Inspect the pure AddOrUpdate delegate used for shared counters.
+4. Reproduce ignored immutable updates and an attempted frozen write.

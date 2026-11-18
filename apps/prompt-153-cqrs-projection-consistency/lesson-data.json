@@ -1,0 +1,73 @@
+{
+  "number": 153,
+  "title": "Commands, queries and explicit projection delay",
+  "files": [
+    "App/App.csproj",
+    "App/CourseStore.cs",
+    "App/Program.cs",
+    "NuGet.Config",
+    "App/Probe.cs",
+    "EXERCISE.txt"
+  ],
+  "resetFiles": {
+    "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+  },
+  "steps": [
+    {
+      "id": "build",
+      "label": "Build and verify",
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release"
+        ],
+        [
+          "App/bin/Release/net11.0/App.dll",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    },
+    {
+      "id": "stale",
+      "label": "Assume immediate projection consistency",
+      "commands": [
+        [
+          "App/bin/Release/net11.0/App.dll",
+          "stale"
+        ]
+      ],
+      "failure": true,
+      "contains": [
+        "incorrect expectation"
+      ]
+    },
+    {
+      "id": "repair",
+      "label": "Repair and verify",
+      "writeFiles": {
+        "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+      },
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release",
+          "--no-restore"
+        ],
+        [
+          "App/bin/Release/net11.0/App.dll",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    }
+  ]
+}

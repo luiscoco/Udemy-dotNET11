@@ -1,0 +1,36 @@
+@implements IDisposable
+@code {
+    [CascadingParameter] private EditContext Context { get; set; } = default!;
+    [Parameter, EditorRequired] public Registration Model { get; set; } = default!;
+    private ValidationMessageStore Messages = default!;
+    protected override void OnInitialized()
+    {
+        Messages = new ValidationMessageStore(Context);
+        Context.OnValidationRequested += OnRequested;
+        Context.OnFieldChanged += OnChanged;
+    }
+    private void OnRequested(object? sender, ValidationRequestedEventArgs args) =>
+        args.AddAsyncValidator(ValidateUsername);
+    private void OnChanged(object? sender, FieldChangedEventArgs args)
+    {
+        if (args.FieldIdentifier.FieldName == nameof(Registration.Username))
+            Context.RegisterAsyncFieldValidator(args.FieldIdentifier, ValidateUsername);
+    }
+    private async Task ValidateUsername(CancellationToken cancellationToken)
+    {
+        var field = Context.Field(nameof(Registration.Username));
+        var candidate = Model.Username;
+        Messages.Clear(field);
+        // A cancellable fixture delay stands in for the availability lookup.
+        await Task.Delay(350, cancellationToken);
+        cancellationToken.ThrowIfCancellationRequested();
+        if (string.Equals(candidate, "taken", StringComparison.OrdinalIgnoreCase))
+            Messages.Add(field, "This username is already taken.");
+        Context.NotifyValidationStateChanged();
+    }
+    public void Dispose()
+    {
+        Context.OnValidationRequested -= OnRequested;
+        Context.OnFieldChanged -= OnChanged;
+    }
+}

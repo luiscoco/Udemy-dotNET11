@@ -1,0 +1,110 @@
+{
+  "number": 169,
+  "title": "Load, concurrency and fault-injection acceptance tests",
+  "files": [
+    "App/App.csproj",
+    "App/WorkGate.cs",
+    "App/WorkHost.cs",
+    "Tests/Tests.csproj",
+    "Tests/GlobalUsings.cs",
+    "NuGet.Config",
+    "AcceptanceCriteria.json",
+    "Tests/AcceptanceTests.cs",
+    "App/Probe.cs",
+    "EXERCISE.txt",
+    "global.json"
+  ],
+  "resetFiles": {
+    "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n",
+    "App/WorkGate.cs": "using Microsoft.AspNetCore.Http;\npublic sealed class WorkGate : IDisposable\n{\n    private readonly SemaphoreSlim permits = new(2,2);\n    private readonly object sync = new();\n    private readonly TaskCompletionSource release = new(TaskCreationOptions.RunContinuationsAsynchronously);\n    private int active;\n    private int maximum;\n    private bool injectFailure;\n    public TaskCompletionSource BothEntered { get; } = new(TaskCreationOptions.RunContinuationsAsynchronously);\n    public bool InjectFailure { get => Volatile.Read(ref injectFailure); set => Volatile.Write(ref injectFailure,value); }\n    public int Maximum { get { lock(sync) return maximum; } }\n    public void Release() => release.TrySetResult();\n    public async Task<IResult> ExecuteAsync(CancellationToken cancellationToken)\n    {\n        if (InjectFailure) return Results.StatusCode(503);\n        if (!await permits.WaitAsync(0,cancellationToken)) return Results.StatusCode(503);\n        lock(sync)\n        {\n            active++;\n            maximum = Math.Max(maximum,active);\n            if (active == 2) BothEntered.TrySetResult();\n        }\n        try\n        {\n            await release.Task.WaitAsync(cancellationToken);\n            return Results.Ok(\"Completed\");\n        }\n        finally\n        {\n            lock(sync) active--;\n            permits.Release();\n        }\n    }\n    public void Dispose() => permits.Dispose();\n}\n"
+  },
+  "steps": [
+    {
+      "id": "build",
+      "label": "Build and run the tests",
+      "commands": [
+        [
+          "build",
+          "Tests/Tests.csproj",
+          "-c",
+          "Release"
+        ],
+        [
+          "test",
+          "--project",
+          "Tests/Tests.csproj",
+          "-c",
+          "Release",
+          "--no-build",
+          "--report-trx",
+          "--results-directory",
+          "artifacts/baseline"
+        ]
+      ],
+      "contains": [
+        "Passed"
+      ]
+    },
+    {
+      "id": "regression",
+      "label": "Introduce and detect the regression",
+      "writeFiles": {
+        "App/WorkGate.cs": "using Microsoft.AspNetCore.Http;\npublic sealed class WorkGate : IDisposable\n{\n    private readonly SemaphoreSlim permits = new(2,2);\n    private readonly object sync = new();\n    private readonly TaskCompletionSource release = new(TaskCreationOptions.RunContinuationsAsynchronously);\n    private int active;\n    private int maximum;\n    private bool injectFailure;\n    public TaskCompletionSource BothEntered { get; } = new(TaskCreationOptions.RunContinuationsAsynchronously);\n    public bool InjectFailure { get => Volatile.Read(ref injectFailure); set => Volatile.Write(ref injectFailure,value); }\n    public int Maximum { get { lock(sync) return maximum; } }\n    public void Release() => release.TrySetResult();\n    public async Task<IResult> ExecuteAsync(CancellationToken cancellationToken)\n    {\n        if (InjectFailure) return Results.Ok(\"Fault hidden\");\n        if (!await permits.WaitAsync(0,cancellationToken)) return Results.StatusCode(503);\n        lock(sync)\n        {\n            active++;\n            maximum = Math.Max(maximum,active);\n            if (active == 2) BothEntered.TrySetResult();\n        }\n        try\n        {\n            await release.Task.WaitAsync(cancellationToken);\n            return Results.Ok(\"Completed\");\n        }\n        finally\n        {\n            lock(sync) active--;\n            permits.Release();\n        }\n    }\n    public void Dispose() => permits.Dispose();\n}\n"
+      },
+      "commands": [
+        [
+          "build",
+          "Tests/Tests.csproj",
+          "-c",
+          "Release",
+          "--no-restore"
+        ],
+        [
+          "test",
+          "--project",
+          "Tests/Tests.csproj",
+          "-c",
+          "Release",
+          "--no-build",
+          "--report-trx",
+          "--results-directory",
+          "artifacts/regression"
+        ]
+      ],
+      "failure": true,
+      "contains": [
+        "Concurrency_and_fault_acceptance_criteria_are_enforced"
+      ]
+    },
+    {
+      "id": "repair",
+      "label": "Repair and rerun the tests",
+      "writeFiles": {
+        "App/WorkGate.cs": "using Microsoft.AspNetCore.Http;\npublic sealed class WorkGate : IDisposable\n{\n    private readonly SemaphoreSlim permits = new(2,2);\n    private readonly object sync = new();\n    private readonly TaskCompletionSource release = new(TaskCreationOptions.RunContinuationsAsynchronously);\n    private int active;\n    private int maximum;\n    private bool injectFailure;\n    public TaskCompletionSource BothEntered { get; } = new(TaskCreationOptions.RunContinuationsAsynchronously);\n    public bool InjectFailure { get => Volatile.Read(ref injectFailure); set => Volatile.Write(ref injectFailure,value); }\n    public int Maximum { get { lock(sync) return maximum; } }\n    public void Release() => release.TrySetResult();\n    public async Task<IResult> ExecuteAsync(CancellationToken cancellationToken)\n    {\n        if (InjectFailure) return Results.StatusCode(503);\n        if (!await permits.WaitAsync(0,cancellationToken)) return Results.StatusCode(503);\n        lock(sync)\n        {\n            active++;\n            maximum = Math.Max(maximum,active);\n            if (active == 2) BothEntered.TrySetResult();\n        }\n        try\n        {\n            await release.Task.WaitAsync(cancellationToken);\n            return Results.Ok(\"Completed\");\n        }\n        finally\n        {\n            lock(sync) active--;\n            permits.Release();\n        }\n    }\n    public void Dispose() => permits.Dispose();\n}\n"
+      },
+      "commands": [
+        [
+          "build",
+          "Tests/Tests.csproj",
+          "-c",
+          "Release",
+          "--no-restore"
+        ],
+        [
+          "test",
+          "--project",
+          "Tests/Tests.csproj",
+          "-c",
+          "Release",
+          "--no-build",
+          "--report-trx",
+          "--results-directory",
+          "artifacts/repair"
+        ]
+      ],
+      "contains": [
+        "Passed"
+      ]
+    }
+  ]
+}

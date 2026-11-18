@@ -1,0 +1,90 @@
+{
+  "number": 185,
+  "title": "Build CI gates and versioned deployment artifacts",
+  "files": [
+    "App/App.csproj",
+    "App/Harness.cs",
+    "App/DeploymentTools.cs",
+    "App/Pipeline.cs",
+    "App/Program.cs",
+    "NuGet.Config",
+    "src/Catalog.csproj",
+    "src/CourseLabel.cs",
+    "src/Program.cs",
+    "Tests/Tests.csproj",
+    "Tests/LabelTests.cs",
+    "release-version.txt",
+    ".github/workflows/ci.yml",
+    "App/Probe.cs",
+    "EXERCISE.txt"
+  ],
+  "resetFiles": {
+    "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+  },
+  "steps": [
+    {
+      "id": "build",
+      "label": "Build and verify deployment",
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release"
+        ],
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    },
+    {
+      "id": "regression",
+      "label": "Observe deployment failure",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "problem"
+        ]
+      ],
+      "failure": true,
+      "contains": [
+        "CI_ANALYSIS_REGRESSION"
+      ]
+    },
+    {
+      "id": "repair",
+      "label": "Verify recovery",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    }
+  ]
+}

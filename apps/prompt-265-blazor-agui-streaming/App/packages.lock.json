@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "dependencies": {
+    "net11.0": {
+      "AGUI.Client": {
+        "type": "Direct",
+        "requested": "[1.0.1, )",
+        "resolved": "1.0.1",
+        "contentHash": "kerm2Bauzi65BD2nc02floaK1yXvVLF8fdTcyX3Gbf4zxujAs2RvFjgMHxlKK20uzNxPHp7avnv4Fh7mzR006A==",
+        "dependencies": {
+          "AGUI.Abstractions": "1.0.1",
+          "AGUI.Formatting": "1.0.1",
+          "Microsoft.Extensions.AI": "10.6.0",
+          "Microsoft.Extensions.AI.Abstractions": "10.6.0"
+        }
+      },
+      "Microsoft.AspNetCore.App.Internal.Assets": {
+        "type": "Direct",
+        "requested": "[11.0.0, )",
+        "resolved": "11.0.0",
+        "contentHash": "Mc4ywjacnewbl9TPTfRaBxGpBJudLEHCpJrG4digzG5v32aJkC1PwCDHwSq0nPiuMftMVAqnlhl6nKZpW60Gwg=="
+      },
+      "Microsoft.AspNetCore.Components.AI": {
+        "type": "Direct",
+        "requested": "[11.0.0-preview.7.26425.128, )",
+        "resolved": "11.0.0-preview.7.26425.128",
+        "contentHash": "dbRsk/qAZtc5q/dM7hSkoI8P9+q+l5LgGZTbJmi16845CJxTHtYIKZpWLSyXsL4VM1oMoNUmK/yhPCYlNRVnOw==",
+        "dependencies": {
+          "Microsoft.Extensions.AI.Abstractions": "10.6.0"
+        }
+      },
+      "AGUI.Abstractions": {
+        "type": "Transitive",
+        "resolved": "1.0.1",
+        "contentHash": "NQnV3HOir5RiYuQFca1jdFnDtmorcqDWMLQ32fl/zJChZEfck9ZqAG4eKewK4oy78s/JqIZUaXQwVIiM2npvJw==",
+        "dependencies": {
+          "Microsoft.Extensions.AI.Abstractions": "10.6.0"
+        }
+      },
+      "AGUI.Formatting": {
+        "type": "Transitive",
+        "resolved": "1.0.1",
+        "contentHash": "+B9shmiqI0ti4quQLP3Sgn0PmlondHk75WbIhZkQCl2gExc5BQBc8kwN4po5tkKiYV2uolQ8EVzzxgKCtNkDug==",
+        "dependencies": {
+          "AGUI.Abstractions": "1.0.1"
+        }
+      },
+      "Microsoft.Extensions.AI": {
+        "type": "Transitive",
+        "resolved": "10.6.0",
+        "contentHash": "30EQA5M7ouoC1rhK0WARh+qm0CSvHToEV9MwkFY7tp42RAFnofirklXP0R/E9xi3pcbJtkNs0Ty2wromtUgXLw==",
+        "dependencies": {
+          "Microsoft.Extensions.AI.Abstractions": "10.6.0",
+          "System.Numerics.Tensors": "10.0.8"
+        }
+      },
+      "Microsoft.Extensions.AI.Abstractions": {
+        "type": "Transitive",
+        "resolved": "10.6.0",
+        "contentHash": "JCkVoyqBqi9r3Vs5Qo5PfZobT0+CWeOx+9y9yggBxtW9s/X5CAoa7Iw/tP/rfUdz+nxRKMSBmrytYgwmu60lgA=="
+      },
+      "System.Numerics.Tensors": {
+        "type": "Transitive",
+        "resolved": "10.0.8",
+        "contentHash": "pcyglC5R0BXGyD8cntjFXJhACpPyk7H7eN0zKW/5d5MIcmRUPVZrjytZ2Bsn9igzQJGg5xIOOokPHFLnfiEuxQ=="
+      }
+    }
+  }
+}

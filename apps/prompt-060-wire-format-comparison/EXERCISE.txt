@@ -1,0 +1,7 @@
+PROMPT 60
+
+1. Use one telemetry record with an integer temperature scale in all three formats.
+2. Inspect named JSON properties and the two positional binary schemas.
+3. Verify every round trip and record exact wire sizes.
+4. Reject format confusion and trailing CBOR data.
+5. Plan schema evolution before reordering positional fields or reusing MessagePack keys.

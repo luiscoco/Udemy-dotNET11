@@ -1,0 +1,12 @@
+PROMPT 15 — YOUR TURN
+
+1. Explain the public API and its documented missing/invalid-input behavior.
+2. Pack a release with XML docs and an snupkg.
+3. Inspect both archives rather than assuming file existence proves completeness.
+4. Restore and run the separate package consumer.
+5. Reproduce an unknown-public-method compiler failure and repair it.
+6. Explain major, minor and patch compatibility intent.
+7. Review the actual license choice before any real distribution; nothing is published by this lesson.
+
+Predict the result before each command.
+Retain output and explain the failure and recovery.

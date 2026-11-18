@@ -1,0 +1,110 @@
+{
+  "number": 166,
+  "title": "Blazor component tests with bUnit",
+  "files": [
+    "App/App.csproj",
+    "App/CoursePicker.razor",
+    "App/ISelectionStore.cs",
+    "Tests/Tests.csproj",
+    "Tests/GlobalUsings.cs",
+    "NuGet.Config",
+    "Tests/ComponentTests.cs",
+    "App/Probe.cs",
+    "EXERCISE.txt",
+    "global.json",
+    "App/_Imports.razor"
+  ],
+  "resetFiles": {
+    "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n",
+    "App/CoursePicker.razor": "@namespace CourseComponents\n@using Microsoft.AspNetCore.Components\n@inject ISelectionStore Store\n<section>\n    <h2>Choose lesson seats</h2>\n    <p data-testid=\"count\">Selected @Selected of @Capacity</p>\n    <button id=\"add\" @onclick=\"Add\" disabled=\"@(Selected >= Capacity)\">Add seat</button>\n    <button id=\"save\" @onclick=\"SaveAsync\">Save selection</button>\n    <p role=\"status\">@Status</p>\n</section>\n@code {\n    [Parameter] public int Capacity { get; set; } = 2;\n    private int Selected;\n    private string Status = \"Choose seats.\";\n    private void Add() { if (Selected < Capacity) Selected++; }\n    private async Task SaveAsync()\n    {\n        await Store.SaveAsync(Selected);\n        Status = $\"Saved {Selected} seats.\";\n    }\n}\n"
+  },
+  "steps": [
+    {
+      "id": "build",
+      "label": "Build and run the tests",
+      "commands": [
+        [
+          "build",
+          "Tests/Tests.csproj",
+          "-c",
+          "Release"
+        ],
+        [
+          "test",
+          "--project",
+          "Tests/Tests.csproj",
+          "-c",
+          "Release",
+          "--no-build",
+          "--report-trx",
+          "--results-directory",
+          "artifacts/baseline"
+        ]
+      ],
+      "contains": [
+        "Passed"
+      ]
+    },
+    {
+      "id": "regression",
+      "label": "Introduce and detect the regression",
+      "writeFiles": {
+        "App/CoursePicker.razor": "@namespace CourseComponents\n@using Microsoft.AspNetCore.Components\n@inject ISelectionStore Store\n<section>\n    <h2>Choose lesson seats</h2>\n    <p data-testid=\"count\">Selected @Selected of @Capacity</p>\n    <button id=\"add\" @onclick=\"Add\" disabled=\"@(Selected > Capacity)\">Add seat</button>\n    <button id=\"save\" @onclick=\"SaveAsync\">Save selection</button>\n    <p role=\"status\">@Status</p>\n</section>\n@code {\n    [Parameter] public int Capacity { get; set; } = 2;\n    private int Selected;\n    private string Status = \"Choose seats.\";\n    private void Add() { if (Selected < Capacity) Selected++; }\n    private async Task SaveAsync()\n    {\n        await Store.SaveAsync(Selected);\n        Status = $\"Saved {Selected} seats.\";\n    }\n}\n"
+      },
+      "commands": [
+        [
+          "build",
+          "Tests/Tests.csproj",
+          "-c",
+          "Release",
+          "--no-restore"
+        ],
+        [
+          "test",
+          "--project",
+          "Tests/Tests.csproj",
+          "-c",
+          "Release",
+          "--no-build",
+          "--report-trx",
+          "--results-directory",
+          "artifacts/regression"
+        ]
+      ],
+      "failure": true,
+      "contains": [
+        "Add_button_is_disabled_at_capacity"
+      ]
+    },
+    {
+      "id": "repair",
+      "label": "Repair and rerun the tests",
+      "writeFiles": {
+        "App/CoursePicker.razor": "@namespace CourseComponents\n@using Microsoft.AspNetCore.Components\n@inject ISelectionStore Store\n<section>\n    <h2>Choose lesson seats</h2>\n    <p data-testid=\"count\">Selected @Selected of @Capacity</p>\n    <button id=\"add\" @onclick=\"Add\" disabled=\"@(Selected >= Capacity)\">Add seat</button>\n    <button id=\"save\" @onclick=\"SaveAsync\">Save selection</button>\n    <p role=\"status\">@Status</p>\n</section>\n@code {\n    [Parameter] public int Capacity { get; set; } = 2;\n    private int Selected;\n    private string Status = \"Choose seats.\";\n    private void Add() { if (Selected < Capacity) Selected++; }\n    private async Task SaveAsync()\n    {\n        await Store.SaveAsync(Selected);\n        Status = $\"Saved {Selected} seats.\";\n    }\n}\n"
+      },
+      "commands": [
+        [
+          "build",
+          "Tests/Tests.csproj",
+          "-c",
+          "Release",
+          "--no-restore"
+        ],
+        [
+          "test",
+          "--project",
+          "Tests/Tests.csproj",
+          "-c",
+          "Release",
+          "--no-build",
+          "--report-trx",
+          "--results-directory",
+          "artifacts/repair"
+        ]
+      ],
+      "contains": [
+        "Passed"
+      ]
+    }
+  ]
+}

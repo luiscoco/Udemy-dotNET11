@@ -1,0 +1,103 @@
+{
+  "number": 247,
+  "title": "Foundry Local inference in an offline worker",
+  "files": [
+    "App/App.csproj",
+    "App/Check.cs",
+    "App/Harness.cs",
+    "App/Platform.cs",
+    "App/OfflineSandbox.cs",
+    "App/FoundryWorker.cs",
+    "App/Program.cs",
+    "NuGet.Config",
+    "prepare-model/prepare-model.csproj",
+    "prepare-model/Program.cs",
+    "App/Probe.cs",
+    "EXERCISE.txt"
+  ],
+  "resetFiles": {
+    "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+  },
+  "steps": [
+    {
+      "id": "build",
+      "label": "Publish and run offline Foundry",
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release",
+          "--disable-build-servers",
+          "-p:UseSharedCompilation=false"
+        ],
+        [
+          "publish",
+          "App",
+          "-c",
+          "Release",
+          "-r",
+          "win-x64",
+          "--self-contained",
+          "true",
+          "-o",
+          "artifacts/offline-worker",
+          "--disable-build-servers",
+          "-p:UseSharedCompilation=false"
+        ],
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    },
+    {
+      "id": "regression",
+      "label": "Observe a missing model cache",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "problem"
+        ]
+      ],
+      "failure": true,
+      "contains": [
+        "FOUNDRY required model cache is missing"
+      ]
+    },
+    {
+      "id": "repair",
+      "label": "Verify offline inference again",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+PROMPT 128
+
+1. Grant the deployed managed identity only the required secret-read permission.
+2. Perform a separate authorized cloud integration test; this offline lesson does not authenticate to Azure.

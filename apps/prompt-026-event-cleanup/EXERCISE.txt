@@ -1,0 +1,8 @@
+PROMPT 26
+
+1. Trace the delegate and lambda invocation.
+2. Subscribe to the invoice completion event.
+3. Reproduce the failed anonymous-handler removal.
+4. Retain the subscribed delegate and remove that delegate.
+5. Dispose the subscription twice and publish another invoice.
+6. Verify the disposed subscriber receives no later notification.

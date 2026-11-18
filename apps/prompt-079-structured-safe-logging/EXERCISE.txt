@@ -1,0 +1,6 @@
+PROMPT 79
+
+1. Inspect the partial LoggerMessage method and generated source.
+2. Verify event ID, named values, original template and the operation scope.
+3. Keep credentials, customer details and payloads out of the event signature.
+4. Run the full-payload counterexample and inspect the failed exclusion check.

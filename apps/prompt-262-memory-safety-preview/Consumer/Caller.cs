@@ -1,0 +1,1 @@
+class Caller {public static safe int Run(){unsafe{return NativeLike.ReadKnownValue();}}}

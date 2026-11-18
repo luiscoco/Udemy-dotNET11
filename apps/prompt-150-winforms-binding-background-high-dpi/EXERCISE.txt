@@ -1,0 +1,5 @@
+PROMPT 150
+
+1. Run the Windows app normally and inspect its controls.
+2. Predict and execute the controlled incorrect expectation.
+3. Read the actual source and extend the verified behavior.

@@ -1,0 +1,111 @@
+{
+  "number": 30,
+  "title": "Orders / immutable snapshots and collection ownership",
+  "files": [
+    "App/App.csproj",
+    "App/Snapshots.cs",
+    "App/MutableInvoice.cs",
+    "App/Program.cs",
+    "App/Probe.cs",
+    "EXERCISE.txt"
+  ],
+  "resetFiles": {
+    "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+  },
+  "steps": [
+    {
+      "id": "build",
+      "label": "Build and verify",
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release"
+        ],
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    },
+    {
+      "id": "shared",
+      "label": "Shared-list problem",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "shared"
+        ]
+      ],
+      "contains": [
+        "external list changed"
+      ],
+      "failure": true
+    },
+    {
+      "id": "mutation",
+      "label": "Readonly snapshot probe",
+      "writeFiles": {
+        "App/Probe.cs": "public static class Probe\n{\n    public static void Change(InvoiceSnapshot snapshot)\n    {\n        snapshot.Customer = \"Grace\";\n    }\n}\n"
+      },
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release",
+          "--no-restore"
+        ]
+      ],
+      "failure": true,
+      "contains": [
+        "CS0200"
+      ]
+    },
+    {
+      "id": "repair",
+      "label": "Repair and verify",
+      "writeFiles": {
+        "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+      },
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release",
+          "--no-restore"
+        ],
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    }
+  ]
+}

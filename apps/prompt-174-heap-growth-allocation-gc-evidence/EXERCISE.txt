@@ -1,0 +1,5 @@
+PROMPT 174
+
+1. Collect a live heap snapshot while the cache retains payloads.
+2. Inspect retained type counts, allocation and collection observations.
+3. Release references and confirm the second snapshot and live-object check.

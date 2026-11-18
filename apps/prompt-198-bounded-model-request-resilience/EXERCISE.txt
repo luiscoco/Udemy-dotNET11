@@ -1,0 +1,6 @@
+PROMPT 198
+
+1. Read the actual source and provider scope. Start the local model service.
+2. Run the build action and inspect live model output and retained evidence.
+3. Run the controlled failure and explain the violated application boundary.
+4. Restore the policy and verify recovery; extend the exercise with your own case.

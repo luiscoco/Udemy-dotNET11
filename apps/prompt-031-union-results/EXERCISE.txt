@@ -1,0 +1,6 @@
+PROMPT 31
+
+1. Predict the outcome for 42, 99 and -1.
+2. Remove Rejected from a switch and inspect the compiler diagnostic.
+3. Inspect a default union and explain its empty contents.
+4. Restore the exhaustive handling and run the checks.

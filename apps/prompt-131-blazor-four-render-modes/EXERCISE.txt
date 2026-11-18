@@ -1,0 +1,5 @@
+PROMPT 131
+
+1. Run the application and inspect the browser evidence.
+2. Predict the controlled failure, then execute it.
+3. Explain how the observed result follows from the component code.

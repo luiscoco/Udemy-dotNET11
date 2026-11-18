@@ -1,0 +1,6 @@
+PROMPT 84
+
+1. Inspect async attribute execution and its injected context factory.
+2. Compare a duplicate validation 400 with a raced insert conflict 409.
+3. Reproduce the controlled two-request race.
+4. Cancel the validator and inspect the unique database rows.

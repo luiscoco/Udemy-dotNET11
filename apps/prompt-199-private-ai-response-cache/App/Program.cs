@@ -1,0 +1,15 @@
+using var client = AiRuntime.Create();
+var cache = new ResponseCache(client, !args.Contains("problem"));
+const string question = "What is a cache? Answer in one sentence.";
+await cache.Get("alice", question);
+await cache.Get("alice", question);
+Check.That(cache.ModelCalls == 1, "same-user repeated prompt uses suitable cached response");
+await cache.Get("bob", question);
+Console.WriteLine($"CACHE after bob modelCalls={cache.ModelCalls} expected=2 entries={cache.Entries}");
+AiRuntime.Evidence("cache-boundary.json", new { cache.ModelCalls, cache.Entries });
+Check.That(cache.ModelCalls == 2, "different users require separate model calls", "AI cross-user cache reuse");
+int entriesBefore = cache.Entries;
+await cache.Get("alice", "Explain private data briefly.", sensitive: true);
+await cache.Get("alice", "Explain private data briefly.", sensitive: true);
+Check.That(cache.Entries == entriesBefore && cache.ModelCalls == 4, "sensitive requests bypass cache reads and writes");
+AiRuntime.Evidence("ai-evidence.json", new { passed = true, cache.ModelCalls, cache.Entries, sensitiveBypass = true });

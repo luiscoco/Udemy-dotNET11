@@ -1,0 +1,12 @@
+@page "/"
+@rendermode InteractiveServer
+@implements IDisposable
+@inject IChatClient Client
+<h1>.NET 11 · Blazor AI + AG-UI</h1>
+<p>Actual components and SSE transport · deterministic protocol fixture</p>
+<section><AgentBoundary Agent="_agent"><MessageList/><MessageInput/><TracePanel/></AgentBoundary></section>
+@code {
+    private UIAgent _agent=default!;
+    protected override void OnInitialized()=>_agent=new UIAgent(Client);
+    public void Dispose()=>_agent?.Dispose();
+}

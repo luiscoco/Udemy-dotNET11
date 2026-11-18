@@ -1,0 +1,89 @@
+{
+  "number": 190,
+  "title": "Modernize a .NET Framework application incrementally",
+  "files": [
+    "App/App.csproj",
+    "App/Harness.cs",
+    "App/DeploymentTools.cs",
+    "App/ApiHarness.cs",
+    "App/LegacyAdapter.cs",
+    "App/Program.cs",
+    "NuGet.Config",
+    "Legacy/Legacy.csproj",
+    "Legacy/Program.cs",
+    "Unsupported/Unsupported.csproj",
+    "Unsupported/Program.cs",
+    "ModernizationPlan.md",
+    "App/Probe.cs",
+    "EXERCISE.txt"
+  ],
+  "resetFiles": {
+    "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+  },
+  "steps": [
+    {
+      "id": "build",
+      "label": "Build and verify deployment",
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release"
+        ],
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    },
+    {
+      "id": "regression",
+      "label": "Observe deployment failure",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "problem"
+        ]
+      ],
+      "failure": true,
+      "contains": [
+        "LEGACY_CUTOVER_REGRESSION"
+      ]
+    },
+    {
+      "id": "repair",
+      "label": "Verify recovery",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    }
+  ]
+}

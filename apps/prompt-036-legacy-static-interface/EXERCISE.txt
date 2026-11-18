@@ -1,0 +1,6 @@
+PROMPT 36
+
+1. Separate the .NET 11 compiler process from the CLR 4 executable.
+2. Read the static helper call on the interface.
+3. Compare C# 14 and C# 15 diagnostics against the same core library.
+4. Run on Windows with .NET Framework 4 and verify the printed runtime.

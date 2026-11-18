@@ -1,0 +1,4 @@
+PROMPT 115
+
+1. Inspect Redis calls and local origin counts before comparing performance.
+2. Choose cache duration and invalidation behavior for mutable course data.

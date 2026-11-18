@@ -1,0 +1,8 @@
+PROMPT 19 — YOUR TURN
+
+1. Separate formatting, nullable analysis and analyzer responsibilities.
+2. Run baseline formatting validation and the Release build.
+3. Introduce whitespace drift and inspect the formatter failure.
+4. Introduce a possible null dereference and identify CS8602 as an error.
+5. Make a stateless member an instance member and observe the configured CA1822 gate.
+6. Restore valid behavior and formatting, then run the program again.

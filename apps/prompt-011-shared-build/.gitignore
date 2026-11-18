@@ -1,0 +1,4 @@
+**/bin/
+**/obj/
+artifacts/
+src/Reporting/Directory.Build.props

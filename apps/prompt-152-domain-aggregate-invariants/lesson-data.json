@@ -1,0 +1,72 @@
+{
+  "number": 152,
+  "title": "Aggregates, value objects and business invariants",
+  "files": [
+    "App/App.csproj",
+    "App/Domain.cs",
+    "App/Program.cs",
+    "App/Probe.cs",
+    "EXERCISE.txt"
+  ],
+  "resetFiles": {
+    "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+  },
+  "steps": [
+    {
+      "id": "build",
+      "label": "Build and verify",
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release"
+        ],
+        [
+          "App/bin/Release/net11.0/App.dll",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    },
+    {
+      "id": "overbook",
+      "label": "Assume an aggregate permits overbooking",
+      "commands": [
+        [
+          "App/bin/Release/net11.0/App.dll",
+          "overbook"
+        ]
+      ],
+      "failure": true,
+      "contains": [
+        "incorrect expectation"
+      ]
+    },
+    {
+      "id": "repair",
+      "label": "Repair and verify",
+      "writeFiles": {
+        "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+      },
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release",
+          "--no-restore"
+        ],
+        [
+          "App/bin/Release/net11.0/App.dll",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    }
+  ]
+}

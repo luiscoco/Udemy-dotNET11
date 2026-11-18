@@ -1,0 +1,52 @@
+{
+  "model": {
+    "id": "qwen2.5-0.5b-instruct-generic-cpu:4",
+    "name": "qwen2.5-0.5b-instruct-generic-cpu",
+    "version": 4,
+    "alias": "qwen2.5-0.5b",
+    "displayName": "qwen2.5-0.5b-instruct-generic-cpu",
+    "providerType": "FoundryLocal",
+    "uri": "azureml://registries/azureml/models/qwen2.5-0.5b-instruct-generic-cpu/versions/4",
+    "modelType": "ONNX",
+    "promptTemplate": null,
+    "publisher": "Microsoft",
+    "modelSettings": null,
+    "license": "apache-2.0",
+    "licenseDescription": "This model is provided under the License Terms available at <https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct/blob/main/LICENSE>.",
+    "cached": true,
+    "task": "chat-completion",
+    "runtime": {
+      "deviceType": "CPU",
+      "executionProvider": "CPUExecutionProvider"
+    },
+    "fileSizeMb": 822,
+    "supportsToolCalling": true,
+    "maxOutputTokens": 2048,
+    "minFLVersion": "0.0.0",
+    "createdAt": 1763105845,
+    "contextLength": 32768,
+    "inputModalities": "text",
+    "outputModalities": "text",
+    "capabilities": "tool-calling"
+  },
+  "sdk": "2.5.0",
+  "assets": [
+    {
+      "file": "model.onnx",
+      "sha256": "997228203AE563C7871E0D78E45E35F9062009822D5A945CF54091F14098CD21"
+    },
+    {
+      "file": "model.onnx.data",
+      "sha256": "2B4B7D307030ABC296469752EB246E3D7E0080D9AE5AA429CDA97635967A35AB"
+    },
+    {
+      "file": "genai_config.json",
+      "sha256": "68A5DF59CFE94CA86CC11BC0233C63472697B8316D6E1D4B6A8F75E06D4D6F03"
+    },
+    {
+      "file": "tokenizer.json",
+      "sha256": "468AD83BE8D9E5795FAD1D502428AD805D2161D4B4D2C75F883135DA17172E15"
+    }
+  ],
+  "weightsBundled": false
+}

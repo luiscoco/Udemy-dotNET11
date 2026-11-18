@@ -1,0 +1,5 @@
+PROMPT 157
+
+1. Compare the local and HTTP adapters.
+2. Verify matching success and not-found results.
+3. Stop the service and preserve unavailable and cancellation outcomes.

@@ -1,0 +1,6 @@
+PROMPT 100
+
+1. Inspect the built static-assets endpoint manifest.
+2. Send a conditional request and observe 304.
+3. Decompress actual gzip bytes and compare content.
+4. Navigate between two documents and inspect browser cache events.

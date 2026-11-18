@@ -1,0 +1,4 @@
+PROMPT 130
+
+1. Extend redirect and URL-normalization cases without sending requests to unowned systems.
+2. Keep security regression tests tied to explicit allowlists and business ownership rules.

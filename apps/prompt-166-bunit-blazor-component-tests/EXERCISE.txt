@@ -1,0 +1,5 @@
+PROMPT 166
+
+1. Render the component with explicit capacity parameters.
+2. Click its controls and inspect rendered attributes and asynchronous status.
+3. Change the disabled boundary and verify the failing component test.

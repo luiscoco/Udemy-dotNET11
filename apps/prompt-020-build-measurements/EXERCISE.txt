@@ -1,0 +1,9 @@
+PROMPT 20 — YOUR TURN
+
+1. Record SDK, OS, architecture, dependency and source state.
+2. Explain the defined server-cold state without claiming empty disk caches.
+3. Measure the server-cold compiling build.
+4. Repeat the warm no-op scenario three times.
+5. Make one controlled source edit and measure the incremental build.
+6. Use binary logs to identify actual work and skipped targets.
+7. Report measured values for this workload without inventing a universal speedup.

@@ -1,0 +1,4 @@
+PROMPT 105
+
+1. Add another collection and compare joined row expansion with split queries.
+2. Discuss consistency across multiple split-query commands when concurrent writes occur.

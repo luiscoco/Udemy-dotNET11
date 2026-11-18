@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NativeCourse.MainPage" BackgroundColor="#F4F2FB" Title="Course navigation">
+    <VerticalStackLayout Padding="36" Spacing="20">
+        <Label Text=".NET 11 · MAUI Shell" FontSize="18" TextColor="#6642BB" />
+        <Label Text="Open a course" FontSize="30" FontAttributes="Bold" />
+        <Label Text="Course link" FontSize="20" />
+        <Entry x:Name="LinkEntry" Text="course://lesson/42" FontSize="20" />
+        <Button Text="Open course" Clicked="Open" HorizontalOptions="Start" />
+        <Border Padding="24" BackgroundColor="#E1F7EE"><Label x:Name="SelectionLabel" Text="No course selected." FontSize="22" /></Border>
+        <Label Text="Back returns to the course list and keeps the explicit selected course." FontSize="18" />
+    </VerticalStackLayout>
+</ContentPage>

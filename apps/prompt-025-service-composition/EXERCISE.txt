@@ -1,0 +1,8 @@
+PROMPT 25
+
+1. Identify the shared behavior supplied by the base class.
+2. Implement an ITaxPolicy without using the base class.
+3. Inject both policies into the same checkout.
+4. Reproduce the incomplete-interface diagnostic.
+5. Verify valid totals and rejection of an invalid policy result.
+6. Choose a service relationship based on the business contract and reuse required.

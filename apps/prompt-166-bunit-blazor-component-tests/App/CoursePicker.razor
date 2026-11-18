@@ -1,0 +1,21 @@
+@namespace CourseComponents
+@using Microsoft.AspNetCore.Components
+@inject ISelectionStore Store
+<section>
+    <h2>Choose lesson seats</h2>
+    <p data-testid="count">Selected @Selected of @Capacity</p>
+    <button id="add" @onclick="Add" disabled="@(Selected >= Capacity)">Add seat</button>
+    <button id="save" @onclick="SaveAsync">Save selection</button>
+    <p role="status">@Status</p>
+</section>
+@code {
+    [Parameter] public int Capacity { get; set; } = 2;
+    private int Selected;
+    private string Status = "Choose seats.";
+    private void Add() { if (Selected < Capacity) Selected++; }
+    private async Task SaveAsync()
+    {
+        await Store.SaveAsync(Selected);
+        Status = $"Saved {Selected} seats.";
+    }
+}

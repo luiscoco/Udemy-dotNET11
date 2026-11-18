@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+<PropertyGroup><TargetFramework>net11.0</TargetFramework><Nullable>enable</Nullable><ImplicitUsings>enable</ImplicitUsings><RunWorkingDirectory>$(MSBuildProjectDirectory)/..</RunWorkingDirectory><RestorePackagesWithLockFile>true</RestorePackagesWithLockFile></PropertyGroup>
+<ItemGroup>
+<PackageReference Include="Grpc.AspNetCore" Version="2.76.0" />
+<PackageReference Include="Grpc.Net.Client" Version="2.76.0" />
+<PackageReference Include="Grpc.Tools" Version="2.76.0" />
+<Protobuf Include="Protos/lessons.proto" GrpcServices="Both" />
+</ItemGroup>
+</Project>

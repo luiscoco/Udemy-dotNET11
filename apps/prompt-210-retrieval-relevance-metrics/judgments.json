@@ -1,0 +1,33 @@
+[
+  {
+    "Question": "rotate API keys",
+    "Relevance": {
+      "keys": 3,
+      "security": 2
+    }
+  },
+  {
+    "Question": "restore database backup",
+    "Relevance": {
+      "backup": 3
+    }
+  },
+  {
+    "Question": "stream response text",
+    "Relevance": {
+      "stream": 3
+    }
+  },
+  {
+    "Question": "private cache entries",
+    "Relevance": {
+      "cache": 3
+    }
+  },
+  {
+    "Question": "non-root container permissions",
+    "Relevance": {
+      "containers": 3
+    }
+  }
+]

@@ -1,0 +1,6 @@
+PROMPT 39
+
+1. Locate the annotated type and its custom-attribute row.
+2. Read the fixed constructor arguments from the metadata blob.
+3. Compare metadata reading with attribute instantiation.
+4. Apply the attribute to an invalid target and inspect the diagnostic.

@@ -1,0 +1,111 @@
+{
+  "number": 66,
+  "title": "Synchronization / lock, Interlocked and SemaphoreSlim",
+  "files": [
+    "App/App.csproj",
+    "App/Account.cs",
+    "App/Gate.cs",
+    "App/Program.cs",
+    "App/Probe.cs",
+    "EXERCISE.txt"
+  ],
+  "resetFiles": {
+    "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+  },
+  "steps": [
+    {
+      "id": "build",
+      "label": "Build and verify",
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release"
+        ],
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    },
+    {
+      "id": "lost",
+      "label": "Split a counter update across an await",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "lost"
+        ]
+      ],
+      "failure": true,
+      "contains": [
+        "Check failed"
+      ]
+    },
+    {
+      "id": "await-lock",
+      "label": "Attempt to await while holding a lock",
+      "writeFiles": {
+        "App/Probe.cs": "public static class Probe\n{\n    private static readonly object sync = new();\n    public static async Task RunAsync()\n    {\n        lock (sync) { await Task.Delay(1); }\n    }\n}\n"
+      },
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release",
+          "--no-restore"
+        ]
+      ],
+      "failure": true,
+      "contains": [
+        "CS1996"
+      ]
+    },
+    {
+      "id": "repair",
+      "label": "Repair and verify",
+      "writeFiles": {
+        "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+      },
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release",
+          "--no-restore"
+        ],
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    }
+  ]
+}

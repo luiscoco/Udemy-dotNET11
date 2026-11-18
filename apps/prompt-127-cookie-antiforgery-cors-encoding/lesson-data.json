@@ -1,0 +1,117 @@
+{
+  "number": 127,
+  "title": "Web protection — Cookies, antiforgery, CORS and encoding",
+  "files": [
+    "App/App.csproj",
+    "App/SecureHarness.cs",
+    "App/IdentitySetup.cs",
+    "App/BrowserRunner.cs",
+    "App/ProtectionSetup.cs",
+    "App/Program.cs",
+    "App/Page.cs",
+    "NuGet.Config",
+    "browser-demo.cjs",
+    "tools/package.json",
+    "App/Probe.cs",
+    "EXERCISE.txt"
+  ],
+  "resetFiles": {
+    "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+  },
+  "steps": [
+    {
+      "id": "build",
+      "label": "Build and verify",
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release"
+        ],
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    },
+    {
+      "id": "csrf",
+      "label": "Reject the missing request token",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "csrf"
+        ]
+      ],
+      "failure": true,
+      "contains": [
+        "incorrect expectation: the cookie alone authorizes a state-changing request"
+      ]
+    },
+    {
+      "id": "browser",
+      "label": "See actual browser request protection",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "browser"
+        ]
+      ],
+      "contains": [
+        "browser:",
+        "PASS"
+      ]
+    },
+    {
+      "id": "repair",
+      "label": "Repair and verify",
+      "writeFiles": {
+        "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+      },
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release",
+          "--no-restore"
+        ],
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    }
+  ]
+}

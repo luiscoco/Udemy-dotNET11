@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NativeCourse.MainPage" BackgroundColor="#F4F2FB" Title="Offline course notes">
+    <VerticalStackLayout Padding="36" Spacing="18">
+        <Label Text=".NET 11 · Offline SQLite notes" FontSize="18" TextColor="#6642BB" />
+        <Label Text="Edit locally, resolve conflicts explicitly" FontSize="28" FontAttributes="Bold" />
+        <Entry x:Name="TitleEntry" Text="Offline course draft" FontSize="20" />
+        <HorizontalStackLayout Spacing="16">
+            <Button Text="Save offline" Clicked="SaveOffline" />
+            <Button Text="Synchronize" Clicked="Synchronize" />
+            <Button Text="Use server revision" Clicked="AcceptServer" />
+        </HorizontalStackLayout>
+        <Border Padding="24" BackgroundColor="#E1F7EE"><Label x:Name="StateLabel" Text="Save a local edit before synchronizing." FontSize="20" /></Border>
+        <Label x:Name="StoredLabel" FontSize="20" />
+    </VerticalStackLayout>
+</ContentPage>

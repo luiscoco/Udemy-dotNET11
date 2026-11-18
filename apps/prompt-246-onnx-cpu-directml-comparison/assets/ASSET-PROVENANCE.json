@@ -1,0 +1,27 @@
+{
+  "model": {
+    "name": "MNIST-12",
+    "url": "https://github.com/onnx/models/tree/main/validated/vision/classification/mnist",
+    "sha256": "5c688690f8bacf667d4c2074af5ad0646ca328d7ab03eccf944a65b320171bdd",
+    "license": "Apache-2.0 (ONNX model repository)"
+  },
+  "images": {
+    "source": "MNIST held-out t10k image/label files, PyTorch-hosted mirror https://ossci-datasets.s3.amazonaws.com/mnist/",
+    "selectedIndices": [
+      2,
+      1,
+      8,
+      8,
+      3
+    ],
+    "targetDigits": [
+      1,
+      2,
+      5,
+      5,
+      0
+    ],
+    "layout": "Five known 28 by 28 grayscale cells; amount cents with fixed two-decimal template",
+    "scope": "Narrow fixed-layout handwritten-digit amount recognition, not general invoice OCR or arbitrary-document understanding."
+  }
+}

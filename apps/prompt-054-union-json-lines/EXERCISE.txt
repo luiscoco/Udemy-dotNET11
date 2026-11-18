@@ -1,0 +1,6 @@
+PROMPT 54
+
+1. Compare numeric and string union cases and their wire values.
+2. Set topLevelValues and verify LF termination.
+3. Inspect why array output violates this JSONL contract.
+4. Try an unsupported JSON object and retain the rejected-input result.

@@ -1,0 +1,8 @@
+PROMPT 27
+
+1. Read the original ordered conditions.
+2. Map each condition to the switch expression.
+3. Explain the overlap between international review and priority.
+4. Verify the threshold and missing-input cases.
+5. Reproduce the incomplete-switch diagnostic.
+6. Add a business case and retain equivalent behavior through the refactor.

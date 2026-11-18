@@ -1,0 +1,6 @@
+PROMPT 202
+
+1. Start the local embedding service and isolated PostgreSQL fixture using LOCAL-RAG-SETUP.md.
+2. Build and run the real application; inspect source and rag-evidence.json.
+3. Reproduce the controlled failure and identify the violated contract.
+4. Restore the policy and verify recovery, retaining the actual observations.

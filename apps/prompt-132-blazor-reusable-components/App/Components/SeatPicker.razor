@@ -1,0 +1,17 @@
+<section class="card">
+    <p id="theme">Theme @Theme</p>
+    <label for="quantity">Seats</label>
+    <input id="quantity" type="number" min="1" max="10" value="@Quantity" @onchange="Change" />
+    <button id="add" @onclick="() => OnReserve.InvokeAsync(Quantity)">Reserve seats</button>
+</section>
+@code {
+    [Parameter] public int Quantity { get; set; }
+    [Parameter] public EventCallback<int> QuantityChanged { get; set; }
+    [Parameter] public EventCallback<int> OnReserve { get; set; }
+    [CascadingParameter] public string Theme { get; set; } = "Default";
+    private async Task Change(ChangeEventArgs args)
+    {
+        if (int.TryParse(args.Value?.ToString(), out var value) && value is >= 1 and <= 10)
+            await QuantityChanged.InvokeAsync(value);
+    }
+}

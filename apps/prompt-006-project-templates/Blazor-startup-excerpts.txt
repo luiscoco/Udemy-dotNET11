@@ -1,0 +1,6 @@
+builder.Services.AddRazorComponents()
+    .AddInteractiveServerComponents();
+
+// After the application is built:
+app.MapRazorComponents<App>()
+    .AddInteractiveServerRenderMode();

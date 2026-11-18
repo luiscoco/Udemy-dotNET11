@@ -1,0 +1,5 @@
+PROMPT 169
+
+1. Read the explicit acceptance criteria.
+2. Hold two accepted operations and reject eight excess requests.
+3. Hide an injected fault and observe the failing acceptance test.

@@ -1,0 +1,25 @@
+PROMPT 11 — YOUR TURN
+
+1. Predict checkout's TrainingRegion before running it.
+2. Explain why reporting uses US instead of EU.
+3. Change the root region; rebuild both apps.
+   Which app changes? Explain the import order.
+
+4. Create a nested props file without a parent import.
+   Inspect the evaluated Nullable and ImplicitUsings.
+   Predict the compiler failure, then build reporting.
+
+5. Import the parent explicitly and build again.
+   Explain why reporting's project override still wins.
+
+6. Remove the optional-name guard in Invoice.cs.
+   Identify CS8602 and restore correct null handling.
+
+7. Run Billing.Checks. All eight checks must pass.
+   The runner is a console app, not a test framework.
+
+Tax is a fixed 20% teaching rule.
+TrainingRegion is metadata; it does not set tax law.
+
+Use node verify.cjs for the automated demonstration.
+Use Reset source in the browser after experiments.

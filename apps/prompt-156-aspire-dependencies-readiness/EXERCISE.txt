@@ -1,0 +1,5 @@
+PROMPT 156
+
+1. Inspect AppHost resource references and readiness dependencies.
+2. Run the distributed application and read the actual worker output through the API.
+3. Reproduce the controlled failure and verify recovery.

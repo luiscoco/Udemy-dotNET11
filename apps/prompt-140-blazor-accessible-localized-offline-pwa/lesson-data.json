@@ -1,0 +1,118 @@
+{
+  "number": 140,
+  "title": "Accessible localized WebAssembly PWA",
+  "files": [
+    "App/App.csproj",
+    "App/Program.cs",
+    "App/LessonSetup.cs",
+    "App/BrowserRunner.cs",
+    "App/Components/_Imports.razor",
+    "App/Components/AppShell.razor",
+    "App/Components/Routes.razor",
+    "App/Components/MainLayout.razor",
+    "App/wwwroot/app.css",
+    "NuGet.Config",
+    "browser-demo.cjs",
+    "tools/package.json",
+    "Offline/App.razor",
+    "Offline/Layout/MainLayout.razor",
+    "Offline/OfflineExample.csproj",
+    "Offline/Pages/Home.razor",
+    "Offline/Pages/NotFound.razor",
+    "Offline/Program.cs",
+    "Offline/Properties/launchSettings.json",
+    "Offline/wwwroot/css/app.css",
+    "Offline/wwwroot/icon-192.png",
+    "Offline/wwwroot/icon-512.png",
+    "Offline/wwwroot/index.html",
+    "Offline/wwwroot/manifest.webmanifest",
+    "Offline/wwwroot/service-worker.js",
+    "Offline/wwwroot/service-worker.published.js",
+    "Offline/_Imports.razor",
+    "Offline/Labels.cs",
+    "Offline/Resources/Labels.resx",
+    "Offline/Resources/Labels.es.resx",
+    "Offline/wwwroot/notebook.js",
+    "App/Probe.cs",
+    "EXERCISE.txt"
+  ],
+  "resetFiles": {
+    "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+  },
+  "steps": [
+    {
+      "id": "build",
+      "label": "Publish PWA and verify in Chrome",
+      "commands": [
+        [
+          "publish",
+          "Offline",
+          "-c",
+          "Release",
+          "-o",
+          "artifacts/pwa"
+        ],
+        [
+          "build",
+          "App",
+          "-c",
+          "Release"
+        ],
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS",
+        "browser:"
+      ]
+    },
+    {
+      "id": "problem",
+      "label": "Check the offline API boundary",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "problem"
+        ]
+      ],
+      "failure": true,
+      "contains": [
+        "incorrect expectation: an uncached server API works offline"
+      ]
+    },
+    {
+      "id": "repair",
+      "label": "Verify the offline shell and local note",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS",
+        "browser:"
+      ]
+    }
+  ]
+}

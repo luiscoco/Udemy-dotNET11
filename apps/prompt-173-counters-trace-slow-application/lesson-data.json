@@ -1,0 +1,87 @@
+{
+  "number": 173,
+  "title": "Diagnose a slow application with counters and traces",
+  "files": [
+    "App/App.csproj",
+    "App/Harness.cs",
+    "App/CpuWork.cs",
+    "App/Program.cs",
+    "NuGet.Config",
+    ".config/dotnet-tools.json",
+    "App/Probe.cs",
+    "EXERCISE.txt"
+  ],
+  "resetFiles": {
+    "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+  },
+  "steps": [
+    {
+      "id": "build",
+      "label": "Collect baseline diagnostics",
+      "commands": [
+        [
+          "tool",
+          "restore"
+        ],
+        [
+          "build",
+          "App",
+          "-c",
+          "Release"
+        ],
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    },
+    {
+      "id": "regression",
+      "label": "Observe the diagnosed problem",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "problem"
+        ]
+      ],
+      "failure": true,
+      "contains": [
+        "REPEATED_WORK_REGRESSION"
+      ]
+    },
+    {
+      "id": "repair",
+      "label": "Verify the recovery",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    }
+  ]
+}

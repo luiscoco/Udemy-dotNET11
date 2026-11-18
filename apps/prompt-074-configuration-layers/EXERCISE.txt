@@ -1,0 +1,6 @@
+PROMPT 74
+
+1. Compare JSON-only, JSON plus environment, and the final CLI layer.
+2. Inspect the double-underscore environment key mapping.
+3. Reorder providers and observe the different winning value.
+4. Reload the JSON fixture and compare live configuration with a previously bound object.

@@ -1,0 +1,4 @@
+PROMPT 127
+
+1. Distinguish CORS response access from authentication and antiforgery validation.
+2. Replace a display-text context with an attribute context and choose the appropriate encoder.

@@ -1,0 +1,5 @@
+PROMPT 181
+
+1. Publish and execute all three deployments with identical receipt input.
+2. Compare file count, size and runtime ownership.
+3. Run the framework-dependent host against an empty runtime root and inspect its failure.

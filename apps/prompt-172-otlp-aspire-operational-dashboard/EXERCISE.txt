@@ -1,0 +1,5 @@
+PROMPT 172
+
+1. Start the pinned local Aspire dashboard and export three telemetry signals.
+2. Inspect the request and failure traces, structured logs and request metric.
+3. Change the export path and verify the missing backend data.

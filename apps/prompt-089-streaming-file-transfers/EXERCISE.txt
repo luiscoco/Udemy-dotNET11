@@ -1,0 +1,6 @@
+PROMPT 89
+
+1. Follow the 4096-byte server copy buffer and running byte count.
+2. Inspect the signature check and generated storage name.
+3. Request a byte range from a completed download.
+4. Cancel an active upload and verify partial-file cleanup.

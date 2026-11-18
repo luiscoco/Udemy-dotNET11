@@ -1,0 +1,9 @@
+PROMPT 18 — YOUR TURN
+
+1. Run with a harmless COURSE_MODE value and compare the plain run.
+2. Explain why the parent shell is not permanently modified.
+3. Keep WatchDemo alive and observe a supported method-body update.
+4. Compare the application PID before and after Hot Reload.
+5. Introduce a compiler error and observe its diagnostic.
+6. Correct the edit and verify live output again.
+7. Stop watch with Ctrl+C; automated experiments stop only their own process tree.

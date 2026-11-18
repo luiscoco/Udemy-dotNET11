@@ -1,0 +1,5 @@
+PROMPT 170
+
+1. Run the passing tests in both modules.
+2. Observe the timeout and failure-limit exit codes.
+3. Inspect the separate per-module results.trx files.

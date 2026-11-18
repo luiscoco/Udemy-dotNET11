@@ -1,0 +1,5 @@
+PROMPT 116
+
+1. Version cache keys when the cached representation changes.
+2. Use invalidation after a committed write, and test the stale-data window.
+3. Explain why local miss coalescing is not a distributed lock.

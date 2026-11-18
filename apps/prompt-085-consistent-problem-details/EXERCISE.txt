@@ -1,0 +1,6 @@
+PROMPT 85
+
+1. Compare all three actual problem responses.
+2. Inspect field errors for invalid quantity.
+3. Trace exception handling and status-code middleware.
+4. Use the request identifier to correlate safe public errors with internal diagnostics.

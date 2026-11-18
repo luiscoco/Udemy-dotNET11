@@ -1,0 +1,6 @@
+PROMPT 83
+
+1. Trace the five recorded pipeline events.
+2. Identify route, query, JSON body and DI parameters.
+3. Observe short-circuit behavior for invalid input.
+4. Distinguish a route constraint mismatch from a DTO validation failure.

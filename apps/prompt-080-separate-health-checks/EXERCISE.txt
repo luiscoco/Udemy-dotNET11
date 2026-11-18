@@ -1,0 +1,6 @@
+PROMPT 80
+
+1. Compare the route tag predicates.
+2. Verify that liveness never calls the HTTP dependency.
+3. Observe startup-unready, degraded, required-dependency failure and recovery states.
+4. Inspect why coupling dependencies to liveness can give an inappropriate restart signal.

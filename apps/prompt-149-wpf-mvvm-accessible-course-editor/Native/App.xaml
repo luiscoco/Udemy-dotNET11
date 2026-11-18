@@ -1,0 +1,6 @@
+<Application x:Class="NativeCourse.App" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Application.Resources>
+        <SolidColorBrush x:Key="CourseAccent" Color="#6642BB" />
+        <Style TargetType="Button"><Setter Property="Padding" Value="18,10"/><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,12,16,12"/></Style>
+    </Application.Resources>
+</Application>

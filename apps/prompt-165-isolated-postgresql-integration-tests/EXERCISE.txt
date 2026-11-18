@@ -1,0 +1,5 @@
+PROMPT 165
+
+1. Run the three isolated database tests.
+2. Remove the primary-key constraint and observe a failing engine test.
+3. Restore the constraint and rerun the suite.

@@ -1,0 +1,16 @@
+@page "/"
+@inject TrackedCircuit Circuit
+<h1>Resume an unfinished course draft</h1>
+<label for="draft">Draft title</label>
+<input id="draft" @bind="Draft" />
+<button id="increment" @onclick="() => Count++">Add lesson</button>
+<p id="count" class="result">Lessons @Count</p>
+<p id="circuit" data-circuit="@Circuit.Id">Current circuit initialized</p>
+<button id="server-pause" @onclick="Pause">Request server pause</button>
+<p>The local fixture retains persisted circuit state for four seconds.</p>
+@code {
+    [PersistentState] public string? Draft { get; set; }
+    [PersistentState] public int Count { get; set; }
+    protected override void OnInitialized() => Draft ??= "Untitled";
+    private async Task Pause() => await Circuit.RequestPauseAsync();
+}

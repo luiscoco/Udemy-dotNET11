@@ -1,0 +1,4 @@
+PROMPT 111
+
+1. Add a selected column and update all three result mappings.
+2. Compare command count and allocation measurements before choosing a data-access library.

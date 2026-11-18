@@ -1,0 +1,75 @@
+{
+  "number": 158,
+  "title": "A durable saga with explicit compensation",
+  "files": [
+    "App/App.csproj",
+    "App/ApiHarness.cs",
+    "App/SagaJournal.cs",
+    "App/SagaCoordinator.cs",
+    "App/Program.cs",
+    "NuGet.Config",
+    "App/Probe.cs",
+    "EXERCISE.txt"
+  ],
+  "resetFiles": {
+    "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+  },
+  "steps": [
+    {
+      "id": "build",
+      "label": "Build and verify",
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release"
+        ],
+        [
+          "App/bin/Release/net11.0/App.dll",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    },
+    {
+      "id": "atomic",
+      "label": "Assume local rollback reverses remote work",
+      "commands": [
+        [
+          "App/bin/Release/net11.0/App.dll",
+          "atomic"
+        ]
+      ],
+      "failure": true,
+      "contains": [
+        "incorrect expectation"
+      ]
+    },
+    {
+      "id": "repair",
+      "label": "Repair and verify",
+      "writeFiles": {
+        "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+      },
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release",
+          "--no-restore"
+        ],
+        [
+          "App/bin/Release/net11.0/App.dll",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "reviewedUtc": "2026-11-18T16:26:56.958Z",
+  "capabilities": [
+    {
+      "api": "StringStream",
+      "classification": "revalidated existing coverage",
+      "priorSourceEvidence": [
+        {
+          "file": "apps/prompt-057-memory-stream-adapters/App/Adapters.cs",
+          "sha256": "f2dda7c5096f845cc5142d35fe129b4723ca6a665c64ebb97a1168e9c2ae43bc"
+        }
+      ],
+      "verifiedProbe": "App/ApiAdditions.cs"
+    },
+    {
+      "api": "ReadOnlyMemoryStream",
+      "classification": "revalidated existing coverage",
+      "priorSourceEvidence": [
+        {
+          "file": "apps/prompt-057-memory-stream-adapters/App/Adapters.cs",
+          "sha256": "f2dda7c5096f845cc5142d35fe129b4723ca6a665c64ebb97a1168e9c2ae43bc"
+        },
+        {
+          "file": "apps/prompt-057-memory-stream-adapters/App/Program.cs",
+          "sha256": "24156092efe40cb922dbc099233d1c3b60b6e061f28811e649f6f5424eeca296"
+        }
+      ],
+      "verifiedProbe": "App/ApiAdditions.cs"
+    },
+    {
+      "api": "Process.RunAndCaptureTextAsync",
+      "classification": "revalidated existing coverage",
+      "priorSourceEvidence": [
+        {
+          "file": "apps/prompt-058-child-process-capture/App/ChildRunner.cs",
+          "sha256": "f9c95255502694d58e8b81a9f55ca7d6d34a320b08e93b57cb7e609d37c56589"
+        }
+      ],
+      "verifiedProbe": "App/ApiAdditions.cs"
+    },
+    {
+      "api": "BitArray.PopCount",
+      "classification": "new supplemental source-level omission addressed in lesson 280",
+      "priorSourceEvidence": [],
+      "verifiedProbe": "App/ApiAdditions.cs"
+    }
+  ],
+  "scope": "Bounded lexical source inspection excluding lesson 280 and generated bin/obj. Earlier stream/process call sites were also manually inspected. Absence of this call pattern is a source-level gap, not proof of missing conceptual instruction. Four executable probes revalidate three previously covered APIs and add BitArray.PopCount. This is not an exhaustive semantic audit of every .NET 11 feature."
+}

@@ -1,0 +1,3 @@
+int divisor = int.Parse(args[0]);
+int result = 10 / divisor;
+Console.WriteLine(result);

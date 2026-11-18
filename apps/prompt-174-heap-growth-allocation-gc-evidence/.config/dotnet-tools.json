@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "isRoot": true,
+  "tools": {
+    "dotnet-gcdump": {
+      "version": "10.0.750501",
+      "commands": [
+        "dotnet-gcdump"
+      ],
+      "rollForward": true
+    }
+  }
+}

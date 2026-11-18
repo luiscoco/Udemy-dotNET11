@@ -1,0 +1,14 @@
+PROMPT 13 — YOUR TURN
+
+1. Inspect the explicit HTTPS source and source mapping.
+2. Restore and run the fixed-version invoice import.
+3. Investigate the deliberately vulnerable 12.0.1 dependency.
+4. Read GHSA-5crp-9r3c-p9vr in the actual audit output.
+5. Turn NU1903 into a restore error and observe the gate.
+6. Restore the reviewed fixed dependency.
+7. Demonstrate NU1020 for a floating reference with an age policy.
+8. Pin the version and verify import behavior again.
+
+Age does not establish trust or block every restore.
+No advisory finding is not proof of no vulnerabilities.
+Audit network failures are not a clean audit result.

@@ -1,0 +1,14 @@
+using var embeddings = new EmbeddingService();
+await using var store = await VectorStore.Open(204);
+await store.CreateCollection(); await store.Seed(embeddings);
+var query = await embeddings.Generate("rotate API keys", query: true);
+var hits = await store.Search(query.Vector, query.Text, k: 20, tenant: "a", user: "alice", unsafeAuthorization: args.Contains("problem"));
+var authorized = Corpus.Documents.Where(d => d.Tenant == "a" && d.User == "alice").Select(d => d.Id).ToHashSet();
+int leaked = hits.Count(h => !authorized.Contains(h.Id));
+Console.WriteLine($"ACCESS tenant=a actor=alice retrieved={hits.Count} unauthorized={leaked}");
+AiRuntime.Evidence("authorization-boundary.json", new { leaked, ids = hits.Select(h => h.Id) });
+Check.That(leaked == 0, "database retrieval returns only the trusted actor's permitted tenant documents", "RAG unauthorized document reached retrieval output");
+Check.That(hits.Count == authorized.Count && hits.All(h => double.IsFinite(h.Score)), "all authorized fixture rows have actual vector similarity scores");
+var bob = await store.Search(query.Vector, query.Text, k: 20, tenant: "a", user: "bob");
+Check.That(bob.Count == 1 && bob[0].Id == "bob-only", "another actor receives its own permission scope");
+AiRuntime.Evidence("rag-evidence.json", new { passed = true, leaked, ids = hits.Select(h => h.Id), bob = bob.Select(h => h.Id) });

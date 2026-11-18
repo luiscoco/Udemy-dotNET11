@@ -1,0 +1,6 @@
+PROMPT 97
+
+1. Inspect JWT validation and server-side room authorization.
+2. Connect clients to separate app instances.
+3. Verify a real Redis-backed group broadcast.
+4. Distinguish membership, room authorization and publishing roles.

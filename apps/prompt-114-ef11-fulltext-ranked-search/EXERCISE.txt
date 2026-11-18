@@ -1,0 +1,4 @@
+PROMPT 114
+
+1. Inspect the generated full-text migration and its transaction suppression.
+2. Add a supported search language and compare a free-text predicate with ranked results.

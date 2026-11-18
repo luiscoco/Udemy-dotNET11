@@ -1,0 +1,5 @@
+PROMPT 187
+
+1. Create and restore an actual SQLite backup before migration.
+2. Expand the schema while old and new readers coexist.
+3. Observe the old-reader failure after contracting the schema too early.

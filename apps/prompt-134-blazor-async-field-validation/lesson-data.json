@@ -1,0 +1,94 @@
+{
+  "number": 134,
+  "title": "Async validation and field-level feedback",
+  "files": [
+    "App/App.csproj",
+    "App/Program.cs",
+    "App/LessonSetup.cs",
+    "App/BrowserRunner.cs",
+    "App/Components/_Imports.razor",
+    "App/Components/AppShell.razor",
+    "App/Components/Routes.razor",
+    "App/Components/MainLayout.razor",
+    "App/Registration.cs",
+    "App/Components/UsernameValidator.razor",
+    "App/Components/Pages/Home.razor",
+    "App/wwwroot/app.css",
+    "NuGet.Config",
+    "browser-demo.cjs",
+    "tools/package.json",
+    "App/Probe.cs",
+    "EXERCISE.txt"
+  ],
+  "resetFiles": {
+    "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+  },
+  "steps": [
+    {
+      "id": "build",
+      "label": "Build and verify in Chrome",
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release"
+        ],
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS",
+        "browser:"
+      ]
+    },
+    {
+      "id": "problem",
+      "label": "Reproduce the incorrect assumption",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "problem"
+        ]
+      ],
+      "failure": true,
+      "contains": [
+        "incorrect expectation: a taken username passes asynchronous validation"
+      ]
+    },
+    {
+      "id": "repair",
+      "label": "Verify the supported behavior",
+      "commands": [
+        [
+          "run",
+          "--project",
+          "App",
+          "-c",
+          "Release",
+          "--no-build",
+          "--",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS",
+        "browser:"
+      ]
+    }
+  ]
+}

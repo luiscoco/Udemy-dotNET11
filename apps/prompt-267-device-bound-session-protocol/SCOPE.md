@@ -1,0 +1,7 @@
+# Executable preview evaluation scope
+
+.NET SDK 11.0.100. Library, compiler and engine versions are independent. All effects use owned synthetic fixtures.
+
+Actual Microsoft.AspNetCore.Authentication.DeviceBoundSessions experimental package over a real loopback HTTPS server. A software ECDSA protocol client registers a public key, receives a refresh challenge, verifies rejection of another key and refreshes with the owner key. It is explicitly not a hardware-bound browser key. Chrome separately observes the real registration advertisement and the server counts any automatic browser proof requests; successful advertisement alone does not prove browser DBSC enrollment or TPM protection. The local certificate is pinned by the HTTP protocol client; only the isolated browser probe ignores its self-signed certificate. No system trust or browser configuration is changed. Real deployment requires a supported qualified browser/device and trusted HTTPS. Install browser dependencies before running the student app.
+
+Historical status: the original infographic identifies removal of DBSC before .NET 11 GA. This lab deliberately restores archived RC1 package 0.11.0-rc.1.26425.128 and executes its bounded protocol on the selected GA SDK; this is not supported GA framework functionality. Actual Chrome 157 observes the advertisement but sends zero automatic enrollment proofs in this environment. Only the explicitly software-key protocol registration/refresh is verified.

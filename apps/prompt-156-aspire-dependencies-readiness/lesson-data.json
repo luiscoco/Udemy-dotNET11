@@ -1,0 +1,78 @@
+{
+  "number": 156,
+  "title": "Aspire resource dependencies and readiness gates",
+  "files": [
+    "App/App.csproj",
+    "App/Program.cs",
+    "NuGet.Config",
+    "AppHost/AppHost.csproj",
+    "AppHost/Program.cs",
+    "Api/Api.csproj",
+    "Api/Program.cs",
+    "Worker/Worker.csproj",
+    "Worker/Program.cs",
+    "App/Probe.cs",
+    "EXERCISE.txt"
+  ],
+  "resetFiles": {
+    "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+  },
+  "steps": [
+    {
+      "id": "build",
+      "label": "Build and verify",
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release"
+        ],
+        [
+          "App/bin/Release/net11.0/App.dll",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    },
+    {
+      "id": "premature",
+      "label": "Reproduce the incorrect distributed-system expectation",
+      "commands": [
+        [
+          "App/bin/Release/net11.0/App.dll",
+          "premature"
+        ]
+      ],
+      "failure": true,
+      "contains": [
+        "incorrect expectation"
+      ]
+    },
+    {
+      "id": "repair",
+      "label": "Repair and verify",
+      "writeFiles": {
+        "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+      },
+      "commands": [
+        [
+          "build",
+          "App",
+          "-c",
+          "Release",
+          "--no-restore"
+        ],
+        [
+          "App/bin/Release/net11.0/App.dll",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS"
+      ]
+    }
+  ]
+}

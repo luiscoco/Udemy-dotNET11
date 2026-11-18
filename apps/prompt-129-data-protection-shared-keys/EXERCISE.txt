@@ -1,0 +1,4 @@
+PROMPT 129
+
+1. Plan certificate retention separately from Data Protection key rotation.
+2. Grant only the actual application identities access to a shared production key repository.

@@ -1,0 +1,11 @@
+using System.Reflection.Emit;
+using System.Text.Json;
+string name=args.FirstOrDefault()??"CourseDto";
+Type? selected=typeof(CourseDto).Assembly.GetType(name);
+Console.WriteLine(selected);
+var method=new DynamicMethod("RuntimeValue",typeof(int),Type.EmptyTypes);
+var generator=method.GetILGenerator();
+generator.Emit(OpCodes.Ldc_I4,11); generator.Emit(OpCodes.Ret);
+Console.WriteLine(((Func<int>)method.CreateDelegate(typeof(Func<int>)))());
+Console.WriteLine(JsonSerializer.Serialize(new CourseDto(11,"AOT")));
+public sealed record CourseDto(int Id,string Title);

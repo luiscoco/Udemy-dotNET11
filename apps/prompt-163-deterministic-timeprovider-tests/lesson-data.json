@@ -1,0 +1,108 @@
+{
+  "number": 163,
+  "title": "Deterministic tests with TimeProvider",
+  "files": [
+    "App/App.csproj",
+    "App/AccessWindow.cs",
+    "Tests/Tests.csproj",
+    "Tests/GlobalUsings.cs",
+    "NuGet.Config",
+    "Tests/TimeTests.cs",
+    "App/Probe.cs",
+    "EXERCISE.txt",
+    "global.json"
+  ],
+  "resetFiles": {
+    "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n",
+    "App/AccessWindow.cs": "public sealed class AccessWindow(TimeProvider clock, TimeSpan lifetime)\n{\n    private readonly DateTimeOffset expiresAt = clock.GetUtcNow() + lifetime;\n    public bool IsValid => clock.GetUtcNow() < expiresAt;\n    public Task WaitForExpiryAsync(CancellationToken cancellationToken = default)\n    {\n        var remaining = expiresAt - clock.GetUtcNow();\n        return remaining <= TimeSpan.Zero ? Task.CompletedTask : Task.Delay(remaining, clock, cancellationToken);\n    }\n}\n"
+  },
+  "steps": [
+    {
+      "id": "build",
+      "label": "Build and run the tests",
+      "commands": [
+        [
+          "build",
+          "Tests/Tests.csproj",
+          "-c",
+          "Release"
+        ],
+        [
+          "test",
+          "--project",
+          "Tests/Tests.csproj",
+          "-c",
+          "Release",
+          "--no-build",
+          "--report-trx",
+          "--results-directory",
+          "artifacts/baseline"
+        ]
+      ],
+      "contains": [
+        "Passed"
+      ]
+    },
+    {
+      "id": "regression",
+      "label": "Introduce and detect the regression",
+      "writeFiles": {
+        "App/AccessWindow.cs": "public sealed class AccessWindow(TimeProvider clock, TimeSpan lifetime)\n{\n    private readonly DateTimeOffset expiresAt = clock.GetUtcNow() + lifetime;\n    public bool IsValid => clock.GetUtcNow() <= expiresAt;\n    public Task WaitForExpiryAsync(CancellationToken cancellationToken = default)\n    {\n        var remaining = expiresAt - clock.GetUtcNow();\n        return remaining <= TimeSpan.Zero ? Task.CompletedTask : Task.Delay(remaining, clock, cancellationToken);\n    }\n}\n"
+      },
+      "commands": [
+        [
+          "build",
+          "Tests/Tests.csproj",
+          "-c",
+          "Release",
+          "--no-restore"
+        ],
+        [
+          "test",
+          "--project",
+          "Tests/Tests.csproj",
+          "-c",
+          "Release",
+          "--no-build",
+          "--report-trx",
+          "--results-directory",
+          "artifacts/regression"
+        ]
+      ],
+      "failure": true,
+      "contains": [
+        "Access_expires_at_the_exact_boundary"
+      ]
+    },
+    {
+      "id": "repair",
+      "label": "Repair and rerun the tests",
+      "writeFiles": {
+        "App/AccessWindow.cs": "public sealed class AccessWindow(TimeProvider clock, TimeSpan lifetime)\n{\n    private readonly DateTimeOffset expiresAt = clock.GetUtcNow() + lifetime;\n    public bool IsValid => clock.GetUtcNow() < expiresAt;\n    public Task WaitForExpiryAsync(CancellationToken cancellationToken = default)\n    {\n        var remaining = expiresAt - clock.GetUtcNow();\n        return remaining <= TimeSpan.Zero ? Task.CompletedTask : Task.Delay(remaining, clock, cancellationToken);\n    }\n}\n"
+      },
+      "commands": [
+        [
+          "build",
+          "Tests/Tests.csproj",
+          "-c",
+          "Release",
+          "--no-restore"
+        ],
+        [
+          "test",
+          "--project",
+          "Tests/Tests.csproj",
+          "-c",
+          "Release",
+          "--no-build",
+          "--report-trx",
+          "--results-directory",
+          "artifacts/repair"
+        ]
+      ],
+      "contains": [
+        "Passed"
+      ]
+    }
+  ]
+}

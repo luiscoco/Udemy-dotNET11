@@ -1,0 +1,4 @@
+PROMPT 120
+
+1. Compare a missed future trigger with recovery of an interrupted execution.
+2. Keep the job side effect idempotent and test a crash after committing it.

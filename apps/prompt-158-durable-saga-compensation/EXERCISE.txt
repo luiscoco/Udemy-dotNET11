@@ -1,0 +1,5 @@
+PROMPT 158
+
+1. Interrupt after the reservation response and before journaling.
+2. Reopen the journal and replay the idempotent operation.
+3. Observe explicit release after the simulated payment rejection.

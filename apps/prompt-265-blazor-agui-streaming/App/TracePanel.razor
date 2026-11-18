@@ -1,0 +1,14 @@
+@implements IDisposable
+<button id="send" disabled="@(!ready)" @onclick="Send">Run streamed course fixture</button>
+<p>Status: <span id="status">@Context.Status</span></p>
+<p id="blocks">@string.Join(" → ",blocks)</p>
+<p id="error">@Context.Error?.Message</p>
+<p>Request completed: <span id="finished">@finished</span></p>
+@code {
+    [CascadingParameter] public AgentContext Context{get;set;}=default!;
+    private readonly List<string> blocks=new();private IDisposable? onBlock,onStatus;private bool ready,finished;
+    protected override void OnAfterRender(bool firstRender){if(firstRender){ready=true;StateHasChanged();}}
+    protected override void OnInitialized(){onBlock=Context.RegisterOnBlockAdded((turn,b)=>{blocks.Add(b.GetType().Name);_=InvokeAsync(StateHasChanged);});onStatus=Context.RegisterOnStatusChanged(status=>{_=InvokeAsync(StateHasChanged);});}
+    private async Task Send(){finished=false;try{await Context.SendMessageAsync("Explain cancellation");}catch{}finally{finished=true;}await InvokeAsync(StateHasChanged);}
+    public void Dispose(){onBlock?.Dispose();onStatus?.Dispose();}
+}

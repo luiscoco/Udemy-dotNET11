@@ -1,0 +1,8 @@
+PROMPT 23
+
+1. Explain which values the constructor establishes.
+2. Explain the compiler requirement for Customer initialization.
+3. Reproduce the missing-required-member error.
+4. Reproduce a later assignment to the init property.
+5. Verify blank names and invalid numeric values are rejected.
+6. Explain how required initialization and validation cooperate.

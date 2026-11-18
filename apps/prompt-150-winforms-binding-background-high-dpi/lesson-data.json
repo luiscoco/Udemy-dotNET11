@@ -1,0 +1,74 @@
+{
+  "number": 150,
+  "title": "Windows Forms binding, background work and high DPI",
+  "files": [
+    "App/App.csproj",
+    "App/Program.cs",
+    "Native/Native.csproj",
+    "lab-runtime.cjs",
+    "NuGet.Config",
+    "Native/Program.cs",
+    "Native/CourseForm.cs",
+    "App/Probe.cs",
+    "EXERCISE.txt"
+  ],
+  "resetFiles": {
+    "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n"
+  },
+  "steps": [
+    {
+      "id": "build",
+      "label": "Build and verify the Windows app",
+      "commands": [
+        [
+          "build",
+          "Native",
+          "-c",
+          "Release"
+        ],
+        [
+          "build",
+          "App",
+          "-c",
+          "Release"
+        ],
+        [
+          "App/bin/Release/net11.0/App.dll",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS",
+        "native:"
+      ]
+    },
+    {
+      "id": "problem",
+      "label": "Reproduce the incorrect assumption",
+      "commands": [
+        [
+          "App/bin/Release/net11.0/App.dll",
+          "problem"
+        ]
+      ],
+      "failure": true,
+      "contains": [
+        "incorrect expectation: cancelled background work appends rows"
+      ]
+    },
+    {
+      "id": "repair",
+      "label": "Verify the supported Windows behavior",
+      "commands": [
+        [
+          "App/bin/Release/net11.0/App.dll",
+          "verify"
+        ]
+      ],
+      "contains": [
+        "PASS",
+        "native:"
+      ]
+    }
+  ]
+}

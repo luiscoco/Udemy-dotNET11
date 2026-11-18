@@ -1,0 +1,108 @@
+{
+  "number": 162,
+  "title": "Business boundaries and appropriate external fakes",
+  "files": [
+    "App/App.csproj",
+    "App/BookingService.cs",
+    "Tests/Tests.csproj",
+    "Tests/GlobalUsings.cs",
+    "NuGet.Config",
+    "Tests/BookingTests.cs",
+    "App/Probe.cs",
+    "EXERCISE.txt",
+    "global.json"
+  ],
+  "resetFiles": {
+    "App/Probe.cs": "// The lesson inserts a controlled compiler experiment here.\n",
+    "App/BookingService.cs": "public interface IPaymentGateway\n{\n    Task<bool> AuthorizeAsync(decimal amount);\n}\npublic sealed class BookingService(IPaymentGateway gateway, int initialSeats)\n{\n    public int AvailableSeats { get; private set; } = initialSeats;\n    public async Task<bool> BookAsync(int quantity)\n    {\n        if (quantity < 1) throw new ArgumentOutOfRangeException(nameof(quantity));\n        if (quantity > AvailableSeats) return false;\n        bool approved = await gateway.AuthorizeAsync(quantity * 25m);\n        if (!approved) return false;\n        AvailableSeats -= quantity;\n        return true;\n    }\n}\n"
+  },
+  "steps": [
+    {
+      "id": "build",
+      "label": "Build and run the tests",
+      "commands": [
+        [
+          "build",
+          "Tests/Tests.csproj",
+          "-c",
+          "Release"
+        ],
+        [
+          "test",
+          "--project",
+          "Tests/Tests.csproj",
+          "-c",
+          "Release",
+          "--no-build",
+          "--report-trx",
+          "--results-directory",
+          "artifacts/baseline"
+        ]
+      ],
+      "contains": [
+        "Passed"
+      ]
+    },
+    {
+      "id": "regression",
+      "label": "Introduce and detect the regression",
+      "writeFiles": {
+        "App/BookingService.cs": "public interface IPaymentGateway\n{\n    Task<bool> AuthorizeAsync(decimal amount);\n}\npublic sealed class BookingService(IPaymentGateway gateway, int initialSeats)\n{\n    public int AvailableSeats { get; private set; } = initialSeats;\n    public async Task<bool> BookAsync(int quantity)\n    {\n        if (quantity < 1) throw new ArgumentOutOfRangeException(nameof(quantity));\n        if (quantity >= AvailableSeats) return false;\n        bool approved = await gateway.AuthorizeAsync(quantity * 25m);\n        if (!approved) return false;\n        AvailableSeats -= quantity;\n        return true;\n    }\n}\n"
+      },
+      "commands": [
+        [
+          "build",
+          "Tests/Tests.csproj",
+          "-c",
+          "Release",
+          "--no-restore"
+        ],
+        [
+          "test",
+          "--project",
+          "Tests/Tests.csproj",
+          "-c",
+          "Release",
+          "--no-build",
+          "--report-trx",
+          "--results-directory",
+          "artifacts/regression"
+        ]
+      ],
+      "failure": true,
+      "contains": [
+        "Exact_capacity_is_a_valid_booking"
+      ]
+    },
+    {
+      "id": "repair",
+      "label": "Repair and rerun the tests",
+      "writeFiles": {
+        "App/BookingService.cs": "public interface IPaymentGateway\n{\n    Task<bool> AuthorizeAsync(decimal amount);\n}\npublic sealed class BookingService(IPaymentGateway gateway, int initialSeats)\n{\n    public int AvailableSeats { get; private set; } = initialSeats;\n    public async Task<bool> BookAsync(int quantity)\n    {\n        if (quantity < 1) throw new ArgumentOutOfRangeException(nameof(quantity));\n        if (quantity > AvailableSeats) return false;\n        bool approved = await gateway.AuthorizeAsync(quantity * 25m);\n        if (!approved) return false;\n        AvailableSeats -= quantity;\n        return true;\n    }\n}\n"
+      },
+      "commands": [
+        [
+          "build",
+          "Tests/Tests.csproj",
+          "-c",
+          "Release",
+          "--no-restore"
+        ],
+        [
+          "test",
+          "--project",
+          "Tests/Tests.csproj",
+          "-c",
+          "Release",
+          "--no-build",
+          "--report-trx",
+          "--results-directory",
+          "artifacts/repair"
+        ]
+      ],
+      "contains": [
+        "Passed"
+      ]
+    }
+  ]
+}

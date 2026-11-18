@@ -1,0 +1,5 @@
+PROMPT 189
+
+1. Execute the same archive reader under actual .NET 10 and .NET 11 runtimes.
+2. Reproduce the documented CRC32 validation change with a controlled fixture.
+3. Handle InvalidDataException and verify valid input and rejected corrupt input.

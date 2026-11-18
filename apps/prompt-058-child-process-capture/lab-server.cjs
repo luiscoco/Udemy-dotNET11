@@ -1,0 +1,1 @@
+const lab=require('./lab-runtime.cjs').createLabServer(__dirname);module.exports={createLabServer:()=>require('./lab-runtime.cjs').createLabServer(__dirname)};if(require.main===module){lab.server.listen(4177,'127.0.0.1',()=>console.log('Lesson lab: http://127.0.0.1:4177'));process.on('SIGINT',()=>Promise.resolve(lab.reset()).finally(()=>lab.server.close(()=>process.exit())));}

@@ -1,0 +1,5 @@
+PROMPT 147
+
+1. Run the native application and inspect the actual control behavior.
+2. Predict the controlled incorrect expectation, then execute it.
+3. Review the successful result and extend the application.

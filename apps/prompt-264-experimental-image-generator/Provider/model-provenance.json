@@ -1,0 +1,7 @@
+{
+  "model": "segmind/tiny-sd",
+  "revision": "cad0bd7495fa6c4bcca01b19a723dc91627fe84f",
+  "license": "creativeml-openrail-m",
+  "url": "https://huggingface.co/segmind/tiny-sd",
+  "weightsBundled": false
+}

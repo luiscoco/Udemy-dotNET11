@@ -1,0 +1,5 @@
+PROMPT 101
+
+1. Add a course through a scoped context and verify it through a new scope.
+2. Explain why DbContext must not be shared by concurrent operations.
+3. Enforce a title-length rule in the application; SQLite does not enforce HasMaxLength.

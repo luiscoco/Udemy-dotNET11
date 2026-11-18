@@ -1,0 +1,6 @@
+PROMPT 90
+
+1. Compare public cache reuse with three personal generations.
+2. Verify unauthenticated access is rejected.
+3. Exhaust one identity partition while retaining another identity allowance.
+4. Inspect gzip headers and decompress the real response bytes.

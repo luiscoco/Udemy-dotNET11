@@ -1,0 +1,6 @@
+PROMPT 244
+
+1. Read SCOPE.md and the exact pinned packages.
+2. Build and execute the real model workflow; inspect the measured outputs.
+3. Reproduce the controlled failure and inspect actual process evidence.
+4. Restore the demonstrated boundary and run the repair.

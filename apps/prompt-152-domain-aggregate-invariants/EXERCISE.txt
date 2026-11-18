@@ -1,0 +1,5 @@
+PROMPT 152
+
+1. Inspect the value-object constructor and aggregate mutation.
+2. Trigger the full-cohort rejection.
+3. Confirm that failed enrollment leaves one student.

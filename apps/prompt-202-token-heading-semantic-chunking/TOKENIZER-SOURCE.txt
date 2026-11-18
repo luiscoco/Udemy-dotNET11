@@ -1,0 +1,4 @@
+Vocabulary: https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/blob/main/vocab.txt
+License identifier from the upstream model card: apache-2.0
+SHA256: 07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3
+The vocabulary is included unchanged. Standard license text: https://www.apache.org/licenses/LICENSE-2.0.txt

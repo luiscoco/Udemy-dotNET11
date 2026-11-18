@@ -1,0 +1,5 @@
+PROMPT 183
+
+1. Publish the Linux application and build its pinned-base container image.
+2. Inspect the actual UID, health state and configured CPU and memory limits.
+3. Run the controlled root-user override and observe the policy failure.

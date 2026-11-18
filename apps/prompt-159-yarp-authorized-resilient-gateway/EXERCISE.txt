@@ -1,0 +1,5 @@
+PROMPT 159
+
+1. Compare anonymous, forbidden and authorized responses.
+2. Inspect route prefix removal and the destination.
+3. Hold one slow request and observe bounded concurrency and timeout.

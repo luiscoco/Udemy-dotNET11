@@ -1,0 +1,13 @@
+PROMPT 12 — YOUR TURN
+
+1. Prepare both local package versions.
+2. Restore checkout and inspect packages.lock.json.
+3. Prove a locked restore succeeds.
+4. Change only the central version to 1.1.0.
+5. Predict the locked-restore failure, then run it.
+6. Intentionally regenerate and review the lock file.
+7. Restore in locked mode, build and run checkout.
+
+Central versions express intent.
+The lock file records the resolved graph and content hash.
+Do not delete the lock file in CI to hide a mismatch.

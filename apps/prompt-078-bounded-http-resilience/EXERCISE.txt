@@ -1,0 +1,7 @@
+PROMPT 78
+
+1. Recover a peer that returns two 503 responses before success.
+2. Compare per-request retry count with the shared cross-request budget.
+3. Open a circuit and verify that the rejected call never reaches the peer.
+4. Inspect timeout ordering and forward the pipeline token into HttpClient.
+5. Define idempotency, jitter and budget replenishment for a production integration.

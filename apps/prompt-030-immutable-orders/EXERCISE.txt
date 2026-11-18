@@ -1,0 +1,8 @@
+PROMPT 30
+
+1. Reproduce the external-list mutation problem.
+2. Construct a snapshot from the supplied list.
+3. Change the caller list and verify the stored snapshot.
+4. Create a revised invoice through Add.
+5. Explain why sharing the immutable collection remains safe.
+6. Reproduce the readonly property diagnostic and verify both snapshot totals.

@@ -1,0 +1,7 @@
+PROMPT 65
+
+1. Fill the channel and observe a pending third write without a timing threshold.
+2. Release one slot and verify ordered queue delivery.
+3. Run two consumers and verify all accepted values.
+4. Compare Wait with an intentional drop policy and inspect producer completion errors.
+5. Observe how a consumer failure cancels blocked writers and siblings.

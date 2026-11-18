@@ -1,0 +1,5 @@
+PROMPT 161
+
+1. Run the seven test cases and inspect their outcomes.
+2. Change the inclusive discount boundary to an exclusive boundary.
+3. Repair the implementation and verify the full suite.

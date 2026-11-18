@@ -1,0 +1,5 @@
+PROMPT 107
+
+1. Compare full join with inner and left joins on the same filtered sets.
+2. Add an explicit deterministic tie-breaking policy for equal extrema.
+3. Inspect translation and execute against your actual provider before deploying.

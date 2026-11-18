@@ -1,0 +1,22 @@
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.DependencyInjection;
+using System.Security.Claims;
+string folder=Path.Combine("artifacts","store-"+Guid.NewGuid().ToString("N"));Directory.CreateDirectory(folder);
+var now=DateTimeOffset.Parse("2026-01-01T00:00:00Z");
+using var store=new ConversationStore(Path.Combine(folder,"conversations.db"),args.Contains("problem"));
+store.Add("c-1","alice",now,"Contact alice@example.test with SECRET-TEST-42 for a synthetic exercise.");
+var tokens=new LocalTokens();var builder=WebFixture.Builder();tokens.Register(builder.Services);
+var app=builder.Build();app.UseAuthentication();app.UseAuthorization();
+app.MapGet("/conversation/{id}",(string id,ClaimsPrincipal user)=>
+    store.Read(id,user.FindFirstValue("sub")!,now) is string body?Results.Text(body):Results.NotFound()).RequireAuthorization("mcp.access");
+await using var server=await WebFixture.Start(app);using var alice=server.Client(tokens.Issue());using var bob=server.Client(tokens.Issue(subject:"bob"));
+string visible=await alice.GetStringAsync("/conversation/c-1");
+Check.That(visible.Contains("[EMAIL]")&&visible.Contains("[SECRET]")&&!visible.Contains("alice@"),"redaction occurs before SQLite persistence and authorized reading");
+var denied=await bob.GetAsync("/conversation/c-1");using var anonymous=server.Client();var missing=await anonymous.GetAsync("/conversation/c-1");
+Console.WriteLine($"STORE alice=200 bob={(int)denied.StatusCode} anonymous={(int)missing.StatusCode} redacted=true");
+Check.That((int)denied.StatusCode==404&&(int)missing.StatusCode==401,"validated current identity controls conversation reads","EVAL another user read a conversation");
+now=now.AddDays(7);var expired=await alice.GetAsync("/conversation/c-1");
+Check.That((int)expired.StatusCode==404&&store.Purge(now)==1,"expiration denies reads at the boundary and purge removes the row");
+Check.That(store.Read("c-1' OR 1=1 --","alice",now) is null,"parameterized IDs cannot change the SQL query");
+EvalData.Save(new {passed=true,actualSqlite=true,actualHttp=true,bobStatus=(int)denied.StatusCode,anonymousStatus=(int)missing.StatusCode,expiredStatus=(int)expired.StatusCode,purged=1,retentionDays=7});

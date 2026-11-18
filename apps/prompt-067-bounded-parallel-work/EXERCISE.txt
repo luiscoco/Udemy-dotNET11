@@ -1,0 +1,6 @@
+PROMPT 67
+
+1. Compare degrees one and three with identical inputs.
+2. Inspect peak work and owned buffer bytes beside measured throughput.
+3. Reproduce twelve in-flight operations with the explicit launch gate.
+4. Choose the bound from the real downstream resource limit rather than the number of input items.
